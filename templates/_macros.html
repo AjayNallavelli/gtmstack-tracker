@@ -45,5 +45,6 @@
     <span>{{ price_from(t) }}{% if t.has_free_plan and t.entry_paid %} · free tier{% endif %}</span>
     <a class="small" href="/pricing/{{ t.slug }}/">Pricing →</a>
   </div>
+  <div class="card-visit small">{{ outlink(t, "Visit " ~ t.name, "visit") }}</div>
 </article>
 {%- endmacro %}

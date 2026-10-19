@@ -1,0 +1,13 @@
+{
+  "_comment": "Single source of truth for affiliate links: tool slug -> {url, program}. Merged into tools at build time; links render with rel=\"sponsored noopener\" and an Affiliate label.",
+  "klenty": {
+    "url": "https://www.klenty.com/?fpr=ajay-8e7b1e",
+    "program": "20% recurring for 36 months (Sales Engagement and Conversation Intelligence plans)",
+    "joined": "2026-10-19"
+  },
+  "woodpecker": {
+    "url": "https://woodpecker.co/?red=gtmsta",
+    "program": "20% lifetime",
+    "joined": "2026-10-19"
+  }
+}

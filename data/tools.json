@@ -613,7 +613,14 @@
       "starting_price_usd": 27,
       "fetch_method": "http",
       "has_free_plan": false,
-      "price_display": "$7 per 100 contacted prospects"
+      "price_display": "$7 per 100 contacted prospects",
+      "compare_with": [
+        "instantly",
+        "smartlead",
+        "lemlist",
+        "saleshandy",
+        "mailshake"
+      ]
     },
     {
       "id": "saleshandy",
@@ -783,34 +790,41 @@
       "categories": [
         "Cold email & engagement"
       ],
-      "description": "Sales engagement platform with email cadences, dialer and CRM sync.",
+      "description": "Sales engagement platform: email cadences, multichannel outreach, built-in dialer with AI call coaching, and two-way CRM sync.",
       "pricing_url": "https://www.klenty.com/pricing/",
       "date_checked": "2026-10-19",
       "pricing_status": "public",
       "pricing_verified": true,
-      "billing_note": "Billed annually (save up to 20%); Parallel & Power Dialer add-on $45/user/mo",
-      "verification_note": "",
+      "billing_note": "Annual or quarterly billing (save up to 20% annually); monthly-billing prices not shown; 14-day free trial (up to 200 emails)",
+      "verification_note": "Re-checked klenty.com/pricing on 2026-10-19 10:35 IST.",
       "tiers": [
         {
           "plan": "Starter",
           "monthly_usd": null,
           "annual_monthly_usd": 50,
-          "limits": "Unlimited users/mailboxes; contacts-based",
-          "note": ""
+          "limits": "Unlimited users & mailboxes; priced by contacts/emails (shown at 15,000 contacts, 75,000 emails/mo)",
+          "note": "Per month, billed annually"
         },
         {
           "plan": "Growth",
           "monthly_usd": null,
           "annual_monthly_usd": 70,
-          "limits": "Per user; 200 dialer minutes",
-          "note": ""
+          "limits": "Per user; 200 dialer minutes, 2,000 phone+email credits, CRM sync",
+          "note": "Per user/month, billed annually"
         },
         {
           "plan": "Plus",
           "monthly_usd": null,
           "annual_monthly_usd": 99,
-          "limits": "Per user; 1,000 dialer minutes",
-          "note": ""
+          "limits": "Per user; 1,000 dialer minutes, 4,000 credits, account-based selling, AI call coaching",
+          "note": "Per user/month, billed annually"
+        },
+        {
+          "plan": "Parallel & Power Dialer add-on",
+          "monthly_usd": null,
+          "annual_monthly_usd": null,
+          "limits": "$45 per user/month",
+          "note": "Add-on"
         }
       ],
       "affiliate_url": "",
@@ -819,7 +833,15 @@
       "starting_price_usd": 50,
       "fetch_method": "http",
       "has_free_plan": false,
-      "price_display": ""
+      "price_display": "",
+      "compare_with": [
+        "lemlist",
+        "replyio",
+        "apollo",
+        "instantly",
+        "smartlead",
+        "woodpecker"
+      ]
     },
     {
       "id": "lagrowthmachine",

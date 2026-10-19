@@ -38,6 +38,17 @@ def load():
     site["base_path"] = urlparse(site["base_url"]).path.rstrip("/")
     tools = json.loads((DATA / "tools.json").read_text())["tools"]
     changes = json.loads((DATA / "changes.json").read_text()) if (DATA / "changes.json").exists() else []
+    # affiliate links live in one file: data/affiliates.json  {slug: url | {"url":..., "program":...}}
+    aff = json.loads((DATA / "affiliates.json").read_text()) if (DATA / "affiliates.json").exists() else {}
+    for t in tools:
+        a = aff.get(t["id"])
+        if a:
+            t["affiliate_url"] = a if isinstance(a, str) else a.get("url", "")
+            if isinstance(a, dict) and a.get("program"):
+                t["affiliate_program"] = a["program"]
+    unknown = [k for k in aff if not k.startswith("_") and k not in {t["id"] for t in tools}]
+    if unknown:
+        raise SystemExit(f"affiliates.json has unknown tool slugs: {unknown}")
     snaps = {}
     sd = DATA / "snapshots"
     if sd.exists():
@@ -75,7 +86,27 @@ def load():
 def pick_pairs(tools):
     rank = {tid: i for i, tid in enumerate(POPULAR)}
     pairs = []
+    by_id = {t["id"]: t for t in tools}
+
+    def add_pair(a, b, cat):
+        if rank.get(a["id"], 99) > rank.get(b["id"], 99):
+            a, b = b, a
+        keys = {p["slug"] for p in pairs} | {f"{p['b']['id']}-vs-{p['a']['id']}" for p in pairs}
+        key = f"{a['id']}-vs-{b['id']}"
+        if key not in keys:
+            pairs.append({"slug": key, "a": a, "b": b, "category": cat})
+            return True
+        return False
+
     for cat, quota in PAIR_QUOTA.items():
+        used = 0
+        # pinned pairs first (tool["compare_with"]), counted against the category quota
+        for t in tools:
+            if t["category"] != cat:
+                continue
+            for other in t.get("compare_with", []):
+                if other in by_id and used < quota and add_pair(t, by_id[other], cat):
+                    used += 1
         members = [t for t in tools if t["category"] == cat or (cat in t["categories"] and cat != "Deliverability & warmup")]
         cand = []
         for a, b in itertools.combinations(members, 2):
@@ -87,12 +118,11 @@ def pick_pairs(tools):
                 score += 8
             cand.append((score, a, b))
         cand.sort(key=lambda x: x[0])
-        for _, a, b in cand[:quota]:
-            if rank.get(a["id"], 99) > rank.get(b["id"], 99):
-                a, b = b, a
-            key = f"{a['id']}-vs-{b['id']}"
-            if key not in {p["slug"] for p in pairs}:
-                pairs.append({"slug": key, "a": a, "b": b, "category": cat})
+        for _, a, b in cand:
+            if used >= quota:
+                break
+            if add_pair(a, b, cat):
+                used += 1
     return pairs[:60]
 
 
@@ -203,7 +233,10 @@ def main():
     # assets, data download, sitemap, robots
     shutil.copytree(ROOT / "static", out / "static")
     (out / "data").mkdir()
-    shutil.copy(DATA / "tools.json", out / "data" / "tools.json")
+    pub = json.loads((DATA / "tools.json").read_text())
+    for t in pub["tools"]:
+        t["affiliate_url"] = by_id[t["id"]]["affiliate_url"]
+    (out / "data" / "tools.json").write_text(json.dumps(pub, indent=1, ensure_ascii=False))
     if (DATA / "changes.json").exists():
         shutil.copy(DATA / "changes.json", out / "data" / "changes.json")
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
