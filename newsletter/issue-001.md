@@ -14,8 +14,8 @@ Nothing has "changed" yet, because today is day one. So this issue covers the st
 
 ## The headline numbers
 
-- **39 tools tracked.** 26 publish full pricing, 6 publish part of it, and **7 hide it behind "contact sales"**: 11x, Artisan, Outreach, Salesloft, ZoomInfo, Cognism and Seamless.AI.
-- **15 tools have a $0 tier**, including Apollo, Clay, Hunter, Prospeo, Regie.ai, Lusha and Kaspr.
+- **39 tools tracked.** 27 publish full pricing, 5 publish part of it, and **7 hide it behind "contact sales"**: 11x, Artisan, Outreach, Salesloft, ZoomInfo, Cognism and Seamless.AI.
+- **16 tools have a $0 tier**, including Apollo, Clay, Hunter, Prospeo, Regie.ai, Lusha and Kaspr.
 - **Annual billing usually saves 17–30%.** Hunter is at the top of that range (30%, so Starter is $49 monthly or $34 on annual). Prospeo is 25%, and Instantly and lemlist are about 20%.
 
 ## AI SDR agents: the best-known ones don't publish prices
@@ -48,7 +48,7 @@ Nothing has "changed" yet, because today is day one. So this issue covers the st
 - **Hunter Starter** and **Prospeo Starter** cost the same: **$49/mo for 2,000 credits**.
 - **FullEnrich** charges **$0.055 per credit** at 1,000 credits a month (about $55/mo). Credits are only spent when data is found.
 - **Findymail** starts at **$99/mo**. **BetterContact** starts at **$15/mo** for 200 credits.
-- **ZoomInfo** and **Cognism** are quote-only. **RocketReach** says its team plans "start at $6K annually."
+- **ZoomInfo** and **Cognism** are quote-only. **RocketReach** individual plans cost **$33–$142/mo** billed annually, and its team plans "start at $6K annually."
 - **Clearbit is now HubSpot Breeze Intelligence.** It's sold through Data Hub plus HubSpot Credits rather than as a standalone price.
 
 ## Deliverability & warmup: $15–$99 to start

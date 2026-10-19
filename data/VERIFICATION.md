@@ -27,17 +27,17 @@ Status: **public** = USD prices published and transcribed; **partial** = some ti
 | Salesloft | Cold email & engagement | contact_sales | https://www.salesloft.com/pricing |  |
 | Clay | Data & enrichment | public | https://www.clay.com/pricing | Actions + data credits priced separately; data credits from $0.05 each |
 | ZoomInfo | Data & enrichment | contact_sales | https://www.zoominfo.com/pricing |  |
-| HubSpot Breeze Intelligence (Data Hub) | Data & enrichment | partial | https://www.hubspot.com/pricing/data | Clearbit was acquired by HubSpot and became Breeze Intelligence; enrichment now sold via Data Hub + HubSpot Credits. |
+| HubSpot Breeze Intelligence (Data Hub) | Data & enrichment | partial | https://www.hubspot.com/pricing/data | Clearbit was acquired by HubSpot and became Breeze Intelligence; enrichment now sold via Data Hub + HubSpot Credits. USD prices from the US- |
 | Lusha | Data & enrichment | public | https://www.lusha.com/pricing/ | Billed yearly (credits upfront) |
 | Cognism | Data & enrichment | contact_sales | https://www.cognism.com/pricing |  |
 | Seamless.AI | Data & enrichment | contact_sales | https://seamless.ai/pricing |  |
-| RocketReach | Data & enrichment | partial | https://rocketreach.co/pricing | Geo-localized pricing; USD per-plan prices not captured |
+| RocketReach | Data & enrichment | public | https://rocketreach.co/pricing | USD prices captured by the US-region CI scrape on 2026-10-19 (box in India saw INR). |
 | Kaspr | Data & enrichment | public | https://www.kaspr.io/pricing | Monthly vs annual; also EUR/GBP |
 | People Data Labs | Data & enrichment | public | https://www.peopledatalabs.com/pricing | Annual saves 20% |
 | Hunter | Data & enrichment | public | https://hunter.io/pricing | Monthly vs yearly (save 30%) |
 | FullEnrich | Data & enrichment | public | https://fullenrich.com/pricing | Credit slider; rollover 3 months (monthly) / 12 months (yearly) |
 | Findymail | Data & enrichment | public | https://www.findymail.com/pricing/ | Plain HTTP fetch blocked (403); captured with headless Chrome. |
-| Prospeo | Data & enrichment | public | https://prospeo.io/pricing | Page is client-rendered; captured via web fetch. |
+| Prospeo | Data & enrichment | public | https://prospeo.io/pricing | Box fetch was blocked; CI (US) headless-Chrome fetch succeeded on 2026-10-19. |
 | BetterContact | Data & enrichment | public | https://bettercontact.rocks/pricing/ | Monthly; annual = 2 months free |
 | Allegrow | Deliverability & warmup | public | https://www.allegrow.co/pricing |  |
 | Warmbox | Deliverability & warmup | public | https://www.warmbox.ai/pricing/ | Monthly vs yearly |
@@ -46,4 +46,4 @@ Status: **public** = USD prices published and transcribed; **partial** = some ti
 | GlockApps | Deliverability & warmup | public | https://glockapps.com/pricing/ | Annual (save 30%) figures shown |
 | EmailGuard | Deliverability & warmup | public | https://emailguard.io/pricing |  |
 
-Totals: 39 tools: 26 public, 6 partial, 7 contact-sales.
+Totals: 39 tools: 27 public, 5 partial, 7 contact-sales.

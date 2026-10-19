@@ -1029,8 +1029,8 @@
       "date_checked": "2026-10-19",
       "pricing_status": "partial",
       "pricing_verified": true,
-      "billing_note": "Geo-localized; USD not captured (US fetch failed to load pricing widget)",
-      "verification_note": "Clearbit was acquired by HubSpot and became Breeze Intelligence; enrichment now sold via Data Hub + HubSpot Credits.",
+      "billing_note": "Data Hub pricing (Breeze Intelligence enrichment uses HubSpot Credits)",
+      "verification_note": "Clearbit was acquired by HubSpot and became Breeze Intelligence; enrichment now sold via Data Hub + HubSpot Credits. USD prices from the US-region CI scrape on 2026-10-19.",
       "tiers": [
         {
           "plan": "Free",
@@ -1044,30 +1044,30 @@
           "monthly_usd": null,
           "annual_monthly_usd": null,
           "limits": "500 HubSpot Credits",
-          "note": "Shown in INR to our fetcher: ₹585/mo/seat annual, ₹1,670 monthly"
+          "note": "'Starts at $7/mo/seat' new-customer promo ('save up to 65%'); $20/mo/seat also shown"
         },
         {
           "plan": "Professional",
-          "monthly_usd": null,
-          "annual_monthly_usd": null,
-          "limits": "5,000 HubSpot Credits; 1 core seat",
-          "note": "₹60,030/mo annual (INR shown)"
+          "monthly_usd": 800,
+          "annual_monthly_usd": 720,
+          "limits": "5,000 HubSpot Credits; 1 core seat; extra core seats from $45/mo",
+          "note": "Starts-at prices"
         },
         {
           "plan": "Enterprise",
           "monthly_usd": null,
           "annual_monthly_usd": null,
-          "limits": "",
-          "note": "₹167,000/mo (INR shown)"
+          "limits": "Extra core seats from $75/mo",
+          "note": "Starts at $2,000/mo"
         }
       ],
       "affiliate_url": "",
       "affiliate_program": "",
       "featured": false,
-      "starting_price_usd": null,
+      "starting_price_usd": 720,
       "fetch_method": "chrome",
       "has_free_plan": true,
-      "price_display": "Free tier; paid tiers localized"
+      "price_display": "Free tier; Starter from $7/mo/seat (promo)"
     },
     {
       "id": "lusha",
@@ -1197,31 +1197,38 @@
       "description": "Contact lookup for emails and phone numbers across 700M+ profiles.",
       "pricing_url": "https://rocketreach.co/pricing",
       "date_checked": "2026-10-19",
-      "pricing_status": "partial",
+      "pricing_status": "public",
       "pricing_verified": true,
-      "billing_note": "Geo-localized pricing; USD per-plan prices not captured",
-      "verification_note": "",
+      "billing_note": "Annual prices shown (page says 'Save 50%' on annual); monthly figures not captured",
+      "verification_note": "USD prices captured by the US-region CI scrape on 2026-10-19 (box in India saw INR).",
       "tiers": [
+        {
+          "plan": "Free",
+          "monthly_usd": 0,
+          "annual_monthly_usd": 0,
+          "limits": "5 free lookups",
+          "note": ""
+        },
         {
           "plan": "Essentials",
           "monthly_usd": null,
-          "annual_monthly_usd": null,
-          "limits": "",
-          "note": "Localized: ₹9,496 billed annually"
+          "annual_monthly_usd": 33,
+          "limits": "Email outreach; $399 billed annually",
+          "note": ""
         },
         {
           "plan": "Pro",
           "monthly_usd": null,
-          "annual_monthly_usd": null,
-          "limits": "",
-          "note": "₹19,086 billed annually"
+          "annual_monthly_usd": 75,
+          "limits": "Email + phone; $899 billed annually",
+          "note": ""
         },
         {
           "plan": "Ultimate",
           "monthly_usd": null,
-          "annual_monthly_usd": null,
-          "limits": "",
-          "note": "₹38,173 billed annually"
+          "annual_monthly_usd": 142,
+          "limits": "Teams with automation needs; $1,699 billed annually",
+          "note": ""
         },
         {
           "plan": "Team / Enterprise",
@@ -1234,10 +1241,10 @@
       "affiliate_url": "",
       "affiliate_program": "",
       "featured": false,
-      "starting_price_usd": null,
+      "starting_price_usd": 33,
       "fetch_method": "chrome",
-      "has_free_plan": false,
-      "price_display": "Localized pricing (USD not captured)"
+      "has_free_plan": true,
+      "price_display": ""
     },
     {
       "id": "kaspr",
@@ -1512,7 +1519,7 @@
       "pricing_status": "public",
       "pricing_verified": true,
       "billing_note": "Monthly vs yearly (save 25%)",
-      "verification_note": "Page is client-rendered; captured via web fetch.",
+      "verification_note": "Box fetch was blocked; CI (US) headless-Chrome fetch succeeded on 2026-10-19.",
       "tiers": [
         {
           "plan": "Free",

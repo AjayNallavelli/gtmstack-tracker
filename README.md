@@ -37,8 +37,8 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 
 ## Known limitations (v1)
 
-- **Prices vary by visitor location.** This box connects from India, so some vendors served it INR prices: RocketReach, HubSpot Data Hub, and Woodpecker over plain HTTP. Woodpecker's USD prices were read through a fetch from another region; the other two are recorded as "localized" with the INR figures in the notes. The GitHub Action runs from the US, so its first run will show USD and log those pages as changed. Treat that first run as the new baseline.
-- **Prospeo** blocks both of the scraper's fetch methods (bot protection), so its daily snapshot shows "fetch failed". Its prices were checked by hand through a web fetch. Re-check it manually, or drop it from the daily scrape.
+- **Prices vary by visitor location.** Some vendors (RocketReach, HubSpot) localise by country. The first CI run (US) re-baselined everything, and RocketReach and HubSpot plan tables now use the USD figures it captured.
+- **Prospeo** blocks plain-HTTP fetches from some networks; the CI headless-Chrome fetch works.
 - **Diffs can be noisy.** Promo banners and A/B tests can trigger `copy_change` entries. Review them before they go into the newsletter.
 - **"From $X/mo" is the lowest listed paid price.** It may be an annual or per-seat price. Each pricing table shows monthly and annual prices separately.
 
