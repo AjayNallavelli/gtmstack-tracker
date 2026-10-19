@@ -61,7 +61,7 @@ Nothing has "changed" yet, because today is day one. So this issue covers the st
 
 Credit-based plans (Clay, Apollo, Instantly credits, Prospeo) are where limits tend to change quietly. Our daily diff flags new or removed price points and changed plan wording, so you'll see it here first.
 
-*[Sponsor slot: available. Reply to this email for rates (TBD).]*
+*Sponsor slot available: reply to this email for rates.*
 
 ---
 *Some links in future issues may be affiliate links. They're always labelled. Prices can change at any time, so confirm on the vendor's site. Data: [gtmstacktracker.com/data/tools.json](https://ajaynallavelli.github.io/gtmstack-tracker/data/tools.json).*

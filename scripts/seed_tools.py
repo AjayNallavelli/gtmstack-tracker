@@ -65,14 +65,14 @@ add("instantly","Instantly","https://instantly.ai",CE,"Cold email at scale: unli
   T("Bundle Scale",194,175,"100,000 emails + 5,000 credits/mo"),
   T("Bundle Agency",555,500,"500,000 emails + 10,000 credits/mo"),
   T("Enterprise",None,None,"500k+ emails, private deliverability network",note="Custom")],
- billing="Monthly and annual both shown", aff_prog="Recurring affiliate, reported 20-40% (owner to confirm)", extra_cats=(DEL,))
+ billing="Monthly and annual both shown", aff_prog="Recurring affiliate, reported 20-40% (not yet joined)", extra_cats=(DEL,))
 add("smartlead","Smartlead","https://www.smartlead.ai",CE,"Cold email platform with unlimited mailboxes, auto-warmup, inbox rotation and agency white-label.",
  "https://www.smartlead.ai/pricing","public",[
   T("Base",39,32,"2,000 contacts, 6,000 emails/mo"),
   T("Pro",94,78,"30,000 contacts, 90,000 emails/mo"),
   T("Unlimited Smart",174,None,"Unlimited contacts, 150,000 emails/mo, 50,000 verified emails"),
   T("Unlimited Prime",379,None,"Unlimited contacts, 500,000 emails/mo, 170,000 verified emails")],
- billing="Monthly shown; annual Base $32, Pro $78; verified-prospect-email add-on $59/mo on Base/Pro", aff_prog="Recurring affiliate, reported 15-35% (owner to confirm)")
+ billing="Monthly shown; annual Base $32, Pro $78; verified-prospect-email add-on $59/mo on Base/Pro", aff_prog="Recurring affiliate, reported 15-35% (not yet joined)")
 add("lemlist","lemlist","https://www.lemlist.com",CE,"Multichannel outreach (email, LinkedIn, calls) with built-in lead database, lemwarm warmup and AI agents.",
  "https://www.lemlist.com/pricing","public",[
   T("Email",69,55,"Unlimited users & senders, 50,000 emails/mo, 650M+ lead database"),
@@ -130,7 +130,7 @@ add("clay","Clay","https://www.clay.com",DATA,"Spreadsheet-style GTM data platfo
   T("Launch",185,167,"15,000 actions/mo + 2,500 data credits/mo (starting point)"),
   T("Growth",495,446,"40,000 actions/mo + 6,000 data credits/mo; CRM auto-sync, HTTP API"),
   T("Enterprise",None,None,"",note="Custom, annual commitment")],
- billing="Actions + data credits priced separately; data credits from $0.05 each", aff_prog="Affiliate reported 20% (owner to confirm)")
+ billing="Actions + data credits priced separately; data credits from $0.05 each", aff_prog="Affiliate reported 20% (not yet joined)")
 add("zoominfo","ZoomInfo","https://www.zoominfo.com",DATA,"Enterprise B2B contact, company and intent data with GTM workspace.",
  "https://www.zoominfo.com/pricing","contact_sales",[T("Professional / Advanced / Elite",note="All tiers 'Get a demo' — no public prices")])
 add("hubspot-breeze","HubSpot Breeze Intelligence (Data Hub)","https://www.hubspot.com/products/data",DATA,"HubSpot's data enrichment (formerly Clearbit) — now packaged in Data Hub with HubSpot Credits.",

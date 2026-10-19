@@ -15,8 +15,8 @@ scripts/check_links.py    # internal link checker + rel=sponsored check for affi
 scripts/seed_tools.py     # one-time seed used to create tools.json (do NOT re-run; it overwrites)
 templates/, static/       # HTML templates and CSS; static/root/* is copied verbatim to the site root (Search Console file) (no JS framework; ~2 KB inline JS for filters)
 newsletter/issue-001.md   # draft of the first newsletter issue (not sent)
-site.json                 # site name, base URL, placeholder featured price, newsletter form action
-.github/workflows/daily.yml  # ready-made daily scrape + deploy workflow (inactive until pushed)
+site.json                 # site name, base URL, featured price, contact email, newsletter settings
+.github/workflows/daily.yml  # daily scrape + deploy workflow (enabled on GitHub; see "Live hosting")
 ```
 
 ## Run it
@@ -53,6 +53,8 @@ Live at https://ajaynallavelli.github.io/gtmstack-tracker/ from repo https://git
 
 A code push skips the scrape and only rebuilds and deploys.
 
+**Status (checked 2026-10-19):** the `daily-scrape-and-deploy` workflow is enabled (active) on GitHub. The first manual-dispatch run (full scrape + deploy) and every push run since have succeeded. The first scheduled run is due 2026-10-20 at 02:30 UTC.
+
 **First CI run = new baseline.** The runner sits in a different region from the box that made the original baseline, so some vendors show other currencies. When `data/ci_baseline.json` is missing, the scraper runs with `--rebaseline`: it saves snapshots but logs no diffs, then creates the marker. Delete the marker to re-baseline again, or run `python scripts/snapshot.py --rebaseline` by hand.
 
 **Sub-path hosting.** `base_url` in `site.json` contains `/gtmstack-tracker`. The build adds that prefix to every root-relative `href`/`src`/`action`. To preview locally at the root, build with `SITE_URL=http://localhost:8787 python scripts/build.py`. For a custom domain later, set `base_url` to the domain, add a CNAME in Pages settings, and rebuild.
@@ -80,5 +82,5 @@ Note: crawlers only read `robots.txt` at a domain root, so the sub-path copy has
 ## Monetization hooks
 
 - Affiliates: Instantly (reported 20–40% recurring), Smartlead (15–35%), Clay (20%), and others. Join each program, then paste the links into `affiliate_url`.
-- Paid featured listing: the price on `/get-featured/` is a placeholder in `site.json` and needs the owner's confirmation.
-- Newsletter sponsor slot: there's a placeholder in the draft issue.
+- Paid featured listing: `/get-featured/` offers a $99/month launch price for the first 5 sponsors (pinned spot at the top of the category, Featured badge, weekly newsletter mention). Price and contact address (`contact_email`, currently ajay-desk@mail.grokbot.com) live in `site.json`.
+- Newsletter sponsor slot: rates on request; the draft issue invites sponsors to reply.

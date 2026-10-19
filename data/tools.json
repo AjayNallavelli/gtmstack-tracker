@@ -408,7 +408,7 @@
         }
       ],
       "affiliate_url": "",
-      "affiliate_program": "Recurring affiliate, reported 20-40% (owner to confirm)",
+      "affiliate_program": "Recurring affiliate, reported 20-40% (not yet joined)",
       "featured": false,
       "starting_price_usd": 37.6,
       "fetch_method": "http",
@@ -461,7 +461,7 @@
         }
       ],
       "affiliate_url": "",
-      "affiliate_program": "Recurring affiliate, reported 15-35% (owner to confirm)",
+      "affiliate_program": "Recurring affiliate, reported 15-35% (not yet joined)",
       "featured": false,
       "starting_price_usd": 32,
       "fetch_method": "http",
@@ -999,7 +999,7 @@
         }
       ],
       "affiliate_url": "",
-      "affiliate_program": "Affiliate reported 20% (owner to confirm)",
+      "affiliate_program": "Affiliate reported 20% (not yet joined)",
       "featured": false,
       "starting_price_usd": 167,
       "fetch_method": "http",
