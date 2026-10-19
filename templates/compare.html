@@ -1,0 +1,23 @@
+{% extends "base.html" %}{% from "_macros.html" import outlink, status, pricing_table, price_from %}
+{% block content %}
+<nav class="crumbs small"><a href="/">Home</a> / <a href="/compare/">Compare</a> / {{ p.a.name }} vs {{ p.b.name }}</nav>
+<h1>{{ p.a.name }} vs {{ p.b.name }}: pricing compared ({{ month }})</h1>
+<p class="lead">Both are {{ p.category }} tools. Here is how their published plans compare, using data from each vendor's pricing page.</p>
+<div class="table-wrap"><table class="ptable vs">
+<thead><tr><th></th><th>{{ p.a.name }}</th><th>{{ p.b.name }}</th></tr></thead>
+<tbody>
+<tr><td>Entry price</td><td>{{ price_from(p.a) }}</td><td>{{ price_from(p.b) }}</td></tr>
+<tr><td>Free tier</td><td>{{ "Yes" if p.a.has_free_plan else "No" }}</td><td>{{ "Yes" if p.b.has_free_plan else "No" }}</td></tr>
+<tr><td>Pricing transparency</td><td>{{ status(p.a) }}</td><td>{{ status(p.b) }}</td></tr>
+<tr><td>Plans listed</td><td>{{ p.a.tiers|map(attribute='plan')|join(', ') }}</td><td>{{ p.b.tiers|map(attribute='plan')|join(', ') }}</td></tr>
+<tr><td>Billing</td><td class="small">{{ p.a.billing_note or '—' }}</td><td class="small">{{ p.b.billing_note or '—' }}</td></tr>
+<tr><td>Last checked</td><td>{{ p.a.last_checked|nicedate }}</td><td>{{ p.b.last_checked|nicedate }}</td></tr>
+<tr><td></td><td>{{ outlink(p.a, None, "btn btn-sm") }}</td><td>{{ outlink(p.b, None, "btn btn-sm") }}</td></tr>
+</tbody></table></div>
+<h2>Key differences</h2>
+<ul>{% for x in points %}<li>{{ x }}</li>{% endfor %}</ul>
+<div class="two">
+  <div><h2>{{ p.a.name }} plans</h2><p>{{ p.a.description }}</p>{{ pricing_table(p.a) }}<p><a href="/tools/{{ p.a.slug }}/">{{ p.a.name }} pricing history →</a></p></div>
+  <div><h2>{{ p.b.name }} plans</h2><p>{{ p.b.description }}</p>{{ pricing_table(p.b) }}<p><a href="/tools/{{ p.b.slug }}/">{{ p.b.name }} pricing history →</a></p></div>
+</div>
+{% endblock %}

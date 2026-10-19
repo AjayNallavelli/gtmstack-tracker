@@ -1,0 +1,22 @@
+{% extends "base.html" %}{% from "_macros.html" import outlink, status, pricing_table, price_from %}
+{% block content %}
+<nav class="crumbs small"><a href="/">Home</a> / <a href="/tools/{{ t.slug }}/">{{ t.name }}</a> / Pricing</nav>
+<h1>{{ t.name }} pricing ({{ month }})</h1>
+<p class="lead">
+{% if t.pricing_status == "contact_sales" %}
+{{ t.name }} does not publish prices on its pricing page — you have to talk to sales to get a quote.
+{% else %}
+{{ t.name }} lists {{ t.tiers|length }} plan{{ 's' if t.tiers|length != 1 }} on its pricing page{% if t.entry_paid %}, with paid plans starting {{ price_from(t) }}{% endif %}{% if t.has_free_plan %} and a $0 / free tier{% endif %}.
+{% endif %}
+Checked {{ t.last_checked|nicedate }} from the official page.</p>
+<p>{{ status(t) }} {{ outlink(t, "See " ~ t.name, "btn btn-sm") }}</p>
+{{ pricing_table(t) }}
+<h2>Is there a free plan?</h2>
+<p>{% if t.has_free_plan %}Yes — the pricing page lists a $0 tier ({{ (t.tiers|selectattr('monthly_usd','equalto',0)|map(attribute='plan')|first) or (t.tiers|selectattr('annual_monthly_usd','equalto',0)|map(attribute='plan')|first) }}).{% else %}No $0 plan is listed on the pricing page{% if t.pricing_status == 'contact_sales' %}, and prices are only available from sales{% endif %}.{% endif %}</p>
+<h2>How {{ t.name }} bills</h2>
+<p>{{ t.billing_note or "See the pricing page for billing details." }}</p>
+{% if t.verification_note %}<p class="small note">{{ t.verification_note }}</p>{% endif %}
+<h2>Has {{ t.name }} changed its pricing?</h2>
+<p>{% set pc = t.changes|selectattr('type','equalto','price_change')|list %}{% if pc %}Yes — we detected {{ pc|length }} price change{{ 's' if pc|length != 1 }}. Latest: {{ pc[0].summary }} ({{ pc[0].date|nicedate }}).{% else %}Not since we started tracking on {{ (t.changes|last).date|nicedate if t.changes else t.date_checked|nicedate }}.{% endif %} See the <a href="/tools/{{ t.slug }}/">full history</a> or the <a href="/changes/">change log</a>.</p>
+{% if t.pairs %}<h2>Compare pricing</h2><ul class="links">{% for p in t.pairs %}<li><a href="/compare/{{ p.slug }}/">{{ p.a.name }} vs {{ p.b.name }}</a></li>{% endfor %}</ul>{% endif %}
+{% endblock %}

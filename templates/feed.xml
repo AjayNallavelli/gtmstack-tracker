@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel>
+<title>{{ site.name }} - what changed</title>
+<link>{{ site.base_url }}/changes/</link>
+<description>Pricing and plan changes across AI sales and outbound tools.</description>
+{% for c in changes %}<item><title>{{ c.tool }}: {{ c.type|replace('_',' ') }}</title><link>{{ site.base_url }}/tools/{{ c.tool_id }}/</link><guid isPermaLink="false">{{ c.date }}-{{ c.tool_id }}-{{ c.type }}</guid><pubDate>{{ c.date|rfc822 }}</pubDate><description>{{ c.summary }}</description></item>
+{% endfor %}</channel></rss>

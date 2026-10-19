@@ -1,0 +1,17 @@
+# local environment / build output
+.venv/
+venv/
+dist/
+scratch/
+__pycache__/
+*.pyc
+node_modules/
+*.log
+.DS_Store
+# secrets (never commit)
+.env
+.env.*
+*.pem
+*.key
+*credentials*.json
+*creds*.json

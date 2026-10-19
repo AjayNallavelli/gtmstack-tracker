@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Get your tool featured</h1>
+<p class="lead">GTMStack Tracker is read by founders, SDR leaders and RevOps teams who are actively comparing sales tool pricing. Featured placements put your tool at the top of its category.</p>
+<div class="two">
+  <div class="card">
+    <h2>Featured listing</h2>
+    <p class="big">{{ site.featured_price_placeholder }}</p>
+    <ul>
+      <li>Pinned at the top of your category and on relevant comparison pages</li>
+      <li>"Featured" badge (clearly labelled as paid)</li>
+      <li>Your own description, screenshot and CTA link</li>
+      <li>Optional newsletter mention</li>
+    </ul>
+    <p class="small muted">Featured status never changes the prices or history we show — data is always copied from your public pricing page.</p>
+  </div>
+  <div class="card">
+    <h2>Newsletter sponsorship</h2>
+    <p class="big">Pricing TBD (owner to confirm)</p>
+    <p>One sponsor slot per weekly issue, sent to subscribers who track GTM tool pricing.</p>
+    <h3>Get in touch</h3>
+    <p>Email <a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a> <span class="small muted">(placeholder address)</span> with your tool name and the placement you want.</p>
+  </div>
+</div>
+<p class="small muted">Vendors: spotted an outdated price? Email us and we'll re-check your pricing page — corrections are always free.</p>
+{% endblock %}

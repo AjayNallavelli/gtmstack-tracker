@@ -1,0 +1,47 @@
+{% extends "base.html" %}{% from "_macros.html" import outlink, status, pricing_table, price_from %}
+{% block head %}
+<script type="application/ld+json">{{ {"@context":"https://schema.org","@type":"SoftwareApplication","name":t.name,"applicationCategory":"BusinessApplication","operatingSystem":"Web","url":t.website,"description":t.description}|tojson }}</script>
+{% endblock %}
+{% block content %}
+<nav class="crumbs small"><a href="/">Home</a> / <a href="/category/{{ t.cat_slug }}/">{{ t.category }}</a> / {{ t.name }}</nav>
+<section class="tool-hero">
+  <div>
+    <h1>{{ t.name }}</h1>
+    <p class="lead">{{ t.description }}</p>
+    <p>{{ status(t) }} <span class="tag">{{ t.category }}</span> <span class="small muted">Last checked {{ t.last_checked|nicedate }}{% if t.last_fetch_failed %} · latest automated check failed, showing last good data{% endif %}</span></p>
+  </div>
+  <div class="tool-cta card">
+    <p class="big">{{ price_from(t) }}</p>
+    {% if t.has_free_plan %}<p class="small">Has a $0 / free tier</p>{% endif %}
+    {{ outlink(t) }}
+    <p class="small"><a href="/pricing/{{ t.slug }}/">Full {{ t.name }} pricing breakdown →</a></p>
+  </div>
+</section>
+
+<h2>Plans &amp; pricing</h2>
+{{ pricing_table(t) }}
+{% if t.verification_note %}<p class="small note">Note: {{ t.verification_note }}</p>{% endif %}
+
+<h2>Pricing history</h2>
+<p class="small muted">We snapshot the pricing page every day. A new row appears only when the extracted pricing text changes.</p>
+{% if t.changes %}
+<ul class="timeline">
+{% for c in t.changes %}
+<li><span class="date">{{ c.date|nicedate }}</span> <span class="tag tag-{{ c.type }}">{{ c.type|replace('_',' ') }}</span> {{ c.summary }}
+{% if c.diff %}<details><summary class="small">Show diff</summary><pre class="diff">{% for l in c.diff %}{{ l }}
+{% endfor %}</pre></details>{% endif %}</li>
+{% endfor %}
+</ul>
+{% else %}<p class="muted">No snapshots yet.</p>{% endif %}
+{% if t.history %}<details class="small"><summary>Snapshot log ({{ t.history|length }})</summary>
+<table class="ptable compact"><thead><tr><th>Date</th><th>Status</th><th>Price points found</th><th>Fingerprint</th></tr></thead><tbody>
+{% for h in t.history %}<tr><td>{{ h.date }}</td><td>{{ h.status }}</td><td>{{ h.points }}</td><td><code>{{ h.hash or '—' }}</code></td></tr>{% endfor %}
+</tbody></table></details>{% endif %}
+
+{% if t.pairs %}
+<h2>Compare {{ t.name }}</h2>
+<ul class="links">{% for p in t.pairs %}<li><a href="/compare/{{ p.slug }}/">{{ p.a.name }} vs {{ p.b.name }}</a></li>{% endfor %}</ul>
+{% endif %}
+<h2>{{ t.name }} alternatives</h2>
+<ul class="links">{% for x in t.alternatives %}<li><a href="/tools/{{ x.slug }}/">{{ x.name }}</a> <span class="small muted">{{ price_from(x) }}</span></li>{% endfor %}</ul>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "base.html" %}{% from "_macros.html" import card %}
+{% block content %}
+<nav class="crumbs small"><a href="/">Home</a> / {{ cat.name }}</nav>
+<h1>{{ cat.name }}: pricing compared</h1>
+<p class="lead">{{ cat.blurb }} {{ cat.tools|length }} tools, sorted by entry price.</p>
+<div class="table-wrap"><table class="ptable"><thead><tr><th>Tool</th><th>Lowest listed paid price</th><th>Free tier</th><th>Pricing</th><th>Last checked</th></tr></thead><tbody>
+{% for t in cat.tools|selectattr('entry_paid')|rejectattr('price_display')|sort(attribute='entry_paid') %}<tr><td><a href="/tools/{{ t.slug }}/">{{ t.name }}</a></td><td>{{ t.entry_paid|money }}/mo</td><td>{{ "Yes" if t.has_free_plan else "No" }}</td><td>{{ t.status_label }}</td><td>{{ t.last_checked }}</td></tr>{% endfor %}
+{% for t in cat.tools|sort(attribute='name') if t.entry_paid is none or t.price_display %}<tr><td><a href="/tools/{{ t.slug }}/">{{ t.name }}</a></td><td>{{ t.price_display or ("Free only / see notes" if t.has_free_plan else "Contact sales") }}</td><td>{{ "Yes" if t.has_free_plan else "No" }}</td><td>{{ t.status_label }}</td><td>{{ t.last_checked }}</td></tr>{% endfor %}
+</tbody></table></div>
+<div class="grid">{% for t in cat.tools|sort(attribute='name') %}{{ card(t) }}{% endfor %}</div>
+{% endblock %}

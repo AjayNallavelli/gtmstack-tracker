@@ -1,0 +1,12 @@
+{% if site.newsletter_action and site.newsletter_action != "#" %}
+<form class="newsletter" action="{{ site.newsletter_action }}" method="post">
+  <label class="sr" for="nl-{{ loop_id|default('f') }}">Email address</label>
+  <div class="nl-row"><input id="nl-{{ loop_id|default('f') }}" type="email" name="email" placeholder="you@company.com" required autocomplete="email"><button class="btn" type="submit">Subscribe</button></div>
+  <p class="nl-msg small muted">One email a week. Every price change we detect. Unsubscribe anytime.</p>
+</form>
+{% else %}
+<div class="newsletter soon">
+  <p class="soon-badge">Newsletter launching soon</p>
+  <p class="small muted">A weekly email with every price change we detect. Until it launches, follow the <a href="/changes/">change log</a> or the <a href="/changes/feed.xml">RSS feed</a>.</p>
+</div>
+{% endif %}

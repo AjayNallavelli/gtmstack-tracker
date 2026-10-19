@@ -1,0 +1,17 @@
+{
+ "id": "seamless",
+ "status": "ok",
+ "method": "chrome",
+ "url": "https://seamless.ai/pricing",
+ "hash": "e242474f7217128f",
+ "price_tokens": [],
+ "pricing_lines": [
+  "Skip Navigation",
+  "Contact Sales:",
+  "Get a demo",
+  "Sign up free",
+  "Director of Operations",
+  "Provides free credits for new users"
+ ],
+ "date": "2026-10-19"
+}

@@ -1,0 +1,82 @@
+{% extends "base.html" %}{% from "_macros.html" import card %}
+{% block content %}
+<section class="hero">
+  <p class="eyebrow">Updated {{ stats.last|nicedate }} · {{ stats.tools }} tools tracked daily</p>
+  <h1>Know what AI sales tools <em>actually</em> cost — and when that changes.</h1>
+  <p class="lead">Plans, prices and limits for AI SDR agents, cold email, data &amp; enrichment and deliverability tools, copied from each vendor's pricing page. Unlike static lists, we keep the <strong>history</strong> and log <a href="/changes/">every change</a>.</p>
+  <div class="stats">
+    <div><strong>{{ stats.tools }}</strong><span>tools</span></div>
+    <div><strong>{{ stats.public }}</strong><span>publish pricing</span></div>
+    <div><strong>{{ stats.contact }}</strong><span>"contact sales"</span></div>
+    <div><strong>{{ stats.free }}</strong><span>have a $0 tier</span></div>
+  </div>
+</section>
+
+<section id="tools">
+  <div class="filters" role="search">
+    <input id="q" type="search" placeholder="Search tools (e.g. warmup, waterfall, LinkedIn)…" aria-label="Search tools">
+    <div class="chips" id="cat-chips">
+      <button class="chip on" data-cat="">All</button>
+      {% for c in cats %}<button class="chip" data-cat="{{ c.slug }}">{{ c.name }}</button>{% endfor %}
+    </div>
+    <div class="row">
+      <label class="small">Price <select id="band">
+        <option value="">Any price</option>
+        <option value="free">Has a free plan</option>
+        <option value="u50">Paid, under $50/mo</option>
+        <option value="50to150">$50–$150/mo</option>
+        <option value="o150">Over $150/mo</option>
+        <option value="other">Usage-based / non-USD</option>
+        <option value="contact">Contact sales only</option>
+      </select></label>
+      <label class="small">Sort <select id="sort"><option value="name">Name</option><option value="price">Entry price</option></select></label>
+      <span class="small muted" id="count"></span>
+    </div>
+  </div>
+  <div class="grid" id="grid">
+    {% for t in tools|sort(attribute="name") %}{{ card(t) }}{% endfor %}
+  </div>
+  <p id="empty" class="muted" hidden>No tools match those filters.</p>
+</section>
+
+<section class="split">
+  <div class="card">
+    <h2>What changed</h2>
+    <ul class="feed">
+    {% for c in changes %}<li><span class="date">{{ c.date|nicedate }}</span> <a href="/tools/{{ c.tool_id }}/">{{ c.tool }}</a> — {{ c.summary }}</li>{% endfor %}
+    </ul>
+    <a href="/changes/">Full change log →</a>
+  </div>
+  <div class="card accent">
+    <h2>Get every price change in your inbox</h2>
+    <p>A weekly digest of plan, price and limit changes across the GTM stack. Free.</p>
+    {% include "_newsletter_form.html" %}
+  </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script>
+(function(){
+  var q=document.getElementById('q'),band=document.getElementById('band'),sort=document.getElementById('sort'),grid=document.getElementById('grid'),cat='';
+  var cards=[].slice.call(grid.children);
+  function apply(){
+    var s=q.value.trim().toLowerCase(),b=band.value,n=0;
+    cards.forEach(function(c){
+      var ok=(!cat||c.dataset.cat===cat)&&(!s||c.dataset.name.indexOf(s)>-1)&&(!b||c.dataset.band.split(' ').indexOf(b)>-1);
+      c.hidden=!ok; if(ok)n++;
+    });
+    document.getElementById('count').textContent=n+' tools';
+    document.getElementById('empty').hidden=n>0;
+  }
+  function doSort(){
+    cards.sort(function(a,b){return sort.value==='price'?(+a.dataset.price)-(+b.dataset.price):a.dataset.name.localeCompare(b.dataset.name);});
+    cards.forEach(function(c){grid.appendChild(c);});
+  }
+  document.querySelectorAll('#cat-chips .chip').forEach(function(ch){ch.addEventListener('click',function(){
+    document.querySelectorAll('#cat-chips .chip').forEach(function(x){x.classList.remove('on');});ch.classList.add('on');cat=ch.dataset.cat;apply();});});
+  q.addEventListener('input',apply);band.addEventListener('change',apply);sort.addEventListener('change',function(){doSort();apply();});
+  var p=new URLSearchParams(location.search);if(p.get('q')){q.value=p.get('q');}
+  apply();
+})();
+</script>
+{% endblock %}

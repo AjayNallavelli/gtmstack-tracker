@@ -1,0 +1,1877 @@
+{
+  "generated": "2026-10-19",
+  "tools": [
+    {
+      "id": "11x",
+      "name": "11x",
+      "website": "https://www.11x.ai",
+      "category": "AI SDR agents",
+      "categories": [
+        "AI SDR agents"
+      ],
+      "description": "AI digital workers (Alice for outbound, Julian for inbound calls) that prospect, write and book meetings across email, voice and chat.",
+      "pricing_url": "https://www.11x.ai/",
+      "date_checked": "2026-10-19",
+      "pricing_status": "contact_sales",
+      "pricing_verified": false,
+      "billing_note": "",
+      "verification_note": "11x.ai/pricing returned HTTP 404 on 2026-10-19; homepage only offers a demo.",
+      "tiers": [
+        {
+          "plan": "Custom",
+          "monthly_usd": null,
+          "annual_monthly_usd": null,
+          "limits": "",
+          "note": "No public pricing page (/pricing returns 404); demo required"
+        }
+      ],
+      "affiliate_url": "",
+      "affiliate_program": "",
+      "featured": false,
+      "starting_price_usd": null,
+      "fetch_method": "chrome",
+      "has_free_plan": false,
+      "price_display": ""
+    },
+    {
+      "id": "artisan",
+      "name": "Artisan",
+      "website": "https://www.artisan.co",
+      "category": "AI SDR agents",
+      "categories": [
+        "AI SDR agents"
+      ],
+      "description": "AI BDR 'Ava' that finds leads, researches them and runs multichannel outbound from one platform.",
+      "pricing_url": "https://www.artisan.co/pricing",
+      "date_checked": "2026-10-19",
+      "pricing_status": "contact_sales",
+      "pricing_verified": false,
+      "billing_note": "",
+      "verification_note": "Pricing page requires a call; no dollar figures published.",
+      "tiers": [
+        {
+          "plan": "Custom",
+          "monthly_usd": null,
+          "annual_monthly_usd": null,
+          "limits": "",
+          "note": "'Pricing scoped on your plan' — sized to lead volume, mailboxes and dialer seats"
+        }
+      ],
+      "affiliate_url": "",
+      "affiliate_program": "",
+      "featured": false,
+      "starting_price_usd": null,
+      "fetch_method": "chrome",
+      "has_free_plan": false,
+      "price_display": ""
+    },
+    {
+      "id": "aisdr",
+      "name": "AiSDR",
+      "website": "https://aisdr.com",
+      "category": "AI SDR agents",
+      "categories": [
+        "AI SDR agents"
+      ],
+      "description": "AI SDR that researches prospects, writes personalized email/LinkedIn outreach and handles replies.",
+      "pricing_url": "https://aisdr.com/pricing/",
+      "date_checked": "2026-10-19",
+      "pricing_status": "public",
+      "pricing_verified": true,
+      "billing_note": "Usage-based self-serve; add-ons: warmed-up mailbox $33",
+      "verification_note": "",
+      "tiers": [
+        {
+          "plan": "Pay as you go",
+          "monthly_usd": null,
+          "annual_monthly_usd": null,
+          "limits": "$1.50 per person prospected; research, lists and writing included",
+          "note": "Usage-based, charged daily"
+        },
+        {
+          "plan": "Per-campaign managed service",
+          "monthly_usd": null,
+          "annual_monthly_usd": null,
+          "limits": "$149 per campaign (GTM engineer builds one campaign)",
+          "note": ""
+        },
+        {
+          "plan": "Fully managed service",
+          "monthly_usd": 2500,
+          "annual_monthly_usd": null,
+          "limits": "AiSDR runs targeting, messaging, replies and reporting",
+          "note": ""
+        }
+      ],
+      "affiliate_url": "",
+      "affiliate_program": "",
+      "featured": false,
+      "starting_price_usd": 2500,
+      "fetch_method": "http",
+      "has_free_plan": false,
+      "price_display": "$1.50 per person prospected"
+    },
+    {
+      "id": "regie",
+      "name": "Regie.ai",
+      "website": "https://www.regie.ai",
+      "category": "AI SDR agents",
+      "categories": [
+        "AI SDR agents"
+      ],
+      "description": "RegieGO AI prospecting agents: research, enrichment, drafting and sending from your own Gmail/Outlook.",
+      "pricing_url": "https://www.regie.ai/pricing",
+      "date_checked": "2026-10-19",
+      "pricing_status": "public",
+      "pricing_verified": true,
+      "billing_note": "Monthly price shown; annual saves 17%",
+      "verification_note": "",
+      "tiers": [
+        {
+          "plan": "Free",
+          "monthly_usd": 0,
+          "annual_monthly_usd": 0,
+          "limits": "250 one-time credits per person, up to 10 people",
+          "note": ""
+        },
+        {
+          "plan": "Pro",
+          "monthly_usd": 49,
+          "annual_monthly_usd": 41,
+          "limits": "5,000 credits/month (60,000 up front on annual); 1 person",
+          "note": ""
+        },
+        {
+          "plan": "Team",
+          "monthly_usd": 150,
+          "annual_monthly_usd": 125,
+          "limits": "Per seat; 15,000 credits/seat/month",
+          "note": ""
+        },
+        {
+          "plan": "Enterprise",
+          "monthly_usd": null,
+          "annual_monthly_usd": null,
+          "limits": "Volume credits, SOC 2 / enterprise security",
+          "note": "Custom"
+        }
+      ],
+      "affiliate_url": "",
+      "affiliate_program": "",
+      "featured": false,
+      "starting_price_usd": 41,
+      "fetch_method": "http",
+      "has_free_plan": true,
+      "price_display": ""
+    },
+    {
+      "id": "replyio",
+      "name": "Reply.io",
+      "website": "https://reply.io",
+      "category": "AI SDR agents",
+      "categories": [
+        "AI SDR agents",
+        "Cold email & engagement"
+      ],
+      "description": "Sales engagement platform with email, LinkedIn, calls and SMS plus the Jason AI SDR agent.",
+      "pricing_url": "https://reply.io/pricing/",
+      "date_checked": "2026-10-19",
+      "pricing_status": "public",
+      "pricing_verified": true,
+      "billing_note": "Monthly vs annual both shown; LinkedIn automation $69/mo/acct, Calls & SMS $29/mo/acct add-ons",
+      "verification_note": "",
+      "tiers": [
+        {
+          "plan": "Email Volume",
+          "monthly_usd": 59,
+          "annual_monthly_usd": 49,
+          "limits": "From 1,000 active contacts/month; unlimited users & mailboxes",
+          "note": "Starts-from price; scales with contacts"
+        },
+        {
+          "plan": "Multichannel",
+          "monthly_usd": 99,
+          "annual_monthly_usd": 89,
+          "limits": "Per user; email, LinkedIn, SMS, calls",
+          "note": ""
+        },
+        {
+          "plan": "AI SDR Starter",
+          "monthly_usd": 800,
+          "annual_monthly_usd": 500,
+          "limits": "From 1,000 active contacts",
+          "note": "Starts-from"
+        },
+        {
+          "plan": "AI SDR Growth",
+          "monthly_usd": 2500,
+          "annual_monthly_usd": 1500,
+          "limits": "From 5,000 active contacts",
+          "note": "Starts-from"
+        },
+        {
+          "plan": "Agency Core",
+          "monthly_usd": null,
+          "annual_monthly_usd": 210,
+          "limits": "Multiple client workspaces",
+          "note": "Shown as starts from $210/month"
+        }
+      ],
+      "affiliate_url": "",
+      "affiliate_program": "",
+      "featured": false,
+      "starting_price_usd": 49,
+      "fetch_method": "http",
+      "has_free_plan": false,
+      "price_display": ""
+    },
+    {
+      "id": "amplemarket",
+      "name": "Amplemarket",
+      "website": "https://www.amplemarket.com",
+      "category": "AI SDR agents",
+      "categories": [
+        "AI SDR agents",
+        "Data & enrichment"
+      ],
+      "description": "AI sales copilot (Duo) combining B2B data, intent signals and multichannel sequences.",
+      "pricing_url": "https://www.amplemarket.com/pricing",
+      "date_checked": "2026-10-19",
+      "pricing_status": "partial",
+      "pricing_verified": true,
+      "billing_note": "Annual term only shown",
+      "verification_note": "",
+      "tiers": [
+        {
+          "plan": "Startup",
+          "monthly_usd": null,
+          "annual_monthly_usd": 600,
+          "limits": "2 users included; 27,000 contacts",
+          "note": "$600/mo on annual term"
+        },
+        {
+          "plan": "Growth",
+          "monthly_usd": null,
+          "annual_monthly_usd": null,
+          "limits": "4 users; 140,000 contacts",
+          "note": "Custom"
+        },
+        {
+          "plan": "Elite",
+          "monthly_usd": null,
+          "annual_monthly_usd": null,
+          "limits": "400,000 contacts",
+          "note": "Custom"
+        }
+      ],
+      "affiliate_url": "",
+      "affiliate_program": "",
+      "featured": false,
+      "starting_price_usd": 600,
+      "fetch_method": "chrome",
+      "has_free_plan": false,
+      "price_display": ""
+    },
+    {
+      "id": "persana",
+      "name": "Persana AI",
+      "website": "https://persana.ai",
+      "category": "AI SDR agents",
+      "categories": [
+        "AI SDR agents",
+        "Data & enrichment"
+      ],
+      "description": "AI prospecting agents and signal-based enrichment (Clay-style waterfall) for outbound teams.",
+      "pricing_url": "https://persana.ai/pricing",
+      "date_checked": "2026-10-19",
+      "pricing_status": "public",
+      "pricing_verified": true,
+      "billing_note": "Prices shown billed annually (annual saves 20%); monthly prices not captured",
+      "verification_note": "",
+      "tiers": [
+        {
+          "plan": "Free",
+          "monthly_usd": 0,
+          "annual_monthly_usd": 0,
+          "limits": "50 credits/month",
+          "note": ""
+        },
+        {
+          "plan": "Starter",
+          "monthly_usd": null,
+          "annual_monthly_usd": 68,
+          "limits": "24k credits/yr",
+          "note": ""
+        },
+        {
+          "plan": "Growth",
+          "monthly_usd": null,
+          "annual_monthly_usd": 151,
+          "limits": "60k credits/yr",
+          "note": ""
+        },
+        {
+          "plan": "Pro",
+          "monthly_usd": null,
+          "annual_monthly_usd": 400,
+          "limits": "216k credits/yr; unlimited users; CRM integration",
+          "note": ""
+        }
+      ],
+      "affiliate_url": "",
+      "affiliate_program": "",
+      "featured": false,
+      "starting_price_usd": 68,
+      "fetch_method": "http",
+      "has_free_plan": true,
+      "price_display": ""
+    },
+    {
+      "id": "instantly",
+      "name": "Instantly",
+      "website": "https://instantly.ai",
+      "category": "Cold email & engagement",
+      "categories": [
+        "Cold email & engagement",
+        "Deliverability & warmup"
+      ],
+      "description": "Cold email at scale: unlimited sending accounts and warmup, lead database (SuperSearch) and AI agents.",
+      "pricing_url": "https://instantly.ai/pricing",
+      "date_checked": "2026-10-19",
+      "pricing_status": "public",
+      "pricing_verified": true,
+      "billing_note": "Monthly and annual both shown",
+      "verification_note": "",
+      "tiers": [
+        {
+          "plan": "Outreach Growth",
+          "monthly_usd": 47,
+          "annual_monthly_usd": 37.6,
+          "limits": "5,000 emails/mo, 1,000 uploaded contacts, unlimited accounts & warmup",
+          "note": ""
+        },
+        {
+          "plan": "Outreach Hypergrowth",
+          "monthly_usd": 97,
+          "annual_monthly_usd": 77.6,
+          "limits": "125,000 emails/mo, 25,000 uploaded contacts",
+          "note": ""
+        },
+        {
+          "plan": "Outreach Light Speed",
+          "monthly_usd": 358,
+          "annual_monthly_usd": 286.3,
+          "limits": "500,000 emails/mo, 100,000 uploaded contacts, SISR private IPs",
+          "note": ""
+        },
+        {
+          "plan": "Leads Growth Credits",
+          "monthly_usd": 47,
+          "annual_monthly_usd": 37.6,
+          "limits": "1,500-2,000 Instantly credits/mo, 450M+ lead database",
+          "note": ""
+        },
+        {
+          "plan": "Leads Supersonic",
+          "monthly_usd": 97,
+          "annual_monthly_usd": 87.3,
+          "limits": "5,000-7,500 credits/mo",
+          "note": ""
+        },
+        {
+          "plan": "Bundle Starter",
+          "monthly_usd": 94,
+          "annual_monthly_usd": 85,
+          "limits": "5,000 emails + 1,500 credits/mo",
+          "note": ""
+        },
+        {
+          "plan": "Bundle Scale",
+          "monthly_usd": 194,
+          "annual_monthly_usd": 175,
+          "limits": "100,000 emails + 5,000 credits/mo",
+          "note": ""
+        },
+        {
+          "plan": "Bundle Agency",
+          "monthly_usd": 555,
+          "annual_monthly_usd": 500,
+          "limits": "500,000 emails + 10,000 credits/mo",
+          "note": ""
+        },
+        {
+          "plan": "Enterprise",
+          "monthly_usd": null,
+          "annual_monthly_usd": null,
+          "limits": "500k+ emails, private deliverability network",
+          "note": "Custom"
+        }
+      ],
+      "affiliate_url": "",
+      "affiliate_program": "Recurring affiliate, reported 20-40% (owner to confirm)",
+      "featured": false,
+      "starting_price_usd": 37.6,
+      "fetch_method": "http",
+      "has_free_plan": false,
+      "price_display": ""
+    },
+    {
+      "id": "smartlead",
+      "name": "Smartlead",
+      "website": "https://www.smartlead.ai",
+      "category": "Cold email & engagement",
+      "categories": [
+        "Cold email & engagement"
+      ],
+      "description": "Cold email platform with unlimited mailboxes, auto-warmup, inbox rotation and agency white-label.",
+      "pricing_url": "https://www.smartlead.ai/pricing",
+      "date_checked": "2026-10-19",
+      "pricing_status": "public",
+      "pricing_verified": true,
+      "billing_note": "Monthly shown; annual Base $32, Pro $78; verified-prospect-email add-on $59/mo on Base/Pro",
+      "verification_note": "",
+      "tiers": [
+        {
+          "plan": "Base",
+          "monthly_usd": 39,
+          "annual_monthly_usd": 32,
+          "limits": "2,000 contacts, 6,000 emails/mo",
+          "note": ""
+        },
+        {
+          "plan": "Pro",
+          "monthly_usd": 94,
+          "annual_monthly_usd": 78,
+          "limits": "30,000 contacts, 90,000 emails/mo",
+          "note": ""
+        },
+        {
+          "plan": "Unlimited Smart",
+          "monthly_usd": 174,
+          "annual_monthly_usd": null,
+          "limits": "Unlimited contacts, 150,000 emails/mo, 50,000 verified emails",
+          "note": ""
+        },
+        {
+          "plan": "Unlimited Prime",
+          "monthly_usd": 379,
+          "annual_monthly_usd": null,
+          "limits": "Unlimited contacts, 500,000 emails/mo, 170,000 verified emails",
+          "note": ""
+        }
+      ],
+      "affiliate_url": "",
+      "affiliate_program": "Recurring affiliate, reported 15-35% (owner to confirm)",
+      "featured": false,
+      "starting_price_usd": 32,
+      "fetch_method": "http",
+      "has_free_plan": false,
+      "price_display": ""
+    },
+    {
+      "id": "lemlist",
+      "name": "lemlist",
+      "website": "https://www.lemlist.com",
+      "category": "Cold email & engagement",
+      "categories": [
+        "Cold email & engagement",
+        "Deliverability & warmup"
+      ],
+      "description": "Multichannel outreach (email, LinkedIn, calls) with built-in lead database, lemwarm warmup and AI agents.",
+      "pricing_url": "https://www.lemlist.com/pricing",
+      "date_checked": "2026-10-19",
+      "pricing_status": "public",
+      "pricing_verified": true,
+      "billing_note": "Monthly vs annual (save 20%); data add-on $20/mo for 2k credits, intent signals $29/mo. lemwarm warmup is now bundled into lemlist plans (no standalone price on lemlist.com/lemwarm)",
+      "verification_note": "",
+      "tiers": [
+        {
+          "plan": "Email",
+          "monthly_usd": 69,
+          "annual_monthly_usd": 55,
+          "limits": "Unlimited users & senders, 50,000 emails/mo, 650M+ lead database",
+          "note": ""
+        },
+        {
+          "plan": "Multichannel",
+          "monthly_usd": 109,
+          "annual_monthly_usd": 87,
+          "limits": "Per user; email + LinkedIn + calls",
+          "note": ""
+        },
+        {
+          "plan": "Enterprise",
+          "monthly_usd": null,
+          "annual_monthly_usd": null,
+          "limits": "",
+          "note": "Talk to sales"
+        }
+      ],
+      "affiliate_url": "",
+      "affiliate_program": "",
+      "featured": false,
+      "starting_price_usd": 55,
+      "fetch_method": "http",
+      "has_free_plan": false,
+      "price_display": ""
+    },
+    {
+      "id": "apollo",
+      "name": "Apollo.io",
+      "website": "https://www.apollo.io",
+      "category": "Cold email & engagement",
+      "categories": [
+        "Cold email & engagement",
+        "Data & enrichment"
+      ],
+      "description": "All-in-one GTM platform: 200M+ contact database, sequences, dialer and AI research.",
+      "pricing_url": "https://www.apollo.io/pricing",
+      "date_checked": "2026-10-19",
+      "pricing_status": "public",
+      "pricing_verified": true,
+      "billing_note": "Per seat, billed annually (page default); monthly-billing figures not captured. Add-ons: Inbound $119-$639/team/mo, Advanced Dialer $119/team/mo",
+      "verification_note": "Pricing renders client-side; captured with headless Chrome.",
+      "tiers": [
+        {
+          "plan": "Free",
+          "monthly_usd": 0,
+          "annual_monthly_usd": 0,
+          "limits": "900 credits/seat/yr granted monthly",
+          "note": ""
+        },
+        {
+          "plan": "Basic",
+          "monthly_usd": null,
+          "annual_monthly_usd": 49,
+          "limits": "30,000 credits/seat/yr",
+          "note": ""
+        },
+        {
+          "plan": "Professional",
+          "monthly_usd": null,
+          "annual_monthly_usd": 79,
+          "limits": "48,000 credits/seat/yr",
+          "note": ""
+        },
+        {
+          "plan": "Organization",
+          "monthly_usd": null,
+          "annual_monthly_usd": 119,
+          "limits": "72,000 credits/seat/yr; min 3 seats",
+          "note": ""
+        }
+      ],
+      "affiliate_url": "",
+      "affiliate_program": "",
+      "featured": false,
+      "starting_price_usd": 49,
+      "fetch_method": "chrome",
+      "has_free_plan": true,
+      "price_display": ""
+    },
+    {
+      "id": "woodpecker",
+      "name": "Woodpecker",
+      "website": "https://woodpecker.co",
+      "category": "Cold email & engagement",
+      "categories": [
+        "Cold email & engagement"
+      ],
+      "description": "Cold email and LinkedIn outreach priced by contacted prospects, with free warmup and catch-all verification.",
+      "pricing_url": "https://woodpecker.co/pricing/",
+      "date_checked": "2026-10-19",
+      "pricing_status": "partial",
+      "pricing_verified": true,
+      "billing_note": "Usage-based slider",
+      "verification_note": "Box fetch showed INR; USD figures read via a US-region fetch.",
+      "tiers": [
+        {
+          "plan": "Cold Email (usage-based)",
+          "monthly_usd": null,
+          "annual_monthly_usd": null,
+          "limits": "$7.00 per 100 contacted prospects (annual saves 25%); unlimited team members & email accounts",
+          "note": "Slider-based; no fixed tier"
+        },
+        {
+          "plan": "LinkedIn add-on",
+          "monthly_usd": 29,
+          "annual_monthly_usd": null,
+          "limits": "Per connected LinkedIn account",
+          "note": ""
+        },
+        {
+          "plan": "Agency panel",
+          "monthly_usd": 27,
+          "annual_monthly_usd": null,
+          "limits": "Per active client",
+          "note": ""
+        }
+      ],
+      "affiliate_url": "",
+      "affiliate_program": "",
+      "featured": false,
+      "starting_price_usd": 27,
+      "fetch_method": "http",
+      "has_free_plan": false,
+      "price_display": "$7 per 100 contacted prospects"
+    },
+    {
+      "id": "saleshandy",
+      "name": "Saleshandy",
+      "website": "https://www.saleshandy.com",
+      "category": "Cold email & engagement",
+      "categories": [
+        "Cold email & engagement"
+      ],
+      "description": "Cold email outreach with unlimited email accounts, warmup and a B2B lead finder.",
+      "pricing_url": "https://www.saleshandy.com/pricing/",
+      "date_checked": "2026-10-19",
+      "pricing_status": "public",
+      "pricing_verified": true,
+      "billing_note": "Monthly vs annual (annual: $408/$912/$1,788 per year); taxes excluded",
+      "verification_note": "",
+      "tiers": [
+        {
+          "plan": "Starter",
+          "monthly_usd": 41,
+          "annual_monthly_usd": 34,
+          "limits": "",
+          "note": ""
+        },
+        {
+          "plan": "Pro",
+          "monthly_usd": 99,
+          "annual_monthly_usd": 76,
+          "limits": "Most popular",
+          "note": ""
+        },
+        {
+          "plan": "Scale",
+          "monthly_usd": 189,
+          "annual_monthly_usd": 149,
+          "limits": "",
+          "note": ""
+        }
+      ],
+      "affiliate_url": "",
+      "affiliate_program": "",
+      "featured": false,
+      "starting_price_usd": 34,
+      "fetch_method": "http",
+      "has_free_plan": false,
+      "price_display": ""
+    },
+    {
+      "id": "mailshake",
+      "name": "Mailshake",
+      "website": "https://mailshake.com",
+      "category": "Cold email & engagement",
+      "categories": [
+        "Cold email & engagement"
+      ],
+      "description": "Cold email and sales engagement with AI copywriter (SHAKESpeare) and phone/LinkedIn tasks.",
+      "pricing_url": "https://mailshake.com/pricing/",
+      "date_checked": "2026-10-19",
+      "pricing_status": "public",
+      "pricing_verified": true,
+      "billing_note": "Monthly vs yearly; Data Finder add-on $19/mo, ready-to-use mailboxes $12/mo",
+      "verification_note": "",
+      "tiers": [
+        {
+          "plan": "Starter",
+          "monthly_usd": 29,
+          "annual_monthly_usd": 25,
+          "limits": "For businesses starting outreach",
+          "note": ""
+        },
+        {
+          "plan": "Email Outreach",
+          "monthly_usd": 49,
+          "annual_monthly_usd": 45,
+          "limits": "For teams scaling email outreach",
+          "note": ""
+        },
+        {
+          "plan": "Sales Engagement",
+          "monthly_usd": 99,
+          "annual_monthly_usd": 85,
+          "limits": "Multichannel",
+          "note": ""
+        }
+      ],
+      "affiliate_url": "",
+      "affiliate_program": "",
+      "featured": false,
+      "starting_price_usd": 25,
+      "fetch_method": "http",
+      "has_free_plan": false,
+      "price_display": ""
+    },
+    {
+      "id": "snovio",
+      "name": "Snov.io",
+      "website": "https://snov.io",
+      "category": "Cold email & engagement",
+      "categories": [
+        "Cold email & engagement",
+        "Data & enrichment"
+      ],
+      "description": "Email finder, verifier and drip campaigns with unlimited seats on all plans.",
+      "pricing_url": "https://snov.io/pricing",
+      "date_checked": "2026-10-19",
+      "pricing_status": "public",
+      "pricing_verified": true,
+      "billing_note": "Monthly; 25% off annual. LinkedIn slots $69/mo each",
+      "verification_note": "",
+      "tiers": [
+        {
+          "plan": "Trial",
+          "monthly_usd": 0,
+          "annual_monthly_usd": 0,
+          "limits": "50 credits",
+          "note": ""
+        },
+        {
+          "plan": "Starter",
+          "monthly_usd": 39,
+          "annual_monthly_usd": null,
+          "limits": "1,000 credits/mo",
+          "note": ""
+        },
+        {
+          "plan": "Pro S",
+          "monthly_usd": 99,
+          "annual_monthly_usd": null,
+          "limits": "5,000 credits/mo",
+          "note": ""
+        },
+        {
+          "plan": "Pro M",
+          "monthly_usd": 189,
+          "annual_monthly_usd": null,
+          "limits": "20,000 credits/mo",
+          "note": ""
+        },
+        {
+          "plan": "Pro L",
+          "monthly_usd": 369,
+          "annual_monthly_usd": null,
+          "limits": "50,000 credits/mo",
+          "note": ""
+        },
+        {
+          "plan": "Ultra",
+          "monthly_usd": 738,
+          "annual_monthly_usd": null,
+          "limits": "100,000 credits/mo",
+          "note": ""
+        }
+      ],
+      "affiliate_url": "",
+      "affiliate_program": "",
+      "featured": false,
+      "starting_price_usd": 39,
+      "fetch_method": "http",
+      "has_free_plan": true,
+      "price_display": ""
+    },
+    {
+      "id": "klenty",
+      "name": "Klenty",
+      "website": "https://www.klenty.com",
+      "category": "Cold email & engagement",
+      "categories": [
+        "Cold email & engagement"
+      ],
+      "description": "Sales engagement platform with email cadences, dialer and CRM sync.",
+      "pricing_url": "https://www.klenty.com/pricing/",
+      "date_checked": "2026-10-19",
+      "pricing_status": "public",
+      "pricing_verified": true,
+      "billing_note": "Billed annually (save up to 20%); Parallel & Power Dialer add-on $45/user/mo",
+      "verification_note": "",
+      "tiers": [
+        {
+          "plan": "Starter",
+          "monthly_usd": null,
+          "annual_monthly_usd": 50,
+          "limits": "Unlimited users/mailboxes; contacts-based",
+          "note": ""
+        },
+        {
+          "plan": "Growth",
+          "monthly_usd": null,
+          "annual_monthly_usd": 70,
+          "limits": "Per user; 200 dialer minutes",
+          "note": ""
+        },
+        {
+          "plan": "Plus",
+          "monthly_usd": null,
+          "annual_monthly_usd": 99,
+          "limits": "Per user; 1,000 dialer minutes",
+          "note": ""
+        }
+      ],
+      "affiliate_url": "",
+      "affiliate_program": "",
+      "featured": false,
+      "starting_price_usd": 50,
+      "fetch_method": "http",
+      "has_free_plan": false,
+      "price_display": ""
+    },
+    {
+      "id": "lagrowthmachine",
+      "name": "La Growth Machine",
+      "website": "https://lagrowthmachine.com",
+      "category": "Cold email & engagement",
+      "categories": [
+        "Cold email & engagement"
+      ],
+      "description": "Multichannel (LinkedIn, email, X, calls) prospecting automation priced per identity.",
+      "pricing_url": "https://lagrowthmachine.com/pricing/",
+      "date_checked": "2026-10-19",
+      "pricing_status": "partial",
+      "pricing_verified": true,
+      "billing_note": "Prices published in EUR only",
+      "verification_note": "",
+      "tiers": [
+        {
+          "plan": "Basic",
+          "monthly_usd": null,
+          "annual_monthly_usd": null,
+          "limits": "LinkedIn + email; per identity",
+          "note": "€50/month per identity (EUR shown)"
+        },
+        {
+          "plan": "Pro",
+          "monthly_usd": null,
+          "annual_monthly_usd": null,
+          "limits": "LinkedIn, email, calls",
+          "note": "€100/month per identity"
+        },
+        {
+          "plan": "Ultimate",
+          "monthly_usd": null,
+          "annual_monthly_usd": null,
+          "limits": "LinkedIn, email, X, calls; 1,000 leads enriched/mo",
+          "note": "€150/month per identity"
+        }
+      ],
+      "affiliate_url": "",
+      "affiliate_program": "",
+      "featured": false,
+      "starting_price_usd": null,
+      "fetch_method": "http",
+      "has_free_plan": false,
+      "price_display": "from €50/mo per identity (EUR)"
+    },
+    {
+      "id": "outreach",
+      "name": "Outreach",
+      "website": "https://www.outreach.io",
+      "category": "Cold email & engagement",
+      "categories": [
+        "Cold email & engagement"
+      ],
+      "description": "Enterprise sales execution platform with AI agents, sequencing, forecasting and conversation intelligence.",
+      "pricing_url": "https://www.outreach.io/pricing",
+      "date_checked": "2026-10-19",
+      "pricing_status": "contact_sales",
+      "pricing_verified": false,
+      "billing_note": "",
+      "verification_note": "",
+      "tiers": [
+        {
+          "plan": "Custom",
+          "monthly_usd": null,
+          "annual_monthly_usd": null,
+          "limits": "",
+          "note": "Seat-based + consumption AI credits; 'Request pricing'"
+        }
+      ],
+      "affiliate_url": "",
+      "affiliate_program": "",
+      "featured": false,
+      "starting_price_usd": null,
+      "fetch_method": "http",
+      "has_free_plan": false,
+      "price_display": ""
+    },
+    {
+      "id": "salesloft",
+      "name": "Salesloft",
+      "website": "https://www.salesloft.com",
+      "category": "Cold email & engagement",
+      "categories": [
+        "Cold email & engagement"
+      ],
+      "description": "Revenue orchestration platform (cadences, conversation intelligence, deals).",
+      "pricing_url": "https://www.salesloft.com/pricing",
+      "date_checked": "2026-10-19",
+      "pricing_status": "contact_sales",
+      "pricing_verified": false,
+      "billing_note": "",
+      "verification_note": "",
+      "tiers": [
+        {
+          "plan": "Custom",
+          "monthly_usd": null,
+          "annual_monthly_usd": null,
+          "limits": "",
+          "note": "Pricing page is a 'Talk to Sales' form"
+        }
+      ],
+      "affiliate_url": "",
+      "affiliate_program": "",
+      "featured": false,
+      "starting_price_usd": null,
+      "fetch_method": "http",
+      "has_free_plan": false,
+      "price_display": ""
+    },
+    {
+      "id": "clay",
+      "name": "Clay",
+      "website": "https://www.clay.com",
+      "category": "Data & enrichment",
+      "categories": [
+        "Data & enrichment"
+      ],
+      "description": "Spreadsheet-style GTM data platform with 100+ provider waterfalls, AI research agents and CRM sync.",
+      "pricing_url": "https://www.clay.com/pricing",
+      "date_checked": "2026-10-19",
+      "pricing_status": "public",
+      "pricing_verified": true,
+      "billing_note": "Actions + data credits priced separately; data credits from $0.05 each",
+      "verification_note": "",
+      "tiers": [
+        {
+          "plan": "Free",
+          "monthly_usd": 0,
+          "annual_monthly_usd": 0,
+          "limits": "Unlimited seats & tables; limited credits",
+          "note": ""
+        },
+        {
+          "plan": "Launch",
+          "monthly_usd": 185,
+          "annual_monthly_usd": 167,
+          "limits": "15,000 actions/mo + 2,500 data credits/mo (starting point)",
+          "note": ""
+        },
+        {
+          "plan": "Growth",
+          "monthly_usd": 495,
+          "annual_monthly_usd": 446,
+          "limits": "40,000 actions/mo + 6,000 data credits/mo; CRM auto-sync, HTTP API",
+          "note": ""
+        },
+        {
+          "plan": "Enterprise",
+          "monthly_usd": null,
+          "annual_monthly_usd": null,
+          "limits": "",
+          "note": "Custom, annual commitment"
+        }
+      ],
+      "affiliate_url": "",
+      "affiliate_program": "Affiliate reported 20% (owner to confirm)",
+      "featured": false,
+      "starting_price_usd": 167,
+      "fetch_method": "http",
+      "has_free_plan": true,
+      "price_display": ""
+    },
+    {
+      "id": "zoominfo",
+      "name": "ZoomInfo",
+      "website": "https://www.zoominfo.com",
+      "category": "Data & enrichment",
+      "categories": [
+        "Data & enrichment"
+      ],
+      "description": "Enterprise B2B contact, company and intent data with GTM workspace.",
+      "pricing_url": "https://www.zoominfo.com/pricing",
+      "date_checked": "2026-10-19",
+      "pricing_status": "contact_sales",
+      "pricing_verified": false,
+      "billing_note": "",
+      "verification_note": "",
+      "tiers": [
+        {
+          "plan": "Professional / Advanced / Elite",
+          "monthly_usd": null,
+          "annual_monthly_usd": null,
+          "limits": "",
+          "note": "All tiers 'Get a demo' — no public prices"
+        }
+      ],
+      "affiliate_url": "",
+      "affiliate_program": "",
+      "featured": false,
+      "starting_price_usd": null,
+      "fetch_method": "http",
+      "has_free_plan": false,
+      "price_display": ""
+    },
+    {
+      "id": "hubspot-breeze",
+      "name": "HubSpot Breeze Intelligence (Data Hub)",
+      "website": "https://www.hubspot.com/products/data",
+      "category": "Data & enrichment",
+      "categories": [
+        "Data & enrichment"
+      ],
+      "description": "HubSpot's data enrichment (formerly Clearbit) — now packaged in Data Hub with HubSpot Credits.",
+      "pricing_url": "https://www.hubspot.com/pricing/data",
+      "date_checked": "2026-10-19",
+      "pricing_status": "partial",
+      "pricing_verified": true,
+      "billing_note": "Geo-localized; USD not captured (US fetch failed to load pricing widget)",
+      "verification_note": "Clearbit was acquired by HubSpot and became Breeze Intelligence; enrichment now sold via Data Hub + HubSpot Credits.",
+      "tiers": [
+        {
+          "plan": "Free",
+          "monthly_usd": 0,
+          "annual_monthly_usd": 0,
+          "limits": "Up to 2 users; data sync",
+          "note": ""
+        },
+        {
+          "plan": "Starter",
+          "monthly_usd": null,
+          "annual_monthly_usd": null,
+          "limits": "500 HubSpot Credits",
+          "note": "Shown in INR to our fetcher: ₹585/mo/seat annual, ₹1,670 monthly"
+        },
+        {
+          "plan": "Professional",
+          "monthly_usd": null,
+          "annual_monthly_usd": null,
+          "limits": "5,000 HubSpot Credits; 1 core seat",
+          "note": "₹60,030/mo annual (INR shown)"
+        },
+        {
+          "plan": "Enterprise",
+          "monthly_usd": null,
+          "annual_monthly_usd": null,
+          "limits": "",
+          "note": "₹167,000/mo (INR shown)"
+        }
+      ],
+      "affiliate_url": "",
+      "affiliate_program": "",
+      "featured": false,
+      "starting_price_usd": null,
+      "fetch_method": "chrome",
+      "has_free_plan": true,
+      "price_display": "Free tier; paid tiers localized"
+    },
+    {
+      "id": "lusha",
+      "name": "Lusha",
+      "website": "https://www.lusha.com",
+      "category": "Data & enrichment",
+      "categories": [
+        "Data & enrichment"
+      ],
+      "description": "B2B contact data (emails, direct dials) with Chrome extension, enrichment and intent.",
+      "pricing_url": "https://www.lusha.com/pricing/",
+      "date_checked": "2026-10-19",
+      "pricing_status": "public",
+      "pricing_verified": true,
+      "billing_note": "Billed yearly (credits upfront)",
+      "verification_note": "",
+      "tiers": [
+        {
+          "plan": "Free",
+          "monthly_usd": 0,
+          "annual_monthly_usd": 0,
+          "limits": "40 credits/month",
+          "note": ""
+        },
+        {
+          "plan": "Starter",
+          "monthly_usd": null,
+          "annual_monthly_usd": 37.45,
+          "limits": "4,800 credits/yr, 1 seat",
+          "note": ""
+        },
+        {
+          "plan": "Pro",
+          "monthly_usd": null,
+          "annual_monthly_usd": 52.45,
+          "limits": "Bulk enrichment, AI assistant, 5 intent topics",
+          "note": ""
+        },
+        {
+          "plan": "Premium",
+          "monthly_usd": null,
+          "annual_monthly_usd": 299.95,
+          "limits": "40,800 credits/yr, 5 seats",
+          "note": ""
+        }
+      ],
+      "affiliate_url": "",
+      "affiliate_program": "",
+      "featured": false,
+      "starting_price_usd": 37.45,
+      "fetch_method": "chrome",
+      "has_free_plan": true,
+      "price_display": ""
+    },
+    {
+      "id": "cognism",
+      "name": "Cognism",
+      "website": "https://www.cognism.com",
+      "category": "Data & enrichment",
+      "categories": [
+        "Data & enrichment"
+      ],
+      "description": "GDPR-focused B2B data with phone-verified mobile numbers (Diamond Data), strong in EMEA.",
+      "pricing_url": "https://www.cognism.com/pricing",
+      "date_checked": "2026-10-19",
+      "pricing_status": "contact_sales",
+      "pricing_verified": false,
+      "billing_note": "",
+      "verification_note": "",
+      "tiers": [
+        {
+          "plan": "Grow / Elevate",
+          "monthly_usd": null,
+          "annual_monthly_usd": null,
+          "limits": "",
+          "note": "'Get a personalised quote' — no public prices"
+        }
+      ],
+      "affiliate_url": "",
+      "affiliate_program": "",
+      "featured": false,
+      "starting_price_usd": null,
+      "fetch_method": "http",
+      "has_free_plan": false,
+      "price_display": ""
+    },
+    {
+      "id": "seamless",
+      "name": "Seamless.AI",
+      "website": "https://seamless.ai",
+      "category": "Data & enrichment",
+      "categories": [
+        "Data & enrichment"
+      ],
+      "description": "Real-time search engine for B2B contact info with Chrome extension and buyer intent.",
+      "pricing_url": "https://seamless.ai/pricing",
+      "date_checked": "2026-10-19",
+      "pricing_status": "contact_sales",
+      "pricing_verified": false,
+      "billing_note": "",
+      "verification_note": "",
+      "tiers": [
+        {
+          "plan": "Free / Pro / Enterprise",
+          "monthly_usd": null,
+          "annual_monthly_usd": null,
+          "limits": "",
+          "note": "Pricing page is a 'Pricing Inquiry' form; no dollar figures"
+        }
+      ],
+      "affiliate_url": "",
+      "affiliate_program": "",
+      "featured": false,
+      "starting_price_usd": null,
+      "fetch_method": "chrome",
+      "has_free_plan": false,
+      "price_display": ""
+    },
+    {
+      "id": "rocketreach",
+      "name": "RocketReach",
+      "website": "https://rocketreach.co",
+      "category": "Data & enrichment",
+      "categories": [
+        "Data & enrichment"
+      ],
+      "description": "Contact lookup for emails and phone numbers across 700M+ profiles.",
+      "pricing_url": "https://rocketreach.co/pricing",
+      "date_checked": "2026-10-19",
+      "pricing_status": "partial",
+      "pricing_verified": true,
+      "billing_note": "Geo-localized pricing; USD per-plan prices not captured",
+      "verification_note": "",
+      "tiers": [
+        {
+          "plan": "Essentials",
+          "monthly_usd": null,
+          "annual_monthly_usd": null,
+          "limits": "",
+          "note": "Localized: ₹9,496 billed annually"
+        },
+        {
+          "plan": "Pro",
+          "monthly_usd": null,
+          "annual_monthly_usd": null,
+          "limits": "",
+          "note": "₹19,086 billed annually"
+        },
+        {
+          "plan": "Ultimate",
+          "monthly_usd": null,
+          "annual_monthly_usd": null,
+          "limits": "",
+          "note": "₹38,173 billed annually"
+        },
+        {
+          "plan": "Team / Enterprise",
+          "monthly_usd": null,
+          "annual_monthly_usd": null,
+          "limits": "",
+          "note": "'Plans start at $6K annually'"
+        }
+      ],
+      "affiliate_url": "",
+      "affiliate_program": "",
+      "featured": false,
+      "starting_price_usd": null,
+      "fetch_method": "chrome",
+      "has_free_plan": false,
+      "price_display": "Localized pricing (USD not captured)"
+    },
+    {
+      "id": "kaspr",
+      "name": "Kaspr",
+      "website": "https://www.kaspr.io",
+      "category": "Data & enrichment",
+      "categories": [
+        "Data & enrichment"
+      ],
+      "description": "LinkedIn Chrome extension for phone numbers and emails (Cognism-owned), popular in Europe.",
+      "pricing_url": "https://www.kaspr.io/pricing",
+      "date_checked": "2026-10-19",
+      "pricing_status": "public",
+      "pricing_verified": true,
+      "billing_note": "Monthly vs annual; also EUR/GBP",
+      "verification_note": "",
+      "tiers": [
+        {
+          "plan": "Free",
+          "monthly_usd": 0,
+          "annual_monthly_usd": 0,
+          "limits": "15 B2B email, 5 phone, 5 direct email credits",
+          "note": ""
+        },
+        {
+          "plan": "Starter",
+          "monthly_usd": 65,
+          "annual_monthly_usd": 49,
+          "limits": "Per user; up to 12,000 exports/yr",
+          "note": ""
+        },
+        {
+          "plan": "Business",
+          "monthly_usd": 99,
+          "annual_monthly_usd": 79,
+          "limits": "Per user",
+          "note": ""
+        }
+      ],
+      "affiliate_url": "",
+      "affiliate_program": "",
+      "featured": false,
+      "starting_price_usd": 49,
+      "fetch_method": "http",
+      "has_free_plan": true,
+      "price_display": ""
+    },
+    {
+      "id": "pdl",
+      "name": "People Data Labs",
+      "website": "https://www.peopledatalabs.com",
+      "category": "Data & enrichment",
+      "categories": [
+        "Data & enrichment"
+      ],
+      "description": "Developer-first person and company data APIs for enrichment and search.",
+      "pricing_url": "https://www.peopledatalabs.com/pricing",
+      "date_checked": "2026-10-19",
+      "pricing_status": "public",
+      "pricing_verified": true,
+      "billing_note": "Annual saves 20%",
+      "verification_note": "",
+      "tiers": [
+        {
+          "plan": "Free",
+          "monthly_usd": 0,
+          "annual_monthly_usd": 0,
+          "limits": "Up to 100 credits/mo; Person APIs, contact data not included",
+          "note": ""
+        },
+        {
+          "plan": "Self-Serve",
+          "monthly_usd": 98,
+          "annual_monthly_usd": null,
+          "limits": "Starting at 350 credits/mo; contact data + premium fields",
+          "note": ""
+        },
+        {
+          "plan": "Enterprise",
+          "monthly_usd": null,
+          "annual_monthly_usd": null,
+          "limits": "",
+          "note": "Custom"
+        }
+      ],
+      "affiliate_url": "",
+      "affiliate_program": "",
+      "featured": false,
+      "starting_price_usd": 98,
+      "fetch_method": "http",
+      "has_free_plan": true,
+      "price_display": ""
+    },
+    {
+      "id": "hunter",
+      "name": "Hunter",
+      "website": "https://hunter.io",
+      "category": "Data & enrichment",
+      "categories": [
+        "Data & enrichment",
+        "Cold email & engagement"
+      ],
+      "description": "Email finder, verifier and simple cold email sequences; unlimited users on all plans.",
+      "pricing_url": "https://hunter.io/pricing",
+      "date_checked": "2026-10-19",
+      "pricing_status": "public",
+      "pricing_verified": true,
+      "billing_note": "Monthly vs yearly (save 30%)",
+      "verification_note": "",
+      "tiers": [
+        {
+          "plan": "Free",
+          "monthly_usd": 0,
+          "annual_monthly_usd": 0,
+          "limits": "50 credits/mo",
+          "note": ""
+        },
+        {
+          "plan": "Starter",
+          "monthly_usd": 49,
+          "annual_monthly_usd": 34,
+          "limits": "2,000 credits/mo",
+          "note": ""
+        },
+        {
+          "plan": "Growth",
+          "monthly_usd": 149,
+          "annual_monthly_usd": 104,
+          "limits": "10,000 credits/mo",
+          "note": ""
+        },
+        {
+          "plan": "Scale",
+          "monthly_usd": 299,
+          "annual_monthly_usd": 209,
+          "limits": "25,000 credits/mo",
+          "note": ""
+        },
+        {
+          "plan": "Enterprise",
+          "monthly_usd": null,
+          "annual_monthly_usd": null,
+          "limits": "",
+          "note": "Contact sales"
+        }
+      ],
+      "affiliate_url": "",
+      "affiliate_program": "",
+      "featured": false,
+      "starting_price_usd": 34,
+      "fetch_method": "http",
+      "has_free_plan": true,
+      "price_display": ""
+    },
+    {
+      "id": "fullenrich",
+      "name": "FullEnrich",
+      "website": "https://fullenrich.com",
+      "category": "Data & enrichment",
+      "categories": [
+        "Data & enrichment"
+      ],
+      "description": "Waterfall enrichment across 15+ providers for work emails and mobile numbers; pay only for found data.",
+      "pricing_url": "https://fullenrich.com/pricing",
+      "date_checked": "2026-10-19",
+      "pricing_status": "public",
+      "pricing_verified": true,
+      "billing_note": "Credit slider; rollover 3 months (monthly) / 12 months (yearly)",
+      "verification_note": "",
+      "tiers": [
+        {
+          "plan": "Free trial",
+          "monthly_usd": 0,
+          "annual_monthly_usd": 0,
+          "limits": "50 credits",
+          "note": ""
+        },
+        {
+          "plan": "Pro",
+          "monthly_usd": 55,
+          "annual_monthly_usd": null,
+          "limits": "1,000 credits/mo at $0.055/credit (slider 500 to 100K+); unlimited users",
+          "note": "Monthly price computed from per-credit price shown"
+        },
+        {
+          "plan": "Pro 15K",
+          "monthly_usd": 720,
+          "annual_monthly_usd": null,
+          "limits": "15,000 credits/mo",
+          "note": ""
+        },
+        {
+          "plan": "Enterprise",
+          "monthly_usd": null,
+          "annual_monthly_usd": null,
+          "limits": "",
+          "note": "Custom"
+        }
+      ],
+      "affiliate_url": "",
+      "affiliate_program": "",
+      "featured": false,
+      "starting_price_usd": 55,
+      "fetch_method": "chrome",
+      "has_free_plan": true,
+      "price_display": ""
+    },
+    {
+      "id": "findymail",
+      "name": "Findymail",
+      "website": "https://www.findymail.com",
+      "category": "Data & enrichment",
+      "categories": [
+        "Data & enrichment"
+      ],
+      "description": "Verified email and phone finder with Sales Navigator scraping and CRM enrichment (Datacare).",
+      "pricing_url": "https://www.findymail.com/pricing/",
+      "date_checked": "2026-10-19",
+      "pricing_status": "public",
+      "pricing_verified": true,
+      "billing_note": "Pay yearly = 2 months free",
+      "verification_note": "Plain HTTP fetch blocked (403); captured with headless Chrome.",
+      "tiers": [
+        {
+          "plan": "Individual",
+          "monthly_usd": 99,
+          "annual_monthly_usd": null,
+          "limits": "'Generous usage'",
+          "note": ""
+        },
+        {
+          "plan": "Team",
+          "monthly_usd": 399,
+          "annual_monthly_usd": null,
+          "limits": "5x more usage",
+          "note": ""
+        },
+        {
+          "plan": "Scale",
+          "monthly_usd": 999,
+          "annual_monthly_usd": null,
+          "limits": "20x more usage",
+          "note": ""
+        },
+        {
+          "plan": "Datacare",
+          "monthly_usd": null,
+          "annual_monthly_usd": 500,
+          "limits": "CRM cleanup; priced on CRM size",
+          "note": "Starting from $500/mo billed annually"
+        }
+      ],
+      "affiliate_url": "",
+      "affiliate_program": "",
+      "featured": false,
+      "starting_price_usd": 99,
+      "fetch_method": "chrome",
+      "has_free_plan": false,
+      "price_display": ""
+    },
+    {
+      "id": "prospeo",
+      "name": "Prospeo",
+      "website": "https://prospeo.io",
+      "category": "Data & enrichment",
+      "categories": [
+        "Data & enrichment"
+      ],
+      "description": "B2B email and mobile finder with 45+ filter search, enrichment API and MCP server.",
+      "pricing_url": "https://prospeo.io/pricing",
+      "date_checked": "2026-10-19",
+      "pricing_status": "public",
+      "pricing_verified": true,
+      "billing_note": "Monthly vs yearly (save 25%)",
+      "verification_note": "Page is client-rendered; captured via web fetch.",
+      "tiers": [
+        {
+          "plan": "Free",
+          "monthly_usd": 0,
+          "annual_monthly_usd": 0,
+          "limits": "100 credits/mo",
+          "note": ""
+        },
+        {
+          "plan": "Starter",
+          "monthly_usd": 49,
+          "annual_monthly_usd": 37,
+          "limits": "2,000 credits/mo per user",
+          "note": ""
+        },
+        {
+          "plan": "Growth",
+          "monthly_usd": 99,
+          "annual_monthly_usd": 74,
+          "limits": "5,000 credits/mo per user; HubSpot & Salesforce",
+          "note": ""
+        },
+        {
+          "plan": "Pro",
+          "monthly_usd": 249,
+          "annual_monthly_usd": 187,
+          "limits": "15,000 credits/mo per user",
+          "note": ""
+        }
+      ],
+      "affiliate_url": "",
+      "affiliate_program": "",
+      "featured": false,
+      "starting_price_usd": 37,
+      "fetch_method": "chrome",
+      "has_free_plan": true,
+      "price_display": ""
+    },
+    {
+      "id": "bettercontact",
+      "name": "BetterContact",
+      "website": "https://bettercontact.rocks",
+      "category": "Data & enrichment",
+      "categories": [
+        "Data & enrichment"
+      ],
+      "description": "Waterfall enrichment across 20+ email and phone providers, credits roll over.",
+      "pricing_url": "https://bettercontact.rocks/pricing/",
+      "date_checked": "2026-10-19",
+      "pricing_status": "public",
+      "pricing_verified": true,
+      "billing_note": "Monthly; annual = 2 months free",
+      "verification_note": "",
+      "tiers": [
+        {
+          "plan": "Starter",
+          "monthly_usd": 15,
+          "annual_monthly_usd": null,
+          "limits": "200 credits/mo (20 mobiles or 200 emails)",
+          "note": ""
+        },
+        {
+          "plan": "Pro",
+          "monthly_usd": 49,
+          "annual_monthly_usd": null,
+          "limits": "1,000 credits/mo",
+          "note": ""
+        },
+        {
+          "plan": "Enterprise",
+          "monthly_usd": 799,
+          "annual_monthly_usd": null,
+          "limits": "From $799/mo; high-volume",
+          "note": ""
+        }
+      ],
+      "affiliate_url": "",
+      "affiliate_program": "",
+      "featured": false,
+      "starting_price_usd": 15,
+      "fetch_method": "http",
+      "has_free_plan": false,
+      "price_display": ""
+    },
+    {
+      "id": "allegrow",
+      "name": "Allegrow",
+      "website": "https://www.allegrow.co",
+      "category": "Deliverability & warmup",
+      "categories": [
+        "Deliverability & warmup"
+      ],
+      "description": "Email verification (incl. catch-alls) plus domain health and spam-trap protection for GTM teams.",
+      "pricing_url": "https://www.allegrow.co/pricing",
+      "date_checked": "2026-10-19",
+      "pricing_status": "public",
+      "pricing_verified": true,
+      "billing_note": "",
+      "verification_note": "",
+      "tiers": [
+        {
+          "plan": "Free trial",
+          "monthly_usd": 0,
+          "annual_monthly_usd": 0,
+          "limits": "Verify up to 1,000 addresses",
+          "note": ""
+        },
+        {
+          "plan": "Starter",
+          "monthly_usd": 99,
+          "annual_monthly_usd": null,
+          "limits": "5,000 contacts/mo verification, 1 mailbox",
+          "note": ""
+        },
+        {
+          "plan": "Scale Plus Unlimited",
+          "monthly_usd": null,
+          "annual_monthly_usd": 1340,
+          "limits": "Unlimited verification, HubSpot/Outreach/Salesloft integrations",
+          "note": "Billed annually"
+        },
+        {
+          "plan": "API Plan",
+          "monthly_usd": null,
+          "annual_monthly_usd": null,
+          "limits": "",
+          "note": "Custom"
+        }
+      ],
+      "affiliate_url": "",
+      "affiliate_program": "",
+      "featured": false,
+      "starting_price_usd": 99,
+      "fetch_method": "http",
+      "has_free_plan": true,
+      "price_display": ""
+    },
+    {
+      "id": "warmbox",
+      "name": "Warmbox",
+      "website": "https://www.warmbox.ai",
+      "category": "Deliverability & warmup",
+      "categories": [
+        "Deliverability & warmup"
+      ],
+      "description": "Email warmup service for cold email inboxes.",
+      "pricing_url": "https://www.warmbox.ai/pricing/",
+      "date_checked": "2026-10-19",
+      "pricing_status": "public",
+      "pricing_verified": true,
+      "billing_note": "Monthly vs yearly",
+      "verification_note": "",
+      "tiers": [
+        {
+          "plan": "Solo",
+          "monthly_usd": 19,
+          "annual_monthly_usd": 15,
+          "limits": "1 inbox",
+          "note": ""
+        },
+        {
+          "plan": "Start-up",
+          "monthly_usd": 79,
+          "annual_monthly_usd": 69,
+          "limits": "3 inboxes",
+          "note": ""
+        },
+        {
+          "plan": "Growth",
+          "monthly_usd": 159,
+          "annual_monthly_usd": 139,
+          "limits": "6 inboxes",
+          "note": ""
+        },
+        {
+          "plan": "Custom",
+          "monthly_usd": null,
+          "annual_monthly_usd": null,
+          "limits": "",
+          "note": "Contact"
+        }
+      ],
+      "affiliate_url": "",
+      "affiliate_program": "",
+      "featured": false,
+      "starting_price_usd": 15,
+      "fetch_method": "http",
+      "has_free_plan": false,
+      "price_display": ""
+    },
+    {
+      "id": "mailreach",
+      "name": "MailReach",
+      "website": "https://www.mailreach.co",
+      "category": "Deliverability & warmup",
+      "categories": [
+        "Deliverability & warmup"
+      ],
+      "description": "Email warmer plus spam/inbox placement tester.",
+      "pricing_url": "https://www.mailreach.co/pricing",
+      "date_checked": "2026-10-19",
+      "pricing_status": "public",
+      "pricing_verified": true,
+      "billing_note": "Per-mailbox slider; annual saves 20%",
+      "verification_note": "",
+      "tiers": [
+        {
+          "plan": "All-in-One (warmer + spam tests)",
+          "monthly_usd": 25,
+          "annual_monthly_usd": 20,
+          "limits": "Per mailbox per month; includes 20 spam test credits",
+          "note": ""
+        }
+      ],
+      "affiliate_url": "",
+      "affiliate_program": "",
+      "featured": false,
+      "starting_price_usd": 20,
+      "fetch_method": "http",
+      "has_free_plan": false,
+      "price_display": "$20–25 per mailbox/mo"
+    },
+    {
+      "id": "warmy",
+      "name": "Warmy",
+      "website": "https://www.warmy.io",
+      "category": "Deliverability & warmup",
+      "categories": [
+        "Deliverability & warmup"
+      ],
+      "description": "AI email warmup across a 1M+ mailbox network plus deliverability consulting.",
+      "pricing_url": "https://www.warmy.io/pricing",
+      "date_checked": "2026-10-19",
+      "pricing_status": "partial",
+      "pricing_verified": true,
+      "billing_note": "",
+      "verification_note": "",
+      "tiers": [
+        {
+          "plan": "Plans from",
+          "monthly_usd": 49,
+          "annual_monthly_usd": null,
+          "limits": "Starting price; 1M+ mailbox warmup network",
+          "note": "'Plans starting from $49/month'"
+        }
+      ],
+      "affiliate_url": "",
+      "affiliate_program": "",
+      "featured": false,
+      "starting_price_usd": 49,
+      "fetch_method": "http",
+      "has_free_plan": false,
+      "price_display": ""
+    },
+    {
+      "id": "glockapps",
+      "name": "GlockApps",
+      "website": "https://glockapps.com",
+      "category": "Deliverability & warmup",
+      "categories": [
+        "Deliverability & warmup"
+      ],
+      "description": "Inbox placement testing, DMARC analytics and deliverability monitoring.",
+      "pricing_url": "https://glockapps.com/pricing/",
+      "date_checked": "2026-10-19",
+      "pricing_status": "public",
+      "pricing_verified": true,
+      "billing_note": "Annual (save 30%) figures shown",
+      "verification_note": "",
+      "tiers": [
+        {
+          "plan": "Free",
+          "monthly_usd": 0,
+          "annual_monthly_usd": 0,
+          "limits": "",
+          "note": ""
+        },
+        {
+          "plan": "Essential",
+          "monthly_usd": null,
+          "annual_monthly_usd": 59,
+          "limits": "$708 paid annually",
+          "note": ""
+        },
+        {
+          "plan": "Growth",
+          "monthly_usd": null,
+          "annual_monthly_usd": 99,
+          "limits": "$1,188 paid annually",
+          "note": ""
+        },
+        {
+          "plan": "Enterprise",
+          "monthly_usd": null,
+          "annual_monthly_usd": 129,
+          "limits": "$1,548 paid annually",
+          "note": ""
+        }
+      ],
+      "affiliate_url": "",
+      "affiliate_program": "",
+      "featured": false,
+      "starting_price_usd": 59,
+      "fetch_method": "http",
+      "has_free_plan": true,
+      "price_display": ""
+    },
+    {
+      "id": "emailguard",
+      "name": "EmailGuard",
+      "website": "https://emailguard.io",
+      "category": "Deliverability & warmup",
+      "categories": [
+        "Deliverability & warmup"
+      ],
+      "description": "Deliverability suite: inbox placement tests, DMARC, blacklist monitoring and domain masking.",
+      "pricing_url": "https://emailguard.io/pricing",
+      "date_checked": "2026-10-19",
+      "pricing_status": "public",
+      "pricing_verified": true,
+      "billing_note": "",
+      "verification_note": "",
+      "tiers": [
+        {
+          "plan": "Free",
+          "monthly_usd": 0,
+          "annual_monthly_usd": 0,
+          "limits": "",
+          "note": ""
+        },
+        {
+          "plan": "Pro",
+          "monthly_usd": 49,
+          "annual_monthly_usd": null,
+          "limits": "25 domains, 100 email accounts, 300 inbox placement tests",
+          "note": ""
+        },
+        {
+          "plan": "Business",
+          "monthly_usd": 129,
+          "annual_monthly_usd": null,
+          "limits": "75 domains, 300 email accounts",
+          "note": ""
+        },
+        {
+          "plan": "Agency",
+          "monthly_usd": 199,
+          "annual_monthly_usd": null,
+          "limits": "200 domains, 1,000 email accounts",
+          "note": ""
+        }
+      ],
+      "affiliate_url": "",
+      "affiliate_program": "",
+      "featured": false,
+      "starting_price_usd": 49,
+      "fetch_method": "http",
+      "has_free_plan": true,
+      "price_display": ""
+    }
+  ]
+}

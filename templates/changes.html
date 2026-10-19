@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>What changed</h1>
+<p class="lead">Every day we snapshot each tracked pricing page, extract the pricing text and compare it with the previous snapshot. Price changes, plan/wording changes and new tools show up here. <a href="/changes/feed.xml">RSS feed</a>.</p>
+<div class="chips" id="type-chips">
+  <button class="chip on" data-type="">All</button><button class="chip" data-type="price_change">Price changes</button><button class="chip" data-type="copy_change">Plan / wording changes</button><button class="chip" data-type="baseline">Tracking started</button>
+</div>
+{% set ns = namespace(d=None) %}
+<ul class="timeline" id="tl">
+{% for c in changes %}
+{% if c.date != ns.d %}{% set ns.d = c.date %}<li class="day"><h2>{{ c.date|nicedate }}</h2></li>{% endif %}
+<li data-type="{{ c.type }}"><a href="/tools/{{ c.tool_id }}/"><strong>{{ c.tool }}</strong></a> <span class="tag tag-{{ c.type }}">{{ c.type|replace('_',' ') }}</span> {{ c.summary }}
+{% if c.diff %}<details><summary class="small">Show diff vs {{ c.previous_date }}</summary><pre class="diff">{% for l in c.diff %}{{ l }}
+{% endfor %}</pre></details>{% endif %}</li>
+{% else %}<li class="muted">No changes recorded yet.</li>
+{% endfor %}
+</ul>
+<p class="small muted">"Baseline" entries mark the day we started tracking a tool. Automated diffs can include noise (e.g. promo banners); significant changes are reviewed before they go in the newsletter.</p>
+{% endblock %}
+{% block scripts %}<script>
+document.querySelectorAll('#type-chips .chip').forEach(function(ch){ch.addEventListener('click',function(){
+document.querySelectorAll('#type-chips .chip').forEach(function(x){x.classList.remove('on');});ch.classList.add('on');
+var t=ch.dataset.type;document.querySelectorAll('#tl li[data-type]').forEach(function(li){li.hidden=t&&li.dataset.type!==t;});});});
+</script>{% endblock %}

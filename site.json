@@ -1,0 +1,8 @@
+{
+  "name": "GTMStack Tracker",
+  "tagline": "Pricing history for AI sales & outbound tools",
+  "base_url": "https://ajaynallavelli.github.io/gtmstack-tracker/",
+  "featured_price_placeholder": "$199/month (placeholder - owner to confirm)",
+  "newsletter_action": "#",
+  "contact_email": "hello@example.com"
+}

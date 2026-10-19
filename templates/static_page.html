@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+{% if page == "disclosure" %}
+<h1>Affiliate disclosure</h1>
+<p>GTMStack Tracker is free to use. We plan to make money in three ways:</p>
+<ul>
+<li><strong>Affiliate links.</strong> Some "Visit" buttons may be affiliate links. They are labelled <span class="tag tag-aff">Affiliate</span> and use <code>rel="sponsored"</code>. If you buy through one, we may earn a commission at no extra cost to you.</li>
+<li><strong>Featured listings.</strong> Vendors can pay to be featured. Featured placements are always labelled.</li>
+<li><strong>Newsletter sponsorships.</strong> Sponsored sections are marked as sponsored.</li>
+</ul>
+<p>None of these affect the pricing data: prices are copied from each vendor's public pricing page, and we show history and changes for every tool, whether or not we have a commercial relationship with it.</p>
+{% else %}
+<h1>Methodology</h1>
+<ol>
+<li><strong>Source.</strong> Each tool's official pricing page (linked on every tool page). We never estimate prices; if a vendor hides pricing behind "contact sales", we say so.</li>
+<li><strong>Daily snapshot.</strong> A script fetches each pricing page (with a headless browser where the page needs JavaScript), extracts the visible text, keeps the lines that carry prices or billing terms, and stores a dated snapshot.</li>
+<li><strong>Diff.</strong> Each snapshot is compared with the previous one. Changed price points become a "price change" entry; changed plan wording without price changes becomes a "plan / wording change". All entries appear on <a href="/changes/">What changed</a>.</li>
+<li><strong>Structured plans.</strong> The plan tables are curated by hand from the page and re-checked when the diff flags a change.</li>
+<li><strong>Caveats.</strong> "From $X/mo" is the lowest listed paid price and may be an annual-billing or per-seat price — see each table. Some vendors localise prices by visitor country; where we could only see a non-USD price we show it in the notes instead of converting.</li>
+</ol>
+{% endif %}
+{% endblock %}

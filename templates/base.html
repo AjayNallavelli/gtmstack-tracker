@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }}</title>
+<meta name="description" content="{{ description }}">
+<link rel="canonical" href="{{ site.base_url }}{{ path }}">
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ site.base_url }}{{ path }}">
+<meta name="twitter:card" content="summary">
+<link rel="alternate" type="application/rss+xml" title="{{ site.name }} - what changed" href="/changes/feed.xml">
+<link rel="stylesheet" href="/static/style.css">
+{% block head %}{% endblock %}
+</head>
+<body>
+<header class="top">
+  <div class="wrap nav">
+    <a class="logo" href="/"><span class="logo-mark">◆</span> GTMStack<span class="muted">Tracker</span></a>
+    <nav>
+      <a href="/#tools">Tools</a>
+      <a href="/compare/">Compare</a>
+      <a href="/changes/">What changed</a>
+      <a href="/newsletter/">Newsletter</a>
+      <a class="btn btn-sm" href="/get-featured/">Get featured</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+{% block content %}{% endblock %}
+</main>
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div>
+      <a class="logo" href="/"><span class="logo-mark">◆</span> GTMStack<span class="muted">Tracker</span></a>
+      <p class="muted small">{{ site.tagline }}. Prices are copied from each vendor's public pricing page and re-checked daily. Always confirm on the vendor's site before buying.</p>
+      <p class="small disclosure"><strong>Disclosure:</strong> some outbound links may be affiliate links (marked "Affiliate" and <code>rel="sponsored"</code>). We may earn a commission at no extra cost to you. Featured listings are paid and labelled. <a href="/disclosure/">Learn more</a>.</p>
+    </div>
+    <div>
+      <h4>Categories</h4>
+      {% for c in cats %}<a href="/category/{{ c.slug }}/">{{ c.name }}</a>{% endfor %}
+    </div>
+    <div>
+      <h4>Site</h4>
+      <a href="/changes/">What changed</a><a href="/compare/">Comparisons</a><a href="/methodology/">Methodology</a><a href="/disclosure/">Disclosure</a><a href="/get-featured/">Get featured</a><a href="/changes/feed.xml">RSS</a><a href="/data/tools.json">Dataset (JSON)</a>
+    </div>
+    <div>
+      <h4>Weekly pricing changes</h4>
+      {% include "_newsletter_form.html" %}
+    </div>
+  </div>
+  <div class="wrap small muted copy">© {{ year }} {{ site.name }}. Not affiliated with the vendors listed. Trademarks belong to their owners.</div>
+</footer>
+{% block scripts %}{% endblock %}
+</body>
+</html>

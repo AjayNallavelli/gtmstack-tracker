@@ -1,0 +1,103 @@
+B2B Email Verification Plans | Pay For Accuracy, Not "Unknowns"
+
+14-Day Free Trial
+
+Enterprise-Grade Verification for Data & GTM Teams
+14-Day Trial
+Free
+Start a Free Trial
+
+Free B2B email verification for up to 1,000 addresses
+Verify catch-alls contacts with conclusive Valid/ Invalid statuses
+Identify spam traps, disposables & inactive mailboxes
+Primary email detection
+Does not include integrations, API access or mailbox connection for spam rate calculations.
+Starter
+$99
+/month
+Get Started
+
+High-accuracy verification starting at 5,000 contacts monthly
+Verify catch-all contacts with conclusive Valid/Invalid statuses
+Identify spam traps, disposables & inactive mailboxes
+Primary email detection
+List cleaning via CSV upload
+API access available upon request
+Clay integration via API key
+Connect 1 mailbox to track domain health & reputation
+Automated positive email interactions
+Hourly SPF, DKIM & DMARC monitoring
+Content test 1 A/B version to avoid spam filters
+Add-on credits ($8 per 1,000 contacts)
+Add additional users for $40 per mailbox/user
+No native integrations or unlimited verification (credits required).
+Scale Plus Unlimited
+$1,340
+/month
+(billed annually)
+Request a Demo
+
+Everything in Starter, plus:
+Unlimited email verification (no credit limits via integration or CSV)
+Conclusive Valid/Invalid results on Secure Email Gateways
+Native integrations for HubSpot, Outreach & Salesloft
+Automated workflow rules for your CRM & SEP
+API access (capped at 1M requests/month for custom builds)
+Dedicated Customer Success Manager
+Customizable user governance and permissions
+SSO bolt-on available (Okta, Azure, Google + 11 More)
+SOC 2 & Penetration test reports available
+Best fitted for GTM Teams looking for integrations and selling into Mid-Market to Enterprise companies.
+API Plan
+Custom Pricing
+Request a demo
+
+Custom pricing for millions of monthly API request
+Verify catch-alls contacts with conclusive Valid/ Invalid statuses
+Identify spam traps, disposables & inactive mailboxes
+Primary email detection
+Securely manage workflows with unlimited API keys
+Greylisting Resolution
+Custom API speeds for both Synchronous and Asynchronous builds
+Customizable verification method mix (SMTP vs. Signals-Based)
+Resell & embed Allegrow verification
+Become an approved data partner for AI & SaaS products
+Dedicated technical support via live chat, email, and Zoom
+SSO login and advanced security settings
+SOC 2 & Penetration test reports available
+Best fitted for Data Providers and Builders embedding Allegrow's verification into products, tools, or AI agents.
+Trusted by Market Leaders
+Frequently Asked Questions
+What's the right plan for my team?
+
+If your primary goal is targeted list verification in a cost-effective way, the Starter plan is the perfect entry point. It gives you 5,000 advanced credits monthly—including our definitive catch-all verification—for your most important pre-campaign checks and verification via CSV or API. More credits can be added anytime at $8 per 1,000.
+If your team runs high-volume outreach and needs to go beyond CSV list verification to protect your entire GTM motion, the Scale-Plus plan is the ideal choice. It provides unlimited verification, unlocks our full deliverability suite, and includes the native integrations (HubSpot, Outreach, Salesloft, etc.) that are critical for automated, in-workflow protection.
+Finally, for power users like data providers, SaaS builders, or teams needing to programmatically verify millions of contacts, our API plan is designed for you. It's built for enterpise scale and provides the robust, reliable infrastructure you need to power your own product or platform.
+What does the onboarding process look like?
+
+Our onboarding process is tailored to your chosen plan to ensure you get value from day one.
+For our Starter plan, you gain self-serve access to begin analyzing contacts shortly after signup. Guidance is available through our regularly scheduled group sessions hosted by the Allegrow team, and you can easily add more verification credits or mailbox connections anytime via live chat.
+For our Scale-Plus and API plans, the process begins with a personalized session led by your dedicated CSM to ensure a seamless setup. By the end of this single session, your team will have full platform access, your first contact list will be uploaded and analyzed for risk, and (for Scale Plus) your SEP & CRM integrations will be live and protecting your team.
+After the initial setup, we provide ongoing, on-demand support that fits your team's workflow. You can get help through 1:1 video sessions for strategic questions, or use our email and live chat for quick, tactical answers.
+What makes Allegrow different from other email verification tools?
+
+We are purpose-built for the complexities of B2B outreach, while most verifiers are generic, B2C-focused tools. This differences become clear when you dial the comparison down to three key pillars. First, we find the hidden threats that legacy tools miss, like modern spam traps and manual complainers. Second, we solve the catch-all problem, providing a definitive 'Safe' or 'Unsafe' verdict where legacy tools just return a useless ""unknown"" or ""catch-all"" response.
+Third, on our Scale Plus plan, our unlimited verifications incentivize the good habit of constant cleaning, unlike credit-based tools that punish you for it. This combination of deeper detection, definitive answers, and a smarter business model makes us a fundamentally different and more effective platform for B2B teams.
+With the new Google & Microsoft rules, is basic verification enough?
+
+Definetly not. In this new era, basic verification is a liability. The new rules are no longer just about bounces; they are are all about negative signals. Google and Microsoft's stricter filters are now trained to look for patterns of low engagement and high spam complaints. Basic verification only checks for existence; it has no way of seeing the contacts that are the primary source of these negative signals.
+Every time you send to a hidden spam trap or a known complainer, you are sending a powerful negative signal that trains these filters to send you to spam more frequently. Allegrow is designed to find and eliminate these negative signals at the source, keeping your reputation clean.
+What exactly happens after I request my free trial?
+
+You can complete sign-up for immediate access to the Allegrow platform for 14 days. Right away, you can upload your first list of up to 1,000 contacts and start seeing the hidden spam traps and invalid emails behind catch-all servers that legacy verifiers can't detect.
+To set you up for success, one of our deliverability specialists will contact you and schedule a strategy session, helping you get the most value and insight from your trial.
+Is catch-all risk analysis included in the free trial?
+
+Yes. Your 1,000 free email verifications include full access to Allegrow’s advanced risk scoring features (catch-all verification, hidden spam traps, known spam reporters, and more) — no credit card required.
+How do you handle "catch-all" emails? Do you send emails to test them?
+
+Under no circumstances. We never send emails to verify a catch-all address. That method is risky, outdated, and often gives you false confidence.
+‍
+Instead of guessing or scraping online sources like basic tools, Allegrow uses a proprietary, signal-based system to analyze each individual contact on a catch-all domain. This tells you which specific emails are safe to send to and which are engagement dead zones or hidden risks. You stop gambling on 30% of your list and start having conversations.
+Get a Free Trial
+

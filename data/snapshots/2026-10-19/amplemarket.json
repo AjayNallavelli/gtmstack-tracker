@@ -1,0 +1,24 @@
+{
+ "id": "amplemarket",
+ "status": "ok",
+ "method": "chrome",
+ "url": "https://www.amplemarket.com/pricing",
+ "hash": "0705b7532847e70a",
+ "price_tokens": [
+  "$600",
+  "€2M"
+ ],
+ "pricing_lines": [
+  "best",
+  "* All plans include a free trial.",
+  "Perfect for small businesses, startups, & founder-led sales teams.",
+  "$600/mo",
+  "Read story →",
+  "“Amplemarket has helped revive our pipeline and create over €2M in business opportunities, with late six digits in won deals. All in just 10 months!”",
+  "Tidio",
+  "During the free trial alone, we generated 5-6 meetings - all driven by signals, not guesswork.",
+  "Tidio",
+  "During the free trial alone, we generated 5-6 meetings - all driven by signals, not guesswork."
+ ],
+ "date": "2026-10-19"
+}

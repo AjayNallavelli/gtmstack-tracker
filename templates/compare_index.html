@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Comparisons</h1>
+<p class="lead">{{ pairs|length }} head-to-head pricing comparisons of tools in the same category.</p>
+{% for c in cats %}{% set ps = pairs|selectattr('category','equalto',c.name)|list %}{% if ps %}
+<h2>{{ c.name }}</h2><ul class="links cols">{% for p in ps %}<li><a href="/compare/{{ p.slug }}/">{{ p.a.name }} vs {{ p.b.name }}</a></li>{% endfor %}</ul>
+{% endif %}{% endfor %}
+{% endblock %}
