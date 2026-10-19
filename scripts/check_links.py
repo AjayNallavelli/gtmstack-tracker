@@ -19,7 +19,7 @@ for f in dist.rglob("*.html"):
             p = urlparse(u)
             if p.scheme in ("http", "https"):
                 # affiliate links must be rel=sponsored
-                if el.find_next_sibling("span", class_="tag-aff") is not None and "sponsored" not in (el.get("rel") or []):
+                if (el.find_next_sibling("span", class_="tag-aff") is not None or el.find_next_sibling("span", class_="tag-feat") is not None) and "sponsored" not in (el.get("rel") or []):
                     ext_sponsored_missing.append((str(f), u))
                 continue
             n += 1
@@ -33,7 +33,7 @@ for f in dist.rglob("*.html"):
                 target = target / "index.html"
             if not target.exists():
                 bad.append((str(f.relative_to(dist)), u))
-print(f"checked {n} internal links across {len(list(dist.rglob('*.html')))} pages; broken: {len(bad)}; affiliate links missing rel=sponsored: {len(ext_sponsored_missing)}")
+print(f"checked {n} internal links across {len(list(dist.rglob('*.html')))} pages; broken: {len(bad)}; affiliate/featured links missing rel=sponsored: {len(ext_sponsored_missing)}")
 for b in bad[:50]:
     print("  BROKEN", b)
 sys.exit(1 if bad or ext_sponsored_missing else 0)

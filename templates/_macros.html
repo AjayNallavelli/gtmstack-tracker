@@ -1,6 +1,10 @@
+{% macro featured_badge(t) -%}
+{% if t.is_featured %}<span class="tag tag-feat" title="Paid placement: this vendor paid to be featured. Pricing data is unaffected.">Featured (paid)</span>{% endif %}
+{%- endmacro %}
+
 {% macro outlink(t, label=None, cls="btn") -%}
-{% if t.is_affiliate -%}
-<a class="{{ cls }}" href="{{ t.affiliate_url }}" rel="sponsored noopener" target="_blank">{{ label or ("Visit " ~ t.name) }} ↗</a> <span class="tag tag-aff" title="We may earn a commission">Affiliate</span>
+{% if t.is_affiliate or t.is_featured -%}
+<a class="{{ cls }}" href="{{ t.affiliate_url or t.website }}" rel="sponsored noopener" target="_blank">{{ label or ("Visit " ~ t.name) }} ↗</a>{% if t.is_affiliate %} <span class="tag tag-aff" title="We may earn a commission">Affiliate</span>{% endif %}{% if t.is_featured %} <span class="tag tag-feat" title="Paid placement">Featured (paid)</span>{% endif %}
 {%- else -%}
 <a class="{{ cls }}" href="{{ t.website }}" rel="noopener" target="_blank">{{ label or ("Visit " ~ t.name) }} ↗</a>
 {%- endif %}
@@ -34,11 +38,12 @@
 {%- endmacro %}
 
 {% macro card(t) -%}
-<article class="card tool-card" data-cat="{{ t.cat_slug }}" data-band="{{ t.price_band }}" data-name="{{ (t.name ~ ' ' ~ t.description ~ ' ' ~ t.category)|lower }}" data-price="{{ t.entry_paid if t.entry_paid is not none else 999999 }}">
+<article class="card tool-card{% if t.is_featured %} is-featured{% endif %}" data-featured="{{ 1 if t.is_featured else 0 }}" data-cat="{{ t.cat_slug }}" data-band="{{ t.price_band }}" data-name="{{ (t.name ~ ' ' ~ t.description ~ ' ' ~ t.category)|lower }}" data-price="{{ t.entry_paid if t.entry_paid is not none else 999999 }}">
   <div class="card-head">
     <h3><a href="/tools/{{ t.slug }}/">{{ t.name }}</a></h3>
     {{ status(t) }}
   </div>
+  {% if t.is_featured %}<p class="feat-line">{{ featured_badge(t) }}</p>{% endif %}
   <p class="small muted">{{ t.category }}</p>
   <p class="desc">{{ t.description }}</p>
   <div class="card-foot">

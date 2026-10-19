@@ -1,4 +1,4 @@
-{% extends "base.html" %}{% from "_macros.html" import outlink, status, pricing_table, price_from %}
+{% extends "base.html" %}{% from "_macros.html" import outlink, featured_badge, status, pricing_table, price_from %}
 {% block head %}
 <script type="application/ld+json">{{ {"@context":"https://schema.org","@type":"SoftwareApplication","name":t.name,"applicationCategory":"BusinessApplication","operatingSystem":"Web","url":t.website,"description":t.description}|tojson }}</script>
 {% endblock %}
@@ -8,7 +8,7 @@
   <div>
     <h1>{{ t.name }}</h1>
     <p class="lead">{{ t.description }}</p>
-    <p>{{ status(t) }} <span class="tag">{{ t.category }}</span> <span class="small muted">Last checked {{ t.last_checked|nicedate }}{% if t.last_fetch_failed %} · latest automated check failed, showing last good data{% endif %}</span></p>
+    <p>{{ status(t) }} {{ featured_badge(t) }} <span class="tag">{{ t.category }}</span> <span class="small muted">Last checked {{ t.last_checked|nicedate }}{% if t.last_fetch_failed %} · latest automated check failed, showing last good data{% endif %}</span></p>
   </div>
   <div class="tool-cta card">
     <p class="big">{{ price_from(t) }}</p>

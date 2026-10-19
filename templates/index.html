@@ -34,7 +34,7 @@
     </div>
   </div>
   <div class="grid" id="grid">
-    {% for t in tools|sort(attribute="name") %}{{ card(t) }}{% endfor %}
+    {% for t in tools %}{{ card(t) }}{% endfor %}
   </div>
   <p id="empty" class="muted" hidden>No tools match those filters.</p>
 </section>
@@ -69,7 +69,7 @@
     document.getElementById('empty').hidden=n>0;
   }
   function doSort(){
-    cards.sort(function(a,b){return sort.value==='price'?(+a.dataset.price)-(+b.dataset.price):a.dataset.name.localeCompare(b.dataset.name);});
+    cards.sort(function(a,b){var f=(+b.dataset.featured)-(+a.dataset.featured);if(f)return f;return sort.value==='price'?(+a.dataset.price)-(+b.dataset.price):a.dataset.name.localeCompare(b.dataset.name);});
     cards.forEach(function(c){grid.appendChild(c);});
   }
   document.querySelectorAll('#cat-chips .chip').forEach(function(ch){ch.addEventListener('click',function(){

@@ -81,6 +81,8 @@ def load():
         t["price_band"] = " ".join(bands)
         t["outbound_url"] = t["affiliate_url"] or t["website"]
         t["is_affiliate"] = bool(t["affiliate_url"])
+        # paid featured listing: pinned first in category + homepage lists, labelled "Featured (paid)", links rel=sponsored
+        t["is_featured"] = t.get("featured") is True
     return site, tools, changes
 
 
@@ -182,7 +184,8 @@ def main():
     for t in tools:
         t["pairs"] = [p for p in pairs if p["a"]["id"] == t["id"] or p["b"]["id"] == t["id"]]
         t["alternatives"] = [x for x in tools if x["category"] == t["category"] and x["id"] != t["id"]][:6]
-    cats = [{"name": n, "slug": s, "blurb": b, "tools": [t for t in tools if n in t["categories"]]} for n, (s, b) in CATS.items()]
+    cats = [{"name": n, "slug": s, "blurb": b, "tools": [t for t in tools if n in t["categories"]],
+             "featured": sorted([t for t in tools if n in t["categories"] and t["is_featured"]], key=lambda t: t["name"])} for n, (s, b) in CATS.items()]
     stats = {"tools": len(tools), "public": sum(t["pricing_status"] != "contact_sales" for t in tools),
              "contact": sum(t["pricing_status"] == "contact_sales" for t in tools),
              "free": sum(t["has_free_plan"] for t in tools),
@@ -197,7 +200,7 @@ def main():
         if path.endswith("/") or path == "/":
             pages.append(path)
 
-    render("index.html", "/", tools=tools, changes=changes[:6],
+    render("index.html", "/", tools=sorted(tools, key=lambda t: (not t["is_featured"], t["name"].lower())), changes=changes[:6],
            title=f"{site['name']}: AI SDR, cold email & data tool pricing (tracked daily)",
            description=f"Compare pricing for {len(tools)} AI SDR, cold email, enrichment and deliverability tools. We snapshot every pricing page daily and log what changed.")
     for c in cats:

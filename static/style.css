@@ -40,6 +40,7 @@ select{padding:.35em .5em;border:1px solid var(--line);border-radius:8px;backgro
 .tag-public{background:var(--okbg);color:var(--ok)}.tag-partial{background:var(--warnbg);color:var(--warn)}.tag-contact_sales{background:var(--badbg);color:var(--bad)}
 .tag-price_change{background:#fee2e2;color:#b91c1c}.tag-copy_change{background:var(--warnbg);color:var(--warn)}.tag-baseline{background:#eef2ff;color:var(--brand)}.tag-fetch_failed{background:#f1f5f9}
 .tag-aff{background:#fef3c7;color:#92400e}
+.tag-feat{background:#ede9fe;color:#5b21b6}.tool-card.is-featured{border-color:#a78bfa;box-shadow:0 0 0 1px #a78bfa}.feat-line{margin:.2rem 0}tr.is-featured td{background:#f5f3ff}
 .split{display:grid;grid-template-columns:1.4fr 1fr;gap:16px;margin:40px 0}
 .feed{list-style:none;padding:0;margin:0}.feed li{padding:8px 0;border-bottom:1px solid var(--line);font-size:.92rem}
 .date{color:var(--muted);font-size:.82rem;font-variant-numeric:tabular-nums;margin-right:4px}
