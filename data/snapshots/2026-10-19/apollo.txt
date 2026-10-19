@@ -165,10 +165,6 @@ Single-line dialing with auto-advance, voicemail drop, and instant call logging.
 Local Presence
 Use local area codes to help increase pickup rates.
 Select your paid plan first, then add any add-on in-app. Introductory pricing — features and pricing may change.
-Find the plan that's
-right for your team
-Enter your team size, usage, and goals in Apollo. We'll recommend a plan and estimate how many credits you'll need.
-Calculate my credit needs
 Join over 600,000 companies using Apollo
 Compare plans
 Free
@@ -332,7 +328,7 @@ The most loved sales platform on the planet
 4.7/5 based on 9,690 reviews | GDPR Compliant
 What are Apollo credits?
 Credits give you access to emails, phone numbers, and enriched data, helping you connect with prospects and enhance your CRM.
-Calculate my credit needs
+Need more credits?
 Email
 1 credit
 Access verified emails to connect with the right prospects.

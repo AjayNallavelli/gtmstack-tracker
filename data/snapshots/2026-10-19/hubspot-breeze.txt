@@ -9,7 +9,7 @@ Everything you need to connect your apps, sync and clean customer data, and auto
 Calculate your price
 Free
 Start syncing data between HubSpot and dozens of third-party apps — for free
-₹0
+$0
 /mo
 Free for up to 2 users. No credit card required.
 Get started free
@@ -17,9 +17,9 @@ See Details
 Starter
 Essential marketing, sales, service, content, and data management software
 Starts at
-₹585
+$7
 /mo/seat
-₹1,670
+$20
 /mo/seat
 Billing period
 Pay Monthly
@@ -35,13 +35,13 @@ See Details
 Professional
 Comprehensive data management software to automate and scale processes
 Starts at
-₹60,030
+$720
 /mo
-₹66,700
+$800
 /mo
 Includes 1 Core Seat
 Additional Core Seats start at
-₹3,753
+$45
 /mo
 Billing period
 Pay Monthly
@@ -58,11 +58,11 @@ See Details
 Enterprise
 Our most powerful data management software for advanced control and flexibility
 Starts at
-₹167,000
+$2,000
 /mo
 Includes 1 Core Seat
 Additional Core Seats start at
-₹6,250
+$75
 /mo
 Talk to Sales
 Start 14-day trial
@@ -93,17 +93,17 @@ Combine Data
 Free tools
 Get started free
 Starter
-₹585
+$7
 /mo
 Buy now
 Loading
 Professional
-₹60,030
+$720
 /mo
 Buy now
 Loading
 Enterprise
-₹167,000
+$2,000
 /mo
 Talk to Sales
 Agent Hub
@@ -122,17 +122,17 @@ Enhance Data
 Free tools
 Get started free
 Starter
-₹585
+$7
 /mo
 Buy now
 Loading
 Professional
-₹60,030
+$720
 /mo
 Buy now
 Loading
 Enterprise
-₹167,000
+$2,000
 /mo
 Talk to Sales
 Data quality automation

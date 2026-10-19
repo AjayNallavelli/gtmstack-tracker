@@ -3,13 +3,15 @@
  "status": "ok",
  "method": "chrome",
  "url": "https://seamless.ai/pricing",
- "hash": "e242474f7217128f",
+ "hash": "fbdb6265f773a046",
  "price_tokens": [],
  "pricing_lines": [
   "Skip Navigation",
   "Contact Sales:",
   "Get a demo",
   "Sign up free",
+  "Get pricing and promos",
+  "How many contacts do you need per month?",
   "Director of Operations",
   "Provides free credits for new users"
  ],

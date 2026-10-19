@@ -1,6 +1,26 @@
 [
  {
   "date": "2026-10-19",
+  "tool_id": "prospeo",
+  "tool": "Prospeo",
+  "type": "baseline",
+  "summary": "Tracking started: 11 price points captured from the pricing page.",
+  "price_points": [
+   "$0",
+   "$10",
+   "$187",
+   "$2241",
+   "$249",
+   "$37",
+   "$441",
+   "$49",
+   "$74",
+   "$888",
+   "$99"
+  ]
+ },
+ {
+  "date": "2026-10-19",
   "tool_id": "11x",
   "tool": "11x",
   "type": "baseline",
@@ -655,13 +675,6 @@
    "$99",
    "$999"
   ]
- },
- {
-  "date": "2026-10-19",
-  "tool_id": "prospeo",
-  "tool": "Prospeo",
-  "type": "fetch_failed",
-  "summary": "Pricing page could not be fetched; will retry tomorrow."
  },
  {
   "date": "2026-10-19",

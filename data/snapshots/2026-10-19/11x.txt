@@ -4,11 +4,11 @@ Menu
 Close
 For frontier revenue teams
 [
-Email
 Social
 SMS
 Voice
 Chat
+Email
 ]
 agents
 that

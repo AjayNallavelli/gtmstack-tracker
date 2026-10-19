@@ -3,7 +3,7 @@
  "status": "ok",
  "method": "http",
  "url": "https://woodpecker.co/pricing/",
- "hash": "78e1af031ac5cdda",
+ "hash": "8b7ce683324299cb",
  "price_tokens": [
   "$0",
   "$0.01",
@@ -158,7 +158,9 @@
   "Unlimited team members for free",
   "Unlimited email accounts for free",
   "Write your emails and send",
-  "Start free trial"
+  "Start free trial",
+  "Watch Demo",
+  "Talk to sales"
  ],
  "date": "2026-10-19"
 }
