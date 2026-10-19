@@ -14,6 +14,7 @@
     <p class="big">{{ price_from(t) }}</p>
     {% if t.has_free_plan %}<p class="small">Has a $0 / free tier</p>{% endif %}
     {{ outlink(t) }}
+{% if t.is_affiliate and t.affiliate_perk %}<p class="perk small">🎁 {{ t.affiliate_perk }}</p>{% endif %}
     <p class="small"><a href="/pricing/{{ t.slug }}/">Full {{ t.name }} pricing breakdown →</a></p>
   </div>
 </section>

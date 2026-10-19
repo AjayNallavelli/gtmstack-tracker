@@ -1578,7 +1578,14 @@
       "starting_price_usd": 37,
       "fetch_method": "chrome",
       "has_free_plan": true,
-      "price_display": ""
+      "price_display": "",
+      "compare_with": [
+        "hunter",
+        "apollo",
+        "fullenrich",
+        "findymail",
+        "lusha"
+      ]
     },
     {
       "id": "bettercontact",

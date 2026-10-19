@@ -10,6 +10,7 @@
 {% endif %}
 Checked {{ t.last_checked|nicedate }} from the official page.</p>
 <p>{{ status(t) }} {{ outlink(t, "See " ~ t.name, "btn btn-sm") }}</p>
+{% if t.is_affiliate and t.affiliate_perk %}<p class="perk small">🎁 {{ t.affiliate_perk }}</p>{% endif %}
 {{ pricing_table(t) }}
 <h2>Is there a free plan?</h2>
 <p>{% if t.has_free_plan %}Yes — the pricing page lists a $0 tier ({{ (t.tiers|selectattr('monthly_usd','equalto',0)|map(attribute='plan')|first) or (t.tiers|selectattr('annual_monthly_usd','equalto',0)|map(attribute='plan')|first) }}).{% else %}No $0 plan is listed on the pricing page{% if t.pricing_status == 'contact_sales' %}, and prices are only available from sales{% endif %}.{% endif %}</p>

@@ -46,6 +46,7 @@ def load():
             t["affiliate_url"] = a if isinstance(a, str) else a.get("url", "")
             if isinstance(a, dict) and a.get("program"):
                 t["affiliate_program"] = a["program"]
+            t["affiliate_perk"] = a.get("perk", "") if isinstance(a, dict) else ""
     unknown = [k for k in aff if not k.startswith("_") and k not in {t["id"] for t in tools}]
     if unknown:
         raise SystemExit(f"affiliates.json has unknown tool slugs: {unknown}")
