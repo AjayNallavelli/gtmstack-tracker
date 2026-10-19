@@ -13,6 +13,7 @@
 <meta name="twitter:card" content="summary">
 <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - what changed" href="/changes/feed.xml">
 <link rel="stylesheet" href="/static/style.css">
+<script type="text/javascript" async src="https://subscribe-forms.beehiiv.com/attribution.js"></script>
 {% block head %}{% endblock %}
 </head>
 <body>
@@ -48,7 +49,7 @@
     </div>
     <div>
       <h4>Weekly pricing changes</h4>
-      {% include "_newsletter_form.html" %}
+      {% include "_newsletter_button.html" %}
     </div>
   </div>
   <div class="wrap small muted copy">© {{ year }} {{ site.name }}. Not affiliated with the vendors listed. Trademarks belong to their owners.</div>

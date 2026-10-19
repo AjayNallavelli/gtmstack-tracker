@@ -42,6 +42,7 @@
 <h2>Compare {{ t.name }}</h2>
 <ul class="links">{% for p in t.pairs %}<li><a href="/compare/{{ p.slug }}/">{{ p.a.name }} vs {{ p.b.name }}</a></li>{% endfor %}</ul>
 {% endif %}
+<div class="card accent nl-cta"><strong>Get notified when prices change.</strong> {% include "_newsletter_button.html" %}</div>
 <h2>{{ t.name }} alternatives</h2>
 <ul class="links">{% for x in t.alternatives %}<li><a href="/tools/{{ x.slug }}/">{{ x.name }}</a> <span class="small muted">{{ price_from(x) }}</span></li>{% endfor %}</ul>
 {% endblock %}

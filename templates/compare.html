@@ -16,6 +16,7 @@
 </tbody></table></div>
 <h2>Key differences</h2>
 <ul>{% for x in points %}<li>{{ x }}</li>{% endfor %}</ul>
+<div class="card accent nl-cta"><strong>Get notified when prices change.</strong> {% include "_newsletter_button.html" %}</div>
 <div class="two">
   <div><h2>{{ p.a.name }} plans</h2><p>{{ p.a.description }}</p>{{ pricing_table(p.a) }}<p><a href="/tools/{{ p.a.slug }}/">{{ p.a.name }} pricing history →</a></p></div>
   <div><h2>{{ p.b.name }} plans</h2><p>{{ p.b.description }}</p>{{ pricing_table(p.b) }}<p><a href="/tools/{{ p.b.slug }}/">{{ p.b.name }} pricing history →</a></p></div>

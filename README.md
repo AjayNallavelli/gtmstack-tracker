@@ -75,7 +75,7 @@ Note: crawlers only read `robots.txt` at a domain root, so the sub-path copy has
 | MailerLite | Free up to 500–1,000 subscribers | Cheap, good forms |
 | Substack | Free (takes 10% of paid subscriptions only) | Least control over branding and domain |
 
-To connect a provider, set `newsletter_action` in `site.json` to the provider's form endpoint. The forms post `email`. Field names may need small changes per provider. While the action is `#`, the form only shows a "not connected" message and sends nothing.
+**Connected: beehiiv** (https://gtmstack.beehiiv.com). Settings are under `newsletter` in `site.json`. The full embed (`v3/loader.js`) appears only on the homepage and `/newsletter/`. The footer, tool pages and vs pages use a light "Subscribe free" button that links to the subscribe page, and each embed has a noscript fallback link. beehiiv's `attribution.js` loads once per page, async, in `<head>`.
 
 ## Monetization hooks
 

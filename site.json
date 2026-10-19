@@ -3,6 +3,11 @@
   "tagline": "Pricing history for AI sales & outbound tools",
   "base_url": "https://ajaynallavelli.github.io/gtmstack-tracker/",
   "featured_price_placeholder": "$199/month (placeholder - owner to confirm)",
-  "newsletter_action": "#",
-  "contact_email": "hello@example.com"
+  "contact_email": "hello@example.com",
+  "newsletter": {
+    "provider": "beehiiv",
+    "publication_url": "https://gtmstack.beehiiv.com",
+    "subscribe_url": "https://gtmstack.beehiiv.com/subscribe",
+    "form_id": "20325473-6fa3-406b-98be-6b0a0a52154a"
+  }
 }

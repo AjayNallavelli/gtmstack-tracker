@@ -1,12 +1,7 @@
-{% if site.newsletter_action and site.newsletter_action != "#" %}
-<form class="newsletter" action="{{ site.newsletter_action }}" method="post">
-  <label class="sr" for="nl-{{ loop_id|default('f') }}">Email address</label>
-  <div class="nl-row"><input id="nl-{{ loop_id|default('f') }}" type="email" name="email" placeholder="you@company.com" required autocomplete="email"><button class="btn" type="submit">Subscribe</button></div>
-  <p class="nl-msg small muted">One email a week. Every price change we detect. Unsubscribe anytime.</p>
-</form>
-{% else %}
-<div class="newsletter soon">
-  <p class="soon-badge">Newsletter launching soon</p>
-  <p class="small muted">A weekly email with every price change we detect. Until it launches, follow the <a href="/changes/">change log</a> or the <a href="/changes/feed.xml">RSS feed</a>.</p>
+{# Full beehiiv embed: only used on the homepage and /newsletter/ to keep other pages light #}
+{% set nl = site.newsletter %}
+<div class="newsletter nl-embed">
+  <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="{{ nl.form_id }}"></script>
+  <noscript><a class="btn" href="{{ nl.subscribe_url }}" rel="noopener">Subscribe free on beehiiv</a></noscript>
+  <p class="small muted">Form not loading? <a href="{{ nl.subscribe_url }}" rel="noopener" target="_blank">Subscribe on beehiiv</a>. One email a week, unsubscribe anytime.</p>
 </div>
-{% endif %}
