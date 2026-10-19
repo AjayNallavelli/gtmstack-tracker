@@ -232,7 +232,12 @@ def main():
            description="How we collect, verify and diff pricing data.")
     render("404.html", "404.html", title="Page not found", description="Page not found")
     # assets, data download, sitemap, robots
-    shutil.copytree(ROOT / "static", out / "static")
+    shutil.copytree(ROOT / "static", out / "static", ignore=shutil.ignore_patterns("root"))
+    # files in static/root/ are published verbatim at the site root (e.g. search-console verification)
+    if (ROOT / "static" / "root").exists():
+        for f in (ROOT / "static" / "root").iterdir():
+            if f.is_file():
+                shutil.copy(f, out / f.name)
     (out / "data").mkdir()
     pub = json.loads((DATA / "tools.json").read_text())
     for t in pub["tools"]:

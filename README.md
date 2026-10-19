@@ -13,7 +13,7 @@ scripts/snapshot.py       # fetch -> normalize -> snapshot -> diff  (daily job)
 scripts/build.py          # Jinja2 static site generator -> dist/
 scripts/check_links.py    # internal link checker + rel=sponsored check for affiliate links
 scripts/seed_tools.py     # one-time seed used to create tools.json (do NOT re-run; it overwrites)
-templates/, static/       # HTML templates and CSS (no JS framework; ~2 KB inline JS for filters)
+templates/, static/       # HTML templates and CSS; static/root/* is copied verbatim to the site root (Search Console file) (no JS framework; ~2 KB inline JS for filters)
 newsletter/issue-001.md   # draft of the first newsletter issue (not sent)
 site.json                 # site name, base URL, placeholder featured price, newsletter form action
 .github/workflows/daily.yml  # ready-made daily scrape + deploy workflow (inactive until pushed)
