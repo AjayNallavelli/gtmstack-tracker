@@ -20,6 +20,10 @@ UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chr
 CUR = r"(?:US\$|\$|€|£|₹)"
 PRICE_RE = re.compile(CUR + r"\s?\d[\d,]*(?:\.\d+)?(?:\s?[kKmM]\b)?")
 PRICE_HINT = re.compile(CUR + r"|\b(per (user|seat|month|mailbox)|/mo\b|/month|billed|annually|monthly|contact sales|custom pricing|talk to sales|free)\b", re.I)
+# Bot-check / interstitial pages (Cloudflare etc.) must never be treated as a real pricing page.
+CHALLENGE_RE = re.compile(r"just a moment|performing security verification|checking your browser|verify you are (a )?human|attention required|enable javascript and cookies", re.I)
+# Testimonials / case-study quotes often contain dollar figures ("$4.9M in pipeline") that are not prices.
+QUOTE_START = tuple('"\u201c\u2018\'')
 CHROME_BINS = ["google-chrome", "chromium", "chromium-browser", "google-chrome-stable"]
 
 
@@ -74,7 +78,7 @@ def normalize(lines):
     currency amount or pricing keyword, plus the previous line as label context."""
     keep = []
     for i, l in enumerate(lines):
-        if len(l) > 220:
+        if len(l) > 220 or l.startswith(QUOTE_START):
             continue
         if PRICE_HINT.search(l):
             if i > 0 and len(lines[i - 1]) <= 80 and (not keep or keep[-1] != lines[i - 1]):
@@ -82,6 +86,7 @@ def normalize(lines):
             if not keep or keep[-1] != l:
                 keep.append(l)
     tokens = sorted({re.sub(r"\s", "", m.group(0)) for l in keep for m in PRICE_RE.finditer(l)})
+    tokens = [t for t in tokens if not t.lower().endswith("m")]  # millions are marketing stats, not plan prices
     return keep, tokens
 
 
@@ -101,6 +106,8 @@ def snapshot_tool(tool, chrome):
             lines = html_to_lines(html)
             if len(lines) < 5:
                 raise RuntimeError("too little text")
+            if CHALLENGE_RE.search("\n".join(lines[:15])):
+                raise RuntimeError("bot-check interstitial page")
             used = m
             break
         except Exception as e:  # try next method
@@ -118,8 +125,11 @@ def latest_previous(tool_id, today):
     if not SNAP.exists():
         return None
     for d in sorted((p.name for p in SNAP.iterdir() if p.is_dir()), reverse=True):
-        if d < today and (SNAP / d / f"{tool_id}.json").exists():
-            return json.loads((SNAP / d / f"{tool_id}.json").read_text())
+        f = SNAP / d / f"{tool_id}.json"
+        if d < today and f.exists():
+            j = json.loads(f.read_text())
+            if j.get("status") == "ok":  # skip failed days so the next good fetch diffs against the last good one
+                return j
     return None
 
 
