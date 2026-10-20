@@ -1,0 +1,25 @@
+{
+ "id": "artisan",
+ "status": "ok",
+ "method": "chrome",
+ "url": "https://www.artisan.co/pricing",
+ "hash": "2717513d62440f1b",
+ "price_tokens": [],
+ "pricing_lines": [
+  "~2,500",
+  "leads contacted/mo",
+  "Pricing scoped on your plan",
+  "Talk to sales",
+  "CSM support and onboarding",
+  "AI dialer add-on, per seat",
+  "~6,000",
+  "leads contacted/mo",
+  "Pricing scoped on your plan",
+  "Talk to sales",
+  "Flexible plans",
+  "Talk to sales",
+  "Hire an AI BDR with a whole team behind her.",
+  "Talk to sales"
+ ],
+ "date": "2026-10-20"
+}

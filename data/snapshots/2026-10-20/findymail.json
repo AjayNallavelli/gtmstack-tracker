@@ -1,0 +1,10 @@
+{
+ "id": "findymail",
+ "status": "ok",
+ "method": "chrome",
+ "url": "https://www.findymail.com/pricing/",
+ "hash": "e3b0c44298fc1c14",
+ "price_tokens": [],
+ "pricing_lines": [],
+ "date": "2026-10-20"
+}

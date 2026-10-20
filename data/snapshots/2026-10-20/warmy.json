@@ -1,0 +1,34 @@
+{
+ "id": "warmy",
+ "status": "ok",
+ "method": "http",
+ "url": "https://www.warmy.io/pricing",
+ "hash": "9ca4a1ccc6647d2a",
+ "price_tokens": [
+  "$49"
+ ],
+ "pricing_lines": [
+  "One-on-one deliverability consultation",
+  "One-on-one free email deliverability consultation",
+  "â",
+  "7-Day Free Trial",
+  "Plans starting from",
+  "$49",
+  "Plans starting from",
+  "$49",
+  "Plans starting from",
+  "$49",
+  "Real inboxes across major, corporate and regional providers â mobile included.",
+  "Monthly seed rotation",
+  "Questions",
+  "Do you offer a free trial?",
+  "Warmy offers a 7-day free trial. No credit card is required",
+  "Can I share my subscription with my team?",
+  "Yes! You are free to add team members to share your subscription with. In this case, all the members will share the common monthly quotas provided in the plan",
+  "7000+ businesses rely on Warmy",
+  "Test all features for free. No credit card required",
+  "Increase Deliverability",
+  "Test all features for free. No credit card required."
+ ],
+ "date": "2026-10-20"
+}
