@@ -2,5 +2,5 @@
  "id": "findymail",
  "date": "2026-10-20",
  "status": "error",
- "error": "chrome: bot-check interstitial page"
+ "error": "http: 403 Client Error: Forbidden for url: https://www.findymail.com/pricing/"
 }
