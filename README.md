@@ -11,6 +11,7 @@ data/snapshots/YYYY-MM-DD # daily raw text (.txt) + extracted pricing lines/pric
 data/changes.json         # change log produced by the diff (feeds /changes/ and RSS)
 scripts/snapshot.py       # fetch -> normalize -> snapshot -> diff  (daily job)
 scripts/build.py          # Jinja2 static site generator -> dist/
+scripts/seo.py            # derived pricing facts, FAQ text (FAQPage JSON-LD), alternatives + /best/ roundups (data-only)
 scripts/check_links.py    # internal link checker + rel=sponsored check for affiliate links
 scripts/seed_tools.py     # one-time seed used to create tools.json (do NOT re-run; it overwrites)
 templates/, static/       # HTML templates and CSS; static/root/* is copied verbatim to the site root (Search Console file) (no JS framework; ~2 KB inline JS for filters)
@@ -34,6 +35,15 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 - **Price changes.** When a price point appears or disappears, the scraper writes a `price_change` entry to `changes.json`, including the diff. Changed wording on the pricing page is logged as `copy_change`. The structured plan tables in `tools.json` are curated by hand, so update the matching tool's `tiers` when a real change is flagged.
 - **Affiliate links.** Add `"<tool-slug>": {"url": "...", "program": "..."}` to `data/affiliates.json`. It is the single source of truth; the build merges it into each tool and fails on unknown slugs. Active now: Klenty, Woodpecker, Prospeo. An optional `perk` string is shown next to the CTA on tool and pricing pages. To guarantee comparison pages for a tool, list partner slugs in its `compare_with` in `tools.json`; those pairs are generated first within the category quota. The site then uses it for the "Visit" button with `rel="sponsored noopener"` and an "Affiliate" label. A disclosure appears in the footer and on `/disclosure/`. `check_links.py` fails the build if any affiliate link is missing `rel=sponsored`.
 - **Featured listings.** Set `"featured": true` on a tool in `data/tools.json` (all are `false` today). The build pins it first in its category table and grid and at the top of the homepage list (it stays first under any sort), shows a "Featured (paid)" badge on its card, category row and tool page, and gives its Visit links `rel="sponsored"`. `check_links.py` fails the build if a featured link is missing `rel=sponsored`.
+
+## Buyer-intent pages (SEO)
+
+All generated from `data/tools.json` only (no invented prices; contact-sales tools say so):
+- `/tools/<slug>/` — title/H1 "<Tool> pricing (YEAR): plans, limits & annual cost", plain-English summary, at-a-glance (cheapest plan, free tier, annual discount, date checked), annual cost table, FAQ + FAQPage JSON-LD.
+- `/pricing/<slug>/` — kept for old links, but canonical points to `/tools/<slug>/` and it is left out of the sitemap.
+- `/alternatives/<slug>/` — same-category tools sorted by entry price, free-tier filter, links to tool + compare pages, FAQ.
+- `/best/` — roundups per category: cheapest, best free, annual-vs-monthly pricing, plus a cross-category free-tools page; FAQ on each.
+- Category pages gained a free-tier filter, guide links, alternatives links and an FAQ.
 
 ## Known limitations (v1)
 

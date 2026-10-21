@@ -1,4 +1,4 @@
-{% extends "base.html" %}{% from "_macros.html" import outlink, featured_badge, status, pricing_table, price_from %}
+{% extends "base.html" %}{% from "_macros.html" import outlink, featured_badge, status, pricing_table, price_from, faq_section %}
 {% block head %}
 <script type="application/ld+json">{{ {"@context":"https://schema.org","@type":"SoftwareApplication","name":t.name,"applicationCategory":"BusinessApplication","operatingSystem":"Web","url":t.website,"description":t.description}|tojson }}</script>
 {% endblock %}
@@ -6,22 +6,37 @@
 <nav class="crumbs small"><a href="/">Home</a> / <a href="/category/{{ t.cat_slug }}/">{{ t.category }}</a> / {{ t.name }}</nav>
 <section class="tool-hero">
   <div>
-    <h1>{{ t.name }}</h1>
-    <p class="lead">{{ t.description }}</p>
-    <p>{{ status(t) }} {{ featured_badge(t) }} <span class="tag">{{ t.category }}</span> <span class="small muted">Last checked {{ t.last_checked|nicedate }}{% if t.last_fetch_failed %} · latest automated check failed, showing last good data{% endif %}</span></p>
+    <h1>{{ t.name }} pricing ({{ year }}): plans, limits &amp; annual cost</h1>
+    <p class="lead">{{ t.summary }}</p>
+    <p class="small muted">{{ t.description }}</p>
+    <p>{{ status(t) }} {{ featured_badge(t) }} <a class="tag" href="/category/{{ t.cat_slug }}/">{{ t.category }}</a> <span class="small muted">Last checked {{ t.last_checked|nicedate }}{% if t.last_fetch_failed %} · latest automated check failed, showing last good data{% endif %}</span></p>
   </div>
   <div class="tool-cta card">
     <p class="big">{{ price_from(t) }}</p>
     {% if t.has_free_plan %}<p class="small">Has a $0 / free tier</p>{% endif %}
     {{ outlink(t) }}
 {% if t.is_affiliate and t.affiliate_perk %}<p class="perk small">🎁 {{ t.affiliate_perk }}</p>{% endif %}
-    <p class="small"><a href="/pricing/{{ t.slug }}/">Full {{ t.name }} pricing breakdown →</a></p>
+    <p class="small"><a href="/alternatives/{{ t.slug }}/">{{ t.name }} alternatives by price →</a></p>
   </div>
 </section>
+<dl class="glance">
+  <div><dt>Cheapest plan</dt><dd>{% if t.price_display and t.sort_price is none %}{{ t.price_display }}{% elif t.cheapest_tier %}{{ t.cheapest_tier.plan }}: {{ t.entry_paid|money }}/mo{% else %}Contact sales{% endif %}</dd></div>
+  <div><dt>Free tier</dt><dd>{% if t.has_free_plan %}Yes ({{ t.free_tier }}){% else %}No{% endif %}</dd></div>
+  <div><dt>Annual discount</dt><dd>{% if t.max_saving %}Up to {{ t.max_saving.pct }}%{% elif t.annual_only %}Annual-only pricing{% else %}None listed{% endif %}</dd></div>
+  <div><dt>Pricing</dt><dd>{{ t.status_label }}</dd></div>
+  <div><dt>Date checked</dt><dd>{{ t.last_checked|nicedate }}</dd></div>
+</dl>
 
-<h2>Plans &amp; pricing</h2>
+<h2 id="plans">{{ t.name }} plans &amp; pricing</h2>
 {{ pricing_table(t) }}
 {% if t.verification_note %}<p class="small note">Note: {{ t.verification_note }}</p>{% endif %}
+{% if t.annual_rows %}
+<h2 id="annual-cost">{{ t.name }} annual cost</h2>
+<p class="small muted">Yearly cost = listed per-month price × 12{% if t.billing_note and ('seat' in t.billing_note|lower or 'user' in t.billing_note|lower) %} ({{ t.billing_note }}){% endif %}. Only plans with a published price are shown.</p>
+<div class="table-wrap"><table class="ptable compact"><thead><tr><th>Plan</th><th>Paying monthly (12 × monthly)</th><th>Paying annually</th><th>Annual saving</th></tr></thead><tbody>
+{% for r in t.annual_rows %}{% set sv = t.savings|selectattr('plan','equalto',r.plan)|first %}<tr><td>{{ r.plan }}</td><td>{{ r.monthly_total|money if r.monthly_total is not none else '—' }}</td><td>{{ r.annual_total|money if r.annual_total is not none else '—' }}</td><td>{% if sv %}{{ sv.per_year|money }} ({{ sv.pct }}%){% else %}—{% endif %}</td></tr>
+{% endfor %}</tbody></table></div>
+{% endif %}
 
 <h2>Pricing history</h2>
 <p class="small muted">We snapshot the pricing page every day. A new row appears only when the extracted pricing text changes.</p>
@@ -45,5 +60,8 @@
 {% endif %}
 <div class="card accent nl-cta"><strong>Get notified when prices change.</strong> {% include "_newsletter_button.html" %}</div>
 <h2>{{ t.name }} alternatives</h2>
-<ul class="links">{% for x in t.alternatives %}<li><a href="/tools/{{ x.slug }}/">{{ x.name }}</a> <span class="small muted">{{ price_from(x) }}</span></li>{% endfor %}</ul>
+<ul class="links">{% for x in t.alternatives %}<li><a href="/tools/{{ x.slug }}/">{{ x.name }}</a> <span class="small muted">{{ x.entry_label }}</span></li>{% endfor %}</ul>
+<p><a href="/alternatives/{{ t.slug }}/">All {{ t.all_alternatives|length }} {{ t.name }} alternatives, sorted by price →</a></p>
+{% if t.roundups %}<h2>Buyer guides</h2><ul class="links">{% for r in t.roundups %}<li><a href="/best/{{ r.slug }}/">{{ r.h1 }}</a></li>{% endfor %}</ul>{% endif %}
+{{ faq_section(t.faq, t.name ~ " pricing FAQ") }}
 {% endblock %}

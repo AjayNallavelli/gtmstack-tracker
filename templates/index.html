@@ -39,6 +39,15 @@
   <p id="empty" class="muted" hidden>No tools match those filters.</p>
 </section>
 
+<section class="guides">
+  <h2>Buyer guides</h2>
+  <ul class="links cols">
+    <li><a href="/best/free-ai-sales-outbound-tools/">Free AI sales &amp; outbound tools</a></li>
+    {% for r in roundups if r.cat %}<li><a href="/best/{{ r.slug }}/">{{ r.h1 }}</a></li>{% endfor %}
+  </ul>
+  <p class="small"><a href="/best/">All buyer guides &amp; alternatives pages →</a></p>
+</section>
+
 <section class="split">
   <div class="card">
     <h2>What changed</h2>

@@ -1,0 +1,34 @@
+{% extends "base.html" %}{% from "_macros.html" import price_table, faq_section, free_toggle %}
+{% block content %}
+<nav class="crumbs small"><a href="/">Home</a> / <a href="/best/">Buyer guides</a>{% if r.cat %} / <a href="/category/{{ r.cat.slug }}/">{{ r.cat.name }}</a>{% endif %} / {{ r.h1 }}</nav>
+<h1>{{ r.h1 }}</h1>
+{% if r.kind == "cheapest" %}
+<p class="lead">All {{ r.tools|length }} {{ r.label }} tools we track, ranked by the lowest paid price on their own pricing page. {{ r.tools|selectattr('has_free_plan')|list|length }} also list a $0 tier. Usage-based, non-USD and contact-sales tools are listed last because they don't publish a comparable monthly price. Last checked {{ stats.last|nicedate }}.</p>
+{{ free_toggle(r.tools|length) }}
+{{ price_table(r.tools) }}
+{% elif r.kind == "free" %}
+<p class="lead">{{ r.tools|length }} {{ r.label }} tools list a $0 tier on their pricing page. Below: what the free tier is called and what the first paid plan costs, sorted by that upgrade price. Free plans usually cap credits, contacts or seats; check limits on each tool page. Last checked {{ stats.last|nicedate }}.</p>
+{{ price_table(r.tools, None, True) }}
+<h2>What each free tier includes</h2>
+<ul>{% for t in r.tools %}{% set ft = t.tiers|selectattr('plan','equalto',t.free_tier)|first %}<li><a href="/tools/{{ t.slug }}/"><strong>{{ t.name }}</strong></a> — {{ t.free_tier }}{% if ft and ft.limits %}: {{ ft.limits }}{% endif %}{% if t.free_is_trial %} <span class="small muted">(labelled a trial)</span>{% endif %}</li>{% endfor %}</ul>
+{% else %}
+<p class="lead">Monthly vs annual billing for all {{ r.tools|length }} {{ r.label }} tools we track: the cheapest plan, the biggest published annual discount, and what a year costs. {{ r.tools|selectattr('max_saving')|list|length }} tools publish a lower per-month price for annual billing. Last checked {{ stats.last|nicedate }}.</p>
+{{ free_toggle(r.tools|length) }}
+<div class="table-wrap"><table class="ptable filterable">
+<thead><tr><th>Tool</th><th>Cheapest plan</th><th>Monthly billing</th><th>Annual billing (per mo)</th><th>Biggest annual discount</th><th>Free tier</th></tr></thead><tbody>
+{% for t in r.tools %}{% set ct = t.cheapest_tier %}<tr data-free="{{ 1 if t.has_free_plan else 0 }}"{% if t.is_featured %} class="is-featured"{% endif %}>
+<td><a href="/tools/{{ t.slug }}/"><strong>{{ t.name }}</strong></a>{% if t.is_featured %} <span class="tag tag-feat">Featured (paid)</span>{% endif %}</td>
+<td>{% if t.price_display and t.sort_price is none %}{{ t.price_display }}{% elif ct %}{{ ct.plan }}{% else %}Contact sales{% endif %}</td>
+{% set num = ct and t.sort_price is not none %}<td>{{ ct.monthly_usd|money if num and ct.monthly_usd else '—' }}</td>
+<td>{{ ct.annual_monthly_usd|money if num and ct.annual_monthly_usd else '—' }}</td>
+<td>{% if t.max_saving %}{{ t.max_saving.pct }}% on {{ t.max_saving.plan }} ({{ t.max_saving.per_year|money }}/yr){% elif t.annual_only %}Annual-only: {{ t.annual_only|join(', ') }}{% else %}None listed{% endif %}</td>
+<td>{{ "Yes" if t.has_free_plan else "No" }}</td></tr>{% endfor %}
+</tbody></table></div>
+<p class="small muted">USD per month as listed. Some plans are per seat; see each tool page for billing notes and the full annual cost table.</p>
+{% endif %}
+{% if r.cat %}<h2>More {{ r.label }} guides</h2><ul class="links">{% for x in r.cat.roundups if x.slug != r.slug %}<li><a href="/best/{{ x.slug }}/">{{ x.h1 }}</a></li>{% endfor %}<li><a href="/category/{{ r.cat.slug }}/">{{ r.cat.name }}: full pricing table</a></li></ul>
+<h2>Alternatives pages</h2><ul class="links cols">{% for t in r.cat.tools %}<li><a href="/alternatives/{{ t.slug }}/">{{ t.name }} alternatives</a></li>{% endfor %}</ul>
+{% else %}<h2>Free tools by category</h2><ul class="links">{% for x in roundups if x.kind == "free" and x.cat %}<li><a href="/best/{{ x.slug }}/">{{ x.h1 }}</a></li>{% endfor %}</ul>{% endif %}
+{{ faq_section(faq) }}
+<div class="card accent nl-cta"><h2>Get every price change in your inbox</h2><p>A weekly digest of plan, price and limit changes across the GTM stack. Free.</p>{% include "_newsletter_form.html" %}</div>
+{% endblock %}

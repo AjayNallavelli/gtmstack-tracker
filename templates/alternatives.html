@@ -1,0 +1,19 @@
+{% extends "base.html" %}{% from "_macros.html" import price_table, faq_section, free_toggle, status %}
+{% block content %}
+<nav class="crumbs small"><a href="/">Home</a> / <a href="/category/{{ t.cat_slug }}/">{{ t.category }}</a> / <a href="/tools/{{ t.slug }}/">{{ t.name }}</a> / Alternatives</nav>
+<h1>{{ t.name }} alternatives ({{ year }}): {{ alts|length }} tools compared by price</h1>
+<p class="lead">{{ t.name }} is listed under {{ t.categories|join(' and ') }}. Its pricing: {{ t.entry_label }}{% if t.has_free_plan %}, with a $0 tier{% endif %}. Below are the {{ alts|length }} other tools we track in the same categor{{ 'ies' if t.categories|length > 1 else 'y' }}, sorted by lowest listed paid price. {{ alts|selectattr('has_free_plan')|list|length }} have a free plan. Prices are copied from each vendor's pricing page and re-checked daily (latest check {{ stats.last|nicedate }}).</p>
+<p class="small"><a href="/tools/{{ t.slug }}/">See {{ t.name }} pricing, plans &amp; annual cost →</a></p>
+{{ free_toggle(alts|length) }}
+{{ price_table(alts, vs) }}
+{% set cheaper = alts|selectattr('sort_price')|list %}
+{% if t.sort_price is not none %}{% set cheaper = cheaper|selectattr('sort_price','lt',t.sort_price)|list %}
+<h2>Cheaper than {{ t.name }}</h2>
+<p>{% if cheaper %}{{ cheaper|length }} alternative{{ 's' if cheaper|length != 1 }} list a lower entry price than {{ t.name }}'s {{ t.entry_paid|money }}/mo: {% for x in cheaper %}<a href="/tools/{{ x.slug }}/">{{ x.name }}</a> ({{ x.entry_paid|money }}/mo){{ ", " if not loop.last }}{% endfor %}.{% else %}None of the alternatives with fixed monthly pricing lists a lower entry price than {{ t.name }} ({{ t.entry_paid|money }}/mo).{% endif %} Entry prices may be annual or per-seat; check each plan table.</p>
+{% endif %}
+{% if t.pairs %}<h2>{{ t.name }} head-to-head comparisons</h2>
+<ul class="links">{% for p in t.pairs %}<li><a href="/compare/{{ p.slug }}/">{{ p.a.name }} vs {{ p.b.name }}</a></li>{% endfor %}</ul>{% endif %}
+{% if t.roundups %}<h2>Related buyer guides</h2><ul class="links">{% for r in t.roundups %}<li><a href="/best/{{ r.slug }}/">{{ r.h1 }}</a></li>{% endfor %}</ul>{% endif %}
+{{ faq_section(faq) }}
+<div class="card accent nl-cta"><h2>Get every price change in your inbox</h2><p>A weekly digest of plan, price and limit changes across the GTM stack. Free.</p>{% include "_newsletter_form.html" %}</div>
+{% endblock %}

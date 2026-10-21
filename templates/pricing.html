@@ -10,6 +10,7 @@
 {% endif %}
 Checked {{ t.last_checked|nicedate }} from the official page.</p>
 <p>{{ status(t) }} {{ outlink(t, "See " ~ t.name, "btn btn-sm") }}</p>
+<p class="small">Full breakdown with annual cost and FAQ: <a href="/tools/{{ t.slug }}/">{{ t.name }} pricing ({{ year }}) →</a> · <a href="/alternatives/{{ t.slug }}/">{{ t.name }} alternatives →</a></p>
 {% if t.is_affiliate and t.affiliate_perk %}<p class="perk small">🎁 {{ t.affiliate_perk }}</p>{% endif %}
 {{ pricing_table(t) }}
 <h2>Is there a free plan?</h2>

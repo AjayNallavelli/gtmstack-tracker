@@ -6,16 +6,17 @@
 {% if site.google_site_verification %}<meta name="google-site-verification" content="{{ site.google_site_verification }}" />{% endif %}
 <title>{{ title }}</title>
 <meta name="description" content="{{ description }}">
-<link rel="canonical" href="{{ site.base_url }}{{ path }}">
+<link rel="canonical" href="{{ site.base_url }}{{ canonical or path }}">
 <meta property="og:title" content="{{ title }}">
 <meta property="og:description" content="{{ description }}">
 <meta property="og:type" content="website">
-<meta property="og:url" content="{{ site.base_url }}{{ path }}">
+<meta property="og:url" content="{{ site.base_url }}{{ canonical or path }}">
 <meta name="twitter:card" content="summary">
 <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - what changed" href="/changes/feed.xml">
 <link rel="stylesheet" href="/static/style.css">
 <script type="text/javascript" async src="https://subscribe-forms.beehiiv.com/attribution.js"></script>
-{% block head %}{% endblock %}
+{% if faq %}<script type="application/ld+json">{{ {"@context":"https://schema.org","@type":"FAQPage","mainEntity":faq|map("faq_item")|list}|tojson }}</script>
+{% endif %}{% block head %}{% endblock %}
 </head>
 <body>
 <header class="top">
@@ -24,6 +25,7 @@
     <nav>
       <a href="/#tools">Tools</a>
       <a href="/compare/">Compare</a>
+      <a href="/best/">Guides</a>
       <a href="/changes/">What changed</a>
       <a href="/newsletter/">Newsletter</a>
       <a class="btn btn-sm" href="/get-featured/">Get featured</a>
@@ -46,7 +48,7 @@
     </div>
     <div>
       <h4>Site</h4>
-      <a href="/changes/">What changed</a><a href="/compare/">Comparisons</a><a href="/methodology/">Methodology</a><a href="/disclosure/">Disclosure</a><a href="/get-featured/">Get featured</a><a href="/changes/feed.xml">RSS</a><a href="/data/tools.json">Dataset (JSON)</a>
+      <a href="/changes/">What changed</a><a href="/compare/">Comparisons</a><a href="/best/">Buyer guides</a><a href="/best/free-ai-sales-outbound-tools/">Free tools</a><a href="/methodology/">Methodology</a><a href="/disclosure/">Disclosure</a><a href="/get-featured/">Get featured</a><a href="/changes/feed.xml">RSS</a><a href="/data/tools.json">Dataset (JSON)</a>
     </div>
     <div>
       <h4>Weekly pricing changes</h4>
@@ -56,5 +58,6 @@
   <div class="wrap small muted copy">© {{ year }} {{ site.name }}. Not affiliated with the vendors listed. Trademarks belong to their owners.</div>
 </footer>
 {% block scripts %}{% endblock %}
+{% if filterable %}<script src="/static/filter.js" defer></script>{% endif %}
 </body>
 </html>

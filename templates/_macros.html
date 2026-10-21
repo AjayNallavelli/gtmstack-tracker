@@ -48,8 +48,37 @@
   <p class="desc">{{ t.description }}</p>
   <div class="card-foot">
     <span>{{ price_from(t) }}{% if t.has_free_plan and t.entry_paid %} · free tier{% endif %}</span>
-    <a class="small" href="/pricing/{{ t.slug }}/">Pricing →</a>
+    <a class="small" href="/tools/{{ t.slug }}/#plans">Pricing →</a>
   </div>
   <div class="card-visit small">{{ outlink(t, "Visit " ~ t.name, "visit") }}</div>
 </article>
+{%- endmacro %}
+
+
+{% macro faq_section(faq, heading="Frequently asked questions") -%}
+{% if faq %}<section class="faq" id="faq">
+<h2>{{ heading }}</h2>
+{% for f in faq %}<div class="faq-item"><h3>{{ f.q }}</h3><p>{{ f.a }}</p></div>
+{% endfor %}</section>{% endif %}
+{%- endmacro %}
+
+{% macro free_toggle(n) -%}
+<label class="small free-toggle"><input type="checkbox" id="free-only"> Only show tools with a free plan</label> <span class="small muted" id="row-count" data-total="{{ n }}">{{ n }} tools</span>
+{%- endmacro %}
+
+{% macro price_table(ts, vs=None, show_upgrade=False) -%}
+<div class="table-wrap"><table class="ptable filterable">
+<thead><tr><th>#</th><th>Tool</th><th>{{ "First paid plan" if show_upgrade else "Lowest listed paid price" }}</th><th>Free tier</th><th>Pricing</th>{% if vs is not none %}<th>Compare</th>{% endif %}<th>Checked</th><th></th></tr></thead><tbody>
+{% for t in ts %}<tr data-free="{{ 1 if t.has_free_plan else 0 }}"{% if t.is_featured %} class="is-featured"{% endif %}>
+<td>{{ loop.index }}</td>
+<td><a href="/tools/{{ t.slug }}/"><strong>{{ t.name }}</strong></a> {{ featured_badge(t) }}<br><span class="small muted">{{ t.category }}</span></td>
+<td>{{ t.entry_label }}</td>
+<td>{% if t.has_free_plan %}Yes{% if t.free_tier %} <span class="small muted">({{ t.free_tier }})</span>{% endif %}{% else %}No{% endif %}</td>
+<td>{{ status(t) }}</td>
+{% if vs is not none %}<td>{% if vs[t.id] %}<a href="/compare/{{ vs[t.id].slug }}/">{{ vs[t.id].a.name }} vs {{ vs[t.id].b.name }}</a>{% else %}<a href="/alternatives/{{ t.slug }}/" class="small">{{ t.name }} alternatives</a>{% endif %}</td>{% endif %}
+<td class="small">{{ t.last_checked }}</td>
+<td class="small">{{ outlink(t, "Visit", "visit") }}</td>
+</tr>{% endfor %}
+</tbody></table></div>
+<p class="small muted">USD unless the vendor prices in another currency (shown verbatim). "Lowest listed paid price" can be an annual or per-seat price; see each tool page for the full plan table. Usage-based and contact-sales tools are listed after tools with a fixed monthly price.{% if ts|selectattr('is_affiliate')|list %} Links marked "Affiliate" may earn us a commission (<a href="/disclosure/">disclosure</a>).{% endif %}</p>
 {%- endmacro %}

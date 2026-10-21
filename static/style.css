@@ -70,3 +70,6 @@ code{font-size:.85em;background:#f1f5f9;padding:.1em .3em;border-radius:4px}
 .nl-embed{min-height:60px}.nl-button .btn{margin-bottom:.3em}.nl-cta{margin:28px 0}
 .card-visit{margin-top:8px}.card-visit .visit{font-weight:600}
 .perk{background:#ecfdf5;color:#065f46;border-radius:8px;padding:6px 10px;margin:8px 0}
+.faq{margin:32px 0}.faq-item{border-bottom:1px solid var(--line);padding:4px 0 8px}.faq-item h3{font-size:1rem;margin:.8em 0 .3em}.faq-item p{margin:.2em 0}
+.glance{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin:14px 0}.glance div{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 12px}.glance dt{font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.03em}.glance dd{margin:.2em 0 0;font-weight:600}
+.free-toggle{display:inline-flex;gap:6px;align-items:center;margin:10px 0}.guide-links{margin:10px 0 18px}

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<nav class="crumbs small"><a href="/">Home</a> / Buyer guides</nav>
+<h1>Buyer guides: cheapest &amp; free AI sales tools ({{ year }})</h1>
+<p class="lead">Roundups built straight from our daily-checked pricing data — no paid rankings. Featured (paid) listings, if any, are labelled.</p>
+<ul class="links"><li><a href="/best/free-ai-sales-outbound-tools/">Free AI sales &amp; outbound tools ({{ year }})</a></li></ul>
+{% for c in cats %}<h2>{{ c.name }}</h2><ul class="links">{% for r in c.roundups %}<li><a href="/best/{{ r.slug }}/">{{ r.h1 }}</a></li>{% endfor %}<li><a href="/category/{{ c.slug }}/">{{ c.name }} pricing compared</a></li></ul>{% endfor %}
+<h2>Alternatives to popular tools</h2>
+<ul class="links cols">{% for c in cats %}{% for t in c.tools if t.category == c.name %}<li><a href="/alternatives/{{ t.slug }}/">{{ t.name }} alternatives</a></li>{% endfor %}{% endfor %}</ul>
+<div class="card accent nl-cta"><h2>Get every price change in your inbox</h2>{% include "_newsletter_form.html" %}</div>
+{% endblock %}
