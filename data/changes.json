@@ -1,5 +1,46 @@
 [
  {
+  "date": "2026-10-21",
+  "tool_id": "snovio",
+  "tool": "Snov.io",
+  "type": "price_change",
+  "summary": "Pricing page changed: new price points $29.25, $74.25; removed $39.00, $99.00.",
+  "added": [
+   "$29.25",
+   "$74.25"
+  ],
+  "removed": [
+   "$39.00",
+   "$99.00"
+  ],
+  "previous_date": "2026-10-20",
+  "diff": [
+   "-$39.00",
+   "+$29.25",
+   "-$99.00",
+   "+$74.25"
+  ]
+ },
+ {
+  "date": "2026-10-21",
+  "tool_id": "klenty",
+  "tool": "Klenty",
+  "type": "copy_change",
+  "summary": "Pricing page wording/plan text changed (no price points changed).",
+  "previous_date": "2026-10-20",
+  "diff": [
+   "-Book a Demo",
+   "+Schedule a Demo"
+  ]
+ },
+ {
+  "date": "2026-10-21",
+  "tool_id": "bettercontact",
+  "tool": "BetterContact",
+  "type": "fetch_failed",
+  "summary": "Pricing page could not be fetched; will retry tomorrow."
+ },
+ {
   "date": "2026-10-20",
   "tool_id": "salesloft",
   "tool": "Salesloft",

@@ -1,0 +1,13 @@
+{
+ "id": "salesloft",
+ "status": "ok",
+ "method": "http",
+ "url": "https://www.salesloft.com/pricing",
+ "hash": "d8f7d93ec47427f1",
+ "price_tokens": [],
+ "pricing_lines": [
+  "Talk to Sales | Salesloft",
+  "Talk to Sales"
+ ],
+ "date": "2026-10-21"
+}

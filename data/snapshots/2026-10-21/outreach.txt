@@ -1,0 +1,245 @@
+Outreach Pricing & Plans | AI Credits Consumption Model
+Outreach Pricing and Packages
+AI Agent Platform Pricing for Revenue Teams
+Reach out to our team for custom pricing based on your team’s needs.
+Outreach is the
+AI Agent Platform for Revenue teams
+— built to help
+AEs
+,
+sales leaders
+, and
+revenue executives
+drive pipeline, close deals and deliver accurate forecasts with agents for every persona. Our flexible pricing is built to scale for modern revenue teams.
+Request Pricing
+View packages
+How Outreach pricing works:
+Outreach pricing combines two models: seat-based access, where you pay for each user, and consumption-based AI credits, where you pay for what you use. AI credits power your agentic AI workflows—research, personalization, sequencing automation, conversation analysis, forecasting, and more. Your team's usage directly determines credit consumption. Unlike seat-only pricing, this consumption-based model scales with your adoption, not just headcount.
+​
+Pay based on actual AI usage
+​
+Scale across prospecting, deal management, and customer engagement
+​
+Align cost directly to pipeline impact
+​
+Expand as your team adopts more AI-powered workflows
+Choose your package
+Outreach offers flexible packaging options designed to support different levels of revenue team maturity—from getting started with AI to fully orchestrating your entire revenue engine.
+Most Popular!
+Amplify Plus
+AI-Powered Revenue Acceleration
+Win more with AI agents
+that guide reps live in meetings, automate follow-ups and pipeline updates, flag risks, and coach reps continuously.
+50,000
+AI Credits
+Request pricing
+​
+Predict deal outcomes with
+81%
+accuracy
+​
+Ramp reps
+3x
+faster
+Everything in Essentials + Core, and:
+Advanced Agents & AI
+Omni Agent
+Research Agent ‍
+Revenue Agent
+Personalization Agent
+Deal Agent
+AI Assist – Accounts, Emails, Calls, Meetings & Deals
+Meeting Prep Agent
+AI Coach Cards with Automated Scoring
+AI Topics & Topic Explorer
+Live Coaching: Real-time Content Cards
+AI Summaries - Meetings & Deals
+Deal Health & Alerts
+Data Enrichment
+Outreach MCP (Server & Client)
+Sequencing & Engagement
+Multi-Channel Engagement & Sequences
+Meeting Scheduling & Tasks
+Reporting: Engagement, AI Performance & Revenue Attribution
+Mobile App
+Slack App Integration
+Account Planning
+Relationship Maps
+Conversation Intelligence & Coaching
+Real-Time Transcription
+Action Item Detection
+Outreach Voice Integrated Dialer
+Sentiment Analysis
+Playlists
+Meeting Insights & Analytics
+Integrations: Zoom, Microsoft Teams, Google Meet, Cisco Webex
+Deal & Pipeline Management
+Deal Management
+Pipeline Management
+Team Performance and Win/Loss Outcomes
+500,000 API Calls
+10 Custom Objects
+750 MB Knowledge
+Amplify Pro
+AI-Powered Revenue Orchestration
+Run your enterprise revenue lifecycle
+with an end-to-end agentic revenue platform. Leverage advanced forecasting, visibility into revenue trends, and dedicated services support.
+100,000
+AI Credits
+Request pricing
+​
+Spend
+half
+the time preparing forecasts
+​
+Reduce forecast errors by
+15%
+Everything in Plus, and:
+Full Suite of Agents & AI
+AI Forecast Projection
+AI Assist: Forecasting
+Forecasting
+Scenario Planner
+Forecast Rollups
+Forecast Trends
+Self-Service Forecast Configuration
+Territory Management
+Multi-Currency
+Parallel Forecasts
+Advanced Managed Services
+Tailored, ongoing support designed around your business, helping you scale workflows, maintain the platform, and drive consistent adoption with confidence.
+1,000,000 API Calls
+20 Custom Objects
+1,500 MB Knowledge
+Just getting started?
+Explore our Essentials and Core packages, built for teams looking to start quickly and grow.
+Choose one
+Amplify Essentials
+AI-Powered Intelligence and Coaching
+For teams that need
+conversation intelligence
+at the center of their stack; real-time coaching, deal insight, and rep performance visibility.
+10,000
+AI Credits
+Request pricing
+Capabilities
+Agents & AI
+Omni Agent
+Research Agent
+Deal Agent
+AI Assist - Accounts, Emails, Calls, Meetings & Deals
+Meeting Prep Agent
+AI Coach Cards with Automated Scoring
+AI Topics & Topics Explorer
+Live Coaching: Real-time Content Cards
+AI Summaries - Meetings & Deals
+Deal Health & Alerts
+Data Enrichment
+Outreach MCP (Server & Client)
+Engagement
+Meeting Scheduling & Tasks
+Mobile App
+Slack App Integration
+Account Planning
+Relationship Maps
+Conversation Intelligence & Coaching
+Outreach Voice Integrated Dialer
+Real-Time Transcription
+Action Item Detection
+Sentiment Analysis
+Playlists
+Meeting Insights & Analytics
+Integrations: Zoom, Microsoft Teams, Google Meet, Cisco Webex
+Deal & Pipeline Management
+Deal Management
+Pipeline Management
+Team Performance and Win/Loss Outcomes
+Or
+Amplify Core
+AI-Powered Sales Execution
+For teams looking to leverage AI agents for
+pipeline creation
+and
+account management
+; clear value, quick time to impact, and room to expand.
+25,000
+AI Credits
+Request pricing
+Capabilities
+Agents & AI
+Omni Agent
+Research Agent ‍
+Revenue Agent
+Personalization Agent
+AI Assist – Accounts, Emails & Calls
+Data Enrichment
+Outreach MCP (Server & Client)
+Sequencing & Engagement
+Multi-Channel Engagement & Sequences
+Meeting Scheduling & Tasks
+Reporting: Engagement, AI Performance & Revenue Attribution
+Mobile App
+Slack App Integration
+Account Planning
+Relationship Maps
+Conversation Intelligence
+Outreach Voice Integrated Dialer
+Call Insights & Analytics
+250,000 API Calls
+5 Custom Objects
+500 MB Knowledge
+How much does Outreach cost?
+Outreach pricing depends on several factors, including:
+​
+Team size and usage volume
+​
+Number of AI workflows activated
+​
+Level of platform capabilities required
+Because Outreach uses a flexible, license- and consumption-based pricing model, pricing is tailored to your specific business needs.
+Get custom pricing
+​
+Get custom pricing
+Pricing FAQs
+How does Outreach pricing work?
+Outreach uses a flexible pricing model that combines seat-based platform access with consumption-based usage for AI-powered workflows. This allows teams to scale usage across prospecting, deal management, forecasting, and customer engagement based on their needs.
+Packages can be customized to support different roles across revenue teams, including sales leaders, AEs, SDRs, and RevOps.
+‍
+How much does Outreach cost?
+Outreach pricing depends on team size, workflows, and usage of
+AI-powered and Agent capabilities.
+Because Outreach uses both a seat-based and a flexible, consumption-based model, costs are tailored to your organization’s needs.
+How is consumption-based pricing measured?
+Consumption‑based pricing is measured based on discrete actions. An action is a specific AI‑powered task performed by the platform—such as generating a personalized message or completing an individual search—each defined with clear, measurable criteria and a predictable credit cost. Credits are then deducted according to the predefined amount associated with each action.
+Can I increase the number of credits?
+Yes. If your team needs more credits than what is included in your plan, you can purchase additional credit packs at any time.
+What options exist to expedite onboarding onto Outreach?
+We offer a number of professional services packages to onboard teams faster across the Outreach platform. Services range from self-serve packages to complete implementation and training packages, including FDE resources to help deploy agents. Get in touch to review your organizational needs and we’ll propose a quote to make sure you are set up for success.
+What kind of support do you offer?
+Plus support is included with Amplify Core, and additional managed services are included with Amplify Pro. Beyond that, we offer a range of leading support options including technical account management services and enterprise support. For more information, please reach out to your Outreach representative.
+What add-ons are available for purchase?
+We offer several add-ons that can be added to your plan depending on your team's needs. Available add-ons include Data Sharing, Connectors, Additional Instances, and Listener Licenses.
+I’m an existing customer, how do I access the new pricing packages?
+Reach out to your Outreach account executive, who can do a full walkthrough of the new packages and create a customized proposal for you.
+Which Outreach plan should a CRO choose?
+Reach out to your Outreach account executive, who can do a full walkthrough of the new packages and create a customized proposal for you.CROs typically choose Amplify Pro (Enterprise Revenue Orchestration and Forecasting). This tier provides organization-wide visibility, advanced forecasting, and dedicated services support for enterprise revenue teams who need one orchestrated platform, not a stack. For mid-sized teams, Amplify Plus offers AI-powered revenue acceleration with live coaching and deal coordination.
+What's the difference between Outreach's consumption-based pricing and seat-based pricing?
+Outreach combines both models. Seat-based pricing gives each user access to the platform. Consumption-based AI credits let you pay for what you actually use—research, personalization, sequencing, forecasting, and coaching—so your costs scale with adoption, not headcount alone.
+What are Outreach AI credits used for?
+Reach out to your Outreach account executive, who can do a full walkthrough of the new packages and create a customized proposal for you.AI credits power Outreach's agentic AI workflows: intelligent research and prospecting, personalized email generation, sequence automation, conversation analysis and coaching, deal forecasting, and more. Your team's usage of these AI-powered features consumes credits.
+Which Outreach tier is best for teams just getting started?
+Amplify Essentials and Amplify Core are designed for teams getting started. Essentials (10K credits) focuses on conversation intelligence and coaching. Core (25K credits) emphasizes pipeline creation and account orchestration with AI agents. Both include foundational agents & AI, engagement, account planning, and conversation intelligence capabilities.
+How does Outreach pricing compare to competitors like Gong or Salesloft?
+Unlike single-point solutions, Outreach pricing covers the entire revenue lifecycle—prospecting, deal management, conversation intelligence, and forecasting—in one platform. You don't need to pay separately for each capability. AI credits scale with your adoption; you only pay for what you use.
+Simplified packages for your sales teams
+Request pricing
+Per user pricing. No platform fees. Support included.
+Build stronger pipeline:
+Make sellers wildly productive with optimized playbooks that reach the right prospects, connect faster, and expand relationships.
+Execute stronger deal cycles:
+Automation and insights help sellers keep buyers engaged and deals on track.
+Automate your forecast prep:
+Achieve better, faster, and more reliable forecasts that sustain growth.
+Outreach Agentic AI Platform for Revenue Teams
+See how Outreach helps sellers close over 2 million opportunities every month
+Request a demo
