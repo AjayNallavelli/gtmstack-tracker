@@ -1,0 +1,158 @@
+{
+ "11x": {
+  "hash": "0a3dee2dc4e2758f",
+  "date": "2026-10-19"
+ },
+ "aisdr": {
+  "hash": "db611be550a2a891",
+  "date": "2026-10-19"
+ },
+ "allegrow": {
+  "hash": "b434be37631d9af7",
+  "date": "2026-10-19"
+ },
+ "amplemarket": {
+  "hash": "7ab0ef81438869cf",
+  "date": "2026-10-19"
+ },
+ "apollo": {
+  "hash": "bb914f52853d5a5a",
+  "date": "2026-10-19"
+ },
+ "artisan": {
+  "hash": "72d1ea8f283d18b2",
+  "date": "2026-10-19"
+ },
+ "bettercontact": {
+  "hash": "fb7f8629d3b38d89",
+  "date": "2026-10-19"
+ },
+ "clay": {
+  "hash": "3278b4715c8ed3aa",
+  "date": "2026-10-19"
+ },
+ "cognism": {
+  "hash": "cd80e9d7573211d3",
+  "date": "2026-10-19"
+ },
+ "emailguard": {
+  "hash": "2d18f6b060f9f5c1",
+  "date": "2026-10-19"
+ },
+ "findymail": {
+  "hash": "9d42871d0a49bcfe",
+  "date": "2026-10-19"
+ },
+ "fullenrich": {
+  "hash": "12d36b456b80b043",
+  "date": "2026-10-19"
+ },
+ "glockapps": {
+  "hash": "e215f215036a2a04",
+  "date": "2026-10-19"
+ },
+ "hubspot-breeze": {
+  "hash": "6dd6263459c14cb6",
+  "date": "2026-10-19"
+ },
+ "hunter": {
+  "hash": "19f9dde0af0106c8",
+  "date": "2026-10-19"
+ },
+ "instantly": {
+  "hash": "c1aa57a31f25d861",
+  "date": "2026-10-19"
+ },
+ "kaspr": {
+  "hash": "60fb3057e875df5b",
+  "date": "2026-10-19"
+ },
+ "klenty": {
+  "hash": "7e4bd08384dc00a4",
+  "date": "2026-10-19"
+ },
+ "lagrowthmachine": {
+  "hash": "0b68d9f212eb285d",
+  "date": "2026-10-19"
+ },
+ "lemlist": {
+  "hash": "9a47e510a01d7343",
+  "date": "2026-10-19"
+ },
+ "lusha": {
+  "hash": "3ae2d70c8bf5c472",
+  "date": "2026-10-19"
+ },
+ "mailreach": {
+  "hash": "07ae635791a9b67e",
+  "date": "2026-10-19"
+ },
+ "mailshake": {
+  "hash": "878fe78005f8f863",
+  "date": "2026-10-19"
+ },
+ "outreach": {
+  "hash": "0b263e53b95f0e47",
+  "date": "2026-10-19"
+ },
+ "pdl": {
+  "hash": "32a0be5aa01baa48",
+  "date": "2026-10-19"
+ },
+ "persana": {
+  "hash": "c9e017ec67e51291",
+  "date": "2026-10-19"
+ },
+ "prospeo": {
+  "hash": "f99436d45eb17a8a",
+  "date": "2026-10-19"
+ },
+ "regie": {
+  "hash": "9c61b1d944357a6e",
+  "date": "2026-10-19"
+ },
+ "replyio": {
+  "hash": "eb799a2b4e185576",
+  "date": "2026-10-19"
+ },
+ "rocketreach": {
+  "hash": "2adde6bc793a5699",
+  "date": "2026-10-19"
+ },
+ "saleshandy": {
+  "hash": "7ec954eb63b69284",
+  "date": "2026-10-19"
+ },
+ "salesloft": {
+  "hash": "8c6f04c9de411093",
+  "date": "2026-10-19"
+ },
+ "seamless": {
+  "hash": "b9940be926694b24",
+  "date": "2026-10-19"
+ },
+ "smartlead": {
+  "hash": "778daf5fef65b058",
+  "date": "2026-10-19"
+ },
+ "snovio": {
+  "hash": "20bf63ce751f5f04",
+  "date": "2026-10-19"
+ },
+ "warmbox": {
+  "hash": "c0638cd64e050279",
+  "date": "2026-10-19"
+ },
+ "warmy": {
+  "hash": "a224ba3b453d9939",
+  "date": "2026-10-19"
+ },
+ "woodpecker": {
+  "hash": "795e360b43759032",
+  "date": "2026-10-19"
+ },
+ "zoominfo": {
+  "hash": "8d807d81deaa20fb",
+  "date": "2026-10-19"
+ }
+}

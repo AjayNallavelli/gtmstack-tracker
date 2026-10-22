@@ -7,11 +7,20 @@ For every tool in data/tools.json it fetches the pricing page, extracts and
 normalizes the visible text, stores a dated snapshot in data/snapshots/<date>/,
 and diffs the extracted price points / pricing lines against the previous
 snapshot for that tool. Differences are appended to data/changes.json.
+
+Change types written to data/changes.json (raw log; scripts/build.py publishes only REAL ones):
+  price_change   - plan price points were added/removed  (public)
+  plan_change    - a plan was added/removed/renamed; logged by hand after review  (public)
+  billing_toggle - the page showed annual instead of monthly prices (or back); no plan price changed  (hidden)
+  copy_change    - wording only, no price points changed  (hidden)
+  fetch_failed   - page could not be fetched; retried next run  (hidden)
+  baseline       - tracking started  (hidden from the change log; used as the "tracking since" date)
 """
 import argparse, concurrent.futures as cf, datetime as dt, difflib, hashlib, json, os, re, shutil, subprocess, sys, tempfile
 from pathlib import Path
 import requests
 from bs4 import BeautifulSoup
+import datadates
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
@@ -121,6 +130,47 @@ def snapshot_tool(tool, chrome):
             "hash": hashlib.sha256("\n".join(plines).encode()).hexdigest()[:16]}
 
 
+def _num(tok):
+    try:
+        return float(re.sub(r"[^\d.]", "", tok))
+    except ValueError:
+        return None
+
+
+def annual_discounts(tool):
+    """Annual-billing discount ratios (annual/monthly) implied by tools.json for this tool."""
+    rs = {round(tr["annual_monthly_usd"] / tr["monthly_usd"], 3) for tr in tool.get("tiers", [])
+          if tr.get("monthly_usd") and tr.get("annual_monthly_usd") and tr["annual_monthly_usd"] < tr["monthly_usd"]}
+    for m in re.finditer(r"(\d{1,2})\s?%\s?(?:off|discount|less|save|cheaper)", tool.get("billing_note") or "", re.I):
+        rs.add(round(1 - int(m.group(1)) / 100, 3))
+    return rs
+
+
+def is_billing_toggle(tool, added, removed):
+    """True when the token diff is explained by the page flipping between monthly and annual prices.
+
+    Either every added/removed amount is already a known monthly or annual tier price in tools.json, or
+    the added and removed amounts pair up (sorted) at one constant ratio that equals a published annual
+    discount (e.g. Snov.io 2026-10-21: $39/$99 -> $29.25/$74.25 = 25% off annual)."""
+    a = [_num(x) for x in added]
+    r = [_num(x) for x in removed]
+    if not a or not r or None in a or None in r:
+        return False
+    known = {float(v) for tr in tool.get("tiers", []) for v in (tr.get("monthly_usd"), tr.get("annual_monthly_usd")) if v}
+    if all(v in known for v in a + r):
+        return True
+    if len(a) != len(r):
+        return False
+    ratios = [x / y for x, y in zip(sorted(a), sorted(r)) if y]
+    if len(ratios) != len(a) or max(ratios) - min(ratios) > 0.015:
+        return False
+    q = sum(ratios) / len(ratios)
+    for d in annual_discounts(tool):
+        if abs(q - d) <= 0.015 or abs(q - 1 / d) <= 0.02:
+            return True
+    return False
+
+
 def latest_previous(tool_id, today):
     if not SNAP.exists():
         return None
@@ -167,6 +217,7 @@ def main():
     with cf.ThreadPoolExecutor(a.workers) as ex:
         results = list(ex.map(lambda t: snapshot_tool(t, chrome), tools))
     names = {t["id"]: t["name"] for t in tools}
+    by_id = {t["id"]: t for t in tools}
     for r in results:
         tid = r["id"]
         prev = latest_previous(tid, a.date)
@@ -175,7 +226,8 @@ def main():
             if a.rebaseline:
                 continue  # keep whatever snapshot we already have
             (outdir / f"{tid}.json").write_text(json.dumps({"id": tid, "date": a.date, "status": "error", "error": r["error"]}, indent=1))
-            new.append({"date": a.date, "tool_id": tid, "tool": names[tid], "type": "fetch_failed", "summary": "Pricing page could not be fetched; will retry tomorrow."})
+            # raw log only: never shown publicly as a change; the next run simply retries
+            new.append({"date": a.date, "tool_id": tid, "tool": names[tid], "type": "fetch_failed", "summary": "Pricing page could not be fetched; will retry next run."})
             continue
         (outdir / f"{tid}.txt").write_text(r["text"])
         meta = {k: r[k] for k in ("id", "status", "method", "url", "hash", "price_tokens", "pricing_lines")}
@@ -200,7 +252,11 @@ def main():
         removed = sorted(set(prev["price_tokens"]) - set(r["price_tokens"]))
         diff = [l for l in difflib.unified_diff(prev["pricing_lines"], r["pricing_lines"], lineterm="", n=0)
                 if l[:1] in "+-" and not l.startswith(("+++", "---"))][:40]
-        if added or removed:
+        if (added or removed) and is_billing_toggle(by_id[tid], added, removed):
+            new.append({"date": a.date, "tool_id": tid, "tool": names[tid], "type": "billing_toggle",
+                        "summary": "Pricing page showed a different billing period (annual vs monthly) by default; no plan price changed.",
+                        "added": added, "removed": removed, "previous_date": prev["date"], "diff": diff})
+        elif added or removed:
             parts = []
             if added: parts.append("new price points " + ", ".join(added[:8]))
             if removed: parts.append("removed " + ", ".join(removed[:8]))
@@ -214,6 +270,7 @@ def main():
     changes = new + changes
     changes.sort(key=lambda c: c["date"], reverse=True)
     changes_path.write_text(json.dumps(changes, indent=1, ensure_ascii=False))
+    datadates.update(json.loads((DATA / "tools.json").read_text())["tools"], a.date)
     if a.rebaseline and marker:
         marker.write_text(json.dumps({"rebaselined_on": a.date, "reason": "first run from CI region"}, indent=1) + "\n")
     print(f"Wrote {len(new)} change entries ({sum(c['type']=='price_change' for c in new)} price changes) to {changes_path}")
