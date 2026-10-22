@@ -20,7 +20,7 @@ POPULAR = ["apollo", "instantly", "clay", "smartlead", "lemlist", "zoominfo", "1
            "regie", "persana", "mailshake", "klenty", "lagrowthmachine", "seamless", "rocketreach", "kaspr", "prospeo",
            "fullenrich", "findymail", "bettercontact", "pdl", "hubspot-breeze", "mailreach", "warmy", "warmbox",
            "glockapps", "emailguard", "allegrow"]
-PAIR_QUOTA = {"AI SDR agents": 12, "Cold email & engagement": 21, "Data & enrichment": 20, "Deliverability & warmup": 8}
+PAIR_QUOTA = {"AI SDR agents": 12, "Cold email & engagement": 22, "Data & enrichment": 22, "Deliverability & warmup": 7}
 # Only real price-point or plan changes are published (change log, RSS, home page, tool pages, public JSON).
 # copy_change / billing_toggle / fetch_failed / baseline stay in data/changes.json as raw data only.
 # A raw entry can also be hidden by hand with "public": false.
@@ -152,7 +152,7 @@ def pick_pairs(tools):
                 break
             if add_pair(a, b, cat):
                 used += 1
-    return pairs[:60]
+    return pairs[:sum(PAIR_QUOTA.values())]
 
 
 def compare_points(a, b):
