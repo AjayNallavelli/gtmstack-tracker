@@ -3,8 +3,8 @@
   "date": "2026-10-21",
   "tool_id": "snovio",
   "tool": "Snov.io",
-  "type": "price_change",
-  "summary": "Pricing page changed: new price points $29.25, $74.25; removed $39.00, $99.00.",
+  "type": "copy_change",
+  "summary": "Pricing page showed annual-billing prices by default ($29.25/$74.25 = 25% off monthly). Monthly prices unchanged at $39/$99.",
   "added": [
    "$29.25",
    "$74.25"
