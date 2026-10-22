@@ -82,3 +82,25 @@
 </tbody></table></div>
 <p class="small muted">USD unless the vendor prices in another currency (shown verbatim). "Lowest listed paid price" can be an annual or per-seat price; see each tool page for the full plan table. Usage-based and contact-sales tools are listed after tools with a fixed monthly price.{% if ts|selectattr('is_affiliate')|list %} Links marked "Affiliate" may earn us a commission (<a href="/disclosure/">disclosure</a>).{% endif %}</p>
 {%- endmacro %}
+
+
+{% macro answer_line(text) -%}
+{% if text %}<p class="answer"><strong>{{ text }}</strong></p>{% endif %}
+{%- endmacro %}
+
+{% macro weekly_email(site, cls="btn btn-sm") -%}
+<p class="weekly-email"><a class="{{ cls }}" href="{{ site.newsletter.subscribe_url }}" rel="noopener" target="_blank">Get price changes in the weekly email →</a></p>
+{%- endmacro %}
+
+{% macro change_block(c, show_tool=False) -%}
+<div class="change-block" id="change-{{ c.date }}-{{ c.tool_id }}">
+  <div class="cb-head"><span class="date">{{ c.date|nicedate }}</span>{% if show_tool %} <a href="/tools/{{ c.tool_id }}/"><strong>{{ c.tool }}</strong></a>{% endif %} <span class="tag tag-{{ c.type }}">{{ c.type|replace('_',' ') }}</span></div>
+  <div class="cb-grid">
+    <div class="cb-old"><span class="cb-label">Before{% if c.previous_date %} ({{ c.previous_date|nicedate }}){% endif %}</span>{% if c.old %}<span class="cb-val">{{ c.old|join(', ') }}</span>{% else %}<span class="muted">—</span>{% endif %}</div>
+    <div class="cb-new"><span class="cb-label">After ({{ c.date|nicedate }})</span>{% if c.new %}{{ c.new|join(', ') }}{% else %}<span class="muted">removed</span>{% endif %}</div>
+  </div>
+  <p class="small">{{ c.summary }}</p>
+  {% if c.diff %}<details><summary class="small">Show pricing-text diff</summary><pre class="diff">{% for l in c.diff %}{{ l }}
+{% endfor %}</pre></details>{% endif %}
+</div>
+{%- endmacro %}

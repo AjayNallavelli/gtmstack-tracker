@@ -1,7 +1,8 @@
-{% extends "base.html" %}{% from "_macros.html" import price_table, faq_section, free_toggle, status %}
+{% extends "base.html" %}{% from "_macros.html" import price_table, faq_section, free_toggle, status, answer_line %}
 {% block content %}
 <nav class="crumbs small"><a href="/">Home</a> / <a href="/category/{{ t.cat_slug }}/">{{ t.category }}</a> / <a href="/tools/{{ t.slug }}/">{{ t.name }}</a> / Alternatives</nav>
 <h1>{{ t.name }} alternatives ({{ year }}): {{ alts|length }} tools compared by price</h1>
+{{ answer_line(answer) }}
 <p class="lead">{{ t.name }} is listed under {{ t.categories|join(' and ') }}. Its pricing: {{ t.entry_label }}{% if t.has_free_plan %}, with a $0 tier{% endif %}. Below are the {{ alts|length }} other tools we track in the same categor{{ 'ies' if t.categories|length > 1 else 'y' }}, sorted by lowest listed paid price. {{ alts|selectattr('has_free_plan')|list|length }} have a free plan. Prices are copied from each vendor's pricing page and re-checked daily (latest check {{ stats.last|nicedate }}).</p>
 <p class="small"><a href="/tools/{{ t.slug }}/">See {{ t.name }} pricing, plans &amp; annual cost →</a></p>
 {{ free_toggle(alts|length) }}

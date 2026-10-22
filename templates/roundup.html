@@ -1,7 +1,8 @@
-{% extends "base.html" %}{% from "_macros.html" import price_table, faq_section, free_toggle %}
+{% extends "base.html" %}{% from "_macros.html" import price_table, faq_section, free_toggle, answer_line %}
 {% block content %}
 <nav class="crumbs small"><a href="/">Home</a> / <a href="/best/">Buyer guides</a>{% if r.cat %} / <a href="/category/{{ r.cat.slug }}/">{{ r.cat.name }}</a>{% endif %} / {{ r.h1 }}</nav>
 <h1>{{ r.h1 }}</h1>
+{{ answer_line(answer) }}
 {% if r.kind == "cheapest" %}
 <p class="lead">All {{ r.tools|length }} {{ r.label }} tools we track, ranked by the lowest paid price on their own pricing page. {{ r.tools|selectattr('has_free_plan')|list|length }} also list a $0 tier. Usage-based, non-USD and contact-sales tools are listed last because they don't publish a comparable monthly price. Last checked {{ stats.last|nicedate }}.</p>
 {{ free_toggle(r.tools|length) }}

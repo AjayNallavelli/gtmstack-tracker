@@ -1,4 +1,4 @@
-{% extends "base.html" %}{% from "_macros.html" import outlink, featured_badge, status, pricing_table, price_from, faq_section %}
+{% extends "base.html" %}{% from "_macros.html" import outlink, featured_badge, status, pricing_table, price_from, faq_section, answer_line, weekly_email, change_block %}
 {% block head %}
 <script type="application/ld+json">{{ {"@context":"https://schema.org","@type":"SoftwareApplication","name":t.name,"applicationCategory":"BusinessApplication","operatingSystem":"Web","url":t.website,"description":t.description}|tojson }}</script>
 {% endblock %}
@@ -7,6 +7,7 @@
 <section class="tool-hero">
   <div>
     <h1>{{ t.name }} pricing ({{ year }}): plans, limits &amp; annual cost</h1>
+    {{ answer_line(answer) }}
     <p class="lead">{{ t.summary }}</p>
     <p class="small muted">{{ t.description }}</p>
     <p>{{ status(t) }} {{ featured_badge(t) }} <a class="tag" href="/category/{{ t.cat_slug }}/">{{ t.category }}</a> <span class="small muted">Last checked {{ t.last_checked|nicedate }}{% if t.last_fetch_failed %} · latest automated check failed, showing last good data{% endif %}</span></p>
@@ -17,6 +18,7 @@
     {{ outlink(t) }}
 {% if t.is_affiliate and t.affiliate_perk %}<p class="perk small">🎁 {{ t.affiliate_perk }}</p>{% endif %}
     <p class="small"><a href="/alternatives/{{ t.slug }}/">{{ t.name }} alternatives by price →</a></p>
+    {{ weekly_email(site) }}
   </div>
 </section>
 <dl class="glance">
@@ -39,19 +41,14 @@
 {% endif %}
 
 <h2>Pricing history</h2>
-<p class="small muted">We snapshot the pricing page every day. A new row appears only when the extracted pricing text changes.</p>
+<p class="small muted">We snapshot the pricing page every day and log only real price-point or plan changes. Wording edits, annual/monthly toggle artifacts and failed fetches are not changes (<a href="/methodology/">methodology</a>).</p>
 {% if t.changes %}
-<ul class="timeline">
-{% for c in t.changes %}
-<li><span class="date">{{ c.date|nicedate }}</span> <span class="tag tag-{{ c.type }}">{{ c.type|replace('_',' ') }}</span> {{ c.summary }}
-{% if c.diff %}<details><summary class="small">Show diff</summary><pre class="diff">{% for l in c.diff %}{{ l }}
-{% endfor %}</pre></details>{% endif %}</li>
-{% endfor %}
-</ul>
-{% else %}<p class="muted">No snapshots yet.</p>{% endif %}
+{% for c in t.changes %}{{ change_block(c) }}{% endfor %}
+{% else %}<p>No price or plan changes detected since we started tracking {{ t.name }} on {{ t.tracking_since|nicedate }}.</p>{% endif %}
+{{ weekly_email(site, "btn btn-sm") }}
 {% if t.history %}<details class="small"><summary>Snapshot log ({{ t.history|length }})</summary>
 <table class="ptable compact"><thead><tr><th>Date</th><th>Status</th><th>Price points found</th><th>Fingerprint</th></tr></thead><tbody>
-{% for h in t.history %}<tr><td>{{ h.date }}</td><td>{{ h.status }}</td><td>{{ h.points }}</td><td><code>{{ h.hash or '—' }}</code></td></tr>{% endfor %}
+{% for h in t.history %}<tr><td>{{ h.date }}</td><td>{{ "ok" if h.status == "ok" else "not fetched (retried next run)" }}</td><td>{{ h.points }}</td><td><code>{{ h.hash or '—' }}</code></td></tr>{% endfor %}
 </tbody></table></details>{% endif %}
 
 {% if t.pairs %}

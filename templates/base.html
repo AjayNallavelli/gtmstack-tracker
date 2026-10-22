@@ -11,11 +11,22 @@
 <meta property="og:description" content="{{ description }}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ site.base_url }}{{ canonical or path }}">
-<meta name="twitter:card" content="summary">
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:image" content="{{ site.base_url }}/static/og.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ site.name }}: {{ site.tagline }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ title }}">
+<meta name="twitter:description" content="{{ description }}">
+<meta name="twitter:image" content="{{ site.base_url }}/static/og.png">
+<meta name="twitter:image:alt" content="{{ site.name }}: {{ site.tagline }}">
 <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - what changed" href="/changes/feed.xml">
 <link rel="stylesheet" href="/static/style.css">
 <script type="text/javascript" async src="https://subscribe-forms.beehiiv.com/attribution.js"></script>
-{% if faq %}<script type="application/ld+json">{{ {"@context":"https://schema.org","@type":"FAQPage","mainEntity":faq|map("faq_item")|list}|tojson }}</script>
+{% if home_ld %}<script type="application/ld+json">{{ home_ld|tojson }}</script>
+{% endif %}{% if faq %}<script type="application/ld+json">{{ {"@context":"https://schema.org","@type":"FAQPage","mainEntity":faq|map("faq_item")|list}|tojson }}</script>
 {% endif %}{% block head %}{% endblock %}
 </head>
 <body>

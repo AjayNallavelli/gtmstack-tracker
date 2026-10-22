@@ -4,6 +4,16 @@
   <p class="eyebrow">Updated {{ stats.last|nicedate }} · {{ stats.tools }} tools tracked daily</p>
   <h1>Know what AI sales tools <em>actually</em> cost — and when that changes.</h1>
   <p class="lead">Plans, prices and limits for AI SDR agents, cold email, data &amp; enrichment and deliverability tools, copied from each vendor's pricing page. Unlike static lists, we keep the <strong>history</strong> and log <a href="/changes/">every change</a>.</p>
+  <div class="card accent signup-hero" id="subscribe">
+    <div>
+      <h2>Get every real price change in your inbox</h2>
+      <p>One free email a week: price increases, new or removed plans and free-tier changes across {{ stats.tools }} AI sales tools. No spam, unsubscribe anytime.</p>
+    </div>
+    <div>
+      {% include "_newsletter_form.html" %}
+      <p class="small"><a class="btn btn-sm" href="{{ site.newsletter.subscribe_url }}" rel="noopener" target="_blank">Subscribe free on beehiiv →</a></p>
+    </div>
+  </div>
   <div class="stats">
     <div><strong>{{ stats.tools }}</strong><span>tools</span></div>
     <div><strong>{{ stats.public }}</strong><span>publish pricing</span></div>
@@ -52,14 +62,15 @@
   <div class="card">
     <h2>What changed</h2>
     <ul class="feed">
-    {% for c in changes %}<li><span class="date">{{ c.date|nicedate }}</span> <a href="/tools/{{ c.tool_id }}/">{{ c.tool }}</a> — {{ c.summary }}</li>{% endfor %}
+    {% for c in changes %}<li><span class="date">{{ c.date|nicedate }}</span> <a href="/tools/{{ c.tool_id }}/#change-{{ c.date }}-{{ c.tool_id }}">{{ c.tool }}</a> — {{ c.summary }}</li>
+    {% else %}<li>No real price or plan changes detected since tracking started on {{ tracking_since|nicedate }}. Wording edits, billing-toggle artifacts and failed fetches are not counted.</li>{% endfor %}
     </ul>
     <a href="/changes/">Full change log →</a>
   </div>
   <div class="card accent">
     <h2>Get every price change in your inbox</h2>
     <p>A weekly digest of plan, price and limit changes across the GTM stack. Free.</p>
-    {% include "_newsletter_form.html" %}
+    {% include "_newsletter_button.html" %}
   </div>
 </section>
 {% endblock %}

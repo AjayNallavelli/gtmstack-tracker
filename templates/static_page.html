@@ -14,7 +14,8 @@
 <ol>
 <li><strong>Source.</strong> Each tool's official pricing page (linked on every tool page). We never estimate prices; if a vendor hides pricing behind "contact sales", we say so.</li>
 <li><strong>Daily snapshot.</strong> A script fetches each pricing page (with a headless browser where the page needs JavaScript), extracts the visible text, keeps the lines that carry prices or billing terms, and stores a dated snapshot.</li>
-<li><strong>Diff.</strong> Each snapshot is compared with the previous one. Changed price points become a "price change" entry; changed plan wording without price changes becomes a "plan / wording change". All entries appear on <a href="/changes/">What changed</a>.</li>
+<li><strong>Diff.</strong> Each snapshot is compared with the last successfully fetched one. Only real changes are published on <a href="/changes/">What changed</a> and the tool pages, as dated before/after blocks: a <em>price change</em> (a plan price point was added or removed) or a <em>plan change</em> (a plan was added, removed or renamed, logged after review).</li>
+<li><strong>Not counted as changes.</strong> Wording-only edits (e.g. "Book a Demo" → "Schedule a Demo", "Skip Navigation"), pages that show annual-billing prices instead of monthly by default (the new amounts match the published annual discount), and pages that could not be fetched (bot checks, timeouts), which are simply retried on the next run. These stay in the raw data in the repository but are never shown or counted as changes.</li>
 <li><strong>Structured plans.</strong> The plan tables are curated by hand from the page and re-checked when the diff flags a change.</li>
 <li><strong>Caveats.</strong> "From $X/mo" is the lowest listed paid price and may be an annual-billing or per-seat price — see each table. Some vendors localise prices by visitor country; where we could only see a non-USD price we show it in the notes instead of converting.</li>
 </ol>

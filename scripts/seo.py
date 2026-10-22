@@ -242,3 +242,115 @@ def roundup_faq(kind, label, ts):
     if contact:
         out.append({"q": f"Which {label} tools don't publish pricing?", "a": f"{names(contact)} require a sales conversation for pricing."})
     return out
+
+
+# ---- dated one-line answers shown at the top of tool / comparison / roundup / alternatives pages ----
+def nicedate(d):
+    import datetime as dt
+    return dt.date.fromisoformat(d).strftime("%b %-d, %Y")
+
+
+def _starts(t):
+    """'starts at $37.60/month billed annually ($47 month-to-month)' style fragment, or None."""
+    ct = t["cheapest_tier"]
+    if not ct or (t.get("price_display") and t["id"] not in NUMERIC_DISPLAY):
+        return None
+    m, a = ct["monthly_usd"], ct["annual_monthly_usd"]
+    if m and a and a < m:
+        return f"starts at {money(a)}/month billed annually ({money(m)} month-to-month)"
+    if m:
+        return f"starts at {money(m)}/month"
+    return f"starts at {money(a)}/month billed annually"
+
+
+def _generic(plan):
+    return plan.lower().startswith(("plans", "from", "pricing"))
+
+
+def _who(t):
+    """"Instantly's Outreach Growth plan" or just "Warmy" when the plan has no real name."""
+    p = t["cheapest_tier"]["plan"]
+    return t["name"] if _generic(p) else f"{t['name']}'s {p} plan"
+
+
+def answer_line_tool(t):
+    n, d = t["name"], nicedate(t["last_checked"])
+    free = f"; there is also a $0 plan ({t['free_tier']})" if t["has_free_plan"] and t["free_tier"] else ""
+    st = _starts(t)
+    if st:
+        plan = "" if _generic(t["cheapest_tier"]["plan"]) else f"; the cheapest paid plan is {t['cheapest_tier']['plan']}"
+        return f"As of {d}, {n} {st}{plan}{free}."
+    if t.get("price_display") and t["id"] not in NUMERIC_DISPLAY:
+        return f"As of {d}, {n} does not sell a simple monthly plan: {t['price_display'].rstrip('.')}{free}."
+    if t["has_free_plan"]:
+        return f"As of {d}, {n} has a free plan ({t['free_tier'] or 'Free'}), but its paid plans are not priced publicly."
+    return f"As of {d}, {n} does not publish prices; you have to contact sales for a quote, and there is no free plan."
+
+
+def _latest(ts):
+    return nicedate(max(t["last_checked"] for t in ts))
+
+
+def answer_line_compare(a, b):
+    d = _latest([a, b])
+    sa, sb = a["sort_price"], b["sort_price"]
+    def frag(t):
+        st = _starts(t)
+        if st:
+            return f"{_who(t)} {st}"
+        if t["entry_label"].startswith("Contact"):
+            return f"{t['name']} does not publish prices (contact sales)"
+        if t["entry_label"].startswith("Free"):
+            return f"{t['name']} has a free plan but no public paid prices"
+        return f"{t['name']} is priced as {t['entry_label']}"
+    s = f"As of {d}, {frag(a)}, while {frag(b)}"
+    if sa is not None and sb is not None and sa != sb:
+        lo = a if sa < sb else b
+        s += f"; {lo['name']} has the cheaper entry plan"
+    return s + "."
+
+
+def answer_line_roundup(r):
+    ts = r["tools"]
+    if not ts:
+        return ""
+    d = _latest(ts)
+    label, n = r["label"], len(ts)
+    priced = [x for x in ts if x["sort_price"] is not None]
+    free = [x for x in ts if x["has_free_plan"]]
+    if r["kind"] == "cheapest":
+        if priced:
+            c = min(priced, key=lambda x: x["sort_price"])
+            return (f"As of {d}, the cheapest {label} option we track is {_who(c)}, which {_starts(c)}; "
+                    f"{len(free)} of {n} have a free plan.")
+        return f"As of {d}, none of the {n} {label} tools we track publishes a fixed monthly price; {len(free)} have a free plan."
+    if r["kind"] == "free":
+        fp = [x for x in free if x["sort_price"] is not None]
+        s = f"As of {d}, {len(free)} {label} tools we track have a $0 plan"
+        if fp:
+            c = min(fp, key=lambda x: x["sort_price"])
+            s += f"; the cheapest to upgrade is {c['name']}, whose first paid plan" + ("" if _generic(c["cheapest_tier"]["plan"]) else f" ({c['cheapest_tier']['plan']})") + f" {_starts(c)}"
+        return s + "."
+    sav = sorted([x for x in ts if x["max_saving"]], key=lambda x: -x["max_saving"]["pct"])
+    if sav:
+        b = sav[0]
+        ms = b["max_saving"]
+        return (f"As of {d}, {len(sav)} of {n} {label} tools publish a lower price for annual billing; the biggest discount is "
+                f"{b['name']} {ms['plan']} at {ms['pct']}% off ({money(ms['monthly'])} → {money(ms['annual'])}/month).")
+    return f"As of {d}, none of the {n} {label} tools we track publishes a separate annual price."
+
+
+def answer_line_alternatives(t, alts):
+    if not alts:
+        return ""
+    d = _latest([t] + alts)
+    priced = [x for x in alts if x["sort_price"] is not None and not x["is_featured"]]
+    free = [x for x in alts if x["has_free_plan"]]
+    s = f"As of {d}, "
+    if priced:
+        c = min(priced, key=lambda x: x["sort_price"])
+        s += f"the cheapest {t['name']} alternative we track is {_who(c)}, which {_starts(c)}; "
+    s += f"{len(free)} of {len(alts)} alternatives have a free plan"
+    st = _starts(t)
+    s += f", and {t['name']} itself {st}." if st else "."
+    return s

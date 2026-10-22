@@ -4,7 +4,7 @@ import argparse, datetime as dt, html, itertools, json, os, re, shutil
 from urllib.parse import urlparse
 from pathlib import Path
 from jinja2 import Environment, FileSystemLoader, select_autoescape
-import seo
+import seo, datadates
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
@@ -21,6 +21,10 @@ POPULAR = ["apollo", "instantly", "clay", "smartlead", "lemlist", "zoominfo", "1
            "fullenrich", "findymail", "bettercontact", "pdl", "hubspot-breeze", "mailreach", "warmy", "warmbox",
            "glockapps", "emailguard", "allegrow"]
 PAIR_QUOTA = {"AI SDR agents": 12, "Cold email & engagement": 21, "Data & enrichment": 20, "Deliverability & warmup": 8}
+# Only real price-point or plan changes are published (change log, RSS, home page, tool pages, public JSON).
+# copy_change / billing_toggle / fetch_failed / baseline stay in data/changes.json as raw data only.
+# A raw entry can also be hidden by hand with "public": false.
+PUBLIC_TYPES = {"price_change", "plan_change"}
 STATUS_LABEL = {"public": "Public pricing", "partial": "Partly public", "contact_sales": "Contact sales"}
 
 
@@ -32,13 +36,30 @@ def money(v):
     return f"${v:,.2f}".replace(".00", "") if v % 1 else f"${int(v):,}"
 
 
+def is_public(c):
+    return c.get("type") in PUBLIC_TYPES and c.get("public", True) is not False
+
+
+def change_view(c):
+    """Old-vs-new values for a dated change block. Manual plan_change entries may carry "old"/"new"."""
+    c = dict(c)
+    c["old"] = c.get("old") or c.get("removed") or []
+    c["new"] = c.get("new") or c.get("added") or []
+    return c
+
+
 def load():
     site = json.loads((ROOT / "site.json").read_text())
     site["base_url"] = os.environ.get("SITE_URL", site["base_url"]).rstrip("/")
     # sub-path hosting (e.g. GitHub project pages): https://user.github.io/repo -> "/repo"
     site["base_path"] = urlparse(site["base_url"]).path.rstrip("/")
     tools = json.loads((DATA / "tools.json").read_text())["tools"]
-    changes = json.loads((DATA / "changes.json").read_text()) if (DATA / "changes.json").exists() else []
+    raw = json.loads((DATA / "changes.json").read_text()) if (DATA / "changes.json").exists() else []
+    changes = [change_view(c) for c in raw if is_public(c)]
+    started = {}
+    for c in raw:
+        if c["type"] == "baseline":
+            started[c["tool_id"]] = min(started.get(c["tool_id"], c["date"]), c["date"])
     # affiliate links live in one file: data/affiliates.json  {slug: url | {"url":..., "program":...}}
     aff = json.loads((DATA / "affiliates.json").read_text()) if (DATA / "affiliates.json").exists() else {}
     for t in tools:
@@ -60,6 +81,7 @@ def load():
                 snaps.setdefault(m["id"], []).append({"date": d.name, "status": m.get("status"),
                                                       "points": len(m.get("price_tokens", [])), "hash": m.get("hash"),
                                                       "tokens": m.get("price_tokens", [])})
+    ddates = datadates.update(json.loads((DATA / "tools.json").read_text())["tools"], dt.date.today().isoformat())
     for t in tools:
         t["slug"] = t["id"]
         t["cat_slug"] = CATS[t["category"]][0]
@@ -69,6 +91,9 @@ def load():
         t["last_checked"] = ok[0]["date"] if ok else t["date_checked"]
         t["last_fetch_failed"] = bool(h) and h[0]["status"] != "ok"
         t["changes"] = [c for c in changes if c["tool_id"] == t["id"]]
+        t["tracking_since"] = started.get(t["id"]) or (h[-1]["date"] if h else t["date_checked"])
+        # date this tool's underlying data last really changed: tools.json edits or a real detected change
+        t["data_date"] = max([ddates.get(t["id"], t["date_checked"])] + [c["date"] for c in t["changes"]])
         t["status_label"] = STATUS_LABEL[t["pricing_status"]]
         paid = [x for tr in t["tiers"] for x in (tr["monthly_usd"], tr["annual_monthly_usd"]) if x]
         t["entry_paid"] = ep = min(paid) if paid else None
@@ -165,6 +190,43 @@ def prefix_links(text, base_path):
     return ROOT_REL.sub(lambda m: m.group(1) + base_path + "/", text)
 
 
+AI_CRAWLERS = ["GPTBot", "OAI-SearchBot", "ChatGPT-User", "ClaudeBot", "Claude-User", "Claude-SearchBot", "anthropic-ai",
+               "PerplexityBot", "Perplexity-User", "Google-Extended", "Applebot-Extended", "CCBot", "Meta-ExternalAgent",
+               "Amazonbot", "Bytespider", "cohere-ai", "DuckAssistBot", "MistralAI-User"]
+
+
+def robots_txt(site):
+    lines = ["# GTMStack Tracker: all crawlers, including AI crawlers, are welcome.", "User-agent: *", "Allow: /", ""]
+    for b in AI_CRAWLERS:
+        lines += [f"User-agent: {b}", "Allow: /", ""]
+    lines.append(f"Sitemap: {site['base_url']}/sitemap.xml")
+    return "\n".join(lines) + "\n"
+
+
+def home_ld(site, tools, stats, since, modified):
+    base = site["base_url"] + "/"
+    org = {"@type": "Organization", "@id": base + "#org", "name": site["name"], "url": base,
+           "logo": {"@type": "ImageObject", "url": base + "static/logo.png", "width": 512, "height": 512},
+           "email": site.get("contact_email") or None,
+           "description": site["tagline"] + "."}
+    web = {"@type": "WebSite", "@id": base + "#website", "name": site["name"], "url": base, "publisher": {"@id": base + "#org"}}
+    ds = {"@type": "Dataset", "@id": base + "#dataset",
+          "name": "GTMStack Tracker: AI sales & outbound tool pricing dataset",
+          "description": (f"Plans, monthly and annual prices, free tiers and limits for {stats['tools']} AI SDR, cold email, "
+                          "data enrichment and deliverability tools, copied from each vendor's public pricing page, re-checked daily, "
+                          "with a dated log of real price and plan changes."),
+          "url": base, "creator": {"@id": base + "#org"}, "publisher": {"@id": base + "#org"},
+          "isAccessibleForFree": True, "inLanguage": "en",
+          "keywords": ["sales software pricing", "AI SDR pricing", "cold email tool pricing", "B2B data enrichment pricing",
+                       "email deliverability pricing", "SaaS price changes"],
+          "temporalCoverage": f"{since}/..", "dateModified": modified, "variableMeasured": ["plan price (USD/month)", "annual price (USD/month)", "free plan", "pricing status"],
+          "distribution": [
+              {"@type": "DataDownload", "encodingFormat": "application/json", "contentUrl": base + "data/tools.json", "name": "Tools, plans and prices"},
+              {"@type": "DataDownload", "encodingFormat": "application/json", "contentUrl": base + "data/changes.json", "name": "Real price and plan changes"}]}
+    org = {k: v for k, v in org.items() if v}
+    return {"@context": "https://schema.org", "@graph": [org, web, ds]}
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default=str(ROOT / "dist"))
@@ -234,28 +296,34 @@ def main():
     common = dict(site=site, cats=cats, stats=stats, month=month, year=now.year, roundups=roundups)
     pages = []
 
-    def render(tpl, path, sitemap=True, **ctx):
+    def lastmod(ts):
+        return max(t["data_date"] for t in ts) if ts else None
+
+    def render(tpl, path, sitemap=True, lastmod=None, **ctx):
         p = out / path.strip("/") / "index.html" if not path.endswith((".html", ".xml", ".txt")) else out / path.strip("/")
         p.parent.mkdir(parents=True, exist_ok=True)
         p.write_text(prefix_links(env.get_template(tpl).render(**common, path=path, **ctx), site["base_path"]))
         if sitemap and (path.endswith("/") or path == "/"):
-            pages.append(path)
+            pages.append((path, lastmod))
 
-    render("index.html", "/", tools=sorted(tools, key=lambda t: (not t["is_featured"], t["name"].lower())), changes=changes[:6],
+    all_lm = lastmod(tools)
+    tracking_since = min(t["tracking_since"] for t in tools)
+    common["tracking_since"] = tracking_since
+    render("index.html", "/", lastmod=all_lm, home_ld=home_ld(site, tools, stats, tracking_since, all_lm), tools=sorted(tools, key=lambda t: (not t["is_featured"], t["name"].lower())), changes=changes[:6],
            title=f"{site['name']}: AI SDR, cold email & data tool pricing (tracked daily)",
            description=f"Compare pricing for {len(tools)} AI SDR, cold email, enrichment and deliverability tools. We snapshot every pricing page daily and log what changed.")
     for c in cats:
-        render("category.html", f"/category/{c['slug']}/", cat=c, filterable=True, faq=seo.roundup_faq("cheapest", seo.CAT_LABEL[c["name"]], c["tools"]),
+        render("category.html", f"/category/{c['slug']}/", lastmod=lastmod(c["tools"]), cat=c, filterable=True, faq=seo.roundup_faq("cheapest", seo.CAT_LABEL[c["name"]], c["tools"]),
                title=f"{c['name']} pricing compared ({month}) | {site['name']}",
                description=f"{c['blurb']} Plans, prices and pricing history for {len(c['tools'])} tools.")
     for t in tools:
         sp = t["price_display"] if t.get("price_display") else f"from {money(t['entry_paid'])}/mo" if t["entry_paid"] else ("free plan available" if t["has_free_plan"] else "contact sales only")
-        render("tool.html", f"/tools/{t['slug']}/", t=t, faq=t["faq"],
+        render("tool.html", f"/tools/{t['slug']}/", lastmod=t["data_date"], answer=seo.answer_line_tool(t), t=t, faq=t["faq"],
                title=f"{t['name']} pricing ({now.year}): plans, limits & annual cost",
                description=f"{t['name']} pricing, checked {t['last_checked']}: {sp}. Free plan: {'yes' if t['has_free_plan'] else 'no'}. Every plan, monthly vs annual price, limits and pricing history.")
         alts = t["all_alternatives"]
         afree = sum(x["has_free_plan"] for x in alts)
-        render("alternatives.html", f"/alternatives/{t['slug']}/", t=t, filterable=True, alts=alts, faq=seo.alternatives_faq(t, alts),
+        render("alternatives.html", f"/alternatives/{t['slug']}/", lastmod=lastmod([t] + alts), answer=seo.answer_line_alternatives(t, alts), t=t, filterable=True, alts=alts, faq=seo.alternatives_faq(t, alts),
                vs={x["id"]: pair_by_ids.get(frozenset((t["id"], x["id"]))) for x in alts},
                title=f"{t['name']} alternatives ({now.year}): {len(alts)} tools compared by price",
                description=f"{len(alts)} {t['name']} alternatives sorted by entry price, {afree} with a free plan. Plans, free tiers and side-by-side comparisons, checked {stats['last']}.")
@@ -264,16 +332,16 @@ def main():
                title=f"{t['name']} pricing {now.year}: plans, limits & changes ({sp})",
                description=f"How much does {t['name']} cost? Every plan, monthly vs annual price and key limits, checked {t['last_checked']} from the official pricing page.")
     for p in pairs:
-        render("compare.html", f"/compare/{p['slug']}/", p=p, points=compare_points(p["a"], p["b"]),
+        render("compare.html", f"/compare/{p['slug']}/", lastmod=lastmod([p["a"], p["b"]]), answer=seo.answer_line_compare(p["a"], p["b"]), p=p, points=compare_points(p["a"], p["b"]),
                title=f"{p['a']['name']} vs {p['b']['name']} pricing ({month}) | {site['name']}",
                description=f"{p['a']['name']} vs {p['b']['name']}: side-by-side plans, entry price, free tier and pricing history from the official pricing pages.")
     for r in roundups:
-        render("roundup.html", f"/best/{r['slug']}/", r=r, filterable=True, faq=r["faq"], title=r["title"], description=r["description"])
-    render("best_index.html", "/best/", title=f"Buyer guides: cheapest & free AI sales tools ({now.year}) | {site['name']}",
+        render("roundup.html", f"/best/{r['slug']}/", lastmod=lastmod(r["tools"]), answer=seo.answer_line_roundup(r), r=r, filterable=True, faq=r["faq"], title=r["title"], description=r["description"])
+    render("best_index.html", "/best/", lastmod=all_lm, title=f"Buyer guides: cheapest & free AI sales tools ({now.year}) | {site['name']}",
            description="Data-driven roundups of the cheapest and free AI SDR, cold email, data enrichment and deliverability tools, built from tracked pricing pages.")
-    render("compare_index.html", "/compare/", pairs=pairs, title=f"Tool comparisons | {site['name']}",
+    render("compare_index.html", "/compare/", lastmod=lastmod([x for p in pairs for x in (p["a"], p["b"])]), pairs=pairs, title=f"Tool comparisons | {site['name']}",
            description="Side-by-side pricing comparisons of AI sales and outbound tools in the same category.")
-    render("changes.html", "/changes/", changes=changes, by_id=by_id,
+    render("changes.html", "/changes/", lastmod=max([c["date"] for c in changes], default=tracking_since), changes=changes, by_id=by_id,
            title=f"What changed: pricing & plan change log | {site['name']}",
            description="A dated feed of pricing and plan changes detected on the pricing pages of AI sales and outbound tools.")
     render("feed.xml", "/changes/feed.xml", changes=changes[:50])
@@ -298,16 +366,17 @@ def main():
     for t in pub["tools"]:
         t["affiliate_url"] = by_id[t["id"]]["affiliate_url"]
     (out / "data" / "tools.json").write_text(json.dumps(pub, indent=1, ensure_ascii=False))
-    if (DATA / "changes.json").exists():
-        shutil.copy(DATA / "changes.json", out / "data" / "changes.json")
+    # public change data = real changes only (the raw log incl. copy/toggle/fetch-failed rows stays in the repo)
+    (out / "data" / "changes.json").write_text(json.dumps([{k: v for k, v in c.items() if k not in ("old", "new")} for c in changes], indent=1, ensure_ascii=False))
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-    for p in pages:
-        sm.append(f"  <url><loc>{html.escape(site['base_url'] + p)}</loc><lastmod>{stats['last']}</lastmod></url>")
+    for p, lm in pages:
+        # lastmod = date the page's underlying data last really changed; omitted for pages with no tracked data
+        sm.append(f"  <url><loc>{html.escape(site['base_url'] + p)}</loc>" + (f"<lastmod>{lm}</lastmod>" if lm else "") + "</url>")
     sm.append("</urlset>")
     (out / "sitemap.xml").write_text("\n".join(sm) + "\n")
     # 404 page must work from any depth on GitHub Pages: links are already absolute-with-prefix
     (out / ".nojekyll").write_text("")
-    (out / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {site['base_url']}/sitemap.xml\n")
+    (out / "robots.txt").write_text(robots_txt(site))
     print(f"Built {len(pages)} sitemap pages ({len(tools)} tools, {len(tools)} alternatives, {len(roundups)} roundups, {len(pairs)} comparisons; "
           f"{len(tools)} /pricing/ pages canonicalised to tool pages) -> {out}")
 
