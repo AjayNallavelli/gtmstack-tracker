@@ -1,5 +1,49 @@
 [
  {
+  "date": "2026-10-22",
+  "tool_id": "findymail",
+  "tool": "Findymail",
+  "type": "fetch_failed",
+  "summary": "Pricing page could not be fetched; will retry next run."
+ },
+ {
+  "date": "2026-10-22",
+  "tool_id": "allegrow",
+  "tool": "Allegrow",
+  "type": "copy_change",
+  "summary": "Pricing page wording/plan text changed (no price points changed).",
+  "previous_date": "2026-10-21",
+  "diff": [
+   "-Content test 1 A/B version to avoid spam filters",
+   "+Hourly SPF, DKIM & DMARC monitoring"
+  ]
+ },
+ {
+  "date": "2026-10-22",
+  "tool_id": "warmy",
+  "tool": "Warmy",
+  "type": "copy_change",
+  "summary": "Pricing page wording/plan text changed (no price points changed).",
+  "previous_date": "2026-10-21",
+  "diff": [
+   "+Free Email Builder",
+   "+Free Header Analyzer",
+   "+Inspect email headers and authentication details locally with Warmy's public free tool, available independently of your paid plan",
+   "+Free Accessibility Checker",
+   "+Review email HTML for potential accessibility issues with Warmy's public free tool, available independently of your paid plan. Automated checks are not accessibility certification",
+   "+Free Email Builder",
+   "+Free Header Analyzer",
+   "+Inspect email headers and authentication details locally with Warmy's public free tool, available independently of your paid plan",
+   "+Free Accessibility Checker",
+   "+Review email HTML for potential accessibility issues with Warmy's public free tool, available independently of your paid plan. Automated checks are not accessibility certification",
+   "+Free Email Builder",
+   "+Free Header Analyzer",
+   "+Inspect email headers and authentication details locally with Warmy's public free tool, available independently of your paid plan",
+   "+Free Accessibility Checker",
+   "+Review email HTML for potential accessibility issues with Warmy's public free tool, available independently of your paid plan. Automated checks are not accessibility certification"
+  ]
+ },
+ {
   "date": "2026-10-21",
   "tool_id": "snovio",
   "tool": "Snov.io",

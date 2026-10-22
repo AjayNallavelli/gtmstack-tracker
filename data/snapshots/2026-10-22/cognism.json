@@ -1,0 +1,15 @@
+{
+ "id": "cognism",
+ "status": "ok",
+ "method": "http",
+ "url": "https://www.cognism.com/pricing",
+ "hash": "c1618f2f3032a6bb",
+ "price_tokens": [],
+ "pricing_lines": [
+  "Automatically enrich and maintain your CRM records",
+  "Talk to sales",
+  "Support segmentation, routing and reporting",
+  "Talk to sales"
+ ],
+ "date": "2026-10-22"
+}

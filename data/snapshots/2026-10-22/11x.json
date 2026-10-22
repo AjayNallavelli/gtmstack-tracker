@@ -1,0 +1,19 @@
+{
+ "id": "11x",
+ "status": "ok",
+ "method": "chrome",
+ "url": "https://www.11x.ai/",
+ "hash": "e03ec193a23be94a",
+ "price_tokens": [
+  "$4"
+ ],
+ "pricing_lines": [
+  "01",
+  "$4",
+  "03",
+  "$",
+  "SDR",
+  "hours reallocated to high-value work monthly"
+ ],
+ "date": "2026-10-22"
+}

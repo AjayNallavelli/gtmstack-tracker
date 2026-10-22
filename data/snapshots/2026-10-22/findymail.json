@@ -1,0 +1,6 @@
+{
+ "id": "findymail",
+ "date": "2026-10-22",
+ "status": "error",
+ "error": "http: 403 Client Error: Forbidden for url: https://www.findymail.com/pricing/"
+}
