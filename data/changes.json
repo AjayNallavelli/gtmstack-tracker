@@ -1,5 +1,12 @@
 [
  {
+  "date": "2026-10-24",
+  "tool_id": "prospeo",
+  "tool": "Prospeo",
+  "type": "fetch_failed",
+  "summary": "Pricing page could not be fetched; will retry next run."
+ },
+ {
   "date": "2026-10-23",
   "tool_id": "woodpecker",
   "tool": "Woodpecker",
