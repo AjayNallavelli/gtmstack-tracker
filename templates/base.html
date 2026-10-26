@@ -36,6 +36,7 @@ document.addEventListener('submit',function(e){
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="{{ site.name }}: {{ site.tagline }}">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@{{ site.x_handle }}">
 <meta name="twitter:title" content="{{ title }}">
 <meta name="twitter:description" content="{{ description }}">
 <meta name="twitter:image" content="{{ site.base_url }}/static/og.png">
@@ -57,6 +58,7 @@ document.addEventListener('submit',function(e){
       <a href="/best/">Guides</a>
       <a href="/changes/">What changed</a>
       <a href="/newsletter/">Newsletter</a>
+      <a href="{{ site.x_url }}" target="_blank" rel="me noopener" aria-label="Follow GTMStack on X">Follow on X</a>
       <a class="btn btn-sm" href="/get-featured/">Get featured</a>
     </nav>
   </div>
@@ -82,6 +84,7 @@ document.addEventListener('submit',function(e){
     <div>
       <h4>Weekly pricing changes</h4>
       {% include "_newsletter_button.html" %}
+      <p class="small"><a href="{{ site.x_url }}" target="_blank" rel="me noopener">Follow @{{ site.x_handle }} on X</a> for price changes as they happen.</p>
     </div>
   </div>
   <div class="wrap small muted copy">© {{ year }} {{ site.name }}. Not affiliated with the vendors listed. Trademarks belong to their owners.</div>

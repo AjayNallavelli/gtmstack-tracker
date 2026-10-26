@@ -206,7 +206,7 @@ def robots_txt(site):
 def home_ld(site, tools, stats, since, modified):
     base = site["base_url"] + "/"
     org = {"@type": "Organization", "@id": base + "#org", "name": site["name"], "url": base,
-           "logo": {"@type": "ImageObject", "url": base + "static/logo.png", "width": 512, "height": 512},
+           "logo": {"@type": "ImageObject", "url": base + "static/logo.png", "width": 512, "height": 512}, "sameAs": [site["x_url"]] if site.get("x_url") else [],
            "email": site.get("contact_email") or None,
            "description": site["tagline"] + "."}
     web = {"@type": "WebSite", "@id": base + "#website", "name": site["name"], "url": base, "publisher": {"@id": base + "#org"}}
