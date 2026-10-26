@@ -4,7 +4,7 @@
 
 {% macro outlink(t, label=None, cls="btn") -%}
 {% if t.is_affiliate or t.is_featured -%}
-<a class="{{ cls }}" href="{{ t.affiliate_url or t.website }}" rel="sponsored noopener" target="_blank">{{ label or ("Visit " ~ t.name) }} ↗</a>{% if t.is_affiliate %} <span class="tag tag-aff" title="We may earn a commission">Affiliate</span>{% endif %}{% if t.is_featured %} <span class="tag tag-feat" title="Paid placement">Featured (paid)</span>{% endif %}
+<a class="{{ cls }}" href="{{ t.affiliate_url or t.website }}" rel="sponsored noopener" target="_blank" data-tool="{{ t.slug }}">{{ label or ("Visit " ~ t.name) }} ↗</a>{% if t.is_affiliate %} <span class="tag tag-aff" title="We may earn a commission">Affiliate</span>{% endif %}{% if t.is_featured %} <span class="tag tag-feat" title="Paid placement">Featured (paid)</span>{% endif %}
 {%- else -%}
 <a class="{{ cls }}" href="{{ t.website }}" rel="noopener" target="_blank">{{ label or ("Visit " ~ t.name) }} ↗</a>
 {%- endif %}

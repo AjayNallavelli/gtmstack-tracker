@@ -2,6 +2,24 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+{% if site.ga4_measurement_id %}<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga4_measurement_id }}"></script>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','{{ site.ga4_measurement_id }}');
+document.addEventListener('click',function(e){
+  var a=e.target.closest&&e.target.closest('a');if(!a)return;
+  var rel=(a.getAttribute('rel')||'').split(/\s+/),href=a.href||'';
+  if(rel.indexOf('sponsored')>=0){
+    var tool=a.getAttribute('data-tool');if(!tool){try{tool=new URL(href).hostname.replace(/^www\./,'');}catch(_){tool=href;}}
+    gtag('event','affiliate_click',{tool:tool,link_url:href,page_path:location.pathname,transport_type:'beacon'});
+  }else if(/beehiiv\.com/.test(href)){
+    gtag('event','newsletter_signup_click',{link_url:href,page_path:location.pathname,transport_type:'beacon'});
+  }
+},true);
+document.addEventListener('submit',function(e){
+  var f=e.target;if(f&&/beehiiv/.test((f.action||'')+(f.className||'')))gtag('event','newsletter_signup_click',{link_url:f.action||'',page_path:location.pathname,transport_type:'beacon'});
+},true);
+</script>{% endif %}
 <meta name="viewport" content="width=device-width, initial-scale=1">
 {% if site.google_site_verification %}<meta name="google-site-verification" content="{{ site.google_site_verification }}" />{% endif %}
 <title>{{ title }}</title>
