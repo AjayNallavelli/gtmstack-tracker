@@ -1,0 +1,229 @@
+Person Data Pricing | People Data Labs
+Datasets
+Person Data
+Company Data
+Job Posting Data
+Beta
+Use cases
+HR Tech
+Sales & Marketing
+Investment Research
+Resources
+Docs
+Blog
+Data Lab
+Product Roadmap
+Company
+About PDL
+Our Engineers
+Pricing
+Login
+Sign Up
+Contact Us
+Menu
+Datasets
+Use cases
+Resources
+Company
+Pricing
+Login
+Sign Up
+Contact Us
+Pricing
+The data you need. The flexibility you want. ISO & SOC 2 Type 2 compliant.
+Person Data
+Company Data
+free
+Testing
+Get started for free and explore our Person APIs. Contact data not included.
+Free
+Up to 100 credits/mo
+Easy sign up
+No commitment
+Start testing
+pro
+Monthly
+Annually
+Self-Serve
+Access our full suite of APIs and higher credit limits for real-world usage.
+Starting at $98/mo
+Start with as few as 350 credits/mo
+Monthly and annual subscriptions
+Contact data included
+Access to premium fields
+CSV enrichment available
+Email support
+Get API credits
+enterprise
+Bulk Data
+Power your scaled product with custom volumes and white glove support.
+Custom pricing
+Formal data testing
+Annual contracts
+Flexible payment terms
+Additional field bundles available
+Access to all APIs
+Data License Feeds
+Designated success team
+SSO / SAML
+Contact sales
+Here's how our plans
+compare
+Free
+Pro
+Enterprise
+Usage & Billing
+Free
+Try for free
+Pro
+Start now
+Enterprise
+Talk to an expert
+Data Volume
+The number of records retrieved.
+Up to 100 records / mo
+Starting at 350 records / mo
+Custom volume
+Contact Data
+Free plan: emails, phone, & address data is obfuscated. Unlock with Pro.
+-
+Premium Fields
+-
+Add-on
+Price
+With volume-based pricing, discounts trigger as your usage grows.
+$0 / mo
+Starting at $98 / mo
+Custom pricing
+Term Length
+Save 20% and access all of the data upfront with annual commitments.
+-
+Monthly or Annual
+Annual
+Free
+Try for free
+Pro
+Start now
+Enterprise
+Talk to an expert
+Data Volume
+The number of records retrieved.
+Up to 100 records / mo
+Contact Data
+Free plan: emails, phone, & address data is obfuscated. Unlock with Pro.
+-
+Premium Fields
+-
+Price
+With volume-based pricing, discounts trigger as your usage grows.
+$0 / mo
+Term Length
+Save 20% and access all of the data upfront with annual commitments.
+-
+Delivery Methods
+Free
+Try for free
+Pro
+Start now
+Enterprise
+Talk to an expert
+APIs
+Plug into flexible APIs designed for your workflow.
+Data Licensing
+On premise & flat-file bulk delivery for large data volume needs.
+-
+Integrations
+Append, transform, & sync data across your systems.
+Free
+Try for free
+Pro
+Start now
+Enterprise
+Talk to an expert
+APIs
+Plug into flexible APIs designed for your workflow.
+Data Licensing
+On premise & flat-file bulk delivery for large data volume needs.
+-
+Integrations
+Append, transform, & sync data across your systems.
+Support
+Free
+Try for free
+Pro
+Start now
+Enterprise
+Talk to an expert
+Documentation & Tutorials
+Get up-and-running quickly with developer docs & tutorials
+Email Support
+-
+Designated Customer Success Manager
+-
+Free
+Try for free
+Pro
+Start now
+Enterprise
+Talk to an expert
+Documentation & Tutorials
+Get up-and-running quickly with developer docs & tutorials
+Email Support
+-
+Designated Customer Success Manager
+-
+Security
+Free
+Try for free
+Pro
+Start now
+Enterprise
+Talk to an expert
+SAML / SSO
+-
+Add-on
+ISO & SOC 2 Type 2
+Free
+Try for free
+Pro
+Start now
+Enterprise
+Talk to an expert
+SAML / SSO
+-
+ISO & SOC 2 Type 2
+Get Started
+Let's talk data
+Hey! Another newsletter.
+Datasets
+People Data
+Company Data
+Job Posting Data
+Beta
+Company
+Contact Sales
+Contact Support
+About PDL
+Our Engineers
+Security
+Privacy
+Careers
+llms.txt
+Data Lab
+Blog
+Datafication
+Recipes
+Customer Stories
+Free Datasets
+Deep-dive Webinars
+Libraries & SDKs
+Integrations
+Release Notes
+Roadmap
+API Status
+Privacy Policy
+Cookie Preferences
+Your Privacy Choices
+Terms of Use
+Acceptable Data Use
+© 2026 People Data Labs, Inc. All rights reserved.

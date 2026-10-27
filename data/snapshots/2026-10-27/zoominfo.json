@@ -1,0 +1,20 @@
+{
+ "id": "zoominfo",
+ "status": "ok",
+ "method": "http",
+ "url": "https://www.zoominfo.com/pricing",
+ "hash": "acce6fe371238a17",
+ "price_tokens": [],
+ "pricing_lines": [
+  "Take prospecting to the next level with best in class contact & company data.",
+  "Start free trial",
+  "AI driven account prioritization based on unique B2B signals & deeper insights.",
+  "Start free trial",
+  "Free Trial",
+  "Join the ABM platform trusted by over 250 million users",
+  "Free Trial",
+  "How much does ZoomInfo cost annually?",
+  "Does ZoomInfo allow monthly payments?"
+ ],
+ "date": "2026-10-27"
+}
