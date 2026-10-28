@@ -1,0 +1,348 @@
+FullEnrich Pricing: Pay Only for Verified Contacts | Plans from Free
+1,000
+credits / month
+|
+$0.055
+per credit
+Monthly
+Annual
+Most popular
+500
+750
+1K
+1.5K
+2K
+5K
+10K
+15K
+25K
+50K
+100K
+>100K
+1,000 work emails
+· 1 credit each
+100 mobile
+phones
+· 10 credits each
+333 personal emails
+· 3 credits each
+1,000 reverse email lookups
+· 1 credit each
+Not sure how many credits you need?
+Use the calculator
+Free trial
+Ideal for testing our data quality.
+$0
+Start Free Trial
+Everything in Pro, plus:
+50 credits to start
+No credit card
+Earn additional credits by inviting team members
+Pro
+Selected
+Ideal for teams that want data on demand to power their GTM or product.
+$
+$5
+5
+/mo
+1K credits / month
+Get Started
+Includes:
+Waterfall enrichment
+Work email enrichment
+Mobile phone enrichment
+Personal email enrichment
+Reverse email lookup
+Advanced Email & Phone Verification
+Live Company & Person Enrichment
+People & company search (30+ filters)
+CRM integrations
+API & no-code integration
+MCP Server
+Unlimited users included
+Credit rollover
+3 months monthly, 12 months yearly
+Enterprise
+Ideal for teams that need data at scale: large GTM teams, agencies, and
+products embedding FullEnrich.
+Custom
+Contact Sales
+Everything in Pro, plus:
+For Every Enterprise Customer
+Priority support
+Custom rate limits & priority queue
+Dedicated account manager
+Flexible billing terms
+BYOK (Bring Your Own API Key)
+For Enterprise teams
+Custom SSO & security (add-ons)
+Team governance and workspace setup
+For Embedded API & Resellers
+Reseller agreement
+Shared Slack support channel
+Sub API accounts
+For Agencies
+Agency marketplace listing
+Co-marketing opportunities
+Multi-client workflow support
+Complete feature list
+Working with AI agents?
+Use our machine-readable pricing
+Compare
+all
+plans
+in detail.
+Features
+Free
+Start Free Trial
+Pro
+Get Started
+Enterprise
+Contact Sales
+Enrichment
+Waterfall Enrichment — 25+ Sources
+Mobile Phone Enrichment
+Work Email Enrichment
+Personal Email Enrichment
+Reverse Email Lookup
+People & Company Data
+Bulk CSV Enrichment
+Advanced Verification (~30% Raw Data Removed)
+Email Verification
+Syntax & Formatting
+SMTP Check
+Catch-All Verification (80% Of Catch-Alls Verified)
+Confidence Score
+Phone Verification
+Landline Verification (No Credits Used If Landline)
+Out-Of-Service Removal
+Owner's Name Verification (US & Canada)
+Search People & Companies
+Full People Access (800M)
+Full Company Access (50M)
+Search People (15+ Filters)
+Search Companies (15+ Filters)
+Unlimited Lists
+Exclude Already-Enriched People
+Export As CSV
+Upload List Of Company Names Or Domains
+Integrations & CRM
+MCP Server
+API Access
+Enrichment API
+Search API
+Reverse Email Lookup API
+HubSpot Integration
+Push Contacts & Companies
+Enrich Contacts Already In HubSpot
+FullEnrich Inside HubSpot
+Soon
+Custom Rate Limit & Concurrency
+Workspace Management
+Unlimited Users
+Credits Rollover
+Credit Limits Per User
+Credit Monitoring — By User & Data Point
+Low-Credit Alerts
+Bring Your Own API Key
+SSO
+Google SSO
+Enterprise SSO (Custom IdP)
+Add-on
+Compliance & Security
+GDPR Compliant
+CCPA Compliant
+SOC 2 Type II
+Support & Billing
+Email Support
+Chat Support
+Priority Support
+Dedicated Account Manager
+Shared Slack Channel
+Estimate your usage
+Pricing
+calculator.
+Tell us how your team prospects and we'll estimate your monthly credit needs.
+Per person, per week
+20 mobile numbers × 10 credits
+200
+100 work emails × 1 credit
+100
+Subtotal
+300
+Across the team
+300 × 10 people
+3,000
+Over the month
+3,000 × 4 weeks
+12,000
+Credits / month
+12,000
+Recommended plan
+Pro — 15K credits
+$720/mo (15K credits)
+Get started
+Back to plan selection
+What
+they
+say
+about
+us
+“
+When you're scaling a 1,000-person sales org across 80 countries, bad data kills your pipeline. We piloted FullEnrich with over 70 reps. The results? 2.4x more mobiles found, connect rates that jumped from 6% to 30%, and 5x fewer invalid numbers.
+They're not just another data vendor. They're the foundation our global outreach runs on.
+”
+Olivier Elbaz
+Global Head of Expansion
+2.4×
+more mobile numbers found
+6% → 30%
+connect rates on the pilot
+5×
+fewer invalid numbers
+Watch
+“
+Your real differentiator is the accuracy of the data. You've developed a technique where you know what's accurate and what's not, which is not the same as other players. When you're scaling as we are,
+even a 5 to 10% accuracy increase has a huge impact on the entire yield.
+”
+W
+Wilfried Juncker
+Managing Director Americas
+“
+FullEnrich powers 11x's new version. Our coverage went from 200 million to 1.6 billion contacts, letting us win deals where competitors had zero coverage.
+It's the simplest solution by far and more economical than building in-house.
+”
+200M → 1.6B contact coverage
+K
+Keith Fearon
+Head of Product
+“
+It
+stopped our SDRs complaining to me every day about poor data and bad numbers.
+My Slack and inbox are now a much nicer place.
+”
+40% connect rates in the UK
+A
+Abdul Mereh
+Head of Data
+“
+After Cognism, ZoomInfo, and many others —
+FullEnrich is by far the best enrichment tool.
+Accurate phone numbers where others found nothing or wrong ones. I've lost count of the deals. Thank you :)
+”
+M
+Matthias Danielsson
+Payment Specialist
+“
+A customer asked what we use for email waterfall — I said use FullEnrich. They replied: '
+FullEnrich is legit — 84% find rate vs Apollo.
+We're good on cold emails now. Thanks!!'
+”
+84% find rate vs Apollo
+E
+Eric Nowoslawski
+Founder
+“
+I started solo on the MCP.
+Three weeks later my whole sales team was using it through our internal skills.
+We're moving to Enterprise.
+”
+M
+Maxence Garnier
+GTM Engineer
+“
+FullEnrich
+saves us time, money, and delivers better data quality
+”
+N
+Nicholas Scavone
+CEO
+“
+How does fullenrich compare with lusha in the EMEA?
+It's just way better
+”
+D
+Dominik Schütten
+Regional Director
+Loved by thousands of GTM teams.
+Explore the Wall of Love
+Visit our Trust Center
+Frequently
+Asked
+Questions.
+What is "waterfall enrichment"?
+Waterfall enrichment is a process in which you use several different data sources, one after the other, to find a person's email and phone number. The more sources you use, the more contact information you can find, and the more potential customers you can reach.
+What is your email & phone find rate?
+Our email and phone find rate depends on industry, geography, and other factors. As an estimate, it averages at around 80%, but it can be considerably higher. Try it for yourself with your free credits.
+How do credits work?
+Credits are used when we successfully find verified data. 1 work email found = credits used. 1 phone number found = credits used. If we can't find the data, you don't pay. Credits roll over for 3 months on monthly plans and 12 months on yearly plans.
+What if I only need emails, or only phone numbers?
+The credits in your plan can be used to find phone numbers, emails, or both. Once your plan is purchased, you can select which type of enrichment you want.
+Can I add unlimited users?
+Yes! Every plan — including the free trial — comes with unlimited users at no additional cost. Add your entire team without worrying about per-seat pricing.
+Are you GDPR & CCPA Compliant?
+Yes. We do not have any contact database, meaning we do not store contact information. We only select providers that are CCPA and GDPR compliant. We are also SOC 2 Type II certified.
+Marketing Operation Managers
+Push to CRM
+CRM
+Export
+Mobile numbers
+0
+/ 10
+0%
+0
+Sources
+Work emails
+0
+/ 10
+0%
+0
+Sources
+Full name
+Company
+Mobile phone
+Work email
+James Whitfield
+Notion
++1 (206) 266-1000
+james.whitfield@notion.so
+Priya Sharma
+Slack
++351 21 123 4567
+priya.sharma@slack.com
+Tomás Berger
+Airtable
++1 (415) 890-2241
+tomas.berger@airtable.com
++1
+Amélie Dubois
+Figma
++33 6 12 34 56 78
+amelie.dubois@figma.com
+David Park
+Stripe
++1 (212) 601-9200
+david.park@stripe.com
+Rachel Okafor
+Gusto
++33 1 84 88 00 00
+rachel.okafor@gusto.com
++4
+Sarah Chen
+Zoom
++1 (617) 482-9104
+sarah.chen@zoom.us
++2
+Marcus Okonkwo
+Datadog
+—
+marcus.okonkwo@datadoghq.com
+Elena Vasquez
+Asana
++1 (415) 507-5000
+elena.vasquez@asana.com
++3
+Lucas Fernandes
+G2
+—
+lucas.fernandes@g2.com

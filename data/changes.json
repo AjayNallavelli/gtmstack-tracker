@@ -1,5 +1,23 @@
 [
  {
+  "date": "2026-10-28",
+  "tool_id": "findymail",
+  "tool": "Findymail",
+  "type": "copy_change",
+  "summary": "Pricing page wording/plan text changed (no price points changed).",
+  "previous_date": "2026-10-24",
+  "diff": [
+   "+Never overwrites your data",
+   "+Book Your Free CRM Audit",
+   "+Or",
+   "+get a free CRM health report",
+   "+Integrates with your CRM",
+   "+Book Your Free CRM Audit",
+   "+No conflicts",
+   "+Book Your Free CRM Audit"
+  ]
+ },
+ {
   "date": "2026-10-27",
   "tool_id": "regie",
   "tool": "Regie.ai",

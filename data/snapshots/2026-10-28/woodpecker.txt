@@ -1,0 +1,339 @@
+See pricing for cold email and LinkedIn outreach
+Transparent pricing for Cold Email
+and LinkedIn outreach. Start a free trial.
+14-day free trial
+All features included
+No credit card required
+Monthly
+Annually
+Save 33%
+EUR
+USD
+GBP
+CHF
+AUD
+BRL
+CAD
+DKK
+INR
+NOK
+PLN
+SEK
+Start free trial
+Emails
+sent
+5 000
+50 000
+100 000
+250 000
+500 000
+1 000 000
+Unlimited contacts storage
+Unlimited email verification
+3 warm-ups included
+100 Lead Finder credits
+Unlimited team
+members
+Unlimited email
+accounts
+Most popular
+Start free trial
+Emails
+sent
+5 000
+50 000
+100 000
+250 000
+500 000
+1 000 000
+LinkedIn
+accounts
+1
+Unlimited contacts storage
+Unlimited email verification
+3 warm-ups included
+100 Lead Finder credits
+Unlimited team
+members
+Unlimited email
+accounts
+All LinkedIn
+actions
+Start free trial
+LinkedIn
+accounts
+1
+Unlimited contacts storage
+Up to
+250
+direct
+messages/day
+Up to
+50
+InMail
+messages/mo
+Up to
+30
+connection
+requests/day
+Up to
+500
+profile
+visits/day
+100 Lead Finder
+credits
+Unlimited team
+members
+Book a call
+More emails or LinkedIn slots than the standard tiers? Let's talk.
+Higher email or LinkedIn limits
+A setup shaped around your team
+Add-ons chosen for your needs
+Add-ons
+Optional extras are priced separately and added to your plan.
+Lead Finder
+Additional Lead Finder
+credits
+Starts at 500 credits for
+0
+500
+1 400
+2 100
+4 200
+5 600
+8 400
+14 000
+21 000
+28 000
+35 000
+42 000
+70 000
+Warm-up, emails and domains
+Additional
+warm-ups
+/monthly per email account
+0
+Email addresses (Google or
+Microsoft)
+/monthly per email address
+0
+Email addresses (Maildoso, Mailforge, Infraforge or
+Azure)
+/monthly per email address
+0
+New
+domains
+/monthly per domain, billed annually
+0
+Transfer your
+domain
+/monthly per domain, billed annually
+0
+Dedicated servers
+(Infraforge)
+/monthly per server
+0
+Azure domain
+hosting
+/monthly per domain
+0
+Integrations, API, webhooks, MCP, CLI
+Integrations, API, webhooks, MCP,
+CLI
+/monthly
+Agency Panel
+Active
+clients
+/monthly per active client
+0
+White
+Label
+/monthly per active client
+Selected add-ons
+/mo
+Outbound workshops
+We'll teach your team how to do outbound via cold email.
+Optionally, we can include LinkedIn outreach if you want to go multichannel.
+See all topics
+Topics included
+Intro to cold email and required infrastructure
+Defining ideal customer profiles (ICP) for outbound
+Defining the offer per ICP group
+Creating and launching the first campaigns in Woodpecker
+Other topics as required by your team
+Choose sessions
+4 sessions × 2 hours = 8 hours total
+5 sessions × 2 hours = 10 hours total
+6 sessions × 2 hours = 12 hours total
+7 sessions × 2 hours = 14 hours total
+8 sessions × 2 hours = 16 hours total
+9 sessions × 2 hours = 18 hours total
+10 sessions × 2 hours = 20 hours total
+Minimum 4 sessions. Each additional 2-hour session:
+One-time total
+Reserve workshops
+Features:
+Warm-ups
+FREE
+Email catch-all verification
+FREE
+Lead Finder credits
+FREE
+Unlimited team
+members
+FREE
+Unlimited email
+accounts
+FREE
+DELIVERABILITY
+Free
+warm-up
+Inbox
+rotation
+Centralized
+inbox
+Deliverability
+monitor
+Adaptive
+sending
+Email service provider
+matching
+NEW
+Human-like sending
+randomization
+Adjustable daily sending
+limits
+Customizable sending
+intervals
+Spam words and links
+checker
+Domain audit (SPF, DKIM
+checker)
+AUTOMATION
+Condition-based
+campaigns
+Workflows
+A/B tests (up to 5
+versions)
+‘Out of office’ inbox
+auto-filtering
+AI Interest level
+detection
+Sorting replies by interest
+level
+Manual tasks (Calls, SMS,
+LinkedIn)
+Email-LinkedIn-call combined
+sequences
+Aircall
+integration
+Empty custom fields
+detection
+Duplicate sending
+detection
+Pre-configured email
+providers
+PERSONALIZATION
+Send in the prospect’s
+timezone
+Spintax
+Snippets – dynamic custom
+fields
+Snippet-based
+conditions
+AI email
+writer
+Blacklisting
+domains
+Preview and test an email before
+sending
+GDPR 100%
+compliant
+CCPA 100%
+compliant
+ISO certified
+storage
+CASA certified: tier
+2
+Two-factor authentication
+(2FA)
+Google compliant partner (oAuth
+2)
+INTEGRATIONS
+ADD-ON
+Claude
+NEW
+Clay
+API
+Webhooks
+MCP
+Server
+CLI
+NEW
+Pipedrive two-way
+sync
+Hubspot two-way
+sync
+Persana
+Calendly
+Google
+Sheets
+Zapier
+Zoho
+Hunter
+Mailivery
+Warmy
+NEW
+Mailreef
+AGENCY PANEL
+ADD-ON
+Separate prospects
+database
+Fast loading times at high data
+volumes
+99.9%
+uptime
+Bulk campaign actions (stop, pause,
+start)
+Bulk email accounts
+upload
+All client stats in one
+panel
+Agency outreach
+calendar
+Global
+blacklist
+Client connects mailboxes without sharing
+passwords
+Client view-only
+access
+Automated audits for client
+domains
+Centralized
+billing
+Start free trial
+"We set up about 1,000 appointments a month with Woodpecker. In some cases, we've gotten over 150 in a given month for a client for half the cost of an SDR."
+Miles Veth,
+CEO & Founder of Veth Group
+FAQ
+Is there a free trial? How does the trial work?
+Yes, there is a free trial for 14-day or 500 cold emails. Whichever limit you reach first applies. You start the trial when you create an account in Woodpecker. During the trial, you have access to all Woodpecker features.
+What happens when the trial ends? Can I extend my trial?
+Yes, you can extend your trial if you need more time. You also keep your access to Woodpecker after your trial ends. You can extend your trial by writing to us via the chat in the bottom right corner of the screen.
+Do you automatically upgrade to a higher plan when reaching the limits of the current plan?
+No, your plan will not be automatically upgraded. You can upgrade the plan by yourself if you'd like that.
+What happens if I exceed the limits in my plan? (emails sent)
+If you exceed the emails sent limit, the campaign won't send new emails to new prospects.
+To contact new prospects you can upgrade to a higher limit or wait until the limit renews on your billing date.
+And you won't have to pay for these...
+Unlimited catch-all email verification for free
+Unlimited team members for free
+Unlimited email accounts for free
+Start with cold email in 4 steps:
+Get domains and inboxes
+Warm-up before sending
+Find B2B emails to contact
+Write your emails and send
+Start free trial
+Watch Demo
+Talk to sales

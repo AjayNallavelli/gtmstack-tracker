@@ -1,0 +1,459 @@
+Plans & Pricing | Findymail
+Skip to content
+Pricing
+Verified data
+without worrying about credits
+Find emails that don't bounce, phone numbers that ring and prospects that fit your ICP, with generous usage on every plan.
+Prospecting
+CRM Enrichment & Cleanup
+Individual
+For everyday prospecting
+$99
+/ month
+Get started
+Generous
+usage
+1
+seat
+5
+active signals
+Standard
+processing
+Team
+Most popular
+For teams running outbound workflows
+$399
+/ month
+Get started
+5×
+more usage
+5
+seats
+25
+active signals
+Priority
+processing
+Scale
+For high-volume data operations
+$999
+/ month
+Get started
+20×
+more usage
+20
+seats
+100
+active signals
+Fastest
+processing
+Enterprise
+For organizations with custom data requirements
+Custom
+Contact sales
+Custom
+usage
+Custom
+seats
+Custom
+signals
+Custom
+agreements
+Reselling Findymail data?
+See credit-based plans →
+Ranked #1 by Clay for email finding and verification
+All Plans Include...
+Verified B2B emails only
+Every email is verified in real-time when you request it. No stale databases, no "maybe it works" emails.
+Guaranteed <5% bounce rate
+Send directly to Findymail emails without reverifying them.
+Proprietary catch-all email verification
+We verify catch-all emails that competitors mark as "risky." That's 30% more of your list you can actually reach.
+Mobile phone number finder
+Direct mobile numbers for key decision-makers. Non-EU only.
+Intellimatch AI lead finder
+Describe your ICP in plain English, we find companies that match.
+10+ native integrations
+One-click setup with Clay, HubSpot, Salesforce, Instantly, Lemlist, Pipedrive, and more.
+Chrome extension
+Find emails while browsing social profiles. One click, instant results.
+Bulk email finder
+Upload a CSV of names and companies, get verified emails back in minutes.
+Google Sheets integration
+Enrich contacts directly in Google Sheets. No exports, no copy-paste.
+API & MCP access
+Build custom workflows with the API, or connect Findymail to AI assistants like Claude and ChatGPT through MCP.
+Reverse email lookup
+Have an email but need the person's name, title, and company? Get full contact details from just an email address.
+CRM integration
+Automatically push verified contacts to your CRM without manual data entry.
+How many contacts do you want to find?
+Up to 5,000 per month
+1k
+5k
+15k
+30k
+50k
+100k
+100k+
+5,000 x Finder Credits
+Finder credits are used to find a new contacts as well as verify it automatically.
+AND
+5,000 x Verifier Credits
+BONUS
+Additional credits to verify contacts from other sources. Findymail contacts are already verified.
+A credit gets you...
+1 email = 1 credit
+OR
+1 phone = 10 credits
+You only pay for verified results. No charge if we can't find it.
+Pay Monthly
+Pay Yearly
+2 Months Free
+Starter
+Recommended
+$99
+per month
+billed monthly
+per month
+billed annually
+5,000 x Finder Credits
+/ Month
+/ Year
+Finder credits are used to find a new contacts as well as verify it automatically.
+AND
+5,000 x Verifier Credits
+/ Month
+/ Year
+Bonus credits to verify contacts from other sources.
+Try for free
+Only pay for verified results.
+1 email = 1 credit
+OR
+1 phone = 10 credits
+Enterprise
+Custom
+Let's discuss your specific needs and create a custom plan tailored to your business.
+Custom Volume Pricing
+Automatic Refill
+Priority Support
+Dedicated Account Manager
+Book a Call
+Prospecting for your own team? Our usage-based plans give you more for the same price, with no credits to count.
+See prospecting plans →
+Ranked #1 by Clay for email finding and verification
+All Plans Include...
+Verified B2B emails only
+Every email is verified in real-time when you request it. No stale databases, no "maybe it works" emails. If your bounce rate exceeds 5% with emails from Findymail, we refund your credits.
+Guaranteed <5% bounce rate
+If your bounce rate exceeds 5%, we refund your credits. No fine print.
+Proprietary catch-all email verification
+We verify catch-all emails that competitors mark as "risky." That's 30% more of your list you can actually reach — emails that work, but other tools won't give you.
+Mobile phone number finder
+Direct mobile numbers for key decision-makers. 1 phone = 10 credits. Only pay when we find a verified number. Non-EU only.
+Intellimatch AI lead finder
+Describe your ICP in plain English, we find companies that match. No more checkbox filters, no manual social profile research. Finds prospects other tools miss.
+No charge for duplicates
+We don't charge you an additional credit for emails you've already found in the last 30 days.
+Credits roll over up to 2x your plan
+Unused credits roll over month-to-month, up to 2x your monthly allowance. No "use it or lose it". Your credits are there when you need them.
+10+ native integrations
+One-click setup with Clay, HubSpot, Salesforce, Instantly, Lemlist, Pipedrive, and more. No API configuration, no complex workflows.
+Chrome extension
+Find emails while browsing social profiles. One click, instant results.
+Bulk email finder
+Upload a CSV of names and companies, get verified emails back in minutes. Handles thousands of contacts at once.
+Google Sheets integration
+Enrich contacts directly in Google Sheets. No exports, no copy-paste, just add a formula and pull verified emails.
+API access
+Free API access on all plans. Build custom workflows, integrate with your internal tools, automate prospecting at scale.
+Team accounts
+Share credits across your team. Manage users, track usage, and collaborate without paying per seat.
+Reverse email lookup
+Have an email but need the person's name, title, and company? Reverse lookup gives you full contact details from just an email address.
+CRM integration
+Automatically push verified contacts to your CRM. Keep HubSpot, Salesforce, Pipedrive, and other CRMs up-to-date without manual data entry.
+Datacare
+Datacare keeps it clean & enriched automatically, so your teams can trust it.
+Keep your CRM complete and clean automatically
+Preview every change before it happens
+Live in 2 weeks
+Starting from $500/month billed annually, priced on the number of contacts and companies in your CRM - no credits, no per-action fees.
+Compatible with all major CRMs
+What Datacare does
+Fills missing contact data
+Updates outdated information, including emails
+Enriches company data automatically
+Tracks job changes
+Detects and merges duplicates
+Never overwrites your data
+Book Your Free CRM Audit
+Or
+get a free CRM health report
+by uploading up to 1,000 contacts
+→
+Ranked #1 by Clay for email finding and verification
+Done-For-You CRM hygiene
+Contact data enrichment:
+Email, job title, social profile, phone (non-EU), location
+Company data enrichment:
+Name, website, size, industry, location, social page
+Automated cleaning:
+Invalid emails removed, duplicates merged, company names standardized
+Job change detection:
+Triggers Slack, webhooks, automatic migration, or custom actions when contacts move companies
+Your data is always safe
+"No Override" by default:
+only fills empty fields, protects your manual work
+Preview mode:
+see exactly what changes before going live
+Full rollback:
+undo any change if needed
+Real-time verification:
+same Findymail engine, <5% bounce rate guarantee
+Prospecting
+How it works
+Find new leads or bring yours
+Find prospects with Intellimatch or import your own lists.
+Findymail finds and verifies
+We find and verify emails and phone numbers in real-time.
+Send campaigns with confidence
+Push to Instantly, Smartlead, Lemlist, or your CRM.
+Integrates with your stack
+Get started free
+CRM Datacare
+How to get started
+CRM audit
+We analyze your data completeness, decay rate, and duplicates, then show you exactly what we'd fix.
+Preview & configure
+See what would change before anything touches your CRM, then adjust settings and approve the setup.
+Auto-enrich & maintain
+Datacare runs automatically with live updates when your team creates or edits records, plus monthly batch processing to catch everything else.
+Integrates with your CRM
+Book Your Free CRM Audit
+SOC 2 Type 2
+GDPR Compliant
+Unsure?
+Talk to a human
+See if Findymail can help you
+Quick 20 min chat
+Get expert advice
+Book a Call
+Compare
+Why Findymail costs less per usable email
+Most providers force you into a broken workflow: buy data, pay again to verify it, then throw away 15-25% that bounces anyway. We find and verify in one step.
+Here’s what that means for your budget:
+Feature
+Most B2B data providers
+Findymail
+Credits purchased
+5,000
+Monthly cost
+$75 (avg)
+$99
+Bounce rate
+15-25%
+<5%
+Reverification tool cost
++$29-75/mo
+$0
+Total monthly cost
+$99-149
+$99
+Usable emails
+~3,750-4,250
+5,000
+Cost per usable email
+2.33¢ - 3.97¢
+2.08¢
+No need to reverify your Findymail data
+Our guarantee:
+<5% bounce rate. If your bounce rate is higher, we refund your credits. Don’t waste money reverifying data that’s already verified.
+Get started free
+Compare
+One system instead of three
+Most teams stitch together multiple tools that don’t talk to each other. Datacare replaces all of them.
+Feature
+Most teams
+Datacare
+Data enrichment
+ZoomInfo or Clearbit
+Email & phone verification
+ZeroBounce or NeverBounce
+Deduplication
+Insycle or Dedupely
+Job change tracking
+Custom Zapier/Make workflows
+Enrichment automation
+Make/Zapier
+Data Governance & Maintenance
+RevOps engineer
+Dedicated Account Manager
+Pricing Model
+Credits or per-action fees
+Flat rate by database size
+Tool conflicts
+Data mismatches, overwrites…
+No conflicts
+Book Your Free CRM Audit
+Testimonials
+Trusted by
+lead gen agencies, sales and growth teams
+"From the start of my email outreach efforts, I got 0 bounced emails.
+I never got stats that good."
+Nebojsa Savicic
+Head of Sales, Plainly Videos
+"I send directly to Findymail sourced emails with no additional verification and
+my bounce rate is under 2%.
+"
+Eric Nowoslawski
+Founder, GrowthEngineX
+"Findymail is an excellent product.
+Works exactly as described and great support.
+I recommend it for cold emailers and anyone who needs to reach out to people's B2B E-mail Address!"
+Jesse Ouellette
+Founder of LeadMagic
+<5% bounce rate guarantee
+Hosted in the EU
+SOC 2 Type 2
+GDPR Compliant
+Plans FAQs
+Quick answers about pricing
+Findymail plans give you generous usage without counting credits. Here are the most common questions.
+What are the usage limits on each plan, and what happens when I hit them?
+Every plan comes with generous usage limits, so you can find and verify contacts without counting credits.
+Everything you do in Findymail draws from the same pool, whether it's the web app, the Chrome extension, an integration or the API, and it's shared by everyone on your plan. How much you can do depends on what you run: finding a phone number, for example, uses more than finding an email.
+Individual covers everyday prospecting. Team gives you 5× more usage than Individual, and Scale gives you 20×.
+When you reach a limit, nothing is charged. You can wait for usage to free up or move to a higher plan. Need more than Scale?
+Talk to us
+about Enterprise.
+What's a seat?
+A seat is one team member with their own login. Individual includes 1 seat, Team 5 seats and Scale 20 seats. Need more? Enterprise plans come with custom seat counts.
+What's an active signal?
+An active signal is a signal you're tracking. It continuously monitors for intent signals from your ideal customers, like hiring, funding or job changes, and delivers matching leads to your feed. Each plan sets how many signals you can track at the same time.
+Learn more about Signals →
+Are these verified B2B emails?
+Yes. Every email is verified in real-time when you request it. We don't pull from stale databases, but verify at the moment you need it, so you know it works right now.
+Do I need to reverify Findymail data?
+No. Our emails are already verified and ready to send.
+Here's what happens if you run our data through a separate verification tool: they'll mark 15-20% of our emails as "invalid" or "risky" — even though they're real, working emails.
+Why? Because we verify catch-all domains (emails competitors can't verify), and traditional verifiers flag them as risky. If you reverify our data, you're removing valid emails and paying twice for verification.
+Our guarantee:
+<5% bounce rate. Clay ranked us #1 with more valid emails than competitors. No need to waste money reverifying data that's already verified.
+Do you still offer credit-based plans?
+Yes. Use the
+See credit-based plans
+link below the pricing table above. They're the right fit if you resell Findymail data or embed it in your own product, as usage-based plans are for use within your own team only.
+What's included in Enterprise?
+Custom usage, seats and active signals, plus custom agreements and invoicing.
+Book a call
+to get a quote.
+Can I try to find emails for free first?
+Yes. Sign up for a free account and get 10 credits to test Findymail. No credit card required.
+Try for free →
+HELP, I still have another question!
+No problem. Email us at
+support@findymail.com
+or
+book a call
+with our team.
+Credit-based Plans FAQs
+Quick answers about pricing
+Findymail is the last email and phone finder you'll need. That said, if you have questions about how either works, we're here to help. Here are the most common ones.
+Are these verified B2B emails?
+Yes. Every email is verified in real-time when you request it. We don't pull from stale databases, but verify at the moment you need it, so you know it works right now.
+We guarantee a <5% bounce rate. If your bounce rate exceeds 5%, we refund your credits.
+Do I need to reverify Findymail data?
+No. Our emails are already verified and ready to send.
+Here's what happens if you run our data through a separate verification tool: they'll mark 15-20% of our emails as "invalid" or "risky" — even though they're real, working emails.
+Why? Because we verify catch-all domains (emails competitors can't verify), and traditional verifiers flag them as risky. If you reverify our data, you're removing valid emails and paying twice for verification.
+Our guarantee:
+<5% bounce rate. Clay ranked us #1 with more valid emails than competitors. No need to waste money reverifying data that's already verified.
+How is Findymail different from other email search tools?
+Three things:
+We verify catch-all emails.
+Competitors mark them as "risky" and don't give them to you. We verify them and deliver 23% more valid emails (ranked #1 by Clay).
+No reverification needed.
+Most providers force you to buy data, then pay again to verify it. We find and verify in one step. One credit = one verified email.
+Guaranteed <5% bounce rate.
+If we don't deliver, we refund your credits. No fine print.
+What's the difference between Finder credits and Verifier credits?
+Finder credits
+find and verify new contacts in one step. You give us a name and company, we give you a verified email. 1 email = 1 credit.
+Verifier credits
+are bonus credits to verify contacts from other sources (social profile exports, purchased lists, etc.). If you already have an email and just need to verify it, use a Verifier credit.
+Findymail contacts are already verified, so you don't need to use Verifier credits on them.
+Do I pay a credit if you can't find the email I need?
+No. You only pay for verified results. If we can't find a working email, we don't charge you.
+Do credits roll over?
+Yes. Unused credits roll over month-to-month, up to 2× your monthly allowance. So if you're on the 5,000-credit plan, you can bank up to 10,000 credits total.
+No "use it or lose it" — your credits are there when you need them.
+Can I try to find emails for free first?
+Yes. Sign up for a free account and get 10 credits to test Findymail. No credit card required.
+Try for free →
+How accurate are your emails?
+We guarantee a <5% bounce rate. In practice, most customers see 0-2% bounce rates when sending directly (without reverifying our data).
+Clay's independent benchmark ranked us #1 for accuracy and coverage.
+If your bounce rate exceeds 5%, we refund your credits.
+How to find email addresses with the Findymail Email Finder?
+Three ways:
+Chrome extension:
+Find emails while browsing social profiles. One click, instant results.
+Bulk finder:
+Upload a CSV of names and companies, get verified emails back in minutes.
+Integrations:
+Use Findymail inside Clay, Google Sheets, or your CRM — no exports, no copy-paste.
+HELP, I still have another question!
+No problem. Email us at
+support@findymail.com
+or
+book a call
+with our team.
+Datacare FAQs
+Quick answers about Datacare
+Datacare is automated CRM enrichment &amp; hygiene. Here are the most common questions we get.
+What is Datacare?
+Datacare is automated CRM enrichment & hygiene. We keep your CRM clean by continuously enriching and updating contact and company data, without you lifting a finger.
+Instead of manually cleaning your CRM or running one-off enrichment projects, Datacare runs in the background and keeps your data fresh automatically.
+Will Datacare overwrite my custom CRM fields?
+No. Datacare uses "No Override" by default — we only fill in missing data, we don't overwrite what you already have.
+You also get
+preview mode:
+see exactly what would change before anything touches your CRM. And if something goes wrong, we have rollback capability.
+How long does it take to get started with Datacare?
+Two weeks from your CRM audit to live enrichment. Here's the process:
+CRM audit (week 1):
+We analyze your data completeness, decay rate, and duplicate rate, and show you what we'd fix.
+Configuration (week 2):
+We configure Datacare for your CRM, set up preview mode, and get your approval.
+Go live:
+Datacare starts enriching your CRM automatically.
+It's done-for-you — no complex setup, no API configuration.
+What's included in the CRM audit report?
+We analyze:
+Data completeness:
+What % of your contacts are missing emails, phone numbers, job titles, etc.
+Data decay rate:
+How many contacts have outdated information (changed jobs, old emails, etc.)
+Duplicate rate:
+How many duplicate contacts exist in your CRM
+Preview of changes:
+Exactly what Datacare would enrich or update
+The health check is free and comes with no obligation.
+Book a demo
+to get started.
+Which CRMs does Datacare support?
+HubSpot, Salesforce, Pipedrive, Close, Copper, and Zoho.
+If you use a different CRM,
+talk to us
+— we may be able to support it.
+How does Datacare pricing work?
+Datacare pricing is custom based on your CRM size and enrichment needs.
+Book a demo
+to get a quote.
+HELP, I still have another question!
+No problem. Email us at
+support@findymail.com
+or
+book a call
+with our team.
+Menu
