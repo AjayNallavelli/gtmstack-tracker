@@ -94,3 +94,13 @@ Note: crawlers only read `robots.txt` at a domain root, so the sub-path copy has
 - Affiliates: Instantly (reported 20–40% recurring), Smartlead (15–35%), Clay (20%), and others. Join each program, then paste the links into `affiliate_url`.
 - Paid featured listing: `/get-featured/` offers a $99/month launch price for the first 5 sponsors (pinned spot at the top of the category, Featured badge, weekly newsletter mention). Price and contact address (`contact_email`, currently ajay-desk@mail.grokbot.com) live in `site.json`.
 - Newsletter sponsor slot: rates on request; the draft issue invites sponsors to reply.
+
+## Open pricing dataset (CC BY 4.0)
+
+The pricing data behind the site is published as open data under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/):
+
+- CSV, one row per plan: [`data/pricing.csv`](data/pricing.csv), also live at https://ajaynallavelli.github.io/gtmstack-tracker/data/pricing.csv
+- JSON, full tool records: https://ajaynallavelli.github.io/gtmstack-tracker/data/tools.json
+- Real price and plan changes: https://ajaynallavelli.github.io/gtmstack-tracker/data/changes.json
+
+Columns: `tool_id, tool, category, website, pricing_url, pricing_status, plan, monthly_usd, annual_monthly_usd, limits, note, billing_note, has_free_plan, date_checked`. Blank prices mean the vendor doesn't publish one (contact sales). The file is rebuilt on every daily run. Please credit "GTMStack Tracker" with a link to https://ajaynallavelli.github.io/gtmstack-tracker/.

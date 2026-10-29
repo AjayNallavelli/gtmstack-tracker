@@ -366,6 +366,20 @@ def main():
     for t in pub["tools"]:
         t["affiliate_url"] = by_id[t["id"]]["affiliate_url"]
     (out / "data" / "tools.json").write_text(json.dumps(pub, indent=1, ensure_ascii=False))
+    # open pricing dataset (CC BY 4.0): one row per plan, no affiliate URLs
+    import csv, io
+    buf = io.StringIO()
+    w = csv.writer(buf, lineterminator="\n")
+    w.writerow(["tool_id", "tool", "category", "website", "pricing_url", "pricing_status", "plan", "monthly_usd", "annual_monthly_usd", "limits", "note", "billing_note", "has_free_plan", "date_checked"])
+    for t in sorted(pub["tools"], key=lambda x: x["id"]):
+        for tier in t.get("tiers") or [{}]:
+            w.writerow([t["id"], t["name"], t.get("category", ""), t.get("website", ""), t.get("pricing_url", ""), t.get("pricing_status", ""),
+                        tier.get("plan", ""), "" if tier.get("monthly_usd") is None else tier.get("monthly_usd"),
+                        "" if tier.get("annual_monthly_usd") is None else tier.get("annual_monthly_usd"),
+                        tier.get("limits", ""), tier.get("note", ""), t.get("billing_note", ""), t.get("has_free_plan", False),
+                        by_id[t["id"]].get("last_checked") or t.get("date_checked", "")])
+    (out / "data" / "pricing.csv").write_text(buf.getvalue())
+    (DATA / "pricing.csv").write_text(buf.getvalue())
     # public change data = real changes only (the raw log incl. copy/toggle/fetch-failed rows stays in the repo)
     (out / "data" / "changes.json").write_text(json.dumps([{k: v for k, v in c.items() if k not in ("old", "new")} for c in changes], indent=1, ensure_ascii=False))
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']

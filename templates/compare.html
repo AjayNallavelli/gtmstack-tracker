@@ -4,6 +4,7 @@
 <h1>{{ p.a.name }} vs {{ p.b.name }}: pricing compared ({{ month }})</h1>
 {{ answer_line(answer) }}
 <p class="lead">Both are {{ p.category }} tools. Here is how their published plans compare, using data from each vendor's pricing page.</p>
+{% for x in [p.a, p.b] if x.is_affiliate %}<div class="card aff-cta"><strong>Trying {{ x.name }}?</strong> {{ price_from(x) }} · {{ outlink(x, "Try " ~ x.name, "btn btn-sm") }}{% if x.affiliate_perk %} <span class="perk small">🎁 {{ x.affiliate_perk }}</span>{% endif %}</div>{% endfor %}
 <div class="table-wrap"><table class="ptable vs">
 <thead><tr><th></th><th>{{ p.a.name }}</th><th>{{ p.b.name }}</th></tr></thead>
 <tbody>
@@ -18,7 +19,7 @@
 <p class="small">Alternatives: <a href="/alternatives/{{ p.a.slug }}/">{{ p.a.name }} alternatives</a> · <a href="/alternatives/{{ p.b.slug }}/">{{ p.b.name }} alternatives</a></p>
 <h2>Key differences</h2>
 <ul>{% for x in points %}<li>{{ x }}</li>{% endfor %}</ul>
-<div class="card accent nl-cta"><strong>Get notified when prices change.</strong> {% include "_newsletter_button.html" %}</div>
+<div class="card accent nl-cta"><strong>Price-change alert for {{ p.a.name }} and {{ p.b.name }}.</strong> We check both pricing pages every day. Get one email a week when either changes a plan, price or limit. {% include "_newsletter_button.html" %}</div>
 <div class="two">
   <div><h2>{{ p.a.name }} plans</h2><p>{{ p.a.description }}</p>{{ pricing_table(p.a) }}<p><a href="/tools/{{ p.a.slug }}/">{{ p.a.name }} pricing history →</a></p></div>
   <div><h2>{{ p.b.name }} plans</h2><p>{{ p.b.description }}</p>{{ pricing_table(p.b) }}<p><a href="/tools/{{ p.b.slug }}/">{{ p.b.name }} pricing history →</a></p></div>

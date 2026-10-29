@@ -55,7 +55,7 @@
 <h2>Compare {{ t.name }}</h2>
 <ul class="links">{% for p in t.pairs %}<li><a href="/compare/{{ p.slug }}/">{{ p.a.name }} vs {{ p.b.name }}</a></li>{% endfor %}</ul>
 {% endif %}
-<div class="card accent nl-cta"><strong>Get notified when prices change.</strong> {% include "_newsletter_button.html" %}</div>
+<div class="card accent nl-cta"><strong>Get an alert when {{ t.name }} changes its pricing.</strong> We check the {{ t.name }} pricing page every day and email a weekly roundup of real plan, price and limit changes. {% include "_newsletter_button.html" %}</div>
 <h2>{{ t.name }} alternatives</h2>
 <ul class="links">{% for x in t.alternatives %}<li><a href="/tools/{{ x.slug }}/">{{ x.name }}</a> <span class="small muted">{{ x.entry_label }}</span></li>{% endfor %}</ul>
 <p><a href="/alternatives/{{ t.slug }}/">All {{ t.all_alternatives|length }} {{ t.name }} alternatives, sorted by price →</a></p>
