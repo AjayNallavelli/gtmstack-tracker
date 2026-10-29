@@ -1,0 +1,36 @@
+{
+ "id": "warmbox",
+ "status": "ok",
+ "method": "http",
+ "url": "https://www.warmbox.ai/pricing/",
+ "hash": "62c2730d88d44a4e",
+ "price_tokens": [
+  "$139",
+  "$15",
+  "$159",
+  "$19",
+  "$69",
+  "$79"
+ ],
+ "pricing_lines": [
+  "Get Started",
+  "Free IP Blacklists & DNS settings Checker 🎁",
+  "YEARLY BILLING",
+  "MONTHLY BILLING",
+  "Solo",
+  "$15",
+  "Start-up",
+  "$69",
+  "Growth",
+  "$139",
+  "Solo",
+  "$19",
+  "Start-up",
+  "$79",
+  "Growth",
+  "$159",
+  "Which plan should I choose?",
+  "The plan that we recommend will depend on your sending needs in terms of volume, and/or the number of email accounts you want to warm-up. If you are not sure, remember that you are free to upgrade your plan at any time!"
+ ],
+ "date": "2026-10-29"
+}
