@@ -13,3 +13,11 @@ Targets: first affiliate dollar; 1,000 organic visits/month; 100 newsletter subs
 - 2026-10-29: polished affiliate pages: compare pages with Klenty/Woodpecker/Prospeo now show a "Try X" affiliate CTA under the lead, and every tool and compare page has a tool-named price-change alert signup box. Published the open pricing CSV (CC BY 4.0, /data/pricing.csv, footer link, README). No real price changes this week, so no IH/Reddit data post, launch site or Index. Site Coach brief and RedReplier threads requested; numbers to be recorded when they arrive.
 
 - 2026-10-29 (Site Coach fixes): checked live links (68 home hrefs + nav/footer + /best/, /compare/ all 200 under /gtmstack-tracker/; nothing broken). Headless test of the live tag: page_view sends the full URL incl. /gtmstack-tracker/, and affiliate_click / newsletter_signup_click fire on rel="sponsored" and beehiiv links, so no client-side path stripping or selector bug. Clay page: title/H1 "Clay pricing 2026", plan table moved right under the hero, FAQ led by "How much is Clay?" + credits question (FAQPage JSON-LD), linked from home ("Most searched") and every compare page ("Full plan tables").
+
+### RedReplier threads, 2026-10-29 (all on X; Reddit and HN were weak)
+1. Prospeo renewal price objection: https://x.com/THArrowOfApollo/status/2115192640513991027 (replied from @GTMStackHQ)
+2. Instantly price-hike complaint: https://x.com/jn_jackk/status/2115594965766258925
+3. Instantly/Smartlead contact caps (Woodpecker angle): https://x.com/minimalsource/status/2114405960307429787
+4. Apollo too expensive, wants alternatives: https://x.com/umeshgeeta/status/2115673540053864610 (replied from @GTMStackHQ)
+5. Favourite enrichment tool poll: https://x.com/salesxsaas/status/2115496542694162800
+Note: a rival price-watch account (@RivalPeek) is active in these threads. r/coldemail is unreachable.
