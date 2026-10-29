@@ -131,13 +131,16 @@ def answer_annual(t):
 
 def tool_faq(t):
     n = t["name"]
-    return [
+    faq = [
+        {"q": f"How much is {n}?", "a": answer_cost(t)},
         {"q": f"Does {n} have a free plan?", "a": answer_free(t)},
-        {"q": f"How much does {n} cost per month?", "a": answer_cost(t)},
         {"q": f"Is {n} cheaper if you pay annually?", "a": answer_annual(t)},
         {"q": f"When was {n} pricing last checked?",
          "a": f"{t['last_checked']}, from the official pricing page ({t['pricing_url']}). We re-check it automatically every day and log any change."},
     ]
+    if t["id"] == "clay" and t.get("billing_note"):  # top GSC query cluster: "clay pricing"
+        faq.insert(1, {"q": f"How much do {n} credits cost?", "a": f"{n}'s pricing page says: {t['billing_note'].rstrip('.')}. Each paid plan includes a monthly allowance of actions and data credits (see the plan table above)."})
+    return faq
 
 
 def tool_summary(t):

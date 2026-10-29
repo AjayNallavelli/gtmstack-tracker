@@ -6,7 +6,7 @@
 <nav class="crumbs small"><a href="/">Home</a> / <a href="/category/{{ t.cat_slug }}/">{{ t.category }}</a> / {{ t.name }}</nav>
 <section class="tool-hero">
   <div>
-    <h1>{{ t.name }} pricing ({{ year }}): plans, limits &amp; annual cost</h1>
+    <h1>{{ t.name }} pricing {{ year }}: plans, limits &amp; annual cost</h1>
     {{ answer_line(answer) }}
     <p class="lead">{{ t.summary }}</p>
     <p class="small muted">{{ t.description }}</p>
@@ -21,6 +21,9 @@
     {{ weekly_email(site) }}
   </div>
 </section>
+<h2 id="plans">{{ t.name }} plans &amp; pricing</h2>
+{{ pricing_table(t) }}
+{% if t.verification_note %}<p class="small note">Note: {{ t.verification_note }}</p>{% endif %}
 <dl class="glance">
   <div><dt>Cheapest plan</dt><dd>{% if t.price_display and t.sort_price is none %}{{ t.price_display }}{% elif t.cheapest_tier %}{{ t.cheapest_tier.plan }}: {{ t.entry_paid|money }}/mo{% else %}Contact sales{% endif %}</dd></div>
   <div><dt>Free tier</dt><dd>{% if t.has_free_plan %}Yes ({{ t.free_tier }}){% else %}No{% endif %}</dd></div>
@@ -29,9 +32,6 @@
   <div><dt>Date checked</dt><dd>{{ t.last_checked|nicedate }}</dd></div>
 </dl>
 
-<h2 id="plans">{{ t.name }} plans &amp; pricing</h2>
-{{ pricing_table(t) }}
-{% if t.verification_note %}<p class="small note">Note: {{ t.verification_note }}</p>{% endif %}
 {% if t.annual_rows %}
 <h2 id="annual-cost">{{ t.name }} annual cost</h2>
 <p class="small muted">Yearly cost = listed per-month price × 12{% if t.billing_note and ('seat' in t.billing_note|lower or 'user' in t.billing_note|lower) %} ({{ t.billing_note }}){% endif %}. Only plans with a published price are shown.</p>

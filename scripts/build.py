@@ -319,7 +319,7 @@ def main():
     for t in tools:
         sp = t["price_display"] if t.get("price_display") else f"from {money(t['entry_paid'])}/mo" if t["entry_paid"] else ("free plan available" if t["has_free_plan"] else "contact sales only")
         render("tool.html", f"/tools/{t['slug']}/", lastmod=t["data_date"], answer=seo.answer_line_tool(t), t=t, faq=t["faq"],
-               title=f"{t['name']} pricing ({now.year}): plans, limits & annual cost",
+               title=f"{t['name']} pricing {now.year}: plans, limits & annual cost",
                description=f"{t['name']} pricing, checked {t['last_checked']}: {sp}. Free plan: {'yes' if t['has_free_plan'] else 'no'}. Every plan, monthly vs annual price, limits and pricing history.")
         alts = t["all_alternatives"]
         afree = sum(x["has_free_plan"] for x in alts)
