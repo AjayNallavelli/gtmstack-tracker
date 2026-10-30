@@ -1,5 +1,38 @@
 [
  {
+  "date": "2026-10-30",
+  "tool_id": "klenty",
+  "tool": "Klenty",
+  "type": "copy_change",
+  "summary": "Pricing page wording/plan text changed (no price points changed).",
+  "previous_date": "2026-10-29",
+  "diff": [
+   "-335 local area codes covered in the US",
+   "-10 slots per seat"
+  ]
+ },
+ {
+  "date": "2026-10-30",
+  "tool_id": "seamless",
+  "tool": "Seamless.AI",
+  "type": "copy_change",
+  "summary": "Pricing page wording/plan text changed (no price points changed).",
+  "previous_date": "2026-10-29",
+  "diff": [
+   "-Director of Operations",
+   "-Provides free credits for new users",
+   "+Prime Named Account Executive",
+   "+The setup was straightforward and hassle-free, which was a great start."
+  ]
+ },
+ {
+  "date": "2026-10-30",
+  "tool_id": "findymail",
+  "tool": "Findymail",
+  "type": "fetch_failed",
+  "summary": "Pricing page could not be fetched; will retry next run."
+ },
+ {
   "date": "2026-10-29",
   "tool_id": "klenty",
   "tool": "Klenty",
