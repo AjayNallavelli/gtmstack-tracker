@@ -1,0 +1,19 @@
+{
+ "id": "seamless",
+ "status": "ok",
+ "method": "chrome",
+ "url": "https://seamless.ai/pricing",
+ "hash": "8c4f0fdb1d11f06a",
+ "price_tokens": [],
+ "pricing_lines": [
+  "Skip to main content",
+  "Contact Sales:",
+  "Get a demo",
+  "Sign up free",
+  "Get pricing and promos",
+  "How many contacts do you need per month?",
+  "Prime Named Account Executive",
+  "The setup was straightforward and hassle-free, which was a great start."
+ ],
+ "date": "2026-10-31"
+}

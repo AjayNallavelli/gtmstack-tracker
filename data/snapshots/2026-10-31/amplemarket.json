@@ -1,0 +1,21 @@
+{
+ "id": "amplemarket",
+ "status": "ok",
+ "method": "chrome",
+ "url": "https://www.amplemarket.com/pricing",
+ "hash": "346939fb3661d914",
+ "price_tokens": [
+  "$600"
+ ],
+ "pricing_lines": [
+  "best",
+  "* All plans include a free trial.",
+  "Perfect for small businesses, startups, & founder-led sales teams.",
+  "$600/mo",
+  "Tidio",
+  "During the free trial alone, we generated 5-6 meetings - all driven by signals, not guesswork.",
+  "Tidio",
+  "During the free trial alone, we generated 5-6 meetings - all driven by signals, not guesswork."
+ ],
+ "date": "2026-10-31"
+}

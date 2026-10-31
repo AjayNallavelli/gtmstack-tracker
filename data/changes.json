@@ -1,5 +1,12 @@
 [
  {
+  "date": "2026-10-31",
+  "tool_id": "findymail",
+  "tool": "Findymail",
+  "type": "fetch_failed",
+  "summary": "Pricing page could not be fetched; will retry next run."
+ },
+ {
   "date": "2026-10-30",
   "tool_id": "klenty",
   "tool": "Klenty",

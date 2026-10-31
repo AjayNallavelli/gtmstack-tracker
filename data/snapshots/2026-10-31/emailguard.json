@@ -1,0 +1,38 @@
+{
+ "id": "emailguard",
+ "status": "ok",
+ "method": "http",
+ "url": "https://emailguard.io/pricing",
+ "hash": "62853ad8398269b3",
+ "price_tokens": [
+  "$100",
+  "$129",
+  "$199",
+  "$49"
+ ],
+ "pricing_lines": [
+  "There's a plan for everyone. Choose the one that fits your needs.",
+  "Start free forever",
+  "Free forever plan for your basic monitoring and health needs",
+  "Credits reset monthly",
+  "Unlimited team members",
+  "The free plan",
+  "Sign up for free",
+  "Best for solopreneurs and small businesses",
+  "$49",
+  "10 domain masking proxies or hosted domain redirects (clean IPs)",
+  "$100 / month extra for dedicated redirect IP",
+  "Best for startups and small agencies",
+  "$129",
+  "25 domain masking proxies or hosted domain redirects (clean IPs)",
+  "$100 / month extra for dedicated redirect IP",
+  "Best for large agencies and cold email",
+  "$199",
+  "120 domain masking proxies or hosted domain redirects (clean IPs)",
+  "$100 / month extra for dedicated redirect IP",
+  "in one place.",
+  "Start now for free. No credit card required.",
+  "Sign up for free"
+ ],
+ "date": "2026-10-31"
+}
