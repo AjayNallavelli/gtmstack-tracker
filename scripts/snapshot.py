@@ -59,13 +59,18 @@ def fetch_http(url):
 def fetch_impersonate(url):
     """Plain GET with a real-Chrome TLS/HTTP2 fingerprint (curl_cffi). Cloudflare challenges python-requests
     by fingerprint (cf-mitigated: challenge, 403) even with a browser User-Agent; this passes without JS.
-    Findymail since 2026-10-20: requests -> 403 challenge, headless Chrome -> hangs on the challenge most days."""
+    Findymail since 2026-10-20: requests -> 403 challenge, headless Chrome -> stuck on the challenge most days.
+    From GitHub Actions IPs Cloudflare may still challenge this; then run `--only <id>` from another network
+    and commit the snapshot (the CI run keeps a good same-day snapshot instead of overwriting it)."""
     if cffi_requests is None:
         raise RuntimeError("curl_cffi not installed")
-    r = cffi_requests.get(url, impersonate="chrome", headers={"Accept-Language": "en-US,en;q=0.9"}, timeout=30)
-    if r.status_code >= 400:
-        raise RuntimeError(f"HTTP {r.status_code}" + (" (cloudflare challenge)" if r.headers.get("cf-mitigated") else ""))
-    return r.text
+    errs = []
+    for prof in ("chrome", "safari"):
+        r = cffi_requests.get(url, impersonate=prof, headers={"Accept-Language": "en-US,en;q=0.9"}, timeout=30)
+        if r.status_code < 400:
+            return r.text
+        errs.append(f"{prof} HTTP {r.status_code}" + (" (cloudflare challenge)" if r.headers.get("cf-mitigated") else ""))
+    raise RuntimeError(", ".join(errs))
 
 
 def fetch_chrome(url, chrome):
@@ -228,9 +233,13 @@ def main():
     outdir.mkdir(parents=True, exist_ok=True)
     changes_path = DATA / "changes.json"
     changes = json.loads(changes_path.read_text()) if changes_path.exists() else []
+    old_today = []
     if not a.rebaseline:
-        # drop entries previously written for this same date (idempotent re-runs)
-        changes = [c for c in changes if c["date"] != a.date]
+        # drop entries previously written for this same date and these tools (idempotent re-runs;
+        # an --only run must not wipe today's entries for the other tools)
+        run_ids = {t["id"] for t in tools}
+        old_today = [c for c in changes if c["date"] == a.date and c["tool_id"] in run_ids]
+        changes = [c for c in changes if not (c["date"] == a.date and c["tool_id"] in run_ids)]
     has_baseline = {c["tool_id"] for c in changes if c["type"] == "baseline"}
     new = []
     with cf.ThreadPoolExecutor(a.workers) as ex:
@@ -244,6 +253,13 @@ def main():
             print(f"  ! {tid}: {r['error']}")
             if a.rebaseline:
                 continue  # keep whatever snapshot we already have
+            same_day = outdir / f"{tid}.json"
+            if same_day.exists() and json.loads(same_day.read_text()).get("status") == "ok":
+                # a good capture for today already exists (e.g. run by hand from a network the site doesn't block,
+                # since some sites challenge CI datacenter IPs); never overwrite it with a failure
+                print(f"    keeping today's earlier good snapshot for {tid}")
+                new.extend(c for c in old_today if c["tool_id"] == tid)
+                continue
             (outdir / f"{tid}.json").write_text(json.dumps({"id": tid, "date": a.date, "status": "error", "error": r["error"]}, indent=1))
             # raw log only: never shown publicly as a change; the next run simply retries
             new.append({"date": a.date, "tool_id": tid, "tool": names[tid], "type": "fetch_failed", "summary": "Pricing page could not be fetched; will retry next run."})
