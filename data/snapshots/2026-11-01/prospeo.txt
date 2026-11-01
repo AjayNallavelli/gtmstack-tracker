@@ -28,6 +28,7 @@ $37
 Save 25% billed yearly
 24,000
 CREDITS PER USER/year
+Unused credits rollover
 Get started
 Everything in Free, plus:
 32 search filters
@@ -47,6 +48,7 @@ $74
 Save 25% billed yearly
 60,000
 CREDITS PER USER/year
+Unused credits rollover
 Get started
 Everything in Starter, plus:
 38 search filters
@@ -65,6 +67,7 @@ $187
 Save 25% billed yearly
 180,000
 CREDITS PER USER/year
+Unused credits rollover
 Get started
 Everything in Growth, plus:
 All 41 filters
@@ -262,9 +265,9 @@ Co-Founder at Leadify AI
 Frequently asked questions
 Your questions, answered
 How do Prospeo credits work?
-One credit gives you one verified business email, while a direct mobile number costs 10 credits. Your full credit pack is added at the start of every billing cycle. Credits reset on renewal and do not roll over.
+One credit gives you one verified business email, while a direct mobile number costs 10 credits. Your full credit pack is added at the start of every billing cycle. Credits roll over and if anything is unused, it will be added to your next billing cycle.
 Do credits roll over if I don't use them all?
-No — credits do NOT roll over. Any unused credits expire at renewal, and your credit balance resets each billing cycle.
+Yes — unused credits roll over to your next billing cycle. Any credits you don't use are automatically added on top of your fresh credit pack at renewal.
 What happens if I run out of credits?
 If you have no more credits, you won't be able to export or reveal new enriched contacts (emails/mobiles) until your credits reset at the start of your next billing cycle.
 To get more credits right away, you can upgrade your plan or purchase a Credits Add-on: go to prospeo.io/pricing → use the slider to select a Credits Add-on → click Update Current Plan (or upgrade) → checkout.

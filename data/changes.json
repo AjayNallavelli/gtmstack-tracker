@@ -1,21 +1,5 @@
 [
  {
-  "date": "2026-11-01",
-  "tool_id": "findymail",
-  "tool": "Findymail",
-  "type": "copy_change",
-  "summary": "Pricing page wording/plan text changed (no price points changed).",
-  "previous_date": "2026-10-28",
-  "diff": [
-   "-Credits roll over up to 2x your plan",
-   "-Unused credits roll over month-to-month, up to 2x your monthly allowance. No \"use it or lose it\". Your credits are there when you need them.",
-   "-API access",
-   "-Free API access on all plans. Build custom workflows, integrate with your internal tools, automate prospecting at scale.",
-   "-Team accounts",
-   "-Share credits across your team. Manage users, track usage, and collaborate without paying per seat."
-  ]
- },
- {
   "date": "2026-10-31",
   "tool_id": "findymail",
   "tool": "Findymail",
