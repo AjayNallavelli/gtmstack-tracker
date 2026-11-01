@@ -14,6 +14,8 @@ Targets: first affiliate dollar; 1,000 organic visits/month; 100 newsletter subs
 
 - 2026-10-29 (Site Coach fixes): checked live links (68 home hrefs + nav/footer + /best/, /compare/ all 200 under /gtmstack-tracker/; nothing broken). Headless test of the live tag: page_view sends the full URL incl. /gtmstack-tracker/, and affiliate_click / newsletter_signup_click fire on rel="sponsored" and beehiiv links, so no client-side path stripping or selector bug. Clay page: title/H1 "Clay pricing 2026", plan table moved right under the hero, FAQ led by "How much is Clay?" + credits question (FAQPage JSON-LD), linked from home ("Most searched") and every compare page ("Full plan tables").
 
+- 2026-11-01: awesome-list PRs opened (3): awesome-public-datasets core, dataset entry under Economics https://github.com/awesomedata/apd-core/pull/1015 ; awesome-pricing, Research & Analyst Reports row https://github.com/quentin-py/awesome-pricing/pull/2 ; awesome-lead-generation, Prospecting & Data Enrichment https://github.com/dariubs/awesome-lead-generation/pull/51 . Skipped marketinguys/awesome-gtm-engineering (no push since Jun 2025) and eliasstravik/awesome-gtm-engineering (owner-only merges, "highly curated"). Also fixed the Findymail scrape (Cloudflare challenge; now fetched with curl_cffi).
+
 ### RedReplier threads, 2026-10-29 (all on X; Reddit and HN were weak)
 1. Prospeo renewal price objection: https://x.com/THArrowOfApollo/status/2115192640513991027 (replied from @GTMStackHQ)
 2. Instantly price-hike complaint: https://x.com/jn_jackk/status/2115594965766258925

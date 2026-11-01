@@ -36,7 +36,7 @@ Status: **public** = USD prices published and transcribed; **partial** = some ti
 | People Data Labs | Data & enrichment | public | https://www.peopledatalabs.com/pricing | Annual saves 20% |
 | Hunter | Data & enrichment | public | https://hunter.io/pricing | Monthly vs yearly (save 30%) |
 | FullEnrich | Data & enrichment | public | https://fullenrich.com/pricing | Credit slider; rollover 3 months (monthly) / 12 months (yearly) |
-| Findymail | Data & enrichment | public | https://www.findymail.com/pricing/ | Plain HTTP fetch blocked (403); captured with headless Chrome. |
+| Findymail | Data & enrichment | public | https://www.findymail.com/pricing/ | Plain HTTP fetch blocked by a Cloudflare challenge (403); fetched with a browser-fingerprint HTTP client (curl_cffi). |
 | Prospeo | Data & enrichment | public | https://prospeo.io/pricing | Box fetch was blocked; CI (US) headless-Chrome fetch succeeded on 2026-10-19. |
 | BetterContact | Data & enrichment | public | https://bettercontact.rocks/pricing/ | Monthly; annual = 2 months free |
 | Allegrow | Deliverability & warmup | public | https://www.allegrow.co/pricing |  |
