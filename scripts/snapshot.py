@@ -19,6 +19,10 @@ Change types written to data/changes.json (raw log; scripts/build.py publishes o
 import argparse, concurrent.futures as cf, datetime as dt, difflib, hashlib, json, os, re, shutil, subprocess, sys, tempfile
 from pathlib import Path
 import requests
+try:  # optional: browser-TLS-fingerprint HTTP client, gets past Cloudflare TLS/JA3 bot checks
+    from curl_cffi import requests as cffi_requests
+except ImportError:  # pragma: no cover
+    cffi_requests = None
 from bs4 import BeautifulSoup
 import datadates
 
@@ -49,6 +53,18 @@ def find_chrome():
 def fetch_http(url):
     r = requests.get(url, headers={"User-Agent": UA, "Accept-Language": "en-US,en;q=0.9"}, timeout=30)
     r.raise_for_status()
+    return r.text
+
+
+def fetch_impersonate(url):
+    """Plain GET with a real-Chrome TLS/HTTP2 fingerprint (curl_cffi). Cloudflare challenges python-requests
+    by fingerprint (cf-mitigated: challenge, 403) even with a browser User-Agent; this passes without JS.
+    Findymail since 2026-10-20: requests -> 403 challenge, headless Chrome -> hangs on the challenge most days."""
+    if cffi_requests is None:
+        raise RuntimeError("curl_cffi not installed")
+    r = cffi_requests.get(url, impersonate="chrome", headers={"Accept-Language": "en-US,en;q=0.9"}, timeout=30)
+    if r.status_code >= 400:
+        raise RuntimeError(f"HTTP {r.status_code}" + (" (cloudflare challenge)" if r.headers.get("cf-mitigated") else ""))
     return r.text
 
 
@@ -101,15 +117,18 @@ def normalize(lines):
 
 def snapshot_tool(tool, chrome):
     url, method = tool["pricing_url"], tool.get("fetch_method", "http")
-    err = None
+    errs = []
     html = None
-    order = ["chrome", "http"] if method == "chrome" else ["http", "chrome"]
+    order = {"chrome": ["chrome", "impersonate", "http"],
+             "impersonate": ["impersonate", "chrome", "http"]}.get(method, ["http", "impersonate", "chrome"])
     for m in order:
         try:
             if m == "chrome":
                 if not chrome:
                     continue
                 html = fetch_chrome(url, chrome)
+            elif m == "impersonate":
+                html = fetch_impersonate(url)
             else:
                 html = fetch_http(url)
             lines = html_to_lines(html)
@@ -120,10 +139,10 @@ def snapshot_tool(tool, chrome):
             used = m
             break
         except Exception as e:  # try next method
-            err = f"{m}: {e}"[:300]
+            errs.append(f"{m}: {e}"[:200])  # keep every method's reason, not just the last one
             html = None
     if html is None:
-        return {"id": tool["id"], "status": "error", "error": err}
+        return {"id": tool["id"], "status": "error", "error": " | ".join(errs)[:600]}
     plines, tokens = normalize(lines)
     return {"id": tool["id"], "status": "ok", "method": used, "url": url, "text": "\n".join(lines),
             "pricing_lines": plines, "price_tokens": tokens,

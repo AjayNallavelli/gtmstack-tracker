@@ -1489,7 +1489,7 @@
       "pricing_status": "public",
       "pricing_verified": true,
       "billing_note": "Pay yearly = 2 months free",
-      "verification_note": "Plain HTTP fetch blocked (403); captured with headless Chrome.",
+      "verification_note": "Plain HTTP fetch blocked by a Cloudflare challenge (403); fetched with a browser-fingerprint HTTP client (curl_cffi).",
       "tiers": [
         {
           "plan": "Individual",
@@ -1524,7 +1524,7 @@
       "affiliate_program": "",
       "featured": false,
       "starting_price_usd": 99,
-      "fetch_method": "chrome",
+      "fetch_method": "impersonate",
       "has_free_plan": false,
       "price_display": ""
     },
