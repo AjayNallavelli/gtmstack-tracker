@@ -16,6 +16,13 @@
   ]
  },
  {
+  "date": "2026-11-02",
+  "tool_id": "prospeo",
+  "tool": "Prospeo",
+  "type": "fetch_failed",
+  "summary": "Pricing page could not be fetched; will retry next run."
+ },
+ {
   "date": "2026-10-31",
   "tool_id": "findymail",
   "tool": "Findymail",

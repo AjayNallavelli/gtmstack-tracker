@@ -1,0 +1,6 @@
+{
+ "id": "prospeo",
+ "date": "2026-11-02",
+ "status": "error",
+ "error": "chrome: chrome returned empty DOM | impersonate: too little text | http: too little text"
+}
