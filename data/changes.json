@@ -1,6 +1,55 @@
 [
  {
   "date": "2026-11-03",
+  "tool_id": "regie",
+  "tool": "Regie.ai",
+  "type": "copy_change",
+  "summary": "Pricing page wording/plan text changed (no price points changed).",
+  "previous_date": "2026-11-02",
+  "diff": [
+   "-Get a demo",
+   "+Book a demo"
+  ]
+ },
+ {
+  "date": "2026-11-03",
+  "tool_id": "replyio",
+  "tool": "Reply.io",
+  "type": "copy_change",
+  "summary": "Pricing page wording/plan text changed (no price points changed).",
+  "previous_date": "2026-11-02",
+  "diff": [
+   "-Book a demo",
+   "+Agencies"
+  ]
+ },
+ {
+  "date": "2026-11-03",
+  "tool_id": "instantly",
+  "tool": "Instantly",
+  "type": "price_change",
+  "summary": "Pricing page changed: new price points $107, $85.58; removed $77.6.",
+  "added": [
+   "$107",
+   "$85.58"
+  ],
+  "removed": [
+   "$77.6"
+  ],
+  "previous_date": "2026-11-02",
+  "diff": [
+   "-$97",
+   "+$107",
+   "-$77.6",
+   "+$85.58",
+   "+Reviews",
+   "+Free Email Checker",
+   "+Reviews",
+   "+Free Email Checker"
+  ]
+ },
+ {
+  "date": "2026-11-03",
   "tool_id": "findymail",
   "tool": "Findymail",
   "type": "copy_change",

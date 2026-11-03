@@ -1,0 +1,662 @@
+Pricing - La Growth Machine (LGM)
+Login
+Get a demo
+14-day free trial
+14 days free trial
+Find & Enrich Leads
+Engage on LinkedIn, Email, Calls & X
+Sync with your CRM
+100% SAFE
+every plan includes:
+LinkedIn Automation
+Email Automation
+LinkedIn Voice Messages
+AI Copywriting
+Company Lookalike
+Company database
+Team Management
+Annual
+Monthly
+Quarterly
+Semi-annual
+Annual
+2 mth free
+€ Euro
+Basic
+2 mth free
+Best for solo founders or teams starting with outbound
+60
+€
+/month per
+identity
+Channels:
+LinkedIn, Email
+Start your 14-day free trial
+250 Leads enriched per month
+Verified emails + enriched Lead data
+1 sending email per identity
+Up to 3 identities
+Each billed separately
+3 team members included
+Waterfall Email enrichment
+9 email providers+2 verification tools
+27M+ Company Database
+Browse Companies, create ABM queries
+LinkedIn Engagement
+Direct Messages, Contact Requests...
+Import Leads from LinkedIn
+Basic or Sales Navigator
+Ready-to-use campaign templates
+AI Generated Voice Messages
+AI Writing Assistant
+Support
+Live AI support
+Human Support under 24h
+most popular
+pro
+2 mth free
+Best for scaling
+teams
+using multichannel automation
+120
+€
+/month per
+identity
+Channels:
+LinkedIn, Email, Calls
+Start your 14-day free trial
+400 Leads enriched per month
+Verified emails + enriched Lead data
+5 sending emails per identity
+Using rotating inbox
+Up to 6 active campaigns
+As many identities as you like
+Each billed separately
+Bring 25 team members for free
+everything in
+BASIC
+,plus:
+Custom Workflow
+Create your own custom template.
+Import LinkedIn Intent Data
+Likers, Commenters, Event Attendees
+Unified / Multichannel Inbox
+LinkedIn + Email Inbox
+Automated Social Warming
+Like Posts, Follow & Visit Lead’s profiles
+Real Chat Mode
+Simulate LinkedIn Chat
+Lookalike Opportunities
+Get 50+ leads for each positive reply
+A/B Testing
+Email, LinkedIn, Connection requests...
+Advanced Integrations
+Zapier, Make, Clay, API...
+Slack Notifications
+Receive an alert when a lead replies...
+OOO detection, manual tasks...
+and many more advanced features
+Support
+Live AI support
+Human Support under 4h
+ultimate
+2 mth free
+Best for scaling teams with complex CRM workflows
+120
+€
+/month per
+identity
+Channels:
+LinkedIn, Email, X, Calls
+Start your 14-day free trial
+1,000 Leads enriched per month
+Verified emails + enriched Lead data
+10 sending emails per identity
+Using rotating inbox
+Unlimited active campaigns
+Unlimited team members included
+As many identities as you like
+Each billed separately
+everything in
+pro
+,plus:
+Sync with Hubspot / Pipedrive
+Sent & Replied Messages in your CRM
+CRM Enrichment
+Enrich your CRM’s contact
+Trigger Workflows in your CRM
+Support
+Live AI support
+Human Support under 2h
+Dedicated Customer Support
+Starting at 4 identities
+Your personal Outreach Strategist
+Starting at 4 identities
+Lead Enrichment
+Each plan includes free enriched leads each month.
+Need to enrich more leads?
+You can buy enrichment credits
+Get the number of credits that fits your needs.
+Simulate your needs here
+Looking for something custom?
+These flexible plans are ideal for agencies or fast-growing teams that need more than our 3 main pricing tiers.
+agency
+Best for Lead Gen Agencies & Freelancers
+Dedicated Customer Support
+Onboarding Sessions
+Exclusive features
+Discounted Plans
+Custom Identities
+...
+Talk to Sales
+6 identities minimum commitment required
+CUSTOM
+from
+150
+€
+Best for those who know exactly what they need. And what they don’t.
+Choose features you really need
+Custom Limits (identity, campaign..)
+Custom Support & Onboarding
+...
+Talk to Sales
+6-month minimum commitment required
+What are Identities?
+Identities are profiles engaging with your lead automatically (= running campaigns). You don’t need an identity to answeryour leads’ replies.
+You’re billed per identity.
+What is LGM's lead enrichment?
+We find all the relevant information about your leads.
+You can then segment your prospect lists and adjust your strategy to reach the right people and get more positive replies.
+We enrich the leads you import with verified emails and LinkedIn profile data.
+↓ Pricing FAQ
+Still unsure?
+Compare All Plans
+Features
+basic
+Start free trial now
+pro
+Start free trial now
+ULTIMATE
+Start free trial now
+Data enrichment
+Basic Details Enrichment
+Business Email Enrichment (Waterfall Enrichment)
+Twitter Enrichment
+LinkedIn Reverse Enrichment
+Update Leads in CRM
+Campaign management
+Run Multi-channel campaigns
+Max Running Campaigns
+3
+6
+Unlimited
+Template Sequences
+Build your own Custom Sequences
+Email Automations
+Actions
+Send Emails
+Send Same Thread Follow-ups
+Conditions
+If Email has been Opened ￫ Any action
+If Email has NOT been Opened ￫ Any action
+If Link has been Clicked ￫ Any action
+If Link has NOT been Clicked ￫ Any action
+If Email has been Replied ￫ Any action
+If Email has NOT been Replied ￫ Any action
+LinkedIn Automation
+Actions
+Enrich Contact
+Visit profile
+Send a connection request
+Send a Direct Message
+Send a LinkedIn Voice Message
+Social Warming (auto like)
+Conditions
+If Connection Request has been accepted -> Any action
+If Connection Request has NOT been accepted -> Any action
+If Connection Request has been replied -> Any action
+If Connection Request has NOT been replied -> Any action
+If Direct Message has been replied -> Any action
+If Direct Message has NOT been replied -> Any action
+If Profile visited you back -> Any Action
+If Profile has NOT visited you back -> Any Action
+If Voice Message has been replied -> Any action
+If Voice Message has NOT been replied -> Any action
+Twitter automation
+Actions
+Tweet
+Favorite a lead's tweet (with keyword filtering)
+Retweet a lead's tweet (with keyword filtering)
+Follow a lead
+Unfollow a lead
+Conditions
+If lead follows you -> Any Action
+If lead does not follow you -> Any action
+Advanced Conditions
+If Lead has specific info
+If Lead is already a relation on LinkedIn
+If Lead is already a relation on Twitter
+Advanced Exists
+Exit Actions
+Multichannel Reply Checks
+AI Writing Assistant
+Manual tasks
+Calls
+Custom messages
+Lead management
+Max Leads
+Unlimited
+Import Leads from CSV
+Import leads from LGM Database
+Import leads from LinkedIn (Sales Navigator)
+Import from LinkedIn (like, comment, event)
+Import leads from Hubspot or Pipedrive
+CSV Export
+Filter Leads
+Lead Qualification
+Qualify Interested Leads Manually
+View Leads Won per Campaign
+View Interested Rate per Campaign
+Custom fields
+24
+Multi channel Inbox
+EXCLU
+View Email & LinkedIn DM Sent
+Reply to Email & LinkedIn DM
+MultiChannel Conversations, grouped by Leads
+Manage Multiple Identities in a Single View
+Snooze, Favourite, Archive Conversations
+Integrations
+Connect Email
+Gmail / Gsuite
+Outlook
+SMTP
+Connect LinkedIn
+Regular
+Premium
+Sales Navigator
+Integrate using our API
+Create a lead
+Stop a lead
+Mark lead as converted
+Create an audience from a LinkedIn Search Url
+Remove a lead
+Connect to Zapier
+Receive Actions from Zapier
+Send Trigger to Zapier
+Clay
+Phantombuster
+More integrations
+Unlimited
+CRM
+Hubspot
+Create New Contact
+Update Contact with enrichment data
+Email Activity
+Email Content Sent & Received
+LinkedIn Activity
+LinkedIn DM Content Sent & Received
+Twitter Activity
+Lead Status
+Importing leads from a HubSpot list
+Duplicate Management
+Trigger-based lifecycle update
+Workflows integrated
+Sync activites
+Pipedrive
+Create New Contact
+Update Contact with enrichment data
+Email Activity
+Email Content Sent & Received
+LinkedIn Activity
+LinkedIn DM Content Sent & Received
+Twitter Activity
+Lead Status
+Importing leads from a Pipedrive list
+Duplicate Management
+Trigger-based lifecycle update
+Workflows integrated
+Sync activites
+Analytics & Reporting
+Email Open, Click & Reply Tracking
+LinkedIn Contact Request Tracking
+LinkedIn Direct Message Reply Tracking
+LinkedIn Visit Back Tracking
+Twitter Follow Back tracking
+Lead Activity Tracking
+Support
+Priority Support
+Basic
+Priority
+Top priority
+Support by Chat / Email
+On-demand videos and documentation
+Dedicated account manager
+Starting 4 identities
+Lead Enrichment
+Each plan includes free enriched leads each month.
+Need to enrich more leads?
+You can buy enrichment credits
+Get the number of credits that fits your needs.
+Simulate your needs here
+Looking for something custom?
+These flexible plans are ideal for agencies or fast-growing teams that need more than our 3 main pricing tiers.
+agency
+Best for Lead Gen Agencies & Freelancers
+Dedicated Customer Support
+Onboarding Sessions
+Exclusive features
+Discounted Plans
+Custom Identities
+...
+Talk to Sales
+6 identities minimum commitment required
+CUSTOM
+from
+150
+€
+Best for those who know exactly what they need. And what they don’t.
+Dedicated CuChoose features you really need
+Custom Limits (identity, campaign..)
+Custom Support & Onboarding
+...
+Talk to Sales
+6-month minimum commitment required
+Scale Outreach
+without Sacrificing Safety or ROI
+LGM is the safest LinkedIn automation platform
+Getting banned on LinkedIn
+‍
+is every B2B team’s worst nightmare 😨
+that's why lgm is built for stealth
+100% cloud-based (no detectable extensions)
+Protected by dedicated 5G mobile proxies
+Smart sending limits based on real-world data.
+Thousands of companies run campaigns safely every day.
+Better ROI
+than Hiring a VA
+Hiring a VA?
+Expect to spend $600–$1,200 per month.
+lgm
+pro
+is just $110/month
+(billed annualy)
+You’ll save 100+ hours and automate tasks a VA
+can’t even do
+— like inbox rotation and smart follow-ups.
+LGM pays for itself in a fraction of the cost and time.
+Try All Features Free for 14 Days
+Want to enrich more qualified leads?
+Get extra enrichment packs
+How many more leads do you want to enrich?
+0
+2 500
+5 000
+7 500
+10 000
+500
+What do you want to enrich?
+Full Enrichment
+Complete profile & Verified email
+●
+5 / LEAD
+Lead Data Enrichment
+Profile & Company information
+●
+1 / LEAD
+Our lead enrichment follows a pay-per-use credit pricing.
+We offer you monthly credits in every plan to enrich your contacts. Each lead enriched consumes credits according to your needs:
+FULL ENRICHMENT
+(VERIFIED EMAIL + DATA)
+●
+5 / LEAD
+LEAD DATA ENRICHMENT
+●
+1 / LEAD
+If you use all your plan's credits, you can buy more credits.
+You can calculate the investment based on the number of leads you want to enrich
+Results
+Cost and credit requirements
+Total Investment
+€5
+For
+500
+leads with
+data enrichment
+Credit Requirements
+📊
+Lead Data Enrichment Credits
+500
+credits (
+1
+/ lead)
+Get Credits
+Need a custom plan?
+Contact our sales team
+Why Sales, Founders & Lead Gen Agencies
+love La Growth Machine
+all the answers to
+Frequently Asked Questions
+Can I try for free?
+Yes!
+You can try La Growth Machine for Free, without card details,
+for 14 days
+. No strings attached.
+What features are available in the free trial?
+Lucky you! The free trial allows you to test
+all the features
+available in La Growth Machine, except for custom sequences.
+Custom sequences, in fact, require advanced knowledge of outreach. That’s why we prefer to provide you with
+ready-to-use template sequences
+, so you can make your initial campaigns perform during the testing phase.
+Do you still want to test custom sequences? Contact support via the chat, and they will know what to do.
+How many leads can I activate per month?
+As many as you want.
+La Growth Machine does not limit you in any way.
+Since an email or LinkedIn account can only send a limited number of messages a day, it will vary between campaigns.
+What are identities?
+An identity is a seat for which you can
+automate on all three channels
+(LinkedIn + Email + Twitter).
+Should you need to automate for 2 people, you will need 2 identities
+How to add another identity?
+You can add another identity (or seat) directly within the app.
+Note:
+During your free-trial you only have access to 1 identity, upgrade your account to add multiple identities.
+What's the difference between Multichannel Inbox and Rotating Inbox?
+The
+Multichannel Inbox
+is a
+unified inbox
+that brings together both your
+LinkedIn and email conversations
+in one place.
+It helps you stay on top of all your multichannel interactions, get full visibility, and never miss a reply — no matter the channel your lead uses.
+The
+Rotating Inbox
+, on the other hand, is all about
+sending
+.
+It automatically distributes your outbound emails across multiple addresses to
+preserve your domain’s deliverability
+and
+safely scale your outreach volume
+.
+📷 In short:
+Multichannel Inbox = manage & read LinkedIn + email messages
+Rotating Inbox = send smartly through multiple email addresses
+Can I create my own workflows?
+Yes! Starting with the
+Ultimate
+plan, you’ll have access to our
+drag & drop Sequence Builder
+.
+It’s intuitive, visual, and designed to let you
+build your own outreach flows
+freely.
+Add your channels, conditions, delays, and actions as needed — and unleash your creativity to craft the
+most effective strategies for your audience
+.
+📷 It’s the perfect playground for sales teams who want to go beyond ready-made templates.
+What type of support is included in each plan?
+All La Growth Machine users have access to a
+comprehensive and regularly updated knowledge base
+, designed to help them get started smoothly and answer the most common questions.
+With the
+Basic
+plan, users have access to our
+AI-powered chat
+for instant answers, along with
+human support
+guaranteed within 2
+4 business hours
+.
+The
+Pro
+and
+Ultimate
+plans include
+priority support
+. This means instant responses via the AI chat, and most importantly,
+fast and responsive human support
+, with guaranteed replies within
+2 business hours
+.
+Finally,
+Ultimate customers with 4 identities or more
+benefit from a
+dedicated Account Manager
+, providing personalized guidance: onboarding, advanced usage support, regular check-ins, and assistance tailored to team-specific needs.
+Can I downgrade plans?
+Of course!
+At
+any moment
+, you can downgrade, upgrade, end all your subscriptions, switch to monthly, switch to yearly, add an identity, remove an identity, buy 3 vacuum-packed hams.
+Oops, that’s my grocery shopping list.
+What's the difference between an invited member (free) and an identity?
+A member
+is a person from your company who
+has a La Growth Machine account and a widget
+. A company can have as many members as specified in each plan (3 for the Basic plan and 25 for the Pro and Ultimate plans).
+By inviting a
+free member
+, they will be able to:
+Import leads, create leads, and prepare campaigns
+Access the account to view campaign performance and qualify leads
+Respond to LinkedIn messages and emails under each identity
+A member cannot launch a campaign.
+Their Google and LinkedIn accounts are not connected, so they cannot launch a campaign under their name. To do this, you need to have subscribed to an identity with La Growth Machine.
+An identity equals a license.
+An identity can then launch campaigns using their profile.
+Depending on your plan,
+it’s possible to have multiple identities:
+Up to 3 identities with the Basic plan (3 licenses and therefore 3 billed identities)
+No identity limit for the Pro and Ultimate plansClearer now? Come see for yourself!
+What information do I get with the enrich features? And is it really unlimited?
+Yes,
+unlimited
+. Like really really unlimited.Regarding lead details, when a lead is enriched you can receive: email (pro & personal), phone number, Twitter, company name, company website, gender, LinkedIn profile, and many more.
+We’re using Waterfall Enrichment to find your leads’ email. Read more
+here
+.
+Which CRMs are supported?
+HubSpot and Pipedrive are supported natively.
+Connecting your CRM takes 1 min and La Growth Machine will take care of the rest. Leads will automatically be created and
+every action and message will be synchronized
+on your contact’s timeline.
+Advanced features include automated lifecycle updates based on triggers, integrations with HubSpot & Pipedrive’s workflows and much more…
+Not using HubSpot or Pipedrive?
+‍
+Any CRM can be connected to LGM
+using our Zapier integration in 5min. That includes Salesforce, Close.io, Freshsales, Copper and Zoho, to name just a few
+How can I send from multiple email addresses?
+To scale your volumes while protecting your deliverability, you can connect
+multiple sending email addresses per identity
+.
+‍
+This is made possible with our
+Rotating Inbox
+, available starting from the
+Pro
+plan.
+‍
+Here’s how it works: your campaigns are automatically distributed across multiple inboxes, which helps you:
+Reduce the risk of being flagged
+Protect your domains
+Scale your outreach without stress
+With the
+Pro
+plan, you can connect
+up to 5 sending emails per identity
+.
+‍
+With
+Ultimate
+, you go up to
+10 per identity
+.
+‍
+📷 For example, if your team uses
+3 identities
+on a
+Pro
+plan, you can send emails from
+up to 15 inboxes in rotation
+(5 per identity).
+How does billing work with multiple identities?
+If you have multiple identities, each identity is billed but the
+same billing account
+is used for the payment.
+Where is support handled?
+Support is fully internalized and based in France.
+‍
+It’s
+Marion and her team
+who reply to you every day: product experts who are fast, efficient, and always in a good mood.
+‍
+No outsourcing, no templated answers — you’re speaking directly with people who
+know La Growth Machine inside and out
+, and who are equipped to support you on anything from a quick question to a complex use case.
+‍
+📷 For us, customer support isn’t a nice-to-have — it’s a core part of the
+LGM experience
+.
+What is a social company?
+Social companies are organizations that combine economic activity with
+social or environmental objectives.
+They place the human and collective interest at the heart of their approach, thus promoting a more just and sustainable economy.
+How to get the 50% discount as a social company?
+To get the discount as a company that strives to have a
+social
+or
+environmental
+impact. Please make sure to follow
+these steps below.
+Step 1:
+Sign-up & start your free-trial on LaGrowthMachine (you can click here to
+register
+)
+If you already have an account, skip this step.
+‍
+Step 2:
+Contact our support with the live chat (on the bottom-left corner of the app) and ask them about the discount available for social companies.
+(Disable your ad blockers if you don’t see the live chat icon)
+‍
+Step 3:
+Our support team will take care of you personally and give you a unique discount if you’re eligible.
+Double your sales pipeline
+without doubling your time
+Connect with prospects across
+Linkedin
+,
+Email
+,
+Calls
+&
+- all from
+one platform
+.
+Register to webinar
+Only 45-minutes. 100% Actionable tips.
+Free 14-days trial
+No credit card required.

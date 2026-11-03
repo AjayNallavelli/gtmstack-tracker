@@ -1,0 +1,233 @@
+lemlist pricing︱The all-in-one platform for precise outbound at any scale
+Get 1 entire month of Lemlist for free
+🚨
+Limited Time Offer
+🚨
+You've unlocked an extended 30 day free trial of Lemlist - perks of checking out Tim Yakubson's content : )
+Start free trial
+Pricing
+Flexible plans for every outbound need.
+Monthly
+Quarterly
+Save 10%
+Yearly
+Save 20%
+Yearly
+Save 20%
+Email
+For teams that want to go big on email.
+$69
+$55
+/ month
+Users
+Unlimited
+50,000 emails
+/mo
+$69
+$55
+Start free trial
+Unlimited users & Email senders
+Email & phone number finder
+650M+ leads database
+lemAgent
+Signal, Enrichment, & Messaging AI agents
+lemlist MCP & CLI
+Email warm-up & Deliverability hub
+CRM integrations & API
+See all features
+Multichannel
+For teams that want to maximize every touchpoint.
+$109
+$87
+/ month
+User(s)
+Emails & messages
+/mo
+Unlimited
+Start free trial
+Features of the email plan +
+5 senders per user
+Unlimited emails & messages
+LinkedIn automation
+SMS automation
+WhatsApp automation add-on
+Built‑in call dialer & VoIP Integrations
+Use lemlist from Gmail & LinkedIn
+See all features
+Enterprise
+For larger teams with custom requirements.
+Custom
+Users
+Custom
+Emails & messages
+/mo
+Unlimited
+Talk to sales
+Features of the Multichannel plan +
+≥ 5 senders per user
+Use lemlist from your CRM
+Custom user roles & permissions
+Dedicated account manager
+Custom terms of use
+Advanced login security (SSO/SAML)
+Priority support
+See all features
+Need lead data? Add the missing piece with Data add-ons.
+Lead data enrichment
+Get emails, phones, and other key top 25+ providers.
+$20
+$16
+/ month
+2k credits
+/mo (400 emails or 100 phones)
+$20
+$16
+Data providers
+Buying intent signals
+Get real-time updates when leads perform an event that signals interest.
+$29
+$21
+/ month
+100 signals
+/mo
+$29
+$21
+Signals available
+Case study
+& 20,000+ other sales teams run their entire outbound in lemlist
+“If I had to describe lemlist in one sentence, it’s the platform for salespeople looking to build pipeline easily using the best tactics on the market.”
+Jonathan Chemouny
+Global GTM
+·
+ElevenLabs
+Comparison table
+Compare engagement plans and
+find your best fit.
+Email
+From $55 /mo
+Start free trial
+Multichannel
+From $87 /mo
+Start free trial
+Enterprise
+Custom price
+Talk to sales
+Data & Lead Generation
+650M+ lead database
+Account-based prospecting
+Unlimited contacts
+Centralized contact management
+Leads scoring
+Email finder & verifier
+Phone number finder
+LinkedIn enrichment
+Unlimited LinkedIn leads export
+CSV leads export
+Outreach Automation
+Liquid Syntax
+Custom text & images
+Campaign scheduling
+Campaign auto-launch
+Auto-stop campaign
+Conditioned next steps
+Unlimited emails & messages
+LinkedIn profile visits
+LinkedIn follows & invites
+LinkedIn text messages
+LinkedIn voice messages
+LinkedIn InMail
+In-app calling
+Power dialer
+SMS + phone number
+WhatsApp add-on
+AI-powered Outbound
+lemAgent
+AI leads data cleaning
+AI web search enrichment
+AI-powered lead database filters
+AI account & contact research
+Intent signal agents
+URL-scraping agent
+LinkedIn agents
+Claap agents
+MCP server access
+Guest users
+AI reply intent detection
+AI out-of-office detection
+AI-generated replies
+AI personalized LinkedIn voice notes
+AI sales call summaries
+AI CRM auto-fill
+Operations & Scaling
+Teammate invites
+Template library
+Roles & permissions management
+Shared campaigns
+Task management
+Multi-threading
+Campaign review
+Step preview
+Custom reporting
+Guest users
+Developer tools (API, CLI & MCP)
+Unlimited users & email senders
+Manual steps
+Unified inbox
+Custom user roles & permissions
+Custom credits assignment
+Activity logs
+Chrome Extension & Integrations
+Work in lemlist from LinkedIn
+Work in lemlist from Gmail
+lemlist API key & documentation
+Zapier
+Make, n8n, Clay
+CRM (Hubspot, Salesforce, Pipedrive)
+VoIP (Aircall, Ringover)
+Claap AI call agent
+Work in lemlist from your CRM
+Deliverability
+Google, Microsoft, & SMTP
+In-app domain purchase
+Rotating IPs
+Custom tracking domain
+DNS setup test
+Deliverability testing
+Sending limits management
+Unsubscribe link
+Smart sending algorithm
+Inbox rotation
+In-app emails purchase
+Deliverability alerts
+Deliverability Hub
+Enablement & Support
+Two-factor authentication
+Local currency billing ($, €, or £)
+Interface in EN, FR, DE, ES
+In-app live support
+1:1 onboarding sessions
+Dedicated account manager
+Wire transfer or SEPA payment
+Custom terms of use
+Monthly/Quarterly billing of annual plan
+Advanced login security (SSO/SAML)
+Not sure which plan is right for you?
+Talk to our team for a custom recommendation.
+Talk to sales
+Recognized by G2.
+Trusted by thousands.
+4.6
+/
+5
+based on 2,240+ reviews
+Frequently Asked Questions
+What does the 14-day free trial include?
+You’ll get access to the Multichannel plan’s features (except in-app calls), plus 200 free credits to find emails and phone numbers, explore buying signals, and more. You can also try lemAgent with your own data and see what it creates before upgrading to launch it.
+Which plan should I choose based on my size and volume?
+It depends on the channels you use and how much you reach out. The email plan lets you choose your monthly email volume and send safely at scale, with unlimited users, senders, and campaigns. With Multichannel reach, you can reach leads across email, LinkedIn, and calls, with SMS and WhatsApp available as add-ons. Pricing is based on the number of users. Go for Enterprise if you need a custom plan for larger teams with specific volume, security, flexibility, or support requirements.
+How do lemlist credits work?
+Credits are lemlist’s currency for accessing Data features, including finding contact information, enriching leads, and receiving buying signals. You can subscribe to a monthly credit allowance and are charged only for successful results. Unused credits roll over for as long as your subscription remains active.
+When should I choose the Enterprise plan?
+Enterprise is a good fit for larger or fast-growing teams that need centralized control. Think IT-managed orgs requiring SSO, companies with stricter compliance needs, or finance teams that can't pay by card. If self-serve no longer cuts it and you need structure, auditing, and dedicated support, Enterprise is the right move.
+Is lemwarm and deliverability protection included?
+Yes. lemwarm and built-in deliverability protections are included in all plans to help keep your emails out of spam and protect your sender reputation at any scale.
