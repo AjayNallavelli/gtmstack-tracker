@@ -337,7 +337,7 @@
       ],
       "description": "Cold email at scale: unlimited sending accounts and warmup, lead database (SuperSearch) and AI agents.",
       "pricing_url": "https://instantly.ai/pricing",
-      "date_checked": "2026-10-19",
+      "date_checked": "2026-11-04",
       "pricing_status": "public",
       "pricing_verified": true,
       "billing_note": "Monthly and annual both shown",
@@ -352,8 +352,8 @@
         },
         {
           "plan": "Outreach Hypergrowth",
-          "monthly_usd": 97,
-          "annual_monthly_usd": 77.6,
+          "monthly_usd": 107,
+          "annual_monthly_usd": 85.58,
           "limits": "125,000 emails/mo, 25,000 uploaded contacts",
           "note": ""
         },
