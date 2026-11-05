@@ -216,7 +216,9 @@ def home_ld(site, tools, stats, since, modified):
           "description": (f"Plans, monthly and annual prices, free tiers and limits for {stats['tools']} AI SDR, cold email, "
                           "data enrichment and deliverability tools, copied from each vendor's public pricing page, re-checked daily, "
                           "with a dated log of real price and plan changes."),
-          "url": base, "creator": {"@id": base + "#org"}, "publisher": {"@id": base + "#org"},
+          "url": base, "license": "https://creativecommons.org/licenses/by/4.0/",
+          "creator": {"@type": "Organization", "name": site["name"], "url": base},
+          "publisher": {"@type": "Organization", "name": site["name"], "url": base},
           "isAccessibleForFree": True, "inLanguage": "en",
           "keywords": ["sales software pricing", "AI SDR pricing", "cold email tool pricing", "B2B data enrichment pricing",
                        "email deliverability pricing", "SaaS price changes"],
