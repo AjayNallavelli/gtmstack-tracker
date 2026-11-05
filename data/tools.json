@@ -854,10 +854,10 @@
       ],
       "description": "Multichannel (LinkedIn, email, X, calls) prospecting automation priced per identity.",
       "pricing_url": "https://lagrowthmachine.com/pricing/",
-      "date_checked": "2026-10-19",
+      "date_checked": "2026-11-05",
       "pricing_status": "partial",
       "pricing_verified": true,
-      "billing_note": "Prices published in EUR only",
+      "billing_note": "Prices published in EUR only; team members join free, you pay per sending identity",
       "verification_note": "",
       "tiers": [
         {
@@ -865,21 +865,21 @@
           "monthly_usd": null,
           "annual_monthly_usd": null,
           "limits": "LinkedIn + email; per identity",
-          "note": "€50/month per identity (EUR shown)"
+          "note": "€60/month per identity billed monthly, €50/month billed annually (EUR shown)"
         },
         {
           "plan": "Pro",
           "monthly_usd": null,
           "annual_monthly_usd": null,
           "limits": "LinkedIn, email, calls",
-          "note": "€100/month per identity"
+          "note": "€120/month per identity billed monthly, €100/month billed annually"
         },
         {
           "plan": "Ultimate",
           "monthly_usd": null,
           "annual_monthly_usd": null,
           "limits": "LinkedIn, email, X, calls; 1,000 leads enriched/mo",
-          "note": "€150/month per identity"
+          "note": "€180/month per identity billed monthly, €150/month billed annually"
         }
       ],
       "affiliate_url": "",
@@ -888,7 +888,7 @@
       "starting_price_usd": null,
       "fetch_method": "http",
       "has_free_plan": false,
-      "price_display": "from €50/mo per identity (EUR)"
+      "price_display": "from €50/mo per identity, billed annually (EUR)"
     },
     {
       "id": "outreach",
