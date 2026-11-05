@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<nav class="crumbs small"><a href="/">Home</a> / Pricing indexes</nav>
+<h1>AI Sales Tool Pricing Indexes</h1>
+<p class="lead">Monthly snapshots of entry prices, free tiers and typed price/plan changes across the tools we track. Cite as GTMStack Tracker (CC BY 4.0).</p>
+<ul class="links">
+{% for ix in indexes %}
+  <li><a href="/indexes/{{ ix.slug }}/">{{ ix.title }}</a> — {{ ix.blurb }}</li>
+{% endfor %}
+</ul>
+<p class="small muted"><a href="/data/pricing.csv">Live pricing.csv</a> · <a href="/changes/">What changed</a> · <a href="/methodology/">Methodology</a></p>
+{% endblock %}

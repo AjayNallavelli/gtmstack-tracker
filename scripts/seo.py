@@ -284,7 +284,12 @@ def answer_line_tool(t):
         plan = "" if _generic(t["cheapest_tier"]["plan"]) else f"; the cheapest paid plan is {t['cheapest_tier']['plan']}"
         return f"As of {d}, {n} {st}{plan}{free}."
     if t.get("price_display") and t["id"] not in NUMERIC_DISPLAY:
-        return f"As of {d}, {n} does not sell a simple monthly plan: {t['price_display'].rstrip('.')}{free}."
+        s = f"As of {d}, {n} does not sell a simple monthly plan: {t['price_display'].rstrip('.')}"
+        if t.get("cheapest_tier") and t.get("entry_paid"):
+            ct = t["cheapest_tier"]
+            plan = "" if _generic(ct["plan"]) else f" ({ct['plan']})"
+            s += f"; fixed add-ons start at {money(t['entry_paid'])}/month{plan}"
+        return s + f"{free}."
     if t["has_free_plan"]:
         return f"As of {d}, {n} has a free plan ({t['free_tier'] or 'Free'}), but its paid plans are not priced publicly."
     return f"As of {d}, {n} does not publish prices; you have to contact sales for a quote, and there is no free plan."
@@ -301,6 +306,11 @@ def answer_line_compare(a, b):
         st = _starts(t)
         if st:
             return f"{_who(t)} {st}"
+        if t.get("price_display") and t["id"] not in NUMERIC_DISPLAY:
+            s = f"{t['name']} is priced as {t['price_display']}"
+            if t.get("cheapest_tier") and t.get("entry_paid"):
+                s += f" (fixed add-ons from {money(t['entry_paid'])}/mo)"
+            return s
         if t["entry_label"].startswith("Contact"):
             return f"{t['name']} does not publish prices (contact sales)"
         if t["entry_label"].startswith("Free"):

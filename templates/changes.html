@@ -1,7 +1,7 @@
 {% extends "base.html" %}{% from "_macros.html" import change_block %}
 {% block content %}
 <h1>What changed</h1>
-<p class="lead">Every day we snapshot each tracked pricing page and compare it with the last good snapshot. Only <strong>real price-point or plan changes</strong> are listed here, each with a dated before/after. <a href="/changes/feed.xml">RSS feed</a>.</p>
+<p class="lead">Every day we snapshot each tracked pricing page and compare it with the last good snapshot. Only <strong>real price-point or plan changes</strong> are listed here, each with a dated before/after. <a href="/changes/feed.xml">RSS feed</a>. Monthly rollup: <a href="/indexes/2026-10/">October 2026 Pricing Index</a>.</p>
 {% set ns = namespace(d=None) %}
 {% for c in changes %}
 {% if c.date != ns.d %}{% set ns.d = c.date %}<h2 class="day">{{ c.date|nicedate }}</h2>{% endif %}

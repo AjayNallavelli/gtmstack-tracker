@@ -5,4 +5,5 @@
 - [x] c) Price-change alert signup copy on vs/tool pages (2026-10-29): tool-named alert boxes on every tool and compare page, plus a top-of-page affiliate CTA on compare pages with Klenty, Woodpecker or Prospeo.
 - [ ] d) beehiiv Recommendations
 - [ ] e) PartnerStack / Impact free affiliate applications
-- [ ] f) Awesome-list PRs for the dataset repo
+- [x] f) Awesome-list PRs for the dataset repo (2026-11-01): apd-core #1015, awesome-pricing #2, awesome-lead-generation #51 (opened).
+- [x] g) October 2026 Pricing Index published 2026-11-05: /indexes/2026-10/ + data/pricing-index-2026-10.csv.

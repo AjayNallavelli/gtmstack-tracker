@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Static site generator for GTMStack Tracker.  Usage: python scripts/build.py [--out dist]"""
 import argparse, datetime as dt, html, itertools, json, os, re, shutil
+from statistics import median
 from urllib.parse import urlparse
 from pathlib import Path
 from jinja2 import Environment, FileSystemLoader, select_autoescape
@@ -227,6 +228,101 @@ def home_ld(site, tools, stats, since, modified):
     return {"@context": "https://schema.org", "@graph": [org, web, ds]}
 
 
+
+# tools whose price_display is still a rankable USD monthly figure (mirrors seo.NUMERIC_DISPLAY)
+INDEX_NUMERIC_DISPLAY = {"mailreach"}
+
+
+def entry_for_index(t):
+    """Lowest listed paid USD/mo for index stats. Skip null, usage-based, and non-USD display quotes."""
+    if t.get("price_display") and t["id"] not in INDEX_NUMERIC_DISPLAY:
+        return None
+    return t.get("entry_paid")
+
+
+def write_pricing_csv(path, tools, by_id=None):
+    """One row per plan; same columns as the live open dataset."""
+    import csv, io
+    buf = io.StringIO()
+    w = csv.writer(buf, lineterminator="\n")
+    w.writerow(["tool_id", "tool", "category", "website", "pricing_url", "pricing_status", "plan",
+                "monthly_usd", "annual_monthly_usd", "limits", "note", "billing_note", "has_free_plan", "date_checked"])
+    for t in sorted(tools, key=lambda x: x["id"]):
+        checked = (by_id or {}).get(t["id"], t).get("last_checked") or t.get("date_checked", "")
+        for tier in t.get("tiers") or [{}]:
+            w.writerow([t["id"], t["name"], t.get("category", ""), t.get("website", ""), t.get("pricing_url", ""),
+                        t.get("pricing_status", ""), tier.get("plan", ""),
+                        "" if tier.get("monthly_usd") is None else tier.get("monthly_usd"),
+                        "" if tier.get("annual_monthly_usd") is None else tier.get("annual_monthly_usd"),
+                        tier.get("limits", ""), tier.get("note", ""), t.get("billing_note", ""),
+                        t.get("has_free_plan", False), checked])
+    path.write_text(buf.getvalue())
+    return path
+
+
+def build_month_index(year_month, tools, changes, tracking_since, extra=None):
+    """Stats + copy for /indexes/YYYY-MM/. extra may supply honesty_note / next_month_note / raises / cuts."""
+    extra = extra or {}
+    y, m = map(int, year_month.split("-"))
+    month_name = dt.date(y, m, 1).strftime("%B %Y")
+    period_label = dt.date(y, m, 1).strftime("%B %Y")
+    entries = []
+    for t in tools:
+        ep = entry_for_index(t)
+        if ep is not None:
+            entries.append((t["name"], ep))
+    vals = [e[1] for e in entries]
+    lowest = min(vals) if vals else None
+    lowest_tools = [n for n, v in entries if v == lowest] if lowest is not None else []
+    month_changes = [c for c in changes if c["date"].startswith(year_month)]
+    cats = []
+    for name, (slug, _blurb) in CATS.items():
+        cats.append({"name": name, "slug": slug, "count": sum(1 for t in tools if t["category"] == name)})
+    free_count = sum(1 for t in tools if t["has_free_plan"])
+    contact_count = sum(1 for t in tools if t["pricing_status"] == "contact_sales")
+    raises = extra.get("raises", 0)
+    cuts = extra.get("cuts", 0)
+    median_entry = median(vals) if vals else None
+    answer = (
+        f"As of the {month_name} Pricing Index (built from tools.json; tracking since {tracking_since}), "
+        f"we track {len(tools)} AI sales tools: {free_count} list a $0 tier, {contact_count} are contact-sales only, "
+        f"and among {len(vals)} tools with a numeric USD entry price the median is {money(median_entry)}/mo "
+        f"(lowest {money(lowest)}/mo). The public log recorded {len(month_changes)} typed price_change/plan_change "
+        f"row{'s' if len(month_changes) != 1 else ''} in {month_name}; structured plan tables had {raises} raise(s) and {cuts} cut(s) hand-updated."
+    )
+    return {
+        "slug": year_month,
+        "year_month": year_month,
+        "month_name": month_name,
+        "period_label": period_label,
+        "h1": f"AI Sales Tool Pricing Index — {month_name}",
+        "title": f"AI Sales Tool Pricing Index — {month_name}",
+        "answer": answer,
+        "lead": (
+            f"One citable snapshot of entry prices, free tiers and typed pricing-log activity for the tools GTMStack Tracker covers. "
+            f"Numbers below are computed from data/tools.json; the change section uses only public price_change / plan_change rows dated in {month_name}."
+        ),
+        "tool_count": len(tools),
+        "free_count": free_count,
+        "contact_count": contact_count,
+        "numeric_count": len(vals),
+        "median_entry": median_entry,
+        "lowest_entry": lowest,
+        "lowest_tools": lowest_tools,
+        "change_count": len(month_changes),
+        "raises": raises,
+        "cuts": cuts,
+        "categories": cats,
+        "changes": month_changes,
+        "honesty_note": extra.get("honesty_note", ""),
+        "next_month_note": extra.get("next_month_note", ""),
+        "tracking_since": tracking_since,
+        "csv_name": f"pricing-index-{year_month}.csv",
+        "csv_href": f"/data/pricing-index-{year_month}.csv",
+        "blurb": f"{len(tools)} tools · median entry {money(median_entry)}/mo · {len(month_changes)} typed log row(s)",
+    }
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default=str(ROOT / "dist"))
@@ -345,6 +441,33 @@ def main():
            title=f"What changed: pricing & plan change log | {site['name']}",
            description="A dated feed of pricing and plan changes detected on the pricing pages of AI sales and outbound tools.")
     render("feed.xml", "/changes/feed.xml", changes=changes[:50])
+    # monthly pricing indexes (first Thursday publish; freeze tools.json rows into named CSV)
+    indexes = []
+    oct_extra = {
+        "raises": 0,
+        "cuts": 0,
+        "honesty_note": (
+            "Honesty note: the public log recorded 1 price_change row for Woodpecker on 2026-10-23 "
+            "(\"Pricing page changed: removed $0, $0.01, $1, $10, $20, $2000, $27, $29.\"). "
+            "That row is a scraper price-point delta on the pricing page text. The structured plan tables "
+            "in tools.json for Woodpecker were NOT hand-updated for a vendor plan raise or cut; curated "
+            "plan tables are maintained separately from the automated log."
+        ),
+        "next_month_note": (
+            "November already has real changes that belong in the November index next month, not as October events: "
+            "Instantly (2026-11-03 Outreach Hypergrowth $97→$107 / $77.6→$85.58) and La Growth Machine "
+            "(2026-11-04 EUR pricing redesign). They are listed on /changes/ now but counted in November's index."
+        ),
+    }
+    indexes.append(build_month_index("2026-10", tools, changes, tracking_since, oct_extra))
+    render("indexes.html", "/indexes/", lastmod=all_lm, indexes=indexes,
+           title=f"AI Sales Tool Pricing Indexes | {site['name']}",
+           description="Monthly citable snapshots of AI sales tool entry prices, free tiers and typed price/plan changes.")
+    for ix in indexes:
+        render("pricing_index.html", f"/indexes/{ix['slug']}/", lastmod=all_lm, idx=ix,
+               title=f"{ix['title']} | {site['name']}",
+               description=ix["answer"])
+
     render("featured.html", "/get-featured/", title=f"Get featured on {site['name']}",
            description="Feature your sales or outbound tool in front of buyers comparing GTM software pricing.")
     render("newsletter.html", "/newsletter/", title=f"The {site['name']} newsletter",
@@ -367,19 +490,12 @@ def main():
         t["affiliate_url"] = by_id[t["id"]]["affiliate_url"]
     (out / "data" / "tools.json").write_text(json.dumps(pub, indent=1, ensure_ascii=False))
     # open pricing dataset (CC BY 4.0): one row per plan, no affiliate URLs
-    import csv, io
-    buf = io.StringIO()
-    w = csv.writer(buf, lineterminator="\n")
-    w.writerow(["tool_id", "tool", "category", "website", "pricing_url", "pricing_status", "plan", "monthly_usd", "annual_monthly_usd", "limits", "note", "billing_note", "has_free_plan", "date_checked"])
-    for t in sorted(pub["tools"], key=lambda x: x["id"]):
-        for tier in t.get("tiers") or [{}]:
-            w.writerow([t["id"], t["name"], t.get("category", ""), t.get("website", ""), t.get("pricing_url", ""), t.get("pricing_status", ""),
-                        tier.get("plan", ""), "" if tier.get("monthly_usd") is None else tier.get("monthly_usd"),
-                        "" if tier.get("annual_monthly_usd") is None else tier.get("annual_monthly_usd"),
-                        tier.get("limits", ""), tier.get("note", ""), t.get("billing_note", ""), t.get("has_free_plan", False),
-                        by_id[t["id"]].get("last_checked") or t.get("date_checked", "")])
-    (out / "data" / "pricing.csv").write_text(buf.getvalue())
-    (DATA / "pricing.csv").write_text(buf.getvalue())
+    write_pricing_csv(out / "data" / "pricing.csv", pub["tools"], by_id)
+    write_pricing_csv(DATA / "pricing.csv", pub["tools"], by_id)
+    # frozen monthly index CSVs (regenerated from current tools.json plan rows for the index filename)
+    for ix in indexes:
+        write_pricing_csv(DATA / ix["csv_name"], pub["tools"], by_id)
+        write_pricing_csv(out / "data" / ix["csv_name"], pub["tools"], by_id)
     # public change data = real changes only (the raw log incl. copy/toggle/fetch-failed rows stays in the repo)
     (out / "data" / "changes.json").write_text(json.dumps([{k: v for k, v in c.items() if k not in ("old", "new")} for c in changes], indent=1, ensure_ascii=False))
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']

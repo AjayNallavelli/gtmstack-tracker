@@ -1,0 +1,56 @@
+{% extends "base.html" %}{% from "_macros.html" import change_block %}
+{% block content %}
+<nav class="crumbs small"><a href="/">Home</a> / <a href="/indexes/">Pricing indexes</a> / {{ idx.period_label }}</nav>
+<h1>{{ idx.h1 }}</h1>
+<p class="answer"><strong>{{ idx.answer }}</strong></p>
+<p class="lead">{{ idx.lead }}</p>
+
+<div class="table-wrap">
+<table class="ptable">
+  <thead><tr><th>Stat</th><th>Value</th></tr></thead>
+  <tbody>
+  <tr><td>Tools tracked</td><td>{{ idx.tool_count }}</td></tr>
+  <tr><td>Free / $0 tiers</td><td>{{ idx.free_count }}</td></tr>
+  <tr><td>Contact-sales only</td><td>{{ idx.contact_count }}</td></tr>
+  <tr><td>Tools with a numeric USD entry price</td><td>{{ idx.numeric_count }} <span class="small muted">(skips usage-based, non-USD display, and null)</span></td></tr>
+  <tr><td>Median entry price</td><td>{{ idx.median_entry|money }}/mo</td></tr>
+  <tr><td>Lowest entry price</td><td>{{ idx.lowest_entry|money }}/mo ({{ idx.lowest_tools|join(', ') }})</td></tr>
+  <tr><td>Typed public log rows in {{ idx.month_name }} (price_change / plan_change)</td><td>{{ idx.change_count }}</td></tr>
+  <tr><td>Structured plan raises / cuts hand-updated in tools.json</td><td>{{ idx.raises }} raised / {{ idx.cuts }} cut</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2>Category breakdown</h2>
+<div class="table-wrap">
+<table class="ptable compact">
+  <thead><tr><th>Category</th><th>Tools</th></tr></thead>
+  <tbody>
+  {% for row in idx.categories %}<tr><td>{{ row.name }}</td><td>{{ row.count }}</td></tr>{% endfor %}
+  </tbody>
+</table>
+</div>
+
+<h2>{{ idx.month_name }} change log</h2>
+{% if idx.changes %}
+{% for c in idx.changes %}{{ change_block(c, True) }}{% endfor %}
+{% else %}
+<p>No typed <code>price_change</code> or <code>plan_change</code> rows in the public log for {{ idx.month_name }}.</p>
+{% endif %}
+{% if idx.honesty_note %}<p class="small note">{{ idx.honesty_note }}</p>{% endif %}
+{% if idx.next_month_note %}<p class="small muted">{{ idx.next_month_note }}</p>{% endif %}
+
+<h2>Download</h2>
+<p>Frozen plan rows for this index (same columns as the live <a href="/data/pricing.csv">pricing.csv</a>): <a href="{{ idx.csv_href }}"><strong>{{ idx.csv_name }}</strong></a>.</p>
+
+<div class="card">
+  <h2>Cite this index</h2>
+  <p>Cite as <strong>GTMStack Tracker</strong>, CC BY 4.0. Link the site (<a href="{{ site.base_url }}/">{{ site.base_url }}/</a>) and this CSV (<a href="{{ site.base_url }}{{ idx.csv_href }}">{{ site.base_url }}{{ idx.csv_href }}</a>).</p>
+</div>
+
+<div class="card accent nl-cta">
+  <strong>Get an alert when any of these tools change price.</strong> We re-check every pricing page daily and email one weekly roundup of real plan, price and limit changes.
+  {% include "_newsletter_button.html" %}
+</div>
+<p class="small muted">Tracking started {{ idx.tracking_since|nicedate }}. Structured plan tables in <code>tools.json</code> are hand-curated separately from the automated public change log. Methodology: <a href="/methodology/">how we collect and diff prices</a>.</p>
+{% endblock %}

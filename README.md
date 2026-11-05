@@ -102,5 +102,6 @@ The pricing data behind the site is published as open data under [CC BY 4.0](htt
 - CSV, one row per plan: [`data/pricing.csv`](data/pricing.csv), also live at https://ajaynallavelli.github.io/gtmstack-tracker/data/pricing.csv
 - JSON, full tool records: https://ajaynallavelli.github.io/gtmstack-tracker/data/tools.json
 - Real price and plan changes: https://ajaynallavelli.github.io/gtmstack-tracker/data/changes.json
+- Monthly Pricing Index (October 2026): https://ajaynallavelli.github.io/gtmstack-tracker/indexes/2026-10/ — frozen CSV [`data/pricing-index-2026-10.csv`](data/pricing-index-2026-10.csv) (same columns as `pricing.csv`, regenerated from `tools.json` plan rows for that index filename)
 
 Columns: `tool_id, tool, category, website, pricing_url, pricing_status, plan, monthly_usd, annual_monthly_usd, limits, note, billing_note, has_free_plan, date_checked`. Blank prices mean the vendor doesn't publish one (contact sales). The file is rebuilt on every daily run. Please credit "GTMStack Tracker" with a link to https://ajaynallavelli.github.io/gtmstack-tracker/.
