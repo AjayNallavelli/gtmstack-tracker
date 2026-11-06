@@ -389,6 +389,33 @@ def main():
                      "h1": f"Free AI sales & outbound tools ({now.year})",
                      "description": f"Every AI SDR, cold email, data and deliverability tool we track that lists a $0 plan ({len(all_free)} of {len(tools)}), with the first paid upgrade price.",
                      "faq": seo.roundup_faq("free", "AI sales & outbound", all_free)})
+    # Long-tail: free/cheap email warmup (dedicated warmers + cold-email tools that include warmup)
+    WARMUP_DEDICATED = {"warmbox", "mailreach", "warmy"}
+    def _is_email_warmup(t):
+        if t["id"] in WARMUP_DEDICATED:
+            return True
+        blob = f"{t.get('description') or ''} {t.get('billing_note') or ''}".lower()
+        return any(k in blob for k in ("warmup", "warm-up", "warmer", "lemwarm"))
+    warmup_tools = seo.rank([t for t in tools if _is_email_warmup(t)])
+    deliv = next(c for c in cats if c["name"] == "Deliverability & warmup")
+    priced_w = [t for t in warmup_tools if t["sort_price"] is not None]
+    cheapest_w = min(priced_w, key=lambda t: t["sort_price"]) if priced_w else None
+    free_warmup = sum(
+        1 for t in warmup_tools
+        if t["has_free_plan"] or "free warmup" in f"{t.get('description') or ''} {t.get('billing_note') or ''}".lower()
+    )
+    wr = {"kind": "cheapest", "slug": "free-email-warmup-tools", "cat": deliv, "label": "email warmup",
+          "tools": warmup_tools,
+          "title": f"Free & cheap email warmup tools ({now.year}): {len(warmup_tools)} ranked by price",
+          "h1": f"Free & cheap email warmup tools ({now.year})",
+          "description": (
+              f"{len(warmup_tools)} email warmup tools ranked by lowest listed paid price"
+              + (f"; {cheapest_w['name']} is cheapest {cheapest_w['entry_label']}" if cheapest_w else "")
+              + f". {free_warmup} include a free plan or free bundled warmup. Checked {stats['last']}."
+          ),
+          "faq": seo.roundup_faq("cheapest", "email warmup", warmup_tools)}
+    roundups.append(wr)
+    deliv["roundups"].append(wr)
     for t in tools:
         t["roundups"] = [r for r in roundups if r["cat"] and r["cat"]["name"] in t["categories"]]
     common = dict(site=site, cats=cats, stats=stats, month=month, year=now.year, roundups=roundups)
