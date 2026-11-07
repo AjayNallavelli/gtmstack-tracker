@@ -1,5 +1,24 @@
 [
  {
+  "date": "2026-11-07",
+  "tool_id": "findymail",
+  "tool": "Findymail",
+  "type": "fetch_failed",
+  "summary": "Pricing page could not be fetched; will retry next run."
+ },
+ {
+  "date": "2026-11-07",
+  "tool_id": "prospeo",
+  "tool": "Prospeo",
+  "type": "copy_change",
+  "summary": "Pricing page wording/plan text changed (no price points changed).",
+  "previous_date": "2026-11-06",
+  "diff": [
+   "+Sylvie Thomas",
+   "+Cybersecurity Territory Manager | iTrust - iliad Group-Free Pro | Dedicated to your success"
+  ]
+ },
+ {
   "date": "2026-11-06",
   "tool_id": "snovio",
   "tool": "Snov.io",
