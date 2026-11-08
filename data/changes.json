@@ -1,5 +1,73 @@
 [
  {
+  "date": "2026-11-08",
+  "tool_id": "zoominfo",
+  "tool": "ZoomInfo",
+  "type": "copy_change",
+  "summary": "Pricing page wording/plan text changed (no price points changed).",
+  "previous_date": "2026-11-07",
+  "diff": [
+   "-Take prospecting to the next level with best in class contact & company data.",
+   "-Start free trial",
+   "-AI driven account prioritization based on unique B2B signals & deeper insights.",
+   "-Start free trial",
+   "-Free Trial",
+   "-Join the ABM platform trusted by over 250 million users",
+   "-Free Trial",
+   "+Find buyers, run sequences, build pipeline.",
+   "+Free trial",
+   "+Identify, reach, and convert target accounts, down to the visitor on your site.",
+   "+Talk to sales",
+   "+Score, route, and convert inbound leads while the intent is still live.",
+   "+Talk to sales",
+   "+Map the buying committee and act on the signals that keep deals moving.",
+   "+Free trial",
+   "+One always-fresh source of truth feeding every system you run on.",
+   "+Free trial",
+   "+See renewal risk and room to grow before the QBR, not after it.",
+   "+Free trial",
+   "+Understand why deals are won and lost, and coach reps from their own calls.",
+   "+Free trial",
+   "+Find the best talent, faster",
+   "+Free trial",
+   "+Describe the job in your own words and we'll tell you what it takes.",
+   "+Talk to sales",
+   "+ZOOMINFO:",
+   "+PAY ONCE. RE-PULL IT FREE FOR A YEAR.",
+   "+Free trial",
+   "+Is ZoomInfo worth the price?",
+   "+What is the cost per contact on ZoomInfo?"
+  ]
+ },
+ {
+  "date": "2026-11-08",
+  "tool_id": "findymail",
+  "tool": "Findymail",
+  "type": "copy_change",
+  "summary": "Pricing page wording/plan text changed (no price points changed).",
+  "previous_date": "2026-11-06",
+  "diff": [
+   "+Credits roll over up to 2x your plan",
+   "+Unused credits roll over month-to-month, up to 2x your monthly allowance. No \"use it or lose it\". Your credits are there when you need them.",
+   "+API access",
+   "+Free API access on all plans. Build custom workflows, integrate with your internal tools, automate prospecting at scale.",
+   "+Team accounts",
+   "+Share credits across your team. Manage users, track usage, and collaborate without paying per seat."
+  ]
+ },
+ {
+  "date": "2026-11-08",
+  "tool_id": "prospeo",
+  "tool": "Prospeo",
+  "type": "copy_change",
+  "summary": "Pricing page wording/plan text changed (no price points changed).",
+  "previous_date": "2026-11-07",
+  "diff": [
+   "-Sylvie Thomas",
+   "-Cybersecurity Territory Manager | iTrust - iliad Group-Free Pro | Dedicated to your success"
+  ]
+ },
+ {
   "date": "2026-11-07",
   "tool_id": "findymail",
   "tool": "Findymail",
