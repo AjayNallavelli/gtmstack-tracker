@@ -150,6 +150,36 @@ Prospecting for your own team? Our usage-based plans give you more for the same 
 See prospecting plans →
 Ranked #1 by Clay for email finding and verification
 All Plans Include...
+Verified B2B emails only
+Every email is verified in real-time when you request it. No stale databases, no "maybe it works" emails. If your bounce rate exceeds 5% with emails from Findymail, we refund your credits.
+Guaranteed <5% bounce rate
+If your bounce rate exceeds 5%, we refund your credits. No fine print.
+Proprietary catch-all email verification
+We verify catch-all emails that competitors mark as "risky." That's 30% more of your list you can actually reach — emails that work, but other tools won't give you.
+Mobile phone number finder
+Direct mobile numbers for key decision-makers. 1 phone = 10 credits. Only pay when we find a verified number. Non-EU only.
+Intellimatch AI lead finder
+Describe your ICP in plain English, we find companies that match. No more checkbox filters, no manual social profile research. Finds prospects other tools miss.
+No charge for duplicates
+We don't charge you an additional credit for emails you've already found in the last 30 days.
+Credits roll over up to 2x your plan
+Unused credits roll over month-to-month, up to 2x your monthly allowance. No "use it or lose it". Your credits are there when you need them.
+10+ native integrations
+One-click setup with Clay, HubSpot, Salesforce, Instantly, Lemlist, Pipedrive, and more. No API configuration, no complex workflows.
+Chrome extension
+Find emails while browsing social profiles. One click, instant results.
+Bulk email finder
+Upload a CSV of names and companies, get verified emails back in minutes. Handles thousands of contacts at once.
+Google Sheets integration
+Enrich contacts directly in Google Sheets. No exports, no copy-paste, just add a formula and pull verified emails.
+API access
+Free API access on all plans. Build custom workflows, integrate with your internal tools, automate prospecting at scale.
+Team accounts
+Share credits across your team. Manage users, track usage, and collaborate without paying per seat.
+Reverse email lookup
+Have an email but need the person's name, title, and company? Reverse lookup gives you full contact details from just an email address.
+CRM integration
+Automatically push verified contacts to your CRM. Keep HubSpot, Salesforce, Pipedrive, and other CRMs up-to-date without manual data entry.
 Datacare
 Datacare keeps it clean & enriched automatically, so your teams can trust it.
 Keep your CRM complete and clean automatically
@@ -330,7 +360,7 @@ Yes. Sign up for a free account and get 10 credits to test Findymail. No credit 
 Try for free →
 HELP, I still have another question!
 No problem. Email us at
-[email protected]
+support@findymail.com
 or
 book a call
 with our team.
@@ -382,7 +412,7 @@ Integrations:
 Use Findymail inside Clay, Google Sheets, or your CRM — no exports, no copy-paste.
 HELP, I still have another question!
 No problem. Email us at
-[email protected]
+support@findymail.com
 or
 book a call
 with our team.
@@ -430,7 +460,7 @@ Book a demo
 to get a quote.
 HELP, I still have another question!
 No problem. Email us at
-[email protected]
+support@findymail.com
 or
 book a call
 with our team.
