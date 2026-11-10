@@ -1485,32 +1485,53 @@
       ],
       "description": "Verified email and phone finder with Sales Navigator scraping and CRM enrichment (Datacare).",
       "pricing_url": "https://www.findymail.com/pricing/",
-      "date_checked": "2026-10-19",
+      "date_checked": "2026-11-10",
       "pricing_status": "public",
       "pricing_verified": true,
-      "billing_note": "Pay yearly = 2 months free",
-      "verification_note": "Plain HTTP fetch blocked by a Cloudflare challenge (403); fetched with a browser-fingerprint HTTP client (curl_cffi).",
+      "billing_note": "Headline plans are usage-based (no credit counting). Credit-based plans are listed behind 'See credit-based plans'; yearly billing on credit plans = 2 months free",
+      "verification_note": "Plain HTTP fetch blocked by a Cloudflare challenge (403); fetched with a browser-fingerprint HTTP client (curl_cffi). Re-checked on the live pricing page on 2026-11-10.",
       "tiers": [
+        {
+          "plan": "Free",
+          "monthly_usd": 0,
+          "annual_monthly_usd": 0,
+          "limits": "10 credits, no credit card required",
+          "note": ""
+        },
         {
           "plan": "Individual",
           "monthly_usd": 99,
           "annual_monthly_usd": null,
-          "limits": "'Generous usage'",
-          "note": ""
+          "limits": "Generous usage (no credit counting); 1 seat, 5 active signals",
+          "note": "Usage-based headline plan"
         },
         {
           "plan": "Team",
           "monthly_usd": 399,
           "annual_monthly_usd": null,
-          "limits": "5x more usage",
-          "note": ""
+          "limits": "5x more usage; 5 seats, 25 active signals",
+          "note": "Usage-based headline plan"
         },
         {
           "plan": "Scale",
           "monthly_usd": 999,
           "annual_monthly_usd": null,
-          "limits": "20x more usage",
-          "note": ""
+          "limits": "20x more usage; 20 seats, 100 active signals",
+          "note": "Usage-based headline plan"
+        },
+        {
+          "plan": "Enterprise",
+          "monthly_usd": null,
+          "annual_monthly_usd": null,
+          "limits": "Custom usage, seats, and signals",
+          "note": "Custom"
+        },
+        {
+          "plan": "Basic",
+          "monthly_usd": 49,
+          "annual_monthly_usd": null,
+          "limits": "1,000 finder credits + 1,000 bonus verifier credits/mo; higher credit tiers at 5k/15k/30k/50k/100k",
+          "note": "Credit-based plan, listed behind 'See credit-based plans'"
         },
         {
           "plan": "Datacare",
@@ -1523,9 +1544,9 @@
       "affiliate_url": "",
       "affiliate_program": "",
       "featured": false,
-      "starting_price_usd": 99,
+      "starting_price_usd": 49,
       "fetch_method": "impersonate",
-      "has_free_plan": false,
+      "has_free_plan": true,
       "price_display": ""
     },
     {
