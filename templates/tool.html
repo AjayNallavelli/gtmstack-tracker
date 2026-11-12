@@ -27,7 +27,7 @@
 <dl class="glance">
   <div><dt>Cheapest plan</dt><dd>{% if t.price_display and t.sort_price is none %}{{ t.price_display }}{% elif t.cheapest_tier %}{{ t.cheapest_tier.plan }}: {{ t.entry_paid|money }}/mo{% else %}Contact sales{% endif %}</dd></div>
   <div><dt>Free tier</dt><dd>{% if t.has_free_plan %}Yes ({{ t.free_tier }}){% else %}No{% endif %}</dd></div>
-  <div><dt>Annual discount</dt><dd>{% if t.max_saving %}Up to {{ t.max_saving.pct }}%{% elif t.annual_only %}Annual-only pricing{% else %}None listed{% endif %}</dd></div>
+  <div><dt>Annual discount</dt><dd>{% if t.max_saving %}Up to {{ t.max_saving.pct }}%{% elif t.annual_discount_note %}{{ t.annual_discount_note }}{% elif t.annual_only %}Annual-only pricing{% else %}None listed{% endif %}</dd></div>
   <div><dt>Pricing</dt><dd>{{ t.status_label }}</dd></div>
   <div><dt>Date checked</dt><dd>{{ t.last_checked|nicedate }}</dd></div>
 </dl>

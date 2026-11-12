@@ -299,6 +299,12 @@ def _latest(ts):
     return nicedate(max(t["last_checked"] for t in ts))
 
 
+def monthly_entry(t):
+    """Cheapest positive month-to-month price, or None."""
+    v = [x["monthly_usd"] for x in t.get("tiers", []) if isinstance(x.get("monthly_usd"), (int, float)) and x["monthly_usd"] > 0]
+    return min(v) if v else None
+
+
 def answer_line_compare(a, b):
     d = _latest([a, b])
     sa, sb = a["sort_price"], b["sort_price"]
@@ -319,7 +325,11 @@ def answer_line_compare(a, b):
     s = f"As of {d}, {frag(a)}, while {frag(b)}"
     if sa is not None and sb is not None and sa != sb:
         lo = a if sa < sb else b
-        s += f"; {lo['name']} has the cheaper entry plan"
+        ma, mb = monthly_entry(a), monthly_entry(b)
+        if ma is not None and ma == mb and not (a.get("price_display") or b.get("price_display")):
+            s += f"; on month-to-month billing both start at {money(ma)}, so {lo['name']} is cheaper only if you pay yearly"
+        else:
+            s += f"; {lo['name']} has the cheaper entry plan"
     return s + "."
 
 

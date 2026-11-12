@@ -620,7 +620,8 @@
         "lemlist",
         "saleshandy",
         "mailshake"
-      ]
+      ],
+      "annual_discount_note": "25% on the per-prospect rate (annual billing)"
     },
     {
       "id": "saleshandy",

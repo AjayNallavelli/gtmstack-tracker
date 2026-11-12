@@ -165,7 +165,11 @@ def compare_points(a, b):
             pts.append(f"{x['name']} pricing is not a simple monthly plan: {x['price_display']}.")
     if a.get("price_display") or b.get("price_display"):
         ea = eb = None
-    if ea is not None and eb is not None and ea != eb:
+    ma, mb = seo.monthly_entry(a), seo.monthly_entry(b)
+    if ea is not None and eb is not None and ea != eb and ma is not None and ma == mb:
+        lo, hi = (a, b) if ea < eb else (b, a)
+        pts.append(f"On month-to-month billing both start at {money(ma)}/mo. {lo['name']} is cheaper only on annual billing ({money(lo['entry_paid'])}/mo billed yearly).")
+    elif ea is not None and eb is not None and ea != eb:
         lo, hi = (a, b) if ea < eb else (b, a)
         pts.append(f"{lo['name']} has the lower listed entry price ({money(lo['entry_paid'])}/mo vs {money(hi['entry_paid'])}/mo for {hi['name']}). Check the billing basis (per seat, annual vs monthly) in the tables below.")
     for x, y in ((a, b), (b, a)):
