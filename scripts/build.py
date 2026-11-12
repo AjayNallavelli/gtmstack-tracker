@@ -205,6 +205,9 @@ def robots_txt(site):
     for b in AI_CRAWLERS:
         lines += [f"User-agent: {b}", "Allow: /", ""]
     lines.append(f"Sitemap: {site['base_url']}/sitemap.xml")
+    # Identical copy under a second filename so GSC can be pointed at a fresh URL
+    # if sitemap.xml stays stuck on "Couldn't fetch".
+    lines.append(f"Sitemap: {site['base_url']}/sitemap-index.xml")
     return "\n".join(lines) + "\n"
 
 
@@ -525,10 +528,16 @@ def main():
     # open pricing dataset (CC BY 4.0): one row per plan, no affiliate URLs
     write_pricing_csv(out / "data" / "pricing.csv", pub["tools"], by_id)
     write_pricing_csv(DATA / "pricing.csv", pub["tools"], by_id)
-    # frozen monthly index CSVs (regenerated from current tools.json plan rows for the index filename)
+    # Frozen monthly index CSVs: once published, copy the repo file into dist.
+    # Do not regenerate from current tools.json (that would rewrite a citable snapshot).
     for ix in indexes:
-        write_pricing_csv(DATA / ix["csv_name"], pub["tools"], by_id)
-        write_pricing_csv(out / "data" / ix["csv_name"], pub["tools"], by_id)
+        src = DATA / ix["csv_name"]
+        dest = out / "data" / ix["csv_name"]
+        if src.exists():
+            dest.write_bytes(src.read_bytes())
+        else:
+            write_pricing_csv(src, pub["tools"], by_id)
+            write_pricing_csv(dest, pub["tools"], by_id)
     # public change data = real changes only (the raw log incl. copy/toggle/fetch-failed rows stays in the repo)
     (out / "data" / "changes.json").write_text(json.dumps([{k: v for k, v in c.items() if k not in ("old", "new")} for c in changes], indent=1, ensure_ascii=False))
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
@@ -536,7 +545,10 @@ def main():
         # lastmod = date the page's underlying data last really changed; omitted for pages with no tracked data
         sm.append(f"  <url><loc>{html.escape(site['base_url'] + p)}</loc>" + (f"<lastmod>{lm}</lastmod>" if lm else "") + "</url>")
     sm.append("</urlset>")
-    (out / "sitemap.xml").write_text("\n".join(sm) + "\n")
+    sitemap_body = "\n".join(sm) + "\n"
+    (out / "sitemap.xml").write_text(sitemap_body)
+    # Exact copy of the urlset under a second filename (GSC "Couldn't fetch" workaround).
+    (out / "sitemap-index.xml").write_text(sitemap_body)
     # 404 page must work from any depth on GitHub Pages: links are already absolute-with-prefix
     (out / ".nojekyll").write_text("")
     (out / "robots.txt").write_text(robots_txt(site))

@@ -75,10 +75,10 @@
       ],
       "description": "AI SDR that researches prospects, writes personalized email/LinkedIn outreach and handles replies.",
       "pricing_url": "https://aisdr.com/pricing/",
-      "date_checked": "2026-10-19",
+      "date_checked": "2026-11-12",
       "pricing_status": "public",
       "pricing_verified": true,
-      "billing_note": "Usage-based self-serve; add-ons: warmed-up mailbox $33",
+      "billing_note": "Usage-based self-serve, charged daily. Team plans are billed monthly with quarterly contracts; annual plans are 20% off quarterly. Add-ons: warmed-up mailbox $33. You can sign up without a credit card; the paywall appears when you launch a campaign. No free plan.",
       "verification_note": "",
       "tiers": [
         {
@@ -337,10 +337,10 @@
       ],
       "description": "Cold email at scale: unlimited sending accounts and warmup, lead database (SuperSearch) and AI agents.",
       "pricing_url": "https://instantly.ai/pricing",
-      "date_checked": "2026-11-04",
+      "date_checked": "2026-11-12",
       "pricing_status": "public",
       "pricing_verified": true,
-      "billing_note": "Monthly and annual both shown",
+      "billing_note": "Monthly and annual both shown. Bundles list 10% off for annual billing. Outreach and Credits plans also list a lower annual per-month price. No free plan.",
       "verification_note": "",
       "tiers": [
         {
@@ -479,10 +479,10 @@
       ],
       "description": "Multichannel outreach (email, LinkedIn, calls) with built-in lead database, lemwarm warmup and AI agents.",
       "pricing_url": "https://www.lemlist.com/pricing",
-      "date_checked": "2026-10-19",
+      "date_checked": "2026-11-12",
       "pricing_status": "public",
       "pricing_verified": true,
-      "billing_note": "Monthly vs annual (save 20%); data add-on $20/mo for 2k credits, intent signals $29/mo. lemwarm warmup is now bundled into lemlist plans (no standalone price on lemlist.com/lemwarm)",
+      "billing_note": "Monthly vs annual (save 20%); quarterly billing saves 10%. Data add-on $20/mo ($16/mo billed annually) for 2k credits; intent signals $29/mo ($21/mo billed annually) for 100 signals/mo. lemwarm warmup is bundled into lemlist plans (no standalone price on lemlist.com/lemwarm). 14-day free trial (not a free plan).",
       "verification_note": "",
       "tiers": [
         {

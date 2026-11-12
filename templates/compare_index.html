@@ -2,6 +2,8 @@
 {% block content %}
 <h1>Comparisons</h1>
 <p class="lead">{{ pairs|length }} head-to-head pricing comparisons of tools in the same category.</p>
+<p class="small">Full plan tables: <a href="/tools/clay/">Clay pricing {{ year }}</a> · <a href="/tools/lemlist/">lemlist pricing {{ year }}</a> · <a href="/tools/instantly/">Instantly pricing {{ year }}</a> · <a href="/tools/aisdr/">AiSDR pricing {{ year }}</a><br>
+Alternatives: <a href="/alternatives/lemlist/">lemlist alternatives</a> · <a href="/alternatives/instantly/">Instantly alternatives</a> · <a href="/alternatives/apollo/">Apollo alternatives</a></p>
 {% for c in cats %}{% set ps = pairs|selectattr('category','equalto',c.name)|list %}{% if ps %}
 <h2>{{ c.name }}</h2><ul class="links cols">{% for p in ps %}<li><a href="/compare/{{ p.slug }}/">{{ p.a.name }} vs {{ p.b.name }}</a></li>{% endfor %}</ul>
 {% endif %}{% endfor %}

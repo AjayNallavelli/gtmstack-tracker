@@ -113,6 +113,10 @@ def answer_cost(t):
 
 def answer_annual(t):
     n = t["name"]
+    if t["id"] == "aisdr":
+        # Verified on aisdr.com/pricing (2026-11-12): annual is 20% off quarterly; no public dollar amounts.
+        return (f"Yes, for subscription plans quoted by sales. {n}'s pricing page says annual plans give a 20% "
+                f"discount compared to quarterly plans. Pay-as-you-go is charged daily at $1.50 per person prospected and has no annual rate.")
     if t["savings"]:
         ms = t["max_saving"]
         s = (f"Yes. Paying annually cuts {n} {ms['plan']} from {money(ms['monthly'])} to {money(ms['annual'])} per month, "
@@ -140,6 +144,16 @@ def tool_faq(t):
     ]
     if t["id"] == "clay" and t.get("billing_note"):  # top GSC query cluster: "clay pricing"
         faq.insert(1, {"q": f"How much do {n} credits cost?", "a": f"{n}'s pricing page says: {t['billing_note'].rstrip('.')}. Each paid plan includes a monthly allowance of actions and data credits (see the plan table above)."})
+    if t["id"] == "lemlist":  # GSC: "lemlist pricing", "lemlist cost per month"
+        faq.insert(1, {"q": f"How much does {n} cost per month?", "a": answer_cost(t)})
+    if t["id"] == "aisdr":  # GSC: "aisdr" already ranks near page 1
+        faq.insert(1, {
+            "q": f"Can I try {n} without a paid subscription?",
+            "a": (
+                f"You can sign up without a credit card and set up a campaign first; {n}'s pricing page says the paywall appears when you launch. "
+                f"There is no $0 plan. Self-serve pay-as-you-go is {t.get('price_display') or '$1.50 per person prospected'}, charged daily."
+            ),
+        })
     return faq
 
 
@@ -195,6 +209,15 @@ def alternatives_faq(t, alts):
     free = [x for x in alts if x["has_free_plan"]]
     contact = [x for x in alts if x["pricing_status"] == "contact_sales" and not x["cheapest_tier"]]
     out = []
+    free_alt_a = (f"Yes. {len(free)} alternative{'s' if len(free) != 1 else ''} list a $0 tier: {names(free)}." if free
+                  else f"None of the {len(alts)} alternatives we track lists a $0 tier.")
+    # Lead with pricing FAQs on pages already getting GSC impressions (lemlist, Instantly).
+    if t["id"] in ("lemlist", "instantly"):
+        out.append({"q": f"How much is {n}?", "a": answer_cost(t)})
+        out.append({"q": f"Does {n} have a free plan?", "a": answer_free(t)})
+        if t["id"] == "lemlist":
+            out.append({"q": f"How much does {n} cost per month?", "a": answer_cost(t)})
+        out.append({"q": f"Is there a free {n} alternative?", "a": free_alt_a})
     if priced:
         c = min(priced, key=lambda x: x["sort_price"])
         a = f"Among the {len(alts)} alternatives we track, {c['name']} has the lowest listed paid entry price: {c['entry_label']}."
@@ -202,9 +225,8 @@ def alternatives_faq(t, alts):
             cheaper = [x for x in priced if x["sort_price"] < t["sort_price"]]
             a += f" {len(cheaper)} alternative{'s' if len(cheaper) != 1 else ''} list a lower entry price than {n} ({t['entry_label']})."
         out.append({"q": f"What is the cheapest {n} alternative?", "a": a})
-    out.append({"q": f"Is there a free alternative to {n}?",
-                "a": (f"Yes. {len(free)} alternative{'s' if len(free) != 1 else ''} list a $0 tier: {names(free)}." if free
-                      else f"None of the {len(alts)} alternatives we track lists a $0 tier.")})
+    if t["id"] not in ("lemlist", "instantly"):
+        out.append({"q": f"Is there a free alternative to {n}?", "a": free_alt_a})
     if contact:
         out.append({"q": f"Which {n} alternatives don't publish pricing?",
                     "a": f"{names(contact)} only offer pricing through sales."})
