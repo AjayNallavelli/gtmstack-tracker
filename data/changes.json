@@ -1,5 +1,32 @@
 [
  {
+  "date": "2026-11-12",
+  "tool_id": "lemlist",
+  "tool": "lemlist",
+  "type": "copy_change",
+  "summary": "Pricing page wording/plan text changed (no price points changed).",
+  "previous_date": "2026-11-11",
+  "diff": [
+   "-lemlist pricing︱The all-in-one platform for precise outbound at any scale",
+   "+Read more"
+  ]
+ },
+ {
+  "date": "2026-11-12",
+  "tool_id": "lusha",
+  "tool": "Lusha",
+  "type": "copy_change",
+  "summary": "Pricing page wording/plan text changed (no price points changed).",
+  "previous_date": "2026-11-11",
+  "diff": [
+   "-Contact sales",
+   "-Custom seats",
+   "-Contact sales",
+   "-Scale",
+   "-Contact Sales"
+  ]
+ },
+ {
   "date": "2026-11-11",
   "tool_id": "replyio",
   "tool": "Reply.io",
