@@ -1,5 +1,143 @@
 [
  {
+  "date": "2026-11-14",
+  "tool_id": "regie",
+  "tool": "Regie.ai",
+  "type": "copy_change",
+  "summary": "Pricing page wording/plan text changed (no price points changed).",
+  "previous_date": "2026-11-13",
+  "diff": [
+   "-Free gives each person 250 credits, one time. Pro includes 5,000 a month and Team 15,000 per seat, or a year's worth up front on annual.",
+   "+Free gives each person 1,000 credits, one time. Pro includes 5,000 a month and Team 15,000 per seat, or a year's worth up front on annual.",
+   "-No. Start free with 250 credits using just a work email. You only add a card if you upgrade to a paid plan.",
+   "+No. Start free with 1,000 credits using just a work email. You only add a card if you upgrade to a paid plan.",
+   "-Paid plan credits don't. They reset at the start of each billing period, monthly or annual, rather than carrying over. The 250 credits each person starts with on Free are different: they never expire.",
+   "+Paid plan credits don't. They reset at the start of each billing period, monthly or annual, rather than carrying over. The 1,000 credits each person starts with on Free are different: they never expire."
+  ]
+ },
+ {
+  "date": "2026-11-14",
+  "tool_id": "replyio",
+  "tool": "Reply.io",
+  "type": "price_change",
+  "summary": "Pricing page changed: new price points $499; removed $210.",
+  "added": [
+   "$499"
+  ],
+  "removed": [
+   "$210"
+  ],
+  "previous_date": "2026-11-13",
+  "diff": [
+   "-$210",
+   "+$499",
+   "-Email automation (LinkedIn optional)",
+   "-$69/mo/LinkedIn account",
+   "+7+ LinkedIn profiles included",
+   "+Extra profiles are $49/month each."
+  ]
+ },
+ {
+  "date": "2026-11-14",
+  "tool_id": "hubspot-breeze",
+  "tool": "HubSpot Breeze Intelligence (Data Hub)",
+  "type": "price_change",
+  "summary": "Pricing page changed: new price points $2,000, $20, $45, $7, $720, $75, $800; removed $1,050, $10, $100, $2,500, $26, $59, $945.",
+  "added": [
+   "$2,000",
+   "$20",
+   "$45",
+   "$7",
+   "$720",
+   "$75",
+   "$800"
+  ],
+  "removed": [
+   "$1,050",
+   "$10",
+   "$100",
+   "$2,500",
+   "$26",
+   "$59",
+   "$945"
+  ],
+  "previous_date": "2026-11-13",
+  "diff": [
+   "-CA$0",
+   "+$0",
+   "-CA$10",
+   "+$7",
+   "-CA$26",
+   "+$20",
+   "-CA$945",
+   "+$720",
+   "-CA$1,050",
+   "+$800",
+   "-CA$59",
+   "+$45",
+   "-CA$2,500",
+   "+$2,000",
+   "-CA$100",
+   "+$75",
+   "-CA$10",
+   "+$7",
+   "-CA$945",
+   "+$720",
+   "-CA$2,500",
+   "+$2,000",
+   "-CA$10",
+   "+$7",
+   "-CA$945",
+   "+$720",
+   "-CA$2,500",
+   "+$2,000"
+  ]
+ },
+ {
+  "date": "2026-11-14",
+  "tool_id": "seamless",
+  "tool": "Seamless.AI",
+  "type": "copy_change",
+  "summary": "Pricing page wording/plan text changed (no price points changed).",
+  "previous_date": "2026-11-13",
+  "diff": [
+   "+Get pricing and promos",
+   "+How many contacts do you need per month?"
+  ]
+ },
+ {
+  "date": "2026-11-14",
+  "tool_id": "rocketreach",
+  "tool": "RocketReach",
+  "type": "price_change",
+  "summary": "Pricing page changed: new price points $33, $399, $75, $899; removed $27, $329, $69, $829.",
+  "added": [
+   "$33",
+   "$399",
+   "$75",
+   "$899"
+  ],
+  "removed": [
+   "$27",
+   "$329",
+   "$69",
+   "$829"
+  ],
+  "previous_date": "2026-11-13",
+  "diff": [
+   "-$27",
+   "+$33",
+   "-$329 USD billed annually",
+   "+$399 billed annually",
+   "-$69",
+   "+$75",
+   "-$829 USD billed annually",
+   "+$899 billed annually",
+   "-$1,699 USD billed annually",
+   "+$1,699 billed annually"
+  ]
+ },
+ {
   "date": "2026-11-13",
   "tool_id": "hubspot-breeze",
   "tool": "HubSpot Breeze Intelligence (Data Hub)",
