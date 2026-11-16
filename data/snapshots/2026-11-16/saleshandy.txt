@@ -1,0 +1,664 @@
+Plans & Pricing | Saleshandy
+Stop Overpaying for Email & Phone Data: Get Real-time Verified Data at Half the Price
+Get up to 50 Credits FREE
+no per-seat surprises
+All-in pricing for
+all-out outbound
+Find verified leads, send personalized cold emails, and warm up inboxes with no metered credits.
+Choose your plan
+Everything each plan includes.
+Show more details
+View in
+$
+USD
+EUR
+GBP
+AUD
+CAD
+INR
+BRL
+Starter
+$34
+/month
+Billed annually at
+$408
+/year
+Rates are exclusive of applicable taxes.
+$41
+/mo
+Rates are exclusive of applicable taxes.
+if paid monthly
+7-day free trial
+Most popular
+Pro
+$76
+/month
+Billed annually at
+$912
+/year
+Rates are exclusive of applicable taxes.
+$99
+/mo
+Rates are exclusive of applicable taxes.
+if paid monthly
+7-day free trial
+Scale
+$149
+/month
+Billed annually at
+$1,788
+/year
+Rates are exclusive of applicable taxes.
+$189
+/mo
+Rates are exclusive of applicable taxes.
+if paid monthly
+7-day free trial
+Starter
+$34
+/mo
+Pro
+$76
+/mo
+Scale
+$149
+/mo
+7-day free trial
+Showing
+Pro
+. Tap a plan to compare.
+Multichannel Outreach
+Prospect storage
+Store as many prospects as you like. Your plan's active prospect limit applies only to the ones you keep in live sequences.
+Unlimited
+Active prospects
+Contacts you can keep in live sequences at once.
+2,000
+30,000
+Unlimited
+Unlimited active prospects, subject to our Fair Usage Policy.
+Read the policy
+Emails sent / month
+Total emails you can send each month across all your connected mailboxes.
+6,000
+100,000
+200,000
+300,000
+600,000
+Contact Us
+Need more?
+Email accounts
+Connect as many sending mailboxes as you want, with no per-inbox fees.
+Unlimited
+Multichannel sequences
+Reach prospects across email, calls, LinkedIn, and WhatsApp, plus manual tasks you can assign to SDRs, all in one sequence.
+Email
+Call
+WhatsApp
+Tasks
+Subsequences
+Trigger follow-up sequences automatically based on how prospects respond, keep conversations moving without manual steps.
+B2B Data
+(852M+ contacts, 42M+ companies)
+People & company search
+Search 852M+ verified contacts and 42M+ company profiles. Narrow by job title, seniority, department, industry, company size, revenue, location, tech stack and hiring signals.
+Unlimited
+Lead finder credits / month
+A fresh batch of credits each month. On annual billing your full year is deposited upfront instead. 1 credit reveals a verified email; 6 reveal a phone number.
+1,500
+1,500 credits per month, or all 18,000 upfront if billed annually.
+Need more?
+4,000
+4,000 credits per month, or all 48,000 upfront if billed annually.
+Need more?
+8,000
+8,000 credits per month, or all 96,000 upfront if billed annually.
+Need more?
+Work email
+We reveal the prospect's verified work email, querying Saleshandy, Prospeo, RocketReach, Findymail, Enrich.so and Scalelist in sequence until one returns a match, then verifying it through ZeroBounce and BounceBan. Catchall verification is included at no extra credit cost.
+includes waterfall enrichment
+Saleshandy
+Prospeo
+RocketReach
+Findymail
+Enrich.so
+Scalelist
+ZeroBounce (catchall verification)
+BounceBan (catchall verification)
+1 credit / verified email
+One credit covers the whole job
+All 8 providers checked, email verified, then delivered, all for a single credit. No separate enrichment or verification credits.
+Saleshandy
+Others
+8-provider waterfall
+Included
++ credits
+Email verification
+Included
++ credits
+Unverified result
+$0
+You pay
+One credit covers the whole job. $0 for unverified emails.
+Phone number
+Reveals the prospect's mobile number via waterfall enrichment. Queried across Saleshandy, Prospeo, RocketReach, and Findymail in sequence until one returns a match.
+includes waterfall enrichment
+Saleshandy
+Prospeo
+RocketReach
+Findymail
+6 credits / phone
+Revealing a phone number reveals the verified work email as well. The two together cost 7 credits: 6 for the phone and 1 for the email.
+6 credits consumed when a phone number is found. $0 when it isn't.
+Search Filters
+Narrow your prospect search across people and company data: title, seniority, department, industry, company size, revenue, location, tech stack and hiring signals.
+40+
+70+
+Platform
+API access
+Push and pull data programmatically with the REST API.
+No-code integration
+Automate Saleshandy from your stack without writing code, via Zapier, Make, n8n, and Pabbly.
+Zapier
+Make
+n8n
+MCP and CLI
+Connect AI assistants, ChatGPT, Claude, Gemini, and more, to Saleshandy via the Model Context Protocol (MCP), plus a full command-line interface (CLI).
+ChatGPT
+Claude
+Gemini
+Integrations
+Sync with Salesforce, HubSpot, Pipedrive, Zoho, Zapier, and more.
+Salesforce
+HubSpot
+Pipedrive
+Zoho
+Users
+How many people can work in the account. Starter is a single seat, Pro covers a team of ten, and Scale has no seat limit.
+1 User
+10 Users
+Unlimited
+Teams
+Create as many separate teams or workspaces as you need, each with their own members and settings.
+Unlimited
+Support
+Every plan gets email support and the in-app AI assistant. Pro adds live chat, and Scale moves to the front of the queue with video calls when you need one.
+AI + Email
+AI assistant in the app, plus email support from our team.
++ Live Chat
+Everything on Starter, plus live chat with our team during working hours.
++ Priority
+Everything on Pro, plus front-of-the-queue priority and video calls with our team.
+Onboarding
+How you get set up. On Starter and Pro you complete onboarding and build your sequences yourself. On Scale you get a 1:1 meeting with our team, who assist you through it.
+Self-guided
+You complete your own onboarding and set up your sequences on your own, at your own pace.
+Self-guided
+You complete your own onboarding and set up your sequences on your own, at your own pace.
+Personalized onboarding
+You get on a 1:1 meeting with our team, who assist you through onboarding and setting up.
+Dedicated Account Manager
+A dedicated expert who knows your account, guiding setup, deliverability, and strategy so you ramp fast and hit pipeline targets.
+See full feature comparison
+Beyond the published plans
+Enterprise
+For teams that need their own security, branding and volume terms.
+Everything in Scale, plus
+Single sign-on (SSO)
+Let your team log in through your own identity provider, so access follows your existing IT policy.
+Whitelabel for agencies
+Run the platform under your own brand and domain, so clients see your agency branding.
+Volume & data on your terms
+Sending limits and B2B database credits both sized to your pipeline, not to a fixed tier.
+Custom
+Priced on your volume and requirements.
+Contact Us
+Add-ons & Extras
+Email Infrastructure
+Credits
+Dialer
+Inbox Placement
+A
+built-in sending infrastructure
+Look-alike secondary domains and mailboxes that mirror your primary domain, so you scale cold email without risking your main domain's reputation. Every mailbox ships pre-configured with SPF, DKIM, and DMARC, so there's nothing for your team to set up.
+for sales teams, with no DNS or deliverability hassle.
+Google Workspace
+Microsoft o365
+Azure
+Annual Fixed
+Annual Flexi
+Quarterly
+Annual Fixed
+$
+2.99
+/
+mailbox / month
+Annual Flexi
+Recommended
+$
+3.49
+/
+mailbox / month
+Quarterly
+$
+3.99
+/
+mailbox / month
+Best For
+Established teams with stable, predictable sending needs
+Outbound teams that rotate or swap mailboxes frequently
+Testing new domains and short-term outbound campaigns
+DNS Setup
+Auto-configured SPF, DKIM, DMARC, and other DNS records
+Mailboxes per Domain
+We recommend 3 mailboxes per domain for the best deliverability.
+Up to 5 mailboxes per domain
+Account Flexibility
+Fixed setup, no mailbox replacement
+Free mailbox replacement (requires new domain, $14/yr)
+Fixed setup, no mailbox replacement
+Minimum Purchase
+1 mailbox
+25 mailboxes
+1 mailbox
+Domain
+$14 / year per domain
+A note on renewals
+:
+Your domain renews once a year, while your mailboxes renew every quarter. Your mailbox price stays the same with each quarterly renewal. When your domain renews each year, the domain and mailbox prices may be updated based on the email provider's rates at that time.
+How it works
+:
+Email Infrastructure is an add-on subscription that you purchase separately. It gives you ready-to-use domains and mailboxes for sending cold emails, helping you send at scale without putting your main company domain at risk.
+For AI
+Read the machine-readable pricing
+pricing.md
+Compare Plans
+See exactly what's included in each plan.
+All features
+Only differences
+Starter
+$34
+/month
+Billed annually at
+$408
+/year
+Rates are exclusive of applicable taxes.
+$41
+/mo
+Rates are exclusive of applicable taxes.
+if paid monthly
+7-day free trial
+Most popular
+Pro
+$76
+/month
+Billed annually at
+$912
+/year
+Rates are exclusive of applicable taxes.
+$99
+/mo
+Rates are exclusive of applicable taxes.
+if paid monthly
+7-day free trial
+Scale
+$149
+/month
+Billed annually at
+$1,788
+/year
+Rates are exclusive of applicable taxes.
+$189
+/mo
+Rates are exclusive of applicable taxes.
+if paid monthly
+7-day free trial
+Starter
+Pro
+Scale
+$34
+/month
+Billed annually at
+$408
+/year
+Rates are exclusive of applicable taxes.
+$41
+/mo
+Rates are exclusive of applicable taxes.
+if paid monthly
+7-day free trial
+Outbound
+Send, automate, and scale outreach, across every connected mailbox.
+Email accounts
+Connect as many sending mailboxes as you need, with no per-inbox fees.
+Unlimited
+Prospect storage
+Store and manage as many prospects in the built-in CRM as you want.
+Unlimited Sequences
+Build and run as many outreach sequences as you want.
+Active prospects
+Contacts you can keep in live sequences at once.
+2,000
+30,000
+Unlimited
+Emails sent / month
+Total emails you can send each month across all mailboxes.
+6,000
+100,000
+200,000
+Sender Rotation
+Spread sends across multiple mailboxes to scale volume safely.
+10 Email Accounts
+100 Email Accounts
+1000 Email Accounts
+Unified Inbox
+Manage replies from all your mailboxes in one shared inbox.
+Full Access
+Unlimited 1:1 Email Tracking
+Track opens, clicks, and replies on every one-to-one email.
+AI-powered Sequence
+Generate a full outreach sequence with AI in seconds.
+Subsequences
+Trigger follow-up sequences automatically based on how prospects respond.
+AI Variants
+Let AI write multiple versions of each email to test what converts.
+A-Z Testing (Multivariant)
+Test many subject lines and email variants to find the winner.
+Unlimited Email Warm-up
+Connect and warmup unlimited number of connected mailboxes at no extra cost. Daily warm-up sending limit as per your plan.
+Dynamic IP Addresses
+Rotating IPs that help your emails reach the inbox.
+Advanced Warm-up Settings
+Fine-tune warm-up volume, ramp-up speed, and reply rates.
+Spintax
+Auto-vary your copy so each email looks unique and dodges spam filters.
+Users
+How many people can work in the account. Starter is a single seat, Pro covers a team of ten, and Scale has no seat limit.
+1 User
+10 Users
+Unlimited
+Teams
+Create as many separate teams or workspaces as you need.
+Unlimited
+Unlimited Clients
+Run outreach for unlimited clients from one account, built for agencies.
+Lead Data
+Find verified prospects, reveal contact info, and push them straight into sequences.
+Lead finder credits / month
+A fresh batch of credits each month. On annual billing your full year is deposited upfront instead. 1 credit reveals a verified email; 6 reveal a phone number.
+1,500
+4,000
+8,000
+Waterfall enrichment
+We query premium data providers in sequence until a contact is found, then verify it before handing it over. You only pay when we return a verified result.
+Saleshandy
+Prospeo
+RocketReach
+Findymail
+Enrich.so
+Scalelist
+ZeroBounce (catchall verification)
+BounceBan (catchall verification)
+Reveal Email & Phone Info
+Reveal verified work emails and phone numbers for your prospects.
+Pay Only for Verified Results
+Credits are only spent when we return a verified result.
+AI Natural Language Search
+Describe your ideal customer in plain English and get matching leads.
+Search Filters
+Narrow your prospect search across people and company data: title, seniority, department, industry, company size, revenue, location, tech stack and hiring signals.
+40+
+70+
+People Filters
+Filter contacts by title, seniority, department, location, and more.
+15+
+30+
+Company Filters
+Filter companies by industry, size, revenue, tech stack, and more.
+25+
+40+
+Saved Filters
+Save filter sets to rerun your favorite searches anytime.
+Net New Contacts Tab
+See only contacts you have not pulled before, so you never pay twice.
+B2B Contacts
+Size of the verified B2B contact database you can search.
+852M+
+Company Profiles
+Number of company profiles available to search and enrich.
+42M+
+Tech Stack Data
+See the tools and technologies each company uses.
+Hiring Signals
+Spot companies that are actively hiring as a buying signal.
+Company Financials
+View revenue and funding data to qualify accounts.
+Priority Enrichment
+Faster enrichment processing when you run high volumes.
+Advanced Company Data
+Deeper firmographic and technographic detail on each company.
+Manage Prospects in CRM
+Organize the leads you find directly in the built-in CRM.
+List Building
+Group prospects into targeted lists for outreach.
+Import Data in Lead Finder
+Import contacts or companies you already own into a ready-to-use Lead Finder list.
+Export to CSV
+Download your leads as a CSV anytime.
+Push to Sequences
+Send found leads straight into an outreach sequence.
+Platform
+Integrations, API, security, and the support to grow with you.
+Email Verification Credits (one-time)
+One-time email verification credits to validate your lists so only deliverable addresses consume sends.
+500
+1,000
+5,000
+AI Credits (one-time)
+One-time AI credits that power the AI Sequence Copilot and AI column enrichment.
+100
+500
+1,000
+Integrations
+Sync with Salesforce, HubSpot, Pipedrive, Zoho, and Zapier.
+Salesforce
+HubSpot
+Pipedrive
+Zoho
+Zapier
+MCP and CLI
+Connect AI assistants to Saleshandy through the Model Context Protocol.
+Webhooks
+Get real-time event notifications pushed to your endpoints.
+API access
+Push and pull data programmatically with the REST API.
+API Calls per Minute
+Maximum REST API enrichment calls allowed per minute.
+100
+API Calls per Hour
+Hourly cap on API enrichment calls. 'None' means no hourly limit.
+None
+API Calls per Day
+Maximum API enrichment calls allowed per day.
+50,000
+Multi-Factor Authentication (MFA)
+Add a second verification step at login so only authorized teammates can access your account, even if a password is leaked.
+Advanced Reports
+Deeper analytics on sequence, mailbox, and team performance.
+Onboarding
+How you get set up. On Starter and Pro you complete onboarding and build your sequences yourself. On Scale you get a 1:1 meeting with our team, who assist you through it.
+Self-guided
+You complete your own onboarding and set up your sequences on your own, at your own pace.
+Self-guided
+You complete your own onboarding and set up your sequences on your own, at your own pace.
+Personalized onboarding
+You get on a 1:1 meeting with our team, who assist you through onboarding and setting up.
+Got
+questions?
+we've got answers
+Getting Started
+Plans & Billing
+Features
+Do I have to pay per email account?
+No, all of our plans allow you to connect an unlimited number of emails & Warm-up accounts to improve your email deliverability.
+Is there any limit to the number of emails?
+Is there any limitation during 7-day free trial period?
+How many leads are in the database?
+How often is the data updated?
+Are leads available for export?
+Couldn't find your answer?
+Talk to us →
+Customer reviews
+Trusted by 25,000+ growing businesses
+Real feedback from teams using Saleshandy to grow their pipeline.
+G2
+4.6
+/5
+(
+773
+)
+Trustpilot
+4.7
+/5
+(
+743
+)
+Google
+4.3
+/5
+(
+197
+)
+$0
+charged for unverified emails
+“
+We pulled 3,000 contacts for a campaign —
+92% of emails verified on first try
+. The data accuracy is unreal. Nothing else we've used comes close.
+”
+Thomas Foley
+Founder
+·
+HighTouch
+23%
+higher accuracy vs Apollo
+“
+We ran a side-by-side test vs Apollo and ZoomInfo.
+Saleshandy Lead Finder had 23% higher email accuracy
+and cost us a fraction of the price. Switched our entire team over.
+”
+Gareth Hayter
+Founder & CEO
+·
+Slyce Software Ltd
+3%
+bounce rate (down from 12%)
+“
+Lead Finder gives me
+real-time verified emails
+— not stale data from 6 months ago. My team's
+bounce rate dropped from 12% to under 3%
+.
+”
+Julia M.
+Director of Sales
+·
+Small Business
+“
+Replaced 3 data vendors with one tool
+”
+•
+“
+Prospecting time cut in half
+”
+•
+“
+852M+ database — found contacts Apollo couldn't
+”
+•
+“
+Better data, lower cost, seamless workflow
+”
+•
+“
+Reply rates jumped 40%
+”
+•
+“
+Only pay for verified data
+”
+•
+“
+Build targeted lists 3x faster
+”
+•
+“
+75+ filters — exactly the ICP we need
+”
+•
+“
+One search, verified emails + phone numbers
+”
+•
+“
+Company filters are a game-changer
+”
+•
+“
+Replaced 3 data vendors with one tool
+”
+•
+“
+Prospecting time cut in half
+”
+•
+“
+852M+ database — found contacts Apollo couldn't
+”
+•
+“
+Better data, lower cost, seamless workflow
+”
+•
+“
+Reply rates jumped 40%
+”
+•
+“
+Only pay for verified data
+”
+•
+“
+Build targeted lists 3x faster
+”
+•
+“
+75+ filters — exactly the ICP we need
+”
+•
+“
+One search, verified emails + phone numbers
+”
+•
+“
+Company filters are a game-changer
+”
+•
+1,713
++ verified reviews across platforms
+Read on
+G2
+→
+Read on
+Trustpilot
+→
+Read on
+Google
+→
+Don't overthink it,
+Start free
+Start your free trial
+or sign up with
+Google
+Microsoft
+No credit card · 7-day free trial
