@@ -1,5 +1,39 @@
 [
  {
+  "date": "2026-11-17",
+  "tool_id": "lusha",
+  "tool": "Lusha",
+  "type": "copy_change",
+  "summary": "Pricing page wording/plan text changed (no price points changed).",
+  "previous_date": "2026-11-16",
+  "diff": [
+   "-Contact sales",
+   "-Custom seats",
+   "-Contact sales",
+   "-Scale",
+   "-Contact Sales"
+  ]
+ },
+ {
+  "date": "2026-11-17",
+  "tool_id": "findymail",
+  "tool": "Findymail",
+  "type": "fetch_failed",
+  "summary": "Pricing page could not be fetched; will retry next run."
+ },
+ {
+  "date": "2026-11-17",
+  "tool_id": "prospeo",
+  "tool": "Prospeo",
+  "type": "copy_change",
+  "summary": "Pricing page wording/plan text changed (no price points changed).",
+  "previous_date": "2026-11-16",
+  "diff": [
+   "+Jalen Nelson",
+   "+#1 GTM Engineer | I build Black Boxes | Run your GTM from your LLM | Scale → $4.2M revenue | 1,400+ SQLs in 60 days | Creator of IDEAL"
+  ]
+ },
+ {
   "date": "2026-11-16",
   "tool_id": "findymail",
   "tool": "Findymail",
