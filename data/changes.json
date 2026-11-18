@@ -1,5 +1,95 @@
 [
  {
+  "date": "2026-11-18",
+  "tool_id": "snovio",
+  "tool": "Snov.io",
+  "type": "price_change",
+  "summary": "Pricing page changed: new price points $20, $55, $66; removed $10, $62, $7.",
+  "added": [
+   "$20",
+   "$55",
+   "$66"
+  ],
+  "removed": [
+   "$10",
+   "$62",
+   "$7"
+  ],
+  "previous_date": "2026-11-17",
+  "diff": [
+   "-server access",
+   "-Start free trial",
+   "+1 slot",
+   "+$55",
+   "+Billing period",
+   "-pay month to month with no long-term commitment",
+   "-Annual",
+   "-save $7",
+   "-per each slot when you choose a yearly plan",
+   "-$62",
+   "-/mo",
+   "-Contact Sales",
+   "+Extra 5% off",
+   "+$66",
+   "+Extra 20% off",
+   "+$55",
+   "-Do I need a Sales Suite subscription to use LinkedIn Automation?",
+   "-No, you can use it separately. But if you are considering a Sales Suite subscription, you can get a $10 discount off each LinkedIn slot when getting both.",
+   "-You can save 10% off your LinkedIn Automation with an annual subscription and get an additional $10/mo off each slot if you also have an active Sales Suite subscription.",
+   "+Of course! You can save by choosing a longer billing period or purchasing LinkedIn slots in bulk. With both discounts, the price can drop to as little as $20/mo per slot."
+  ]
+ },
+ {
+  "date": "2026-11-18",
+  "tool_id": "klenty",
+  "tool": "Klenty",
+  "type": "price_change",
+  "summary": "Pricing page changed: new price points $40, $56, $89.",
+  "added": [
+   "$40",
+   "$56",
+   "$89"
+  ],
+  "removed": [],
+  "previous_date": "2026-11-17",
+  "diff": [
+   "+$40",
+   "+Was",
+   "+$56",
+   "+Was",
+   "+$89",
+   "+Was"
+  ]
+ },
+ {
+  "date": "2026-11-18",
+  "tool_id": "findymail",
+  "tool": "Findymail",
+  "type": "copy_change",
+  "summary": "Pricing page wording/plan text changed (no price points changed).",
+  "previous_date": "2026-11-15",
+  "diff": [
+   "-Credits roll over up to 2x your plan",
+   "-Unused credits roll over month-to-month, up to 2x your monthly allowance. No \"use it or lose it\". Your credits are there when you need them.",
+   "-API access",
+   "-Free API access on all plans. Build custom workflows, integrate with your internal tools, automate prospecting at scale.",
+   "-Team accounts",
+   "-Share credits across your team. Manage users, track usage, and collaborate without paying per seat."
+  ]
+ },
+ {
+  "date": "2026-11-18",
+  "tool_id": "prospeo",
+  "tool": "Prospeo",
+  "type": "copy_change",
+  "summary": "Pricing page wording/plan text changed (no price points changed).",
+  "previous_date": "2026-11-17",
+  "diff": [
+   "-Jalen Nelson",
+   "-#1 GTM Engineer | I build Black Boxes | Run your GTM from your LLM | Scale → $4.2M revenue | 1,400+ SQLs in 60 days | Creator of IDEAL"
+  ]
+ },
+ {
   "date": "2026-11-17",
   "tool_id": "lusha",
   "tool": "Lusha",

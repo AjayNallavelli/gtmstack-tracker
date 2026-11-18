@@ -1,0 +1,137 @@
+Cognism Pricing
+How Cognism pricing works
+Clear pricing, built around how your team uses data.
+Prospecting or CRM enrichment — powered by verified, compliance-first data that
+drives higher ROI
+.
+Sales prospecting
+CRM Enrichment
+Standard
+For teams that need core prospecting workflows · 5 seats included
+See how
+DinMo
+4x’d ARR
+in just six months with Cognism
+Find and reach the right contacts accurate B2B data
+MCP & API access
+New
+Build targeted lists using firmographic, technographic and signal-based filters
+Use AI to research accounts and refine your search
+Export data and enrich lists via CSV uploads
+Add-ons
+CRM Enrichment
+Automatically enrich and maintain your CRM records
+Talk to sales
+Most popular
+Pro
+For teams that need advanced prospecting workflows · 5 seats included
+See how
+AVEVA
+generated
+40%+ of outbound pipeline
+with Cognism prospecting
+Everything in Standard, plus
+Reach more decision-makers with higher-quality, accurate mobile data
+Reduce wasted outreach with on-demand verification
+Prioritise accounts showing real buying intent
+Add-ons
+CRM Enrichment
+Automatically enrich and maintain your CRM records
+Talk to an expert
+Cognism Credits
+Credits are used to reveal, enrich, or export a contact. Each seat includes an allocation of credits as part of the subscription. Additional credits can be purchased at any point.
+1 credit = 1 revealed contact
+No charge for viewing previously revealed contacts
+Use the same credits across the prospecting platform, Enrich, and API without extra cost
+Compare in-depth features below
+Features
+Standard
+Pro
+Contact & Company Data
+Company revenue, headcount and HQ
+Emails, mobiles, job titles and work history
+Technology usage
+Premium mobile filter
+Mobile verification on demand
+Contextual Signals
+Hiring
+Funding and M&A
+Job changes
+Intent data
+Platform Features
+AI company research
+MCP & API access
+New
+AI persona builder
+AI search
+CSV enrichment
+SSO
+CRM enrichment
+CRM Enrichment add-on
+Insights & Support
+Live chat support
+Account manager
+CRM Enrichment
+Keep your CRM accurate and ready to act on.
+Enrich records at scale
+Improve CRM coverage and quality
+Support segmentation, routing and reporting
+Talk to sales
+How it works
+Designed to fit your setup and scale with your team
+Works alongside our sales prospecting tool (Standard or Pro)
+Available as a standalone product
+Cognism Credits
+Credits are included in your subscription and used to enrich new records. Ongoing maintenance is included.
+Enrich a contact once, and we keep it up to date
+Credits are only used again when key details change, like a job move
+Additional credits can be added as your usage grows
+4.5/5 on G2
+4.7/5 on Capterra
+Trusted by 4000+ companies worldwide
+Trusted by high-growth revenue teams
+0
+in 6 months
+DinMo
+Case Study
+0
+dials influenced
+Openprise
+Case Study
+0
+increase in leads
+Sparta Global
+Case Study
+0
+saved per rep each week
+SaleCycle
+Case Study
+Pricing FAQs
+How does Cognism pricing work?
+Cognism pricing is tailored based on the product you need, your team setup and how you plan to use the platform.
+Sales Prospecting is offered in Standard and Pro packages.
+CRM Enrichment and Data-as-a-Service are priced based on subscription structure, usage and delivery requirements.
+What's the difference between Standard and Pro?
+Standard is designed for teams that need reliable contact and company data for day-to-day prospecting.
+Pro is designed for teams that need more advanced targeting, better prioritisation and stronger visibility into prospecting performance. It includes features such as intent data, on-demand mobile verification and enhanced dashboards.
+Which Sales Prospecting package is right for my team?
+Standard is usually the right fit for teams that need a strong prospecting foundation and core workflow coverage.
+Pro is typically a better fit for teams with more advanced targeting needs, more complex workflows or a stronger focus on efficiency and performance at scale.
+How do credits work?
+Cognism uses a credits model where one credit is used each time a contact record is revealed.
+Once a contact has been redeemed, your team can continue using that record throughout the contract. A credit is only used again if that contact changes jobs.
+Can I buy CRM Enrichment as a standalone product?
+Yes. CRM Enrichment can be purchased as a standalone product or as an add-on to your existing Cognism setup.
+What are verified mobile numbers?
+Verified mobile numbers are phone-verified contact numbers designed to help sales teams connect with the right decision-makers more reliably. This helps improve connect rates and make outreach more efficient.
+What is on-demand mobile verification?
+On-demand mobile verification is a premium feature designed to enhance the accuracy and effectiveness of your outreach efforts. It allows users to select high-priority prospects and submit them for advanced verification through Cognism's verification engine. This process ensures that the contact information, particularly mobile numbers, is accurate and up-to-date, facilitating more successful connections.
+What is Intent Data?
+Intent data shows when companies are actively researching topics related to your solution. This helps teams prioritise accounts that may be in-market and time outreach more effectively.
+Cognism uses Bombora's Company Surge
+®
+data to pinpoint accounts currently researching topics related to your offerings. Administrators can select up to 12 intent topics from a library of over 11,000 options.
+Trusted by high-growth revenue teams
+Get a personalised quote for your team
+Speak to a Cognism expert to find the right setup and pricing for your team - i
+f helpful, we can also walk you through the platform.

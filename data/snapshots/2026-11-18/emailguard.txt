@@ -1,0 +1,99 @@
+Pricing
+Domain Masking Proxies now available for cold email agencies.
+Protect your secondary domains and remove spoofing alerts.
+Dismiss
+Simple no-tricks pricing
+There's a plan for everyone. Choose the one that fits your needs.
+Start free forever
+Free forever plan for your basic monitoring and health needs
+Credits reset monthly
+Single connected domain
+3 connected email accounts
+50 contact verification credits
+Weekly automated blacklist monitoring
+Ad-hoc blacklist checks
+Live chat, help centre, and email support
+Weekly automated SPF, DKIM, DMARC checks
+Unlimited SPF, DKIM, DMARC checks
+Unlimited DMARC monitored emails
+10 email tests with spam filters
+20 email content spam checks
+Unlimited team members
+The free plan
+does not include
+the following features: Domain Masking Proxies, Hosted Domain Redirects, Unlimited Workspaces
+Sign up for free
+Pro
+Best for solopreneurs and small businesses
+$49
+/month
+25 connected domains
+100 connected email accounts
+3,000 contact verification credits
+300 inbox placement tests
+500 email tests with spam filters
+500 content spam checks
+10 domain masking proxies or hosted domain redirects (clean IPs)
+$100 / month extra for dedicated redirect IP
+Unlimited DMARC monitoring and insights for all domains
+Weekly automated blacklist checks
+Unlimited ad-hoc blacklist checks
+Unlimited email compliance tests
+Unlimited team members
+Unlimited workspaces
+Live chat, help centre, and email support
+75 Spamhaus Intelligence credits
+New
+Sign up for Pro
+Business
+Best for startups and small agencies
+$129
+/month
+75 connected domains
+300 connected email accounts
+20,000 contact verification credits
+500 inbox placement tests
+1,000 email tests with spam filters
+1,000 content spam checks
+25 domain masking proxies or hosted domain redirects (clean IPs)
+$100 / month extra for dedicated redirect IP
+Unlimited DMARC monitoring and insights for all domains
+Weekly automated blacklist checks
+Unlimited ad-hoc blacklist checks
+Unlimited email compliance tests
+Unlimited team members
+Unlimited workspaces
+Live chat, help centre, and email support
+300 Spamhaus Intelligence credits
+New
+Sign up for Business
+Agencies
+Best for large agencies and cold email
+$199
+/month
+200 connected domains
+1,000 connected email accounts
+50,000 contact verification credits
+1,500 inbox placement tests
+2,000 email tests with spam filters
+3,000 content spam checks
+120 domain masking proxies or hosted domain redirects (clean IPs)
+$100 / month extra for dedicated redirect IP
+Unlimited DMARC monitoring and insights for all domains
+Weekly automated blacklist checks
+Unlimited ad-hoc blacklist checks
+Unlimited email compliance tests
+Unlimited team members
+Unlimited workspaces
+Live chat, help centre, and email support
+500 Spamhaus Intelligence credits
+New
+Sign up for Agency
+Need a custom plan?
+Contact us through our live chat or
+[email protected]
+Everything you need to power up your
+email game
+in one place.
+Start now for free. No credit card required.
+Sign up for free
