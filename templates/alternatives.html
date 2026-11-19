@@ -1,7 +1,7 @@
-{% extends "base.html" %}{% from "_macros.html" import price_table, pricing_table, faq_section, free_toggle, status, answer_line, spot_links %}
+{% extends "base.html" %}{% from "_macros.html" import price_table, pricing_table, faq_section, free_toggle, status, answer_line, spot_links, aff_cta %}
 {% block content %}
 <nav class="crumbs small"><a href="/">Home</a> / <a href="/category/{{ t.cat_slug }}/">{{ t.category }}</a> / <a href="/tools/{{ t.slug }}/">{{ t.name }}</a> / Alternatives</nav>
-<h1>{{ t.name }} alternatives ({{ year }}): {{ alts|length }} tools compared by price</h1>
+<h1>{% if t.alt_h1 %}{{ t.alt_h1 }}{% else %}{{ t.name }} alternatives ({{ year }}): {{ alts|length }} tools compared by price{% endif %}</h1>
 {{ answer_line(answer) }}
 {{ spot_links(alts) }}
 <p class="lead">{{ t.name }} is listed under {{ t.categories|join(' and ') }}. Its pricing: {{ t.entry_label }}{% if t.has_free_plan %}, with a $0 tier{% endif %}. Below are the {{ alts|length }} other tools we track in the same categor{{ 'ies' if t.categories|length > 1 else 'y' }}, sorted by lowest listed paid price. {{ alts|selectattr('has_free_plan')|list|length }} have a free plan. Prices are copied from each vendor's pricing page and re-checked daily (latest check {{ stats.last|nicedate }}).</p>
@@ -10,6 +10,7 @@
 {{ pricing_table(t) }}
 {{ free_toggle(alts|length) }}
 {{ price_table(alts, vs) }}
+{{ aff_cta(t) }}
 {% set cheaper = alts|selectattr('sort_price')|list %}
 {% if t.sort_price is not none %}{% set cheaper = cheaper|selectattr('sort_price','lt',t.sort_price)|list %}
 <h2>Cheaper than {{ t.name }}</h2>
@@ -19,5 +20,5 @@
 <ul class="links">{% for p in t.pairs %}<li><a href="/compare/{{ p.slug }}/">{{ p.a.name }} vs {{ p.b.name }}</a></li>{% endfor %}</ul>{% endif %}
 {% if t.roundups %}<h2>Related buyer guides</h2><ul class="links">{% for r in t.roundups %}<li><a href="/best/{{ r.slug }}/">{{ r.h1 }}</a></li>{% endfor %}</ul>{% endif %}
 {{ faq_section(faq) }}
-<div class="card accent nl-cta"><h2>Get every price change in your inbox</h2><p>A weekly digest of plan, price and limit changes across the GTM stack. Free.</p>{% include "_newsletter_form.html" %}</div>
+<div class="card accent nl-cta"><h2>Get an alert when {{ t.name }} or its alternatives change pricing</h2><p>We check these pricing pages every day. A weekly digest of plan, price and limit changes across the GTM stack. Free.</p>{% include "_newsletter_form.html" %}</div>
 {% endblock %}

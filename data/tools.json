@@ -479,32 +479,32 @@
       ],
       "description": "Multichannel outreach (email, LinkedIn, calls) with built-in lead database, lemwarm warmup and AI agents.",
       "pricing_url": "https://www.lemlist.com/pricing",
-      "date_checked": "2026-11-12",
+      "date_checked": "2026-11-19",
       "pricing_status": "public",
       "pricing_verified": true,
       "billing_note": "Monthly vs annual (save 20%); quarterly billing saves 10%. Data add-on $20/mo ($16/mo billed annually) for 2k credits; intent signals $29/mo ($21/mo billed annually) for 100 signals/mo. lemwarm warmup is bundled into lemlist plans (no standalone price on lemlist.com/lemwarm). 14-day free trial (not a free plan).",
-      "verification_note": "",
+      "verification_note": "Re-verified against lemlist.com/pricing on 2026-11-19: Email $69/mo monthly or $55/mo billed annually; Multichannel $109/mo or $87/mo billed annually (per user); Enterprise custom. No change since 2026-11-12.",
       "tiers": [
         {
           "plan": "Email",
           "monthly_usd": 69,
           "annual_monthly_usd": 55,
-          "limits": "Unlimited users & senders, 50,000 emails/mo, 650M+ lead database",
+          "limits": "Unlimited users & email senders; 50,000 emails/mo; 650M+ lead database; email & phone finder; lemwarm warm-up & deliverability hub; CRM integrations & API",
           "note": ""
         },
         {
           "plan": "Multichannel",
           "monthly_usd": 109,
           "annual_monthly_usd": 87,
-          "limits": "Per user; email + LinkedIn + calls",
+          "limits": "Per user; 5 senders per user; unlimited emails & messages; LinkedIn and SMS automation; built-in call dialer (WhatsApp is an add-on)",
           "note": ""
         },
         {
           "plan": "Enterprise",
           "monthly_usd": null,
           "annual_monthly_usd": null,
-          "limits": "",
-          "note": "Talk to sales"
+          "limits": "Custom users; 5+ senders per user; SSO/SAML, custom roles & permissions, dedicated account manager, priority support",
+          "note": "Custom price, talk to sales"
         }
       ],
       "affiliate_url": "",

@@ -5,7 +5,7 @@
 {% macro outlink(t, label=None, cls="btn") -%}
 {% set default_label = ("Try " ~ t.name) if t.is_affiliate else ("Visit " ~ t.name) -%}
 {% if t.is_affiliate or t.is_featured -%}
-<a class="{{ cls }}" href="{{ t.affiliate_url or t.website }}" rel="sponsored noopener" target="_blank" data-tool="{{ t.slug }}">{{ label or default_label }} ↗</a>{% if t.is_affiliate %} <span class="tag tag-aff" title="We may earn a commission">Affiliate</span>{% endif %}{% if t.is_featured %} <span class="tag tag-feat" title="Paid placement">Featured (paid)</span>{% endif %}
+<a class="{{ cls }}" href="{{ t.affiliate_url or t.website }}" rel="sponsored nofollow noopener" target="_blank" data-tool="{{ t.slug }}">{{ label or default_label }} ↗</a>{% if t.is_affiliate %} <span class="tag tag-aff" title="We may earn a commission">Affiliate</span>{% endif %}{% if t.is_featured %} <span class="tag tag-feat" title="Paid placement">Featured (paid)</span>{% endif %}
 {%- else -%}
 <a class="{{ cls }}" href="{{ t.website }}" rel="noopener" target="_blank">{{ label or default_label }} ↗</a>
 {%- endif %}
@@ -109,4 +109,14 @@
 
 {% macro spot_links(ts) -%}
 {% set sp = ts|selectattr('spotlight')|list %}{% if sp %}<p class="small related">Related: {% for x in sp %}<a href="/tools/{{ x.slug }}/">{{ x.spotlight }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</p>{% endif %}
+{%- endmacro %}
+
+{% macro aff_cta(t) -%}
+{% if t.aff_picks or t.aff_data %}<section class="card aff-cta" id="try-instead">
+<h2>Considering a {{ t.name }} alternative?</h2>
+{% if t.aff_picks %}<p>For email sequencing, these are the closest alternatives we track:</p>
+<ul class="links">{% for x in t.aff_picks %}<li><a href="/tools/{{ x.slug }}/"><strong>{{ x.name }}</strong></a> <span class="small muted">{{ x.description }}</span> {{ outlink(x, "Try " ~ x.name, "visit") }}</li>{% endfor %}</ul>{% endif %}
+{% if t.aff_data %}<p class="small">Only need emails and phone numbers ({{ t.name }} sells lead data as an add-on)? {% for x in t.aff_data %}{{ outlink(x, "Try " ~ x.name, "visit") }}{% if x.affiliate_perk %} <span class="small muted">({{ x.affiliate_perk }})</span>{% endif %}{{ " · " if not loop.last }}{% endfor %}</p>{% endif %}
+<p class="small muted">Links marked "Affiliate" may earn us a commission at no cost to you; it never changes the prices we list (<a href="/disclosure/">disclosure</a>). Check each tool page for its current plans.</p>
+</section>{% endif %}
 {%- endmacro %}

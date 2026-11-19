@@ -1,4 +1,4 @@
-{% extends "base.html" %}{% from "_macros.html" import outlink, featured_badge, status, pricing_table, price_from, faq_section, answer_line, weekly_email, change_block %}
+{% extends "base.html" %}{% from "_macros.html" import outlink, featured_badge, status, pricing_table, price_from, faq_section, answer_line, weekly_email, change_block, aff_cta %}
 {% block head %}
 <script type="application/ld+json">{{ {"@context":"https://schema.org","@type":"SoftwareApplication","name":t.name,"applicationCategory":"BusinessApplication","operatingSystem":"Web","url":t.website,"description":t.description}|tojson }}</script>
 {% endblock %}
@@ -24,6 +24,7 @@
 <h2 id="plans">{{ t.name }} plans &amp; pricing{% if t.credit_cols %}: cost by plan{% endif %}</h2>
 {{ pricing_table(t) }}
 {% if t.verification_note %}<p class="small note">Note: {{ t.verification_note }}</p>{% endif %}
+{% if t.aff_picks %}<p class="small related">Related: <a href="/alternatives/{{ t.slug }}/">Best {{ t.name }} alternatives, sorted by price</a>{% for p in t.pairs[:3] %} · <a href="/compare/{{ p.slug }}/">{{ p.a.name }} vs {{ p.b.name }}</a>{% endfor %} · <a href="/compare/">All comparisons</a></p>{% endif %}
 <dl class="glance">
   <div><dt>Cheapest plan</dt><dd>{% if t.price_display and t.sort_price is none %}{{ t.price_display }}{% elif t.cheapest_tier %}{{ t.cheapest_tier.plan }}: {{ t.entry_paid|money }}/mo{% else %}Contact sales{% endif %}</dd></div>
   <div><dt>Free tier</dt><dd>{% if t.has_free_plan %}Yes ({{ t.free_tier }}){% else %}No{% endif %}</dd></div>
@@ -51,6 +52,7 @@
 {% for h in t.history %}<tr><td>{{ h.date }}</td><td>{{ "ok" if h.status == "ok" else "not fetched (retried next run)" }}</td><td>{{ h.points }}</td><td><code>{{ h.hash or '—' }}</code></td></tr>{% endfor %}
 </tbody></table></details>{% endif %}
 
+{{ aff_cta(t) }}
 {% if t.pairs %}
 <h2>Compare {{ t.name }}</h2>
 <ul class="links">{% for p in t.pairs %}<li><a href="/compare/{{ p.slug }}/">{{ p.a.name }} vs {{ p.b.name }}</a></li>{% endfor %}</ul>

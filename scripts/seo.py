@@ -78,6 +78,8 @@ def enrich(t):
     t["spotlight"] = SPOTLIGHT.get(t["id"])
     if t["id"] == "clay":
         clay_fields(t)
+    if t["id"] == "lemlist":
+        lemlist_fields(t)
     t["faq"] = tool_faq(t)
     t["summary"] = tool_summary(t)
 
@@ -85,7 +87,12 @@ def enrich(t):
 NOW_YEAR = dt.date.today().year
 
 # Tool pages that get extra internal links from related pages (top search queries).
-SPOTLIGHT = {"clay": "How much does Clay cost? Clay pricing by plan"}
+SPOTLIGHT = {"clay": "How much does Clay cost? Clay pricing by plan",
+             "lemlist": "lemlist pricing: every plan, monthly vs annual"}
+
+# Affiliate CTA picks per page: approved programs from data/affiliates.json only.
+# "seq" = sequencing alternatives, "data" = lead-data tools (lemlist sells a data add-on, so these fit naturally).
+AFF_PICKS = {"lemlist": {"seq": ["woodpecker", "klenty"], "data": ["prospeo", "fullenrich"]}}
 
 
 def _n(v):
@@ -134,6 +141,63 @@ def clay_faq(t):
                f"({money(launch['annual_monthly_usd'] * 12)} a year). Growth is {money(growth['monthly_usd'])}/month, or {money(growth['annual_monthly_usd'])}/month billed annually "
                f"({money(growth['annual_monthly_usd'] * 12)} a year). Enterprise pricing is custom with an annual commitment.")},
     ]
+
+
+def _lemlist_tiers(t):
+    by = {tr["plan"]: tr for tr in t["tiers"]}
+    return by["Email"], by["Multichannel"], by["Enterprise"]
+
+
+def lemlist_fields(t):
+    """Answer box, H1, title and meta for /tools/lemlist/ (targets 'lemlist pricing'). Numbers come from data/tools.json."""
+    em, mc, ent = _lemlist_tiers(t)
+    d = nicedate(t["date_checked"])
+    t["answer_box"] = (
+        f"lemlist pricing {NOW_YEAR}: from {money(em['annual_monthly_usd'])}/month. The Email plan is {money(em['monthly_usd'])}/month billed monthly "
+        f"or {money(em['annual_monthly_usd'])}/month billed annually (unlimited users, 50,000 emails a month); Multichannel is {money(mc['monthly_usd'])}/month "
+        f"or {money(mc['annual_monthly_usd'])}/month billed annually, per user (email, LinkedIn, SMS and calls); Enterprise is custom-priced. "
+        f"There is a 14-day free trial but no free plan (verified on lemlist.com/pricing, {d}).")
+    t["h1"] = f"lemlist pricing {NOW_YEAR}: plans, cost per month & annual price"
+    t["seo_title"] = f"lemlist Pricing {NOW_YEAR}: Plans from {money(em['annual_monthly_usd'])}/mo, Monthly vs Annual"
+    t["seo_desc"] = (f"lemlist pricing, verified {t['date_checked']}: Email {money(em['monthly_usd'])}/mo ({money(em['annual_monthly_usd'])} annual), "
+                     f"Multichannel {money(mc['monthly_usd'])}/mo ({money(mc['annual_monthly_usd'])} annual) per user, Enterprise custom. Add-ons, trial and alternatives.")
+
+
+def lemlist_faq(t):
+    em, mc, ent = _lemlist_tiers(t)
+    d = nicedate(t["date_checked"])
+    return [
+        {"q": "How much does lemlist cost?", "a": t["answer_box"]},
+        {"q": "How much does lemlist cost per month?",
+         "a": (f"Billed monthly, lemlist Email is {money(em['monthly_usd'])}/month and Multichannel is {money(mc['monthly_usd'])}/month per user. "
+               f"Billed annually they drop to {money(em['annual_monthly_usd'])}/month ({money(em['annual_monthly_usd'] * 12)} a year) and "
+               f"{money(mc['annual_monthly_usd'])}/month per user ({money(mc['annual_monthly_usd'] * 12)} a year). Quarterly billing saves 10% (checked {d}).")},
+        {"q": "Does lemlist have a free plan?",
+         "a": ("No. lemlist has no $0 plan. It offers a 14-day free trial that, per its pricing page, includes the Multichannel plan's features "
+               "(except in-app calls) and 200 free credits for finding emails and phone numbers.")},
+        {"q": "What do lemlist's add-ons cost?",
+         "a": ("Lead data enrichment is $20/month ($16/month billed annually) for 2,000 credits a month (about 400 emails or 100 phone numbers); "
+               "buying intent signals are $29/month ($21/month billed annually) for 100 signals a month. lemwarm warm-up is included in every plan, "
+               f"and unused credits roll over while the subscription is active (checked {d}).")},
+        {"q": "What are the best lemlist alternatives?",
+         "a": ("For email sequencing, Woodpecker and Klenty are the closest alternatives we track; for cheaper high-volume cold email, see Instantly and Smartlead. "
+               "The full list, sorted by price, is on our lemlist alternatives page.")},
+    ]
+
+
+def lemlist_alt_fields(t, alts):
+    """Answer box, title and meta for /alternatives/lemlist/ (targets 'lemlist alternatives')."""
+    em, mc, ent = _lemlist_tiers(t)
+    d = nicedate(t["date_checked"])
+    free = [x for x in alts if x["has_free_plan"]]
+    t["alt_answer"] = (
+        f"Best lemlist alternatives ({d}): Woodpecker and Klenty for email sequencing, Instantly and Smartlead for high-volume cold email, "
+        f"and {len(free)} of the {len(alts)} alternatives below have a free plan. lemlist itself starts at {money(em['annual_monthly_usd'])}/month billed annually "
+        f"({money(em['monthly_usd'])} month-to-month) for Email and {money(mc['annual_monthly_usd'])}/month per user for Multichannel, verified on lemlist.com/pricing.")
+    t["alt_h1"] = f"Best lemlist alternatives ({NOW_YEAR}): {len(alts)} tools compared by price"
+    t["alt_title"] = f"Best lemlist Alternatives {NOW_YEAR}: {len(alts)} Cheaper & Free Tools by Price"
+    t["alt_desc"] = (f"{len(alts)} lemlist alternatives sorted by price, {len(free)} with a free plan. lemlist costs {money(em['annual_monthly_usd'])}-{money(em['monthly_usd'])}/mo "
+                     f"(Email) and {money(mc['annual_monthly_usd'])}-{money(mc['monthly_usd'])}/mo per user (Multichannel), verified {t['date_checked']}.")
 
 
 def answer_free(t):
@@ -204,8 +268,8 @@ def tool_faq(t):
     ]
     if t["id"] == "clay" and t.get("answer_box"):  # top GSC query cluster: "clay pricing", "how much is clay"
         faq = clay_faq(t) + [f for f in faq if f["q"] in (f"Is {n} cheaper if you pay annually?", f"When was {n} pricing last checked?")]
-    if t["id"] == "lemlist":  # GSC: "lemlist pricing", "lemlist cost per month"
-        faq.insert(1, {"q": f"How much does {n} cost per month?", "a": answer_cost(t)})
+    if t["id"] == "lemlist" and t.get("answer_box"):  # GSC: "lemlist pricing", "lemlist cost per month"
+        faq = lemlist_faq(t) + [f for f in faq if f["q"] in (f"Is {n} cheaper if you pay annually?", f"When was {n} pricing last checked?")]
     if t["id"] == "aisdr":  # GSC: "aisdr" already ranks near page 1
         faq.insert(1, {
             "q": f"Can I try {n} without a paid subscription?",
@@ -275,7 +339,10 @@ def alternatives_faq(t, alts):
     if t["id"] in ("lemlist", "instantly"):
         out.append({"q": f"How much is {n}?", "a": answer_cost(t)})
         out.append({"q": f"Does {n} have a free plan?", "a": answer_free(t)})
-        if t["id"] == "lemlist":
+        if t["id"] == "lemlist" and t.get("answer_box"):
+            out[0] = {"q": "How much does lemlist cost?", "a": t["answer_box"]}
+            out.insert(0, {"q": "What are the best lemlist alternatives?", "a": t.get("alt_answer") or ""})
+        elif t["id"] == "lemlist":
             out.append({"q": f"How much does {n} cost per month?", "a": answer_cost(t)})
         out.append({"q": f"Is there a free {n} alternative?", "a": free_alt_a})
     if priced:

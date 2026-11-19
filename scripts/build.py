@@ -357,6 +357,11 @@ def main():
         t["pairs"] = [p for p in pairs if p["a"]["id"] == t["id"] or p["b"]["id"] == t["id"]]
         t["all_alternatives"] = seo.rank(seo.peers(t, tools))
         t["alternatives"] = t["all_alternatives"][:6]
+        # affiliate CTA picks (approved programs only, see data/affiliates.json); rendered with an Affiliate label
+        t["aff_picks"] = [by_id[i] for i in seo.AFF_PICKS.get(t["id"], {}).get("seq", []) if i in by_id and by_id[i]["is_affiliate"]]
+        t["aff_data"] = [by_id[i] for i in seo.AFF_PICKS.get(t["id"], {}).get("data", []) if i in by_id and by_id[i]["is_affiliate"]]
+        if t["id"] == "lemlist":
+            seo.lemlist_alt_fields(t, t["all_alternatives"])
     cats = [{"name": n, "slug": s, "blurb": b, "tools": [t for t in tools if n in t["categories"]],
              "featured": sorted([t for t in tools if n in t["categories"] and t["is_featured"]], key=lambda t: t["name"])} for n, (s, b) in CATS.items()]
     stats = {"tools": len(tools), "public": sum(t["pricing_status"] != "contact_sales" for t in tools),
@@ -455,10 +460,10 @@ def main():
                description=t.get("seo_desc") or f"{t['name']} pricing, checked {t['last_checked']}: {sp}. Free plan: {'yes' if t['has_free_plan'] else 'no'}. Every plan, monthly vs annual price, limits and pricing history.")
         alts = t["all_alternatives"]
         afree = sum(x["has_free_plan"] for x in alts)
-        render("alternatives.html", f"/alternatives/{t['slug']}/", lastmod=lastmod([t] + alts), answer=seo.answer_line_alternatives(t, alts), t=t, filterable=True, alts=alts, faq=seo.alternatives_faq(t, alts),
+        render("alternatives.html", f"/alternatives/{t['slug']}/", lastmod=lastmod([t] + alts), answer=t.get("alt_answer") or seo.answer_line_alternatives(t, alts), t=t, filterable=True, alts=alts, faq=seo.alternatives_faq(t, alts),
                vs={x["id"]: pair_by_ids.get(frozenset((t["id"], x["id"]))) for x in alts},
-               title=f"{t['name']} alternatives ({now.year}): {len(alts)} tools compared by price",
-               description=f"{len(alts)} {t['name']} alternatives sorted by entry price, {afree} with a free plan. Plans, free tiers and side-by-side comparisons, checked {stats['last']}.")
+               title=t.get("alt_title") or f"{t['name']} alternatives ({now.year}): {len(alts)} tools compared by price",
+               description=t.get("alt_desc") or f"{len(alts)} {t['name']} alternatives sorted by entry price, {afree} with a free plan. Plans, free tiers and side-by-side comparisons, checked {stats['last']}.")
         # /pricing/<slug>/ is kept for existing links but consolidated into the tool page (canonical + not in sitemap)
         render("pricing.html", f"/pricing/{t['slug']}/", sitemap=False, canonical=f"/tools/{t['slug']}/", t=t,
                title=f"{t['name']} pricing {now.year}: plans, limits & changes ({sp})",
