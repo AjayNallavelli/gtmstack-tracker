@@ -577,43 +577,50 @@
       "categories": [
         "Cold email & engagement"
       ],
-      "description": "Cold email and LinkedIn outreach priced by contacted prospects, with free warmup and catch-all verification.",
+      "description": "Cold email and LinkedIn outreach with plans priced by emails sent, unlimited team members and email accounts, free email verification and warm-ups.",
       "pricing_url": "https://woodpecker.co/pricing/",
-      "date_checked": "2026-10-19",
-      "pricing_status": "partial",
+      "date_checked": "2026-11-19",
+      "pricing_status": "public",
       "pricing_verified": true,
-      "billing_note": "Usage-based slider",
-      "verification_note": "Box fetch showed INR; USD figures read via a US-region fetch.",
+      "billing_note": "Monthly or annual (save 33%); plans priced by emails sent per month; 14-day free trial, no credit card; add-ons: Agency panel $27/mo per active client (white label +$5), Integrations/API/webhooks/MCP $20/mo, extra warm-ups $5/mo per account",
+      "verification_note": "Re-verified against woodpecker.co/pricing on 2026-11-19 (USD from the page's embedded price table). The old $7-per-100-contacted-prospects slider is gone: plans are now Email, Multichannel (Email + LinkedIn), LinkedIn and custom Scale.",
       "tiers": [
         {
-          "plan": "Cold Email (usage-based)",
+          "plan": "Email",
+          "monthly_usd": 39,
+          "annual_monthly_usd": 26,
+          "limits": "5,000 emails/mo, 3 warm-ups, 100 Lead Finder credits; higher tiers: 50k emails $79 ($52.66 annual), 100k $119 ($79.33), 250k $219 ($146), 500k $499 ($332.66), 1M $999 ($666)",
+          "note": "Unlimited team members & email accounts"
+        },
+        {
+          "plan": "Multichannel",
+          "monthly_usd": 68,
+          "annual_monthly_usd": 55,
+          "limits": "Email plan + 1 LinkedIn account (5,000 emails/mo); each extra LinkedIn account $29/mo",
+          "note": "Most popular"
+        },
+        {
+          "plan": "LinkedIn",
+          "monthly_usd": 29,
+          "annual_monthly_usd": 29,
+          "limits": "Per LinkedIn account: up to 250 messages/day, 30 connection requests/day, 500 profile visits/day, 50 InMails/mo",
+          "note": ""
+        },
+        {
+          "plan": "Scale",
           "monthly_usd": null,
           "annual_monthly_usd": null,
-          "limits": "$7.00 per 100 contacted prospects (annual saves 25%); unlimited team members & email accounts",
-          "note": "Slider-based; no fixed tier"
-        },
-        {
-          "plan": "LinkedIn add-on",
-          "monthly_usd": 29,
-          "annual_monthly_usd": null,
-          "limits": "Per connected LinkedIn account",
-          "note": ""
-        },
-        {
-          "plan": "Agency panel",
-          "monthly_usd": 27,
-          "annual_monthly_usd": null,
-          "limits": "Per active client",
-          "note": ""
+          "limits": "Higher email or LinkedIn limits, custom setup",
+          "note": "Book a call"
         }
       ],
       "affiliate_url": "",
       "affiliate_program": "",
       "featured": false,
-      "starting_price_usd": 27,
+      "starting_price_usd": 26,
       "fetch_method": "http",
       "has_free_plan": false,
-      "price_display": "$7 per 100 contacted prospects",
+      "price_display": "",
       "compare_with": [
         "instantly",
         "smartlead",
@@ -621,7 +628,7 @@
         "saleshandy",
         "mailshake"
       ],
-      "annual_discount_note": "25% on the per-prospect rate (annual billing)"
+      "annual_discount_note": "33% off with annual billing (Email plan $39 -> $26/mo)"
     },
     {
       "id": "saleshandy",
@@ -726,11 +733,11 @@
       ],
       "description": "Email finder, verifier and drip campaigns with unlimited seats on all plans.",
       "pricing_url": "https://snov.io/pricing",
-      "date_checked": "2026-10-19",
+      "date_checked": "2026-11-19",
       "pricing_status": "public",
       "pricing_verified": true,
-      "billing_note": "Monthly; 25% off annual. LinkedIn slots $69/mo each",
-      "verification_note": "",
+      "billing_note": "Monthly, 3-month (-5%) or annual (save 25%). LinkedIn Automation slots extra: $69/mo monthly, $66/mo on 3-month, $55/mo annual, with volume discounts down to about $20/mo per slot",
+      "verification_note": "Re-verified against snov.io/pricing on 2026-11-19: Sales Suite plans unchanged (Starter $39/mo or $29.25/mo annual, Pro S $99/mo or $74.25/mo annual, Pro M $189, Pro L $369, Ultra $738 monthly). The Nov 18 price diff came from the LinkedIn slot add-on: annual price cut from $62 to $55/mo, new 3-month $66/mo option, volume discounts added, and the $10/slot Sales Suite bundle discount dropped.",
       "tiers": [
         {
           "plan": "Trial",
@@ -742,14 +749,14 @@
         {
           "plan": "Starter",
           "monthly_usd": 39,
-          "annual_monthly_usd": null,
+          "annual_monthly_usd": 29.25,
           "limits": "1,000 credits/mo",
           "note": ""
         },
         {
           "plan": "Pro S",
           "monthly_usd": 99,
-          "annual_monthly_usd": null,
+          "annual_monthly_usd": 74.25,
           "limits": "5,000 credits/mo",
           "note": ""
         },
@@ -793,38 +800,45 @@
       ],
       "description": "Sales engagement platform: email cadences, multichannel outreach, built-in dialer with AI call coaching, and two-way CRM sync.",
       "pricing_url": "https://www.klenty.com/pricing/",
-      "date_checked": "2026-10-19",
+      "date_checked": "2026-11-19",
       "pricing_status": "public",
       "pricing_verified": true,
-      "billing_note": "Annual or quarterly billing (save up to 20% annually); monthly-billing prices not shown; 14-day free trial (up to 200 emails)",
-      "verification_note": "Re-checked klenty.com/pricing on 2026-10-19 10:35 IST.",
+      "billing_note": "Annual or quarterly billing (toggle says save up to 30%); monthly-billing prices not shown; 14-day free trial (up to 200 emails). Black Friday through 2026-11-30: up to 20% off annual plans",
+      "verification_note": "Re-verified against klenty.com/pricing on 2026-11-19: Black Friday sale (ends 2026-11-30) shows Starter $40 (was $50), Growth $56 (was $70), Plus $89 (was $99) per month billed annually. Table keeps the regular annual prices; sale prices are in each plan note.",
       "tiers": [
         {
           "plan": "Starter",
           "monthly_usd": null,
           "annual_monthly_usd": 50,
           "limits": "Unlimited users & mailboxes; priced by contacts/emails (shown at 15,000 contacts, 75,000 emails/mo)",
-          "note": "Per month, billed annually"
+          "note": "Per month, billed annually. Black Friday: $40/mo until 2026-11-30 (was $50)"
         },
         {
           "plan": "Growth",
           "monthly_usd": null,
           "annual_monthly_usd": 70,
           "limits": "Per user; 200 dialer minutes, 2,000 phone+email credits, CRM sync",
-          "note": "Per user/month, billed annually"
+          "note": "Per user/month, billed annually. Black Friday: $56/mo until 2026-11-30 (was $70)"
         },
         {
           "plan": "Plus",
           "monthly_usd": null,
           "annual_monthly_usd": 99,
           "limits": "Per user; 1,000 dialer minutes, 4,000 credits, account-based selling, AI call coaching",
-          "note": "Per user/month, billed annually"
+          "note": "Per user/month, billed annually. Black Friday: $89/mo until 2026-11-30 (was $99)"
         },
         {
-          "plan": "Parallel & Power Dialer add-on",
+          "plan": "Power & Parallel Dialer add-on",
           "monthly_usd": null,
           "annual_monthly_usd": null,
           "limits": "$45 per user/month",
+          "note": "Add-on"
+        },
+        {
+          "plan": "Dynamic Presence add-on",
+          "monthly_usd": null,
+          "annual_monthly_usd": null,
+          "limits": "$50 per seat/month billed annually; 350+ local numbers per seat, auto-rotated by prospect area code",
           "note": "Add-on"
         }
       ],
