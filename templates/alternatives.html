@@ -1,15 +1,17 @@
-{% extends "base.html" %}{% from "_macros.html" import price_table, pricing_table, faq_section, free_toggle, status, answer_line, spot_links, aff_cta %}
+{% extends "base.html" %}{% from "_macros.html" import price_table, pricing_table, faq_section, free_toggle, status, answer_line, spot_links, aff_cta, ranked_alts %}
 {% block content %}
 <nav class="crumbs small"><a href="/">Home</a> / <a href="/category/{{ t.cat_slug }}/">{{ t.category }}</a> / <a href="/tools/{{ t.slug }}/">{{ t.name }}</a> / Alternatives</nav>
 <h1>{% if t.alt_h1 %}{{ t.alt_h1 }}{% else %}{{ t.name }} alternatives ({{ year }}): {{ alts|length }} tools compared by price{% endif %}</h1>
 {{ answer_line(answer) }}
+{{ ranked_alts(t.alt_ranked|default([]), t.alt_ranked_heading|default('Top alternatives by price')) }}
 {{ spot_links(alts) }}
 <p class="lead">{{ t.name }} is listed under {{ t.categories|join(' and ') }}. Its pricing: {{ t.entry_label }}{% if t.has_free_plan %}, with a $0 tier{% endif %}. Below are the {{ alts|length }} other tools we track in the same categor{{ 'ies' if t.categories|length > 1 else 'y' }}, sorted by lowest listed paid price. {{ alts|selectattr('has_free_plan')|list|length }} have a free plan. Prices are copied from each vendor's pricing page and re-checked daily (latest check {{ stats.last|nicedate }}).</p>
 <p class="small"><a href="/tools/{{ t.slug }}/">See {{ t.name }} pricing, plans &amp; annual cost →</a></p>
 <h2 id="plans">{{ t.name }} plans &amp; pricing</h2>
 {{ pricing_table(t) }}
+{% if t.alt_ranked %}<h2>All {{ t.name }} alternatives by price</h2>{% endif %}
 {{ free_toggle(alts|length) }}
-{{ price_table(alts, vs) }}
+<div id="full-list">{{ price_table(alts, vs) }}</div>
 {{ aff_cta(t) }}
 {% set cheaper = alts|selectattr('sort_price')|list %}
 {% if t.sort_price is not none %}{% set cheaper = cheaper|selectattr('sort_price','lt',t.sort_price)|list %}

@@ -82,3 +82,9 @@ code{font-size:.85em;background:#f1f5f9;padding:.1em .3em;border-radius:4px}
 .cb-label{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
 .tag-plan_change{background:#e0e7ff;color:#3730a3}h2.day{font-size:1.05rem;margin:1.4em 0 .2em}
 .aff-cta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0;padding:10px 14px}
+
+.popular-guides{margin:20px 0 12px;max-width:820px}
+.popular-guides h2{margin:0 0 .5em}
+.ranked-alts{margin:12px 0 18px;max-width:820px}
+.ranked-list{margin:.4em 0 .6em;padding-left:1.3em}
+.ranked-list li{margin:.35em 0}

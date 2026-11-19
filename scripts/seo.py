@@ -198,6 +198,12 @@ def lemlist_alt_fields(t, alts):
     t["alt_title"] = f"Best lemlist Alternatives {NOW_YEAR}: {len(alts)} Cheaper & Free Tools by Price"
     t["alt_desc"] = (f"{len(alts)} lemlist alternatives sorted by price, {len(free)} with a free plan. lemlist costs {money(em['annual_monthly_usd'])}-{money(em['monthly_usd'])}/mo "
                      f"(Email) and {money(mc['annual_monthly_usd'])}-{money(mc['monthly_usd'])}/mo per user (Multichannel), verified {t['date_checked']}.")
+    # Ranked shortlist near the top of /alternatives/lemlist/ (GSC: "lemlist alternatives").
+    # Cold-email peers only — warmup-only tools share a category with lemlist but are not substitutes.
+    # Prices come from already-enriched entry_label / sort_price (tools.json), not hand-typed.
+    cold = [x for x in alts if "Cold email & engagement" in x.get("categories", []) and x.get("sort_price") is not None]
+    t["alt_ranked"] = cold[:8]
+    t["alt_ranked_heading"] = f"Top lemlist alternatives by price ({NOW_YEAR})"
 
 
 def answer_free(t):

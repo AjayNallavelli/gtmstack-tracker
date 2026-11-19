@@ -120,3 +120,27 @@
 <p class="small muted">Links marked "Affiliate" may earn us a commission at no cost to you; it never changes the prices we list (<a href="/disclosure/">disclosure</a>). Check each tool page for its current plans.</p>
 </section>{% endif %}
 {%- endmacro %}
+
+{% macro popular_guides(year) -%}
+<section class="card guides popular-guides" id="popular-pricing-guides">
+  <h2>Popular pricing guides</h2>
+  <ul class="links cols">
+    <li><a href="/tools/clay/">Clay pricing {{ year }}</a></li>
+    <li><a href="/tools/lemlist/">lemlist pricing</a></li>
+    <li><a href="/alternatives/lemlist/">lemlist alternatives</a></li>
+    <li><a href="/tools/instantly/">Instantly pricing {{ year }}</a></li>
+    <li><a href="/alternatives/apollo/">Apollo alternatives by price</a></li>
+  </ul>
+</section>
+{%- endmacro %}
+
+{% macro ranked_alts(items, heading) -%}
+{% if items %}<section class="ranked-alts" id="top-alternatives">
+<h2>{{ heading }}</h2>
+<ol class="ranked-list">
+{% for x in items %}<li><a href="/tools/{{ x.slug }}/"><strong>{{ x.name }}</strong></a> — {{ x.entry_label }}{% if x.has_free_plan %}, with a free plan{% endif %}</li>
+{% endfor %}
+</ol>
+<p class="small"><a href="#full-list">See the full ranked list below →</a></p>
+</section>{% endif %}
+{%- endmacro %}
