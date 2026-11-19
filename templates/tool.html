@@ -6,7 +6,7 @@
 <nav class="crumbs small"><a href="/">Home</a> / <a href="/category/{{ t.cat_slug }}/">{{ t.category }}</a> / {{ t.name }}</nav>
 <section class="tool-hero">
   <div>
-    <h1>{{ t.name }} pricing {{ year }}: plans, limits &amp; annual cost</h1>
+    <h1>{% if t.h1 %}{{ t.h1 }}{% else %}{{ t.name }} pricing {{ year }}: plans, limits &amp; annual cost{% endif %}</h1>
     {{ answer_line(answer) }}
     <p class="lead">{{ t.summary }}</p>
     <p class="small muted">{{ t.description }}</p>
@@ -21,7 +21,7 @@
     {{ weekly_email(site) }}
   </div>
 </section>
-<h2 id="plans">{{ t.name }} plans &amp; pricing</h2>
+<h2 id="plans">{{ t.name }} plans &amp; pricing{% if t.credit_cols %}: cost by plan{% endif %}</h2>
 {{ pricing_table(t) }}
 {% if t.verification_note %}<p class="small note">Note: {{ t.verification_note }}</p>{% endif %}
 <dl class="glance">

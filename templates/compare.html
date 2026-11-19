@@ -1,8 +1,9 @@
-{% extends "base.html" %}{% from "_macros.html" import outlink, status, pricing_table, price_from, answer_line %}
+{% extends "base.html" %}{% from "_macros.html" import outlink, status, pricing_table, price_from, answer_line, spot_links %}
 {% block content %}
 <nav class="crumbs small"><a href="/">Home</a> / <a href="/compare/">Compare</a> / {{ p.a.name }} vs {{ p.b.name }}</nav>
 <h1>{{ p.a.name }} vs {{ p.b.name }}: pricing compared ({{ month }})</h1>
 {{ answer_line(answer) }}
+{{ spot_links([p.a, p.b]) }}
 <p class="lead">Both are {{ p.category }} tools. Here is how their published plans compare, using data from each vendor's pricing page.</p>
 {% for x in [p.a, p.b] if x.is_affiliate %}<div class="card aff-cta"><strong>Trying {{ x.name }}?</strong> {{ price_from(x) }} · {{ outlink(x, "Try " ~ x.name, "btn btn-sm") }}{% if x.affiliate_perk %} <span class="perk small">🎁 {{ x.affiliate_perk }}</span>{% endif %}</div>{% endfor %}
 <div class="table-wrap"><table class="ptable vs">

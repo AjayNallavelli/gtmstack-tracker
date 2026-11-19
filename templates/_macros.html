@@ -22,13 +22,14 @@
 {% macro pricing_table(t) -%}
 <div class="table-wrap">
 <table class="ptable">
-  <thead><tr><th>Plan</th><th>Monthly billing</th><th>Annual billing (per mo)</th><th>Key limits / notes</th></tr></thead>
+  <thead><tr><th>Plan</th><th>Monthly billing</th><th>Annual billing (per mo)</th>{% if t.credit_cols %}<th>Actions / mo</th><th>Data credits / mo</th>{% endif %}<th>Key limits / notes</th></tr></thead>
   <tbody>
   {% for tr in t.tiers %}
   <tr>
     <td><strong>{{ tr.plan }}</strong></td>
     <td>{% if tr.monthly_usd is not none %}{{ tr.monthly_usd|money }}{% else %}<span class="muted">—</span>{% endif %}</td>
     <td>{% if tr.annual_monthly_usd is not none %}{{ tr.annual_monthly_usd|money }}{% else %}<span class="muted">—</span>{% endif %}</td>
+    {% if t.credit_cols %}<td>{{ '{:,}'.format(tr.actions_per_month) if tr.actions_per_month is defined else '—' }}{% if tr.plan == 'Enterprise' and tr.actions_per_month is defined %}+{% endif %}</td><td>{{ '{:,}'.format(tr.data_credits_per_month) if tr.data_credits_per_month is defined else '—' }}{% if tr.plan == 'Enterprise' and tr.data_credits_per_month is defined %}+{% endif %}</td>{% endif %}
     <td>{{ tr.limits }}{% if tr.limits and tr.note %}<br>{% endif %}{% if tr.note %}<span class="muted small">{{ tr.note }}</span>{% endif %}</td>
   </tr>
   {% endfor %}
@@ -104,4 +105,8 @@
   {% if c.diff %}<details><summary class="small">Show pricing-text diff</summary><pre class="diff">{% for l in c.diff %}{{ l }}
 {% endfor %}</pre></details>{% endif %}
 </div>
+{%- endmacro %}
+
+{% macro spot_links(ts) -%}
+{% set sp = ts|selectattr('spotlight')|list %}{% if sp %}<p class="small related">Related: {% for x in sp %}<a href="/tools/{{ x.slug }}/">{{ x.spotlight }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</p>{% endif %}
 {%- endmacro %}

@@ -450,9 +450,9 @@ def main():
                description=f"{c['blurb']} Plans, prices and pricing history for {len(c['tools'])} tools.")
     for t in tools:
         sp = t["price_display"] if t.get("price_display") else f"from {money(t['entry_paid'])}/mo" if t["entry_paid"] else ("free plan available" if t["has_free_plan"] else "contact sales only")
-        render("tool.html", f"/tools/{t['slug']}/", lastmod=t["data_date"], answer=seo.answer_line_tool(t), t=t, faq=t["faq"],
-               title=f"{t['name']} pricing {now.year}: plans, limits & annual cost",
-               description=f"{t['name']} pricing, checked {t['last_checked']}: {sp}. Free plan: {'yes' if t['has_free_plan'] else 'no'}. Every plan, monthly vs annual price, limits and pricing history.")
+        render("tool.html", f"/tools/{t['slug']}/", lastmod=t["data_date"], answer=t.get("answer_box") or seo.answer_line_tool(t), t=t, faq=t["faq"],
+               title=t.get("seo_title") or f"{t['name']} pricing {now.year}: plans, limits & annual cost",
+               description=t.get("seo_desc") or f"{t['name']} pricing, checked {t['last_checked']}: {sp}. Free plan: {'yes' if t['has_free_plan'] else 'no'}. Every plan, monthly vs annual price, limits and pricing history.")
         alts = t["all_alternatives"]
         afree = sum(x["has_free_plan"] for x in alts)
         render("alternatives.html", f"/alternatives/{t['slug']}/", lastmod=lastmod([t] + alts), answer=seo.answer_line_alternatives(t, alts), t=t, filterable=True, alts=alts, faq=seo.alternatives_faq(t, alts),

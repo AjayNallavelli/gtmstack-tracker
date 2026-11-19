@@ -3,6 +3,8 @@
 Everything here is derived from data/tools.json only. Nothing is invented: when a vendor does not publish a
 price the text says so ("contact sales"), and usage-based / non-USD pricing is quoted verbatim from price_display.
 """
+import datetime as dt
+
 # tools whose price_display is a plain per-month USD range, so their numeric entry price is safe to rank on
 NUMERIC_DISPLAY = {"mailreach"}
 CAT_LABEL = {
@@ -72,8 +74,66 @@ def enrich(t):
         t["entry_label"] = "Free plan; paid plans not priced publicly"
     else:
         t["entry_label"] = "Contact sales (no public prices)"
+    t["credit_cols"] = any("actions_per_month" in tr or "data_credits_per_month" in tr for tr in t["tiers"])
+    t["spotlight"] = SPOTLIGHT.get(t["id"])
+    if t["id"] == "clay":
+        clay_fields(t)
     t["faq"] = tool_faq(t)
     t["summary"] = tool_summary(t)
+
+
+NOW_YEAR = dt.date.today().year
+
+# Tool pages that get extra internal links from related pages (top search queries).
+SPOTLIGHT = {"clay": "How much does Clay cost? Clay pricing by plan"}
+
+
+def _n(v):
+    return f"{v:,}"
+
+
+def _clay_tiers(t):
+    by = {tr["plan"]: tr for tr in t["tiers"]}
+    return by["Free"], by["Launch"], by["Growth"], by["Enterprise"]
+
+
+def clay_fields(t):
+    """Answer box, H1, title and meta for /tools/clay/ (targets 'clay pricing' and 'how much is clay'). Numbers come from data/tools.json."""
+    free, launch, growth, ent = _clay_tiers(t)
+    d = nicedate(t["last_checked"])
+    t["answer_box"] = (
+        f"Clay costs $0 on the Free plan ({_n(free['actions_per_month'])} actions and {_n(free['data_credits_per_month'])} data credits a month). "
+        f"Paid plans start with Launch at {money(launch['monthly_usd'])}/month, or {money(launch['annual_monthly_usd'])}/month billed annually, "
+        f"which includes {_n(launch['actions_per_month'])} actions and {_n(launch['data_credits_per_month'])} data credits a month; "
+        f"Growth is {money(growth['monthly_usd'])}/month ({money(growth['annual_monthly_usd'])} annually) and Enterprise is custom-priced. "
+        f"Data credits start at $0.05 each and actions cost under $0.01 each, per Clay's pricing page (checked {d}).")
+    t["h1"] = f"Clay pricing {NOW_YEAR}: how much does Clay cost?"
+    t["seo_title"] = f"Clay Pricing {NOW_YEAR}: How Much Is Clay? Plans & Credit Costs"
+    t["seo_desc"] = (f"How much is Clay? Free plan, Launch {money(launch['monthly_usd'])}/mo ({money(launch['annual_monthly_usd'])} annual), "
+                     f"Growth {money(growth['monthly_usd'])}/mo ({money(growth['annual_monthly_usd'])} annual), plus cost per credit. Checked {t['last_checked']}.")
+
+
+def clay_faq(t):
+    free, launch, growth, ent = _clay_tiers(t)
+    n = "Clay"
+    return [
+        {"q": "How much is Clay?", "a": t["answer_box"]},
+        {"q": "Is Clay free?",
+         "a": (f"Yes, in part. Clay's Free plan costs $0 and includes unlimited seats and tables, {_n(free['actions_per_month'])} actions and "
+               f"{_n(free['data_credits_per_month'])} data credits a month, up to 200 rows per table, and no phone number enrichment. "
+               f"The paid Launch plan ({money(launch['monthly_usd'])}/month, {money(launch['annual_monthly_usd'])}/month annually) adds phone enrichment "
+               f"and larger tables, and Clay's pricing page offers a 14-day trial on paid plans (checked {nicedate(t['last_checked'])}).")},
+        {"q": "Clay pricing per credit: how much does a credit cost?",
+         "a": ("Clay's pricing page says data credits start at $0.05 each and get cheaper as you grow, and actions start at less than $0.01 each. "
+               "Credits and actions are priced separately. If you bring your own API keys for a data provider, the run uses one action and no data credits. "
+               "Enrichments that return no result do not use credits or actions. "
+               f"As a worked example from the same page, Launch's {_n(launch['data_credits_per_month'])} monthly data credits are {money(launch['data_credits_usd_monthly_billing'])} of its {money(launch['monthly_usd'])}/month "
+               f"(about ${launch['data_credits_usd_monthly_billing'] / launch['data_credits_per_month']:.2f} per credit), and Growth's {_n(growth['data_credits_per_month'])} credits are {money(growth['data_credits_usd_monthly_billing'])} of its {money(growth['monthly_usd'])}/month (about ${growth['data_credits_usd_monthly_billing'] / growth['data_credits_per_month']:.3f} per credit).")},
+        {"q": "How much does Clay cost per month?",
+         "a": (f"Launch is {money(launch['monthly_usd'])}/month billed monthly, or {money(launch['annual_monthly_usd'])}/month billed annually "
+               f"({money(launch['annual_monthly_usd'] * 12)} a year). Growth is {money(growth['monthly_usd'])}/month, or {money(growth['annual_monthly_usd'])}/month billed annually "
+               f"({money(growth['annual_monthly_usd'] * 12)} a year). Enterprise pricing is custom with an annual commitment.")},
+    ]
 
 
 def answer_free(t):
@@ -142,8 +202,8 @@ def tool_faq(t):
         {"q": f"When was {n} pricing last checked?",
          "a": f"{t['last_checked']}, from the official pricing page ({t['pricing_url']}). We re-check it automatically every day and log any change."},
     ]
-    if t["id"] == "clay" and t.get("billing_note"):  # top GSC query cluster: "clay pricing"
-        faq.insert(1, {"q": f"How much do {n} credits cost?", "a": f"{n}'s pricing page says: {t['billing_note'].rstrip('.')}. Each paid plan includes a monthly allowance of actions and data credits (see the plan table above)."})
+    if t["id"] == "clay" and t.get("answer_box"):  # top GSC query cluster: "clay pricing", "how much is clay"
+        faq = clay_faq(t) + [f for f in faq if f["q"] in (f"Is {n} cheaper if you pay annually?", f"When was {n} pricing last checked?")]
     if t["id"] == "lemlist":  # GSC: "lemlist pricing", "lemlist cost per month"
         faq.insert(1, {"q": f"How much does {n} cost per month?", "a": answer_cost(t)})
     if t["id"] == "aisdr":  # GSC: "aisdr" already ranks near page 1

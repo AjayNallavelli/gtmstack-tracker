@@ -965,39 +965,49 @@
       ],
       "description": "Spreadsheet-style GTM data platform with 100+ provider waterfalls, AI research agents and CRM sync.",
       "pricing_url": "https://www.clay.com/pricing",
-      "date_checked": "2026-10-19",
+      "date_checked": "2026-11-19",
       "pricing_status": "public",
       "pricing_verified": true,
-      "billing_note": "Actions + data credits priced separately; data credits from $0.05 each",
-      "verification_note": "",
+      "billing_note": "Actions + data credits priced separately; data credits from $0.05 each, actions under $0.01 each; 14-day trial on paid plans",
+      "verification_note": "Re-verified against clay.com/pricing on 2026-11-19: Launch $185/mo monthly or $167/mo billed annually; Growth $495/mo or $446/mo annually; Enterprise custom.",
       "tiers": [
         {
           "plan": "Free",
           "monthly_usd": 0,
           "annual_monthly_usd": 0,
-          "limits": "Unlimited seats & tables; limited credits",
-          "note": ""
+          "limits": "500 actions/mo + 100 data credits/mo; unlimited seats & tables; up to 200 rows per table; no phone number enrichment",
+          "note": "",
+          "actions_per_month": 500,
+          "data_credits_per_month": 100
         },
         {
           "plan": "Launch",
           "monthly_usd": 185,
           "annual_monthly_usd": 167,
-          "limits": "15,000 actions/mo + 2,500 data credits/mo (starting point)",
-          "note": ""
+          "limits": "15,000 actions/mo + 2,500 data credits/mo (starting point); phone number enrichment; up to 50,000 rows per table",
+          "note": "",
+          "actions_per_month": 15000,
+          "data_credits_per_month": 2500,
+          "data_credits_usd_monthly_billing": 125
         },
         {
           "plan": "Growth",
           "monthly_usd": 495,
           "annual_monthly_usd": 446,
-          "limits": "40,000 actions/mo + 6,000 data credits/mo; CRM auto-sync, HTTP API",
-          "note": ""
+          "limits": "40,000 actions/mo + 6,000 data credits/mo; CRM auto-sync, HTTP API, webhooks, priority support",
+          "note": "",
+          "actions_per_month": 40000,
+          "data_credits_per_month": 6000,
+          "data_credits_usd_monthly_billing": 290
         },
         {
           "plan": "Enterprise",
           "monthly_usd": null,
           "annual_monthly_usd": null,
-          "limits": "",
-          "note": "Custom, annual commitment"
+          "limits": "SSO, RBAC, data warehouse syncs, Clay API access, dedicated Growth Strategist",
+          "note": "Custom pricing, annual commitment",
+          "actions_per_month": 200000,
+          "data_credits_per_month": 100000
         }
       ],
       "affiliate_url": "",
