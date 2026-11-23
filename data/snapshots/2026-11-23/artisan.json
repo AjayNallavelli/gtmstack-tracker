@@ -1,0 +1,16 @@
+{
+ "id": "artisan",
+ "status": "ok",
+ "method": "chrome",
+ "url": "https://www.artisan.co/pricing",
+ "hash": "eff230192d977d87",
+ "price_tokens": [],
+ "pricing_lines": [
+  "Talk to sales",
+  "One seamless GTM engine, with inbound and outbound working the same accounts.",
+  "Talk to sales",
+  "Turns website visits into qualified sales conversations and booked meetings.",
+  "Talk to sales"
+ ],
+ "date": "2026-11-23"
+}
