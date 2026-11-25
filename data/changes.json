@@ -1,5 +1,44 @@
 [
  {
+  "date": "2026-11-25",
+  "tool_id": "aisdr",
+  "tool": "AiSDR",
+  "type": "copy_change",
+  "summary": "Pricing page wording/plan text changed (no price points changed).",
+  "previous_date": "2026-11-24",
+  "diff": [
+   "+Black Friday Double",
+   "+Monthly and annual plans bought by 1 Dec get twice the leads"
+  ]
+ },
+ {
+  "date": "2026-11-25",
+  "tool_id": "findymail",
+  "tool": "Findymail",
+  "type": "price_change",
+  "summary": "Pricing page changed: new price points $249.",
+  "added": [
+   "$249"
+  ],
+  "removed": [],
+  "previous_date": "2026-11-24",
+  "diff": [
+   "-For teams running outbound workflows",
+   "+For large lists and all-day prospecting",
+   "+$249",
+   "+For teams prospecting together",
+   "-Custom",
+   "-Contact sales"
+  ]
+ },
+ {
+  "date": "2026-11-25",
+  "tool_id": "prospeo",
+  "tool": "Prospeo",
+  "type": "fetch_failed",
+  "summary": "Pricing page could not be fetched; will retry next run."
+ },
+ {
   "date": "2026-11-24",
   "tool_id": "lemlist",
   "tool": "lemlist",
