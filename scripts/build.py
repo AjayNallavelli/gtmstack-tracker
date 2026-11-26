@@ -362,6 +362,11 @@ def main():
         t["aff_data"] = [by_id[i] for i in seo.AFF_PICKS.get(t["id"], {}).get("data", []) if i in by_id and by_id[i]["is_affiliate"]]
         if t["id"] == "lemlist":
             seo.lemlist_alt_fields(t, t["all_alternatives"])
+        if t["id"] == "apollo":
+            seo.apollo_alt_fields(t, t["all_alternatives"])
+        extra_ids = seo.ALT_EXTRA_SPOTLIGHT.get(t["id"], [])
+        already = {x["id"] for x in t["all_alternatives"] if x.get("spotlight")}
+        t["alt_extra_spot"] = [by_id[i] for i in extra_ids if i in by_id and by_id[i].get("spotlight") and i not in already]
     cats = [{"name": n, "slug": s, "blurb": b, "tools": [t for t in tools if n in t["categories"]],
              "featured": sorted([t for t in tools if n in t["categories"] and t["is_featured"]], key=lambda t: t["name"])} for n, (s, b) in CATS.items()]
     stats = {"tools": len(tools), "public": sum(t["pricing_status"] != "contact_sales" for t in tools),

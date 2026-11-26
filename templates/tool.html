@@ -22,7 +22,7 @@
   </div>
 </section>
 {% if t.promo_live %}<p class="card accent promo small" id="sale"><strong>Temporary sale:</strong> {{ t.promo_live.text }}</p>{% endif %}
-<h2 id="plans">{{ t.name }} plans &amp; pricing{% if t.credit_cols %}: cost by plan{% endif %}</h2>
+<h2 id="plans">{% if t.plans_h2 %}{{ t.plans_h2 }}{% else %}{{ t.name }} plans &amp; pricing{% if t.credit_cols %}: cost by plan{% endif %}{% endif %}</h2>
 {{ pricing_table(t) }}
 {% if t.self_cta and t.is_affiliate %}<p class="aff-self">{{ outlink(t, t.self_cta) }} <span class="small muted">Affiliate link: we may earn a commission at no cost to you; it never changes the prices we list (<a href="/disclosure/">disclosure</a>).</span></p>{% endif %}
 {% if t.verification_note %}<p class="small note">Note: {{ t.verification_note }}</p>{% endif %}

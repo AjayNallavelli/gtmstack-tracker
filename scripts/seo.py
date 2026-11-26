@@ -101,10 +101,15 @@ SPOTLIGHT = {"clay": "How much does Clay cost? Clay pricing by plan",
 # "seq" = sequencing alternatives, "data" = lead-data tools (lemlist sells a data add-on, so these fit naturally).
 AFF_PICKS = {"lemlist": {"seq": ["woodpecker", "klenty"], "data": ["prospeo", "fullenrich"]},
              "klenty": {"seq": ["woodpecker"], "data": ["prospeo", "fullenrich"]},
-             "prospeo": {"data": ["fullenrich"]}}
+             "prospeo": {"data": ["fullenrich"]},
+             "apollo": {"seq": ["woodpecker", "klenty"], "data": ["prospeo", "fullenrich"]}}
 # Intro line for the "data" picks (default wording is lemlist-specific).
 AFF_DATA_INTRO = {"klenty": "Need more emails and phone numbers than Klenty's included data credits?",
-                  "prospeo": "Want a second email/phone finder to compare against Prospeo?"}
+                  "prospeo": "Want a second email/phone finder to compare against Prospeo?",
+                  "apollo": "Looking for a dedicated email or phone finder instead of Apollo.io's credits?"}
+
+# Spotlight tool pages linked from alternatives pages even when the tool is not a category peer.
+ALT_EXTRA_SPOTLIGHT = {"apollo": ["clay"], "instantly": ["clay"]}
 
 
 def live_promo(t, today=None):
@@ -136,12 +141,13 @@ def clay_fields(t):
     free, launch, growth, ent = _clay_tiers(t)
     d = nicedate(t["last_checked"])
     t["answer_box"] = (
-        f"Clay costs $0 on the Free plan ({_n(free['actions_per_month'])} actions and {_n(free['data_credits_per_month'])} data credits a month). "
+        f"How much is Clay? The Free plan is $0 ({_n(free['actions_per_month'])} actions and {_n(free['data_credits_per_month'])} data credits a month). "
         f"Paid plans start with Launch at {money(launch['monthly_usd'])}/month, or {money(launch['annual_monthly_usd'])}/month billed annually, "
         f"which includes {_n(launch['actions_per_month'])} actions and {_n(launch['data_credits_per_month'])} data credits a month; "
         f"Growth is {money(growth['monthly_usd'])}/month ({money(growth['annual_monthly_usd'])} annually) and Enterprise is custom-priced. "
         f"Data credits start at $0.05 each and actions cost under $0.01 each, per Clay's pricing page (checked {d}).")
     t["h1"] = f"Clay pricing {NOW_YEAR}: how much does Clay cost?"
+    t["plans_h2"] = "How much is Clay? Cost by plan"
     t["seo_title"] = f"Clay Pricing {NOW_YEAR}: How Much Is Clay? Plans & Credit Costs"
     t["seo_desc"] = (f"How much is Clay? Free plan, Launch {money(launch['monthly_usd'])}/mo ({money(launch['annual_monthly_usd'])} annual), "
                      f"Growth {money(growth['monthly_usd'])}/mo ({money(growth['annual_monthly_usd'])} annual), plus cost per credit. Checked {t['last_checked']}.")
@@ -231,6 +237,68 @@ def lemlist_alt_fields(t, alts):
     cold = [x for x in alts if "Cold email & engagement" in x.get("categories", []) and x.get("sort_price") is not None]
     t["alt_ranked"] = cold[:8]
     t["alt_ranked_heading"] = f"Top lemlist alternatives by price ({NOW_YEAR})"
+
+
+def _join_and(parts):
+    if not parts:
+        return ""
+    if len(parts) == 1:
+        return parts[0]
+    return ", ".join(parts[:-1]) + " and " + parts[-1]
+
+
+def _from_price(x):
+    """Name plus entry price from already-enriched tools.json data, never hand-typed."""
+    if x.get("entry_paid") is not None:
+        return f"{x['name']} from {money(x['entry_paid'])}/mo"
+    return x["name"]
+
+
+# Closest Apollo.io substitutes we actually track (lead data and/or sales engagement).
+# The shortlist is sorted by each tool's sort_price from tools.json.
+APOLLO_CLOSEST = (
+    "snovio", "woodpecker", "rocketreach", "hunter", "saleshandy",
+    "prospeo", "lusha", "instantly", "findymail", "kaspr",
+    "klenty", "fullenrich", "lemlist", "clay",
+)
+
+
+def apollo_alt_fields(t, alts):
+    """Answer box, title and meta for /alternatives/apollo/ (targets 'Apollo.io alternatives')."""
+    d = nicedate(t["last_checked"])
+    free = [x for x in alts if x["has_free_plan"]]
+    by = {x["id"]: x for x in alts}
+    data = [by[i] for i in ("hunter", "snovio", "lusha", "rocketreach", "prospeo") if i in by and by[i].get("entry_paid") is not None]
+    outreach = [by[i] for i in ("instantly", "lemlist") if i in by and by[i].get("entry_paid") is not None]
+    clay = by.get("clay")
+    bits = []
+    if data:
+        bits.append(f"{_join_and([_from_price(x) for x in data])} for lead data")
+    if outreach:
+        bits.append(f"{_join_and([_from_price(x) for x in outreach])} for outreach")
+    if clay and clay.get("entry_paid") is not None:
+        bits.append(f"{_from_price(clay)} for enrichment")
+    free_tr = next((tr for tr in t["tiers"] if tr.get("monthly_usd") == 0 or tr.get("annual_monthly_usd") == 0), None)
+    free_bit = ""
+    if t["has_free_plan"]:
+        lim = (free_tr or {}).get("limits") or t.get("free_tier") or "Free"
+        free_bit = f", with a Free plan ({lim.rstrip('.')})"
+    t["alt_answer"] = (
+        f"Best Apollo.io alternatives in {NOW_YEAR} (checked {d}): {'; '.join(bits)}. "
+        f"{len(free)} of the {len(alts)} alternatives below have a free plan. "
+        f"Apollo.io itself starts at {money(t['entry_paid'])}/month billed annually (Basic){free_bit}.")
+    t["alt_h1"] = f"Best Apollo.io Alternatives in {NOW_YEAR}: {len(alts)} tools compared by price"
+    t["alt_title"] = f"Best Apollo.io Alternatives {NOW_YEAR}: {len(alts)} Tools Compared by Price"
+    t["alt_desc"] = (
+        f"{len(alts)} Apollo.io Alternatives sorted by price, {len(free)} with a free plan. "
+        f"Apollo.io starts at {money(t['entry_paid'])}/mo billed annually (Basic){free_bit}. "
+        f"Checked {t['last_checked']}.")
+    ranked = [by[i] for i in APOLLO_CLOSEST if i in by and by[i].get("sort_price") is not None]
+    ranked.sort(key=lambda x: x["sort_price"])
+    t["alt_ranked"] = ranked[:8]
+    t["alt_ranked_heading"] = f"Top Apollo.io Alternatives by price ({NOW_YEAR})"
+    t["aff_data_intro"] = AFF_DATA_INTRO["apollo"]
+    t["aff_seq_intro"] = "For sales engagement and email sequencing, these are the closest alternatives we track:"
 
 
 def _by_plan(t):
@@ -458,8 +526,8 @@ def alternatives_faq(t, alts):
     out = []
     free_alt_a = (f"Yes. {len(free)} alternative{'s' if len(free) != 1 else ''} list a $0 tier: {names(free)}." if free
                   else f"None of the {len(alts)} alternatives we track lists a $0 tier.")
-    # Lead with pricing FAQs on pages already getting GSC impressions (lemlist, Instantly).
-    if t["id"] in ("lemlist", "instantly"):
+    # Lead with pricing FAQs on pages already getting GSC impressions (lemlist, Instantly, Apollo).
+    if t["id"] in ("lemlist", "instantly", "apollo"):
         out.append({"q": f"How much is {n}?", "a": answer_cost(t)})
         out.append({"q": f"Does {n} have a free plan?", "a": answer_free(t)})
         if t["id"] == "lemlist" and t.get("answer_box"):
@@ -467,6 +535,9 @@ def alternatives_faq(t, alts):
             out.insert(0, {"q": "What are the best lemlist alternatives?", "a": t.get("alt_answer") or ""})
         elif t["id"] == "lemlist":
             out.append({"q": f"How much does {n} cost per month?", "a": answer_cost(t)})
+        elif t["id"] == "apollo" and t.get("alt_answer"):
+            out[0] = {"q": "How much does Apollo.io cost?", "a": answer_cost(t)}
+            out.insert(0, {"q": "What are the best Apollo.io alternatives?", "a": t["alt_answer"]})
         out.append({"q": f"Is there a free {n} alternative?", "a": free_alt_a})
     if priced:
         c = min(priced, key=lambda x: x["sort_price"])
@@ -475,7 +546,7 @@ def alternatives_faq(t, alts):
             cheaper = [x for x in priced if x["sort_price"] < t["sort_price"]]
             a += f" {len(cheaper)} alternative{'s' if len(cheaper) != 1 else ''} list a lower entry price than {n} ({t['entry_label']})."
         out.append({"q": f"What is the cheapest {n} alternative?", "a": a})
-    if t["id"] not in ("lemlist", "instantly"):
+    if t["id"] not in ("lemlist", "instantly", "apollo"):
         out.append({"q": f"Is there a free alternative to {n}?", "a": free_alt_a})
     if contact:
         out.append({"q": f"Which {n} alternatives don't publish pricing?",
