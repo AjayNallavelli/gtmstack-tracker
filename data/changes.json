@@ -1,5 +1,24 @@
 [
  {
+  "date": "2026-11-26",
+  "tool_id": "smartlead",
+  "tool": "Smartlead",
+  "type": "copy_change",
+  "summary": "Pricing page wording/plan text changed (no price points changed).",
+  "previous_date": "2026-11-25",
+  "diff": [
+   "-and get 50% off on your first month on any plan",
+   "+*"
+  ]
+ },
+ {
+  "date": "2026-11-26",
+  "tool_id": "prospeo",
+  "tool": "Prospeo",
+  "type": "fetch_failed",
+  "summary": "Pricing page could not be fetched; will retry next run."
+ },
+ {
   "date": "2026-11-25",
   "tool_id": "aisdr",
   "tool": "AiSDR",
