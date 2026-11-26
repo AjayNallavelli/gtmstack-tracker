@@ -800,32 +800,32 @@
       ],
       "description": "Sales engagement platform: email cadences, multichannel outreach, built-in dialer with AI call coaching, and two-way CRM sync.",
       "pricing_url": "https://www.klenty.com/pricing/",
-      "date_checked": "2026-11-19",
+      "date_checked": "2026-11-26",
       "pricing_status": "public",
       "pricing_verified": true,
-      "billing_note": "Annual or quarterly billing (toggle says save up to 30%); monthly-billing prices not shown; 14-day free trial (up to 200 emails). Black Friday through 2026-11-30: up to 20% off annual plans",
-      "verification_note": "Re-verified against klenty.com/pricing on 2026-11-19: Black Friday sale (ends 2026-11-30) shows Starter $40 (was $50), Growth $56 (was $70), Plus $89 (was $99) per month billed annually. Table keeps the regular annual prices; sale prices are in each plan note.",
+      "billing_note": "Annual or quarterly billing (toggle says save up to 30%); monthly-billing prices not shown; 14-day free trial (up to 200 emails)",
+      "verification_note": "Re-verified against klenty.com/pricing on 2026-11-26: regular prices Starter $50, Growth $70 (per user), Plus $99 (per user) per month billed annually; Power & Parallel Dialer add-on $45 per user/month; Dynamic Presence $50 per seat/month. A temporary Black Friday discount is shown separately while it runs.",
       "tiers": [
         {
           "plan": "Starter",
           "monthly_usd": null,
           "annual_monthly_usd": 50,
           "limits": "Unlimited users & mailboxes; priced by contacts/emails (shown at 15,000 contacts, 75,000 emails/mo)",
-          "note": "Per month, billed annually. Black Friday: $40/mo until 2026-11-30 (was $50)"
+          "note": "Per month, billed annually"
         },
         {
           "plan": "Growth",
           "monthly_usd": null,
           "annual_monthly_usd": 70,
           "limits": "Per user; 200 dialer minutes, 2,000 phone+email credits, CRM sync",
-          "note": "Per user/month, billed annually. Black Friday: $56/mo until 2026-11-30 (was $70)"
+          "note": "Per user/month, billed annually"
         },
         {
           "plan": "Plus",
           "monthly_usd": null,
           "annual_monthly_usd": 99,
           "limits": "Per user; 1,000 dialer minutes, 4,000 credits, account-based selling, AI call coaching",
-          "note": "Per user/month, billed annually. Black Friday: $89/mo until 2026-11-30 (was $99)"
+          "note": "Per user/month, billed annually"
         },
         {
           "plan": "Power & Parallel Dialer add-on",
@@ -857,7 +857,19 @@
         "smartlead",
         "woodpecker",
         "saleshandy"
-      ]
+      ],
+      "promo": {
+        "label": "Black Friday",
+        "ends": "2026-11-30",
+        "verified": "2026-11-26",
+        "summary": "up to 20% off annual plans",
+        "prices": {
+          "Starter": 40,
+          "Growth": 56,
+          "Plus": 89
+        },
+        "source": "klenty.com/pricing banner \"Black Friday: Up to 20% OFF on all annual plans\"; end date 2026-11-30 from the 2026-11-19 hand check"
+      }
     },
     {
       "id": "lagrowthmachine",
@@ -1510,11 +1522,11 @@
       ],
       "description": "Verified email and phone finder with Sales Navigator scraping and CRM enrichment (Datacare).",
       "pricing_url": "https://www.findymail.com/pricing/",
-      "date_checked": "2026-11-10",
+      "date_checked": "2026-11-26",
       "pricing_status": "public",
       "pricing_verified": true,
       "billing_note": "Headline plans are usage-based (no credit counting). Credit-based plans are listed behind 'See credit-based plans'; yearly billing on credit plans = 2 months free",
-      "verification_note": "Plain HTTP fetch blocked by a Cloudflare challenge (403); fetched with a browser-fingerprint HTTP client (curl_cffi). Re-checked on the live pricing page on 2026-11-10.",
+      "verification_note": "Plain HTTP fetch blocked by a Cloudflare challenge (403); fetched with a browser-fingerprint HTTP client (curl_cffi). Re-checked on the live pricing page on 2026-11-10. Re-checked 2026-11-26: headline plans are Individual $99, Pro $249 (new, first seen 2026-11-25), Team $399, Scale $999 per month; Enterprise via sales.",
       "tiers": [
         {
           "plan": "Free",
@@ -1529,6 +1541,13 @@
           "annual_monthly_usd": null,
           "limits": "Generous usage (no credit counting); 1 seat, 5 active signals",
           "note": "Usage-based headline plan"
+        },
+        {
+          "plan": "Pro",
+          "monthly_usd": 249,
+          "annual_monthly_usd": null,
+          "limits": "3x more usage; 1 seat, 15 active signals, up to 15,000 rows per file, priority processing",
+          "note": "Usage-based headline plan (added 2026-11-25)"
         },
         {
           "plan": "Team",
@@ -1584,11 +1603,11 @@
       ],
       "description": "B2B email and mobile finder with 45+ filter search, enrichment API and MCP server.",
       "pricing_url": "https://prospeo.io/pricing",
-      "date_checked": "2026-10-19",
+      "date_checked": "2026-11-18",
       "pricing_status": "public",
       "pricing_verified": true,
       "billing_note": "Monthly vs yearly (save 25%)",
-      "verification_note": "Box fetch was blocked; CI (US) headless-Chrome fetch succeeded on 2026-10-19.",
+      "verification_note": "Confirmed by our automated headless-Chrome snapshot of prospeo.io/pricing on 2026-11-18: Free $0 (100 credits/mo); Starter $49/mo or $37/mo yearly; Growth $99 or $74; Pro $249 or $187 (per user; 24,000 / 60,000 / 180,000 credits per user per year, unused credits roll over). Automated and manual re-checks from 2026-11-19 to 2026-11-26 could not load the JavaScript-rendered page, so these are the last verified prices.",
       "tiers": [
         {
           "plan": "Free",

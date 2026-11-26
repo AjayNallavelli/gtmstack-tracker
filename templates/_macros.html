@@ -116,7 +116,7 @@
 <h2>Considering a {{ t.name }} alternative?</h2>
 {% if t.aff_picks %}<p>For email sequencing, these are the closest alternatives we track:</p>
 <ul class="links">{% for x in t.aff_picks %}<li><a href="/tools/{{ x.slug }}/"><strong>{{ x.name }}</strong></a> <span class="small muted">{{ x.description }}</span> {{ outlink(x, "Try " ~ x.name, "visit") }}</li>{% endfor %}</ul>{% endif %}
-{% if t.aff_data %}<p class="small">Only need emails and phone numbers ({{ t.name }} sells lead data as an add-on)? {% for x in t.aff_data %}{{ outlink(x, "Try " ~ x.name, "visit") }}{% if x.affiliate_perk %} <span class="small muted">({{ x.affiliate_perk }})</span>{% endif %}{{ " · " if not loop.last }}{% endfor %}</p>{% endif %}
+{% if t.aff_data %}<p class="small">{% if t.aff_data_intro %}{{ t.aff_data_intro }}{% else %}Only need emails and phone numbers ({{ t.name }} sells lead data as an add-on)?{% endif %} {% for x in t.aff_data %}{{ outlink(x, "Try " ~ x.name, "visit") }}{% if x.affiliate_perk %} <span class="small muted">({{ x.affiliate_perk }})</span>{% endif %}{{ " · " if not loop.last }}{% endfor %}</p>{% endif %}
 <p class="small muted">Links marked "Affiliate" may earn us a commission at no cost to you; it never changes the prices we list (<a href="/disclosure/">disclosure</a>). Check each tool page for its current plans.</p>
 </section>{% endif %}
 {%- endmacro %}

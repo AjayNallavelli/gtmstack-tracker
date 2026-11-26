@@ -80,6 +80,11 @@ def enrich(t):
         clay_fields(t)
     if t["id"] == "lemlist":
         lemlist_fields(t)
+    t["promo_live"] = live_promo(t)
+    if t["id"] == "klenty":
+        klenty_fields(t)
+    if t["id"] == "prospeo":
+        prospeo_fields(t)
     t["faq"] = tool_faq(t)
     t["summary"] = tool_summary(t)
 
@@ -88,11 +93,33 @@ NOW_YEAR = dt.date.today().year
 
 # Tool pages that get extra internal links from related pages (top search queries).
 SPOTLIGHT = {"clay": "How much does Clay cost? Clay pricing by plan",
-             "lemlist": "lemlist pricing: every plan, monthly vs annual"}
+             "lemlist": "lemlist pricing: every plan, monthly vs annual",
+             "klenty": "Klenty pricing: plans billed annually",
+             "prospeo": "Prospeo pricing: free plan and credit costs"}
 
 # Affiliate CTA picks per page: approved programs from data/affiliates.json only.
 # "seq" = sequencing alternatives, "data" = lead-data tools (lemlist sells a data add-on, so these fit naturally).
-AFF_PICKS = {"lemlist": {"seq": ["woodpecker", "klenty"], "data": ["prospeo", "fullenrich"]}}
+AFF_PICKS = {"lemlist": {"seq": ["woodpecker", "klenty"], "data": ["prospeo", "fullenrich"]},
+             "klenty": {"seq": ["woodpecker"], "data": ["prospeo", "fullenrich"]},
+             "prospeo": {"data": ["fullenrich"]}}
+# Intro line for the "data" picks (default wording is lemlist-specific).
+AFF_DATA_INTRO = {"klenty": "Need more emails and phone numbers than Klenty's included data credits?",
+                  "prospeo": "Want a second email/phone finder to compare against Prospeo?"}
+
+
+def live_promo(t, today=None):
+    """A vendor sale from tools.json "promo", only while it runs. Date-gated so the page stops claiming
+    the sale on the first build after promo["ends"] (the site rebuilds daily)."""
+    p = t.get("promo")
+    if not p:
+        return None
+    today = today or dt.date.today()
+    if today > dt.date.fromisoformat(p["ends"]):
+        return None
+    by = {tr["plan"]: tr for tr in t["tiers"]}
+    rows = [f"{plan} {money(v)}/mo (was {money(by[plan]['annual_monthly_usd'])})" for plan, v in p["prices"].items() if plan in by]
+    return {**p, "text": (f"{p['label']} sale, verified {nicedate(p['verified'])}, ends {nicedate(p['ends'])}: {p['summary']} - "
+                          + ", ".join(rows) + " billed annually. Regular prices are in the table below.")}
 
 
 def _n(v):
@@ -206,6 +233,92 @@ def lemlist_alt_fields(t, alts):
     t["alt_ranked_heading"] = f"Top lemlist alternatives by price ({NOW_YEAR})"
 
 
+def _by_plan(t):
+    return {tr["plan"]: tr for tr in t["tiers"]}
+
+
+def klenty_fields(t):
+    """Answer box, H1, title and meta for /tools/klenty/. Regular prices come from data/tools.json; the sale line only while live."""
+    b = _by_plan(t)
+    st, gr, pl = b["Starter"], b["Growth"], b["Plus"]
+    d = nicedate(t["date_checked"])
+    sale = ""
+    if t.get("promo_live"):
+        pp = t["promo_live"]["prices"]
+        sale = (f" Until {nicedate(t['promo_live']['ends'])} a {t['promo_live']['label']} sale cuts these to "
+                f"{money(pp['Starter'])}, {money(pp['Growth'])} and {money(pp['Plus'])}.")
+    t["answer_box"] = (
+        f"Klenty pricing {NOW_YEAR}: from {money(st['annual_monthly_usd'])}/month. Starter is {money(st['annual_monthly_usd'])}/month billed annually "
+        f"(unlimited users and mailboxes, 15,000 contacts and 75,000 emails a month), Growth is {money(gr['annual_monthly_usd'])}/user/month and "
+        f"Plus is {money(pl['annual_monthly_usd'])}/user/month, both billed annually; Klenty does not publish month-to-month prices. "
+        f"There is a 14-day free trial but no free plan (verified on klenty.com/pricing, {d})." + sale)
+    t["h1"] = f"Klenty pricing {NOW_YEAR}: plans, cost per month & annual price"
+    t["seo_title"] = f"Klenty Pricing {NOW_YEAR}: Plans from {money(st['annual_monthly_usd'])}/mo, Trial & Alternatives"
+    t["seo_desc"] = (f"Klenty pricing, verified {t['date_checked']}: Starter {money(st['annual_monthly_usd'])}/mo, Growth {money(gr['annual_monthly_usd'])}/user/mo, "
+                     f"Plus {money(pl['annual_monthly_usd'])}/user/mo billed annually. Add-ons, 14-day trial and cheaper alternatives.")
+    t["self_cta"] = "Try Klenty free for 14 days"
+    t["aff_data_intro"] = AFF_DATA_INTRO["klenty"]
+
+
+def klenty_faq(t):
+    b = _by_plan(t)
+    st, gr, pl = b["Starter"], b["Growth"], b["Plus"]
+    d = nicedate(t["date_checked"])
+    return [
+        {"q": "How much does Klenty cost?", "a": t["answer_box"]},
+        {"q": "How much does Klenty cost per month?",
+         "a": (f"Klenty lists per-month prices billed annually: Starter {money(st['annual_monthly_usd'])}/month ({money(st['annual_monthly_usd'] * 12)} a year), "
+               f"Growth {money(gr['annual_monthly_usd'])} per user/month ({money(gr['annual_monthly_usd'] * 12)} a year) and Plus {money(pl['annual_monthly_usd'])} per user/month "
+               f"({money(pl['annual_monthly_usd'] * 12)} a year). Add-ons: Power & Parallel Dialer $45 per user/month and Dynamic Presence $50 per seat/month (checked {d}).")},
+        {"q": "Does Klenty have a free plan or free trial?",
+         "a": ("Klenty has no free plan. Its pricing page offers a 14-day free trial with access to all features and up to 200 emails to prospects; "
+               "after the trial you upgrade with a credit card or the account is deactivated.")},
+        {"q": "Is Klenty cheaper if you pay annually?",
+         "a": ("Klenty shows annual and quarterly billing, and its billing toggle says you save up to 30% with annual. It does not publish "
+               "month-to-month or quarterly dollar prices, so we only list the annual-billed per-month prices.")},
+        {"q": "What are the best Klenty alternatives?",
+         "a": ("For email sequencing, Woodpecker, lemlist, Reply.io and Saleshandy are the closest alternatives we track; Apollo bundles a lead database with sequences. "
+               "The full list, sorted by price, is on our Klenty alternatives page.")},
+    ]
+
+
+def prospeo_fields(t):
+    """Answer box, H1, title and meta for /tools/prospeo/. Numbers come from data/tools.json."""
+    b = _by_plan(t)
+    fr, st, gr, pro = b["Free"], b["Starter"], b["Growth"], b["Pro"]
+    d = nicedate(t["date_checked"])
+    t["answer_box"] = (
+        f"Prospeo pricing {NOW_YEAR}: from {money(st['annual_monthly_usd'])}/month. There is a free plan ({fr['limits']}); Starter is "
+        f"{money(st['monthly_usd'])}/month or {money(st['annual_monthly_usd'])}/month billed yearly ({st['limits']}), Growth is {money(gr['monthly_usd'])}/month "
+        f"or {money(gr['annual_monthly_usd'])}/month yearly ({gr['limits'].split(';')[0]}) and Pro is {money(pro['monthly_usd'])}/month or "
+        f"{money(pro['annual_monthly_usd'])}/month yearly ({pro['limits']}). Last verified on prospeo.io/pricing on {d}.")
+    t["h1"] = f"Prospeo pricing {NOW_YEAR}: free plan, credits & cost per month"
+    t["seo_title"] = f"Prospeo Pricing {NOW_YEAR}: Free Plan, Plans from {money(st['annual_monthly_usd'])}/mo & Credits"
+    t["seo_desc"] = (f"Prospeo pricing: free plan, Starter {money(st['monthly_usd'])}/mo ({money(st['annual_monthly_usd'])} yearly), Growth {money(gr['monthly_usd'])}/mo, "
+                     f"Pro {money(pro['monthly_usd'])}/mo, credits per plan and alternatives. Last verified {t['date_checked']}.")
+    t["self_cta"] = "Try Prospeo free"
+    t["aff_data_intro"] = AFF_DATA_INTRO["prospeo"]
+
+
+def prospeo_faq(t):
+    b = _by_plan(t)
+    fr, st, gr, pro = b["Free"], b["Starter"], b["Growth"], b["Pro"]
+    d = nicedate(t["date_checked"])
+    return [
+        {"q": "How much does Prospeo cost?", "a": t["answer_box"]},
+        {"q": "How much does Prospeo cost per month?",
+         "a": (f"Billed monthly: Starter {money(st['monthly_usd'])}, Growth {money(gr['monthly_usd'])} and Pro {money(pro['monthly_usd'])} per month. "
+               f"Billed yearly: {money(st['annual_monthly_usd'])}, {money(gr['annual_monthly_usd'])} and {money(pro['annual_monthly_usd'])} per month "
+               f"({money(st['annual_monthly_usd'] * 12)}, {money(gr['annual_monthly_usd'] * 12)} and {money(pro['annual_monthly_usd'] * 12)} a year). "
+               f"Credits: {st['limits']} on Starter, {gr['limits'].split(';')[0]} on Growth, {pro['limits']} on Pro (last verified {d}).")},
+        {"q": "Does Prospeo have a free plan?",
+         "a": f"Yes. Prospeo's Free plan costs $0 and includes {fr['limits']} (last verified {d})."},
+        {"q": "What are the best Prospeo alternatives?",
+         "a": ("The closest email and phone finders we track are Hunter, Apollo, FullEnrich, Findymail, Lusha, Snov.io and RocketReach. "
+               "The full list, sorted by price, is on our Prospeo alternatives page.")},
+    ]
+
+
 def answer_free(t):
     n, d = t["name"], t["last_checked"]
     if t["has_free_plan"]:
@@ -276,6 +389,10 @@ def tool_faq(t):
         faq = clay_faq(t) + [f for f in faq if f["q"] in (f"Is {n} cheaper if you pay annually?", f"When was {n} pricing last checked?")]
     if t["id"] == "lemlist" and t.get("answer_box"):  # GSC: "lemlist pricing", "lemlist cost per month"
         faq = lemlist_faq(t) + [f for f in faq if f["q"] in (f"Is {n} cheaper if you pay annually?", f"When was {n} pricing last checked?")]
+    if t["id"] == "klenty" and t.get("answer_box"):
+        faq = klenty_faq(t) + [f for f in faq if f["q"] == f"When was {n} pricing last checked?"]
+    if t["id"] == "prospeo" and t.get("answer_box"):
+        faq = prospeo_faq(t) + [f for f in faq if f["q"] in (f"Is {n} cheaper if you pay annually?", f"When was {n} pricing last checked?")]
     if t["id"] == "aisdr":  # GSC: "aisdr" already ranks near page 1
         faq.insert(1, {
             "q": f"Can I try {n} without a paid subscription?",
