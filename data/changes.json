@@ -1,5 +1,71 @@
 [
  {
+  "date": "2026-11-27",
+  "tool_id": "lemlist",
+  "tool": "lemlist",
+  "type": "copy_change",
+  "summary": "Pricing page wording/plan text changed (no price points changed).",
+  "previous_date": "2026-11-26",
+  "diff": [
+   "-lemlist pricing︱The all-in-one platform for precise outbound at any scale",
+   "+Register"
+  ]
+ },
+ {
+  "date": "2026-11-27",
+  "tool_id": "lagrowthmachine",
+  "tool": "La Growth Machine",
+  "type": "price_change",
+  "summary": "Pricing page changed: new price points €40, €720, €80.",
+  "added": [
+   "€40",
+   "€720",
+   "€80"
+  ],
+  "removed": [],
+  "previous_date": "2026-11-26",
+  "diff": [
+   "+Black Friday: 4 months free on the yearly plan - La Growth Machine (LGM)",
+   "+Black Friday",
+   "+4 months free",
+   "+12 months for the price of 8, paid in one go",
+   "+Up to €720 saved per sales rep over the year*",
+   "+*Compared with the monthly price, excluding team discounts.",
+   "+4 months free",
+   "-€50",
+   "-/ month",
+   "-, billed yearly",
+   "+€40",
+   "+/ month, billed yearly",
+   "+With code BF26. From year 2: €50/mo, billed yearly.",
+   "-€100",
+   "-/ month",
+   "-, billed yearly",
+   "+€80",
+   "+/ month, billed yearly",
+   "+With code BF26. From year 2: €100/mo, billed yearly.",
+   "-€150",
+   "-/ month",
+   "-, billed yearly",
+   "+€120",
+   "+/ month, billed yearly",
+   "+With code BF26. From year 2: €150/mo, billed yearly.",
+   "-€50",
+   "-€100",
+   "-€150",
+   "+€40",
+   "+€80",
+   "+€120"
+  ]
+ },
+ {
+  "date": "2026-11-27",
+  "tool_id": "prospeo",
+  "tool": "Prospeo",
+  "type": "fetch_failed",
+  "summary": "Pricing page could not be fetched; will retry next run."
+ },
+ {
   "date": "2026-11-26",
   "tool_id": "smartlead",
   "tool": "Smartlead",
